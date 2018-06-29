@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuiteSAT]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="all-tests-SAT-IExplorer(failed)">
+    <parameter name="browser" value="IExplorer"/>
+    <classes>
+      <class name="testCasesSAT.ButtonCheckLoggedInAsAdmin">
+        <methods>
+          <include name="f"/>
+          <include name="ClickIntressentregisterButton"/>
+          <include name="tearDown"/>
+          <include name="Logout"/>
+          <include name="LoginAsAdminUser"/>
+          <include name="ClickBeredningsgrupperButton"/>
+          <include name="ClickFinansiärButton"/>
+          <include name="ClickMyProfileButton"/>
+          <include name="ClickPortaladministrationButton"/>
+          <include name="ClickFormulärButton"/>
+        </methods>
+      </class> <!-- testCasesSAT.ButtonCheckLoggedInAsAdmin -->
+      <class name="testCasesSAT.ButtonCheckLoggedInAsUser">
+        <methods>
+          <include name="ClickUtbildningButton"/>
+          <include name="ClickImmaterialrättButton"/>
+          <include name="ClickArbetslivButton"/>
+          <include name="ClickPublikationerButton"/>
+          <include name="LoginAsNormalUser"/>
+          <include name="ClickPersonuppgifterButton"/>
+          <include name="ClickGranskarkompetens"/>
+          <include name="ClickStartButton"/>
+          <include name="ClickMeriterOchUtmärkelserButton"/>
+          <include name="ClickOrganisationsKonto"/>
+          <include name="f"/>
+          <include name="ClickAnsökningarOchBidrag"/>
+          <include name="Logout"/>
+          <include name="ClickOrganisationsUppgifter"/>
+          <include name="tearDown"/>
+          <include name="ClickGranskning"/>
+        </methods>
+      </class> <!-- testCasesSAT.ButtonCheckLoggedInAsUser -->
+      <class name="testCasesSAT.LoginAsInvalidUser">
+        <methods>
+          <include name="f"/>
+          <include name="InputUserWithInvalidInfo"/>
+          <include name="tearDown"/>
+          <include name="CheckThatLogginInWithFalseInfoNotPossible"/>
+        </methods>
+      </class> <!-- testCasesSAT.LoginAsInvalidUser -->
+      <class name="testCasesSAT.LoginAsValidUser">
+        <methods>
+          <include name="LoginAsUser"/>
+          <include name="f"/>
+          <include name="CheckIfLogOutButtonIsPresentVerifyLoginSuccess"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCasesSAT.LoginAsValidUser -->
+    </classes>
+  </test> <!-- all-tests-SAT-IExplorer(failed) -->
+</suite> <!-- Failed suite [SuiteSAT] -->
