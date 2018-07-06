@@ -23,7 +23,7 @@ public class LoginLogic {
 			SAT_Home_Page_Not_Logged_In.EnterPassword(driver).sendKeys(AnyPassword);
 		} 
 		SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword(driver).click();
-
+		
 		return null;
 
 	}

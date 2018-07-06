@@ -9,6 +9,11 @@ import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
 import pageObjectsSAT.PortalLoggedInAsUser;
+import pageObjectsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import pageObjectsSAT.PortalLoggedInAsOrgUserOrganisationsuppgifter;
+import pageObjectsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
+import pageObjectsSAT.PortalLoggedInAsUserGranskning;
+import pageObjectsSAT.PortalLoggedInAsUserMinProfil;
 import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
@@ -20,14 +25,15 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 		DriverGetWebsite.OpenSatPortal(driver);
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.kkprismayahooSATusername, UserCredentials.kkprismayahooSATpassword);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsUser.MinProfil_Start_Xpath);
+		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Xpath);
 	}
 
 	@Test (dependsOnMethods={"LoginAsNormalUser"})
 	public void ClickStartButton() {
 
 		//KLICKAR PÅ START
-		PortalLoggedInAsUser.MinProfil_Start_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Start_Xpath(driver).click();
+		
 
 	}
 
@@ -35,7 +41,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickPersonuppgifterButton() {
 
 		//KLICKAR PÅ PERSONUPPGIFTER
-		PortalLoggedInAsUser.MinProfil_Personuppgifter_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Personuppgifter_Xpath(driver).click();
 
 	}
 
@@ -43,9 +49,9 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickUtbildningButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER UTBILDNING
-		PortalLoggedInAsUser.MinProfil_Utbildning_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Utbildning_Forskarutbildning_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Utbildning_UtbildningPåGrundOch_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOch_Xpath(driver).click();
 
 	}
 
@@ -53,11 +59,11 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickArbetslivButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER ARBETSLIV
-		PortalLoggedInAsUser.MinProfil_Arbetsliv_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Arbetsliv_Anställningar_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Arbetsliv_Postdoktorvistelser_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Arbetsliv_Forskarutbyten_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Arbetsliv_UppehållIForskningen_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Postdoktorvistelser_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Forskarutbyten_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningen_Xpath(driver).click();
 
 	}
 
@@ -65,8 +71,8 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickPublikationerButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER PUBLIKATIONER
-		PortalLoggedInAsUser.MinProfil_Publikationer_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_Publikationer_Publikationer_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationer_Xpath(driver).click();
 
 	}
 
@@ -74,12 +80,12 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickMeriterOchUtmärkelserButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_Docentur_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_HandleddaPersoner_Xpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens_XpathXpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelser_XpathXpath(driver).click();
-		PortalLoggedInAsUser.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriter_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_Docentur_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersoner_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens_XpathXpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelser_XpathXpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriter_Xpath(driver).click();
 
 	}
 
@@ -87,71 +93,71 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickImmaterialrättButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
-		PortalLoggedInAsUser.MinProfil_Immaterialrätt(driver).click();
-		PortalLoggedInAsUser.MinProfil_Immaterialrätt_Immaterialrätt(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt_Immaterialrätt(driver).click();
 
 	}
 
 
 	@Test (dependsOnMethods={"ClickImmaterialrättButton"})
-	public void ClickGranskarkompetens() {
+	public void ClickGranskarkompetensIfVisible() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER GRANSKARKOMPETENS
 		while (driver.getPageSource().contains("Granskarkompetens")) {
-			PortalLoggedInAsUser.MinProfil_Granskarkompetens(driver).click();
+			PortalLoggedInAsUserMinProfil.MinProfil_Granskarkompetens(driver).click();
 			break;
 		}
 	}
 
-	@Test (dependsOnMethods={"ClickGranskarkompetens"})
+	@Test (dependsOnMethods={"ClickGranskarkompetensIfVisible"})
 	public void ClickAnsökningarOchBidrag() {
 
 		//Klickar på alla knappar som finns på "Ansökningar och bidrag" sidan
-		PortalLoggedInAsUser.AnsokningarOchBidragButton_Xpath(driver).click();
-		PortalLoggedInAsUser.AnsokningarOchBidragUtlysningarButton_Xpath(driver).click();
-		PortalLoggedInAsUser.AnsokningarOchBidragAnsokningarButton_Xpath(driver).click();
-		PortalLoggedInAsUser.AnsokningarOchBidragBidragButton_Xpath(driver).click();
-		PortalLoggedInAsUser.AnsokningarOchBidragAnsökOmEtikprövning_Xpath(driver).click();
-		PortalLoggedInAsUser.AnsokningarOchBidragEtikprövningsansökningar_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragButton_CSS(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragUtlysningarButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragAnsokningarButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragBidragButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragAnsökOmEtikprövning_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragEtikprövningsansökningar_Xpath(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickAnsökningarOchBidrag"})
 	public void ClickGranskning() {
 
 		//Klickar på alla knappar som finns på "Granskning" sidan
-		PortalLoggedInAsUser.GranskningButton_Xpath(driver).click();
-		PortalLoggedInAsUser.Granskning_Granskning_Xpath(driver).click();
-		PortalLoggedInAsUser.GranskningBetalningsinformation_Xpath(driver).click();
-		PortalLoggedInAsUser.GranskningArvoden_Xpath(driver).click();
+		PortalLoggedInAsUserGranskning.GranskningButton_CSS(driver).click();
+		PortalLoggedInAsUserGranskning.Granskning_Granskning_Xpath(driver).click();
+		PortalLoggedInAsUserGranskning.GranskningBetalningsinformation_Xpath(driver).click();
+		PortalLoggedInAsUserGranskning.GranskningArvoden_Xpath(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickGranskning"})
 	public void ClickOrganisationsUppgifter() {
 
 		//Klickar på alla knappar som finns på "ORGANISATIONSUPPGIFTER" SIDAN
-		PortalLoggedInAsUser.Organisationsuppifter_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationsuppifter_Signera_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationsuppifter_Rapportera_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_CSS(driver).click();
+		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Signera_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Rapportera_Xpath(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationsUppgifter"})
 	public void ClickOrganisationsKonto() {
 
 		//Klickar på alla knappar som finns på "ORGANISATIONSKONTO" SIDAN
-		PortalLoggedInAsUser.Organisationskonto_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_AnsökningarOchBidrag_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Nedladdning_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Struktur_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Användare_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Byt_Hemvist_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Föreslagen_Hemvist_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Rapporteringsöversikt_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Rapporteringsstruktur_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Signeringsöversikt_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Signeringsstruktur_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Organisationsutlysningar_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Organisationsansökningar_Xpath(driver).click();
-		PortalLoggedInAsUser.Organisationskonto_Utbetalningar_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_CSS(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_AnsökningarOchBidrag_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Nedladdning_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Byt_Hemvist_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Föreslagen_Hemvist_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsöversikt_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsstruktur_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsöversikt_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsstruktur_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsutlysningar_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsansökningar_Xpath(driver).click();
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Utbetalningar_Xpath(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationsKonto"})

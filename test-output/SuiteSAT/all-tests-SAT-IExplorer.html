@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>all-tests-SAT-IExplorer</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/25</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/20</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 29 11:27:02 CEST 2018</td>
+<td>Started on:</td><td>Thu Jul 05 15:47:40 CEST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37792 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26439 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,174 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace508760925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace508760925'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-</pre></div></td>
-<td>1</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsUser.f()'><b>f</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsUser@28975c28</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsInvalidUser.f()'><b>f</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsInvalidUser@5f16132a</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsValidUser.f()'><b>f</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsValidUser@36d585c</td></tr>
-<tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsUser@28975c28</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsInvalidUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsInvalidUser@5f16132a</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsValidUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
-<td></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsValidUser@36d585c</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -244,53 +76,43 @@ Caused by: java.net.ConnectException: Connection refused: connect
 </tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser()'><b>LoginAsAdminUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,246). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:20)
-Caused by: java.net.SocketException: Connection reset
-	at java.base/java.net.SocketInputStream.read(Unknown Source)
-	at java.base/java.net.SocketInputStream.read(Unknown Source)
-	at okio.Okio$2.read(Okio.java:139)
-	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:345)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:217)
-	at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:212)
-	at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:45827/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 01501d91-664c-41de-adf4-4cddea811f9a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 29 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1424439581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1424439581'><pre>org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:20)
+	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
+	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:26)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1917161212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1917161212'><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,246). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:45827/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 01501d91-664c-41de-adf4-4cddea811f9a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
+	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -316,37 +138,104 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.SocketException: Connection reset
-	at java.base/java.net.SocketInputStream.read(Unknown Source)
-	at java.base/java.net.SocketInputStream.read(Unknown Source)
-	at okio.Okio$2.read(Okio.java:139)
-	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:345)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:217)
-	at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:212)
-	at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 29 more
 </pre></div></td>
-<td>33</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811</td></tr>
+<td>3</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser()'><b>LoginAsNormalUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,247). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:2885/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
+	at testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:27)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace373973695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace373973695'><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,247). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:2885/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
+	at testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSAT.LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()'><b>CheckIfLogOutButtonIsPresentVerifyLoginSuccess</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsValidUser@c03cf28</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()'><b>CheckThatLogginInWithFalseInfoNotPossible</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsInvalidUser@55f616cf</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsInvalidUser.InputUserWithInvalidInfo()'><b>InputUserWithInvalidInfo</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td></td>
+<td>3</td>
+<td>testCasesSAT.LoginAsInvalidUser@55f616cf</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsValidUser.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td></td>
+<td>5</td>
+<td>testCasesSAT.LoginAsValidUser@c03cf28</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -356,62 +245,10 @@ Caused by: java.net.SocketException: Connection reset
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCasesSAT.LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()'><b>CheckIfLogOutButtonIsPresentVerifyLoginSuccess</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
-<td><div><pre>java.lang.Throwable: Method LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()[pri:0, instance:testCasesSAT.LoginAsValidUser@36d585c] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1056185446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1056185446'><pre>java.lang.Throwable: Method LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()[pri:0, instance:testCasesSAT.LoginAsValidUser@36d585c] depends on not successfully finished methods
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()'><b>CheckThatLogginInWithFalseInfoNotPossible</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
-<td><div><pre>java.lang.Throwable: Method LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()[pri:0, instance:testCasesSAT.LoginAsInvalidUser@5f16132a] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace426288284", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace426288284'><pre>java.lang.Throwable: Method LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()[pri:0, instance:testCasesSAT.LoginAsInvalidUser@5f16132a] depends on not successfully finished methods
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-<tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()'><b>ClickAnsökningarOchBidrag</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1895054149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1895054149'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1842881670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1842881670'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -435,9 +272,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickArbetslivButton()'><b>ClickArbetslivButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526062841", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1526062841'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1751753651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1751753651'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -461,9 +298,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()'><b>ClickBeredningsgrupperButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465909321", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace465909321'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace755759908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace755759908'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -487,9 +324,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()'><b>ClickFinansiärButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1964926542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1964926542'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944348744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace944348744'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -513,9 +350,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickFormulärButton()'><b>ClickFormulärButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1205419533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1205419533'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2068100669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2068100669'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -539,9 +376,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickGranskarkompetens()'><b>ClickGranskarkompetens</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace851480926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace851480926'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1673389762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1673389762'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -565,9 +402,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickGranskning()'><b>ClickGranskning</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace279781579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace279781579'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1510009630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1510009630'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -591,9 +428,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()'><b>ClickImmaterialrättButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1989332276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1989332276'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1280959582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1280959582'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -617,9 +454,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()'><b>ClickIntressentregisterButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1657125852", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1657125852'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1226298219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1226298219'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -643,9 +480,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()'><b>ClickMeriterOchUtmärkelserButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace869290854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace869290854'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1126112943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1126112943'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -669,9 +506,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()'><b>ClickMyProfileButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace981159997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace981159997'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1320869181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1320869181'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -695,9 +532,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()'><b>ClickOrganisationsKonto</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2080125222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2080125222'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace757332719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace757332719'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -721,9 +558,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()'><b>ClickOrganisationsUppgifter</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace740827140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace740827140'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace447486093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace447486093'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -747,9 +584,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()'><b>ClickPersonuppgifterButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace615853374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace615853374'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1252713736", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1252713736'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -773,9 +610,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()'><b>ClickPortaladministrationButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace405488475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace405488475'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace397309480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace397309480'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -799,9 +636,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickPublikationerButton()'><b>ClickPublikationerButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920446957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace920446957'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace665641137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace665641137'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -825,9 +662,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickStartButton()'><b>ClickStartButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1969347346", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1969347346'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace179233442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace179233442'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -851,9 +688,9 @@ Caused by: java.net.SocketException: Connection reset
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickUtbildningButton()'><b>ClickUtbildningButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1855734078", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1855734078'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2076627578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2076627578'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -876,376 +713,10 @@ Caused by: java.net.SocketException: Connection reset
 <td>0</td>
 <td>null</td></tr>
 <tr>
-<td title='testCasesSAT.LoginAsInvalidUser.InputUserWithInvalidInfo()'><b>InputUserWithInvalidInfo</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2028036437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2028036437'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-</pre></div></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsInvalidUser@5f16132a</td></tr>
-<tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser()'><b>LoginAsNormalUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace170106909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace170106909'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-</pre></div></td>
-<td>0</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsUser@28975c28</td></tr>
-<tr>
-<td title='testCasesSAT.LoginAsValidUser.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203472514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace203472514'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: driver.version: EndDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:443)
-	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
-	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:45117
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 31 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
-	... 51 more
-</pre></div></td>
-<td>0</td>
-<td>testCasesSAT.LoginAsValidUser@36d585c</td></tr>
-<tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.Logout()'><b>Logout</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace49969897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace49969897'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@f2ff811] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1702478809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1702478809'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -1269,9 +740,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.Logout()'><b>Logout</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1404834600", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1404834600'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@28975c28] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace103433239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace103433239'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)

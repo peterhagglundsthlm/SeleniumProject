@@ -38,22 +38,6 @@
           <include name="ClickGranskning"/>
         </methods>
       </class> <!-- testCasesSAT.ButtonCheckLoggedInAsUser -->
-      <class name="testCasesSAT.LoginAsInvalidUser">
-        <methods>
-          <include name="f"/>
-          <include name="InputUserWithInvalidInfo"/>
-          <include name="tearDown"/>
-          <include name="CheckThatLogginInWithFalseInfoNotPossible"/>
-        </methods>
-      </class> <!-- testCasesSAT.LoginAsInvalidUser -->
-      <class name="testCasesSAT.LoginAsValidUser">
-        <methods>
-          <include name="LoginAsUser"/>
-          <include name="f"/>
-          <include name="CheckIfLogOutButtonIsPresentVerifyLoginSuccess"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testCasesSAT.LoginAsValidUser -->
     </classes>
   </test> <!-- all-tests-SAT-IExplorer(failed) -->
 </suite> <!-- Failed suite [SuiteSAT] -->

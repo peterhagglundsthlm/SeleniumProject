@@ -16,7 +16,7 @@ public class LoginAsValidUser extends BeforeAfterTestBrowsers {
 
 	@Test 
 	public void LoginAsUser() {
-
+	
 		//LOGGAR IN SOM ADMIN MED GILTIGT INLOGGNING
 		DriverGetWebsite.OpenSatPortal(driver);
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
