@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Ett test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testCasesSAT.ImmaterialrättAddNewImmaterialRätt">
+        <methods>
+          <include name="Typ"/>
+          <include name="DatumFörBeviljande"/>
+          <include name="Id"/>
+          <include name="f"/>
+          <include name="ProduktKlassificering"/>
+          <include name="tearDown"/>
+          <include name="LäggTill"/>
+          <include name="LicensieradTillAnnan"/>
+          <include name="LoginAsUser"/>
+          <include name="ClickImmaterialrätt"/>
+          <include name="Spara"/>
+        </methods>
+      </class> <!-- testCasesSAT.ImmaterialrättAddNewImmaterialRätt -->
+    </classes>
+  </test> <!-- Ett test(failed) -->
+</suite> <!-- Failed suite [Ett testfall] -->

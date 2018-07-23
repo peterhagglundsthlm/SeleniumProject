@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SuiteSAT" verbose="1" parallel="none">
+
+	<test name="all-tests-SAT-IExplorer">
+		<parameter name="browser" value="IExplorer" />
+		<packages>
+			<package name="testCasesSAT" />
+		</packages>
+	</test>
+	
+</suite>
