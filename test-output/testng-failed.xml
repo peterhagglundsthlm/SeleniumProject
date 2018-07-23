@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Ett test(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testCasesSAT.AddEducationsINTEKLAR">
+      <class name="testCasesSAT.ImmaterialrättAddNewImmaterialRätt">
         <methods>
-          <include name="ClickUtbildning"/>
-          <include name="WriteAvhandlingensTitelEngelska"/>
-          <include name="EfternamnHandledare"/>
+          <include name="Typ"/>
+          <include name="DatumFörBeviljande"/>
+          <include name="Id"/>
+          <include name="f"/>
+          <include name="ProduktKlassificering"/>
+          <include name="tearDown"/>
+          <include name="LäggTill"/>
+          <include name="LicensieradTillAnnan"/>
           <include name="LoginAsUser"/>
-          <include name="WriteAvhandlingensTitelOrginalSpråk"/>
-          <include name="FörnamnHandledare"/>
-          <include name="SelectOrganization"/>
-          <include name="TypAvForskarUtbildningSelectSubjects"/>
-          <include name="TypAvForskarUtbildningAddLicentiatexamen"/>
-          <include name="AddForskarUtbildning"/>
-          <include name="SparaForskarutbildningKnapp"/>
-          <include name="ISSNISBNNummer"/>
-          <include name="Examensdatum"/>
-          <include name="ClickForskarUtbildning"/>
+          <include name="ClickImmaterialrätt"/>
+          <include name="Spara"/>
         </methods>
-      </class> <!-- testCasesSAT.AddEducationsINTEKLAR -->
+      </class> <!-- testCasesSAT.ImmaterialrättAddNewImmaterialRätt -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Ett test(failed) -->
+</suite> <!-- Failed suite [Ett testfall] -->

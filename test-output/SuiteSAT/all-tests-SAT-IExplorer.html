@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>all-tests-SAT-IExplorer</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/2/20</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/40</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 05 15:47:40 CEST 2018</td>
+<td>Started on:</td><td>Wed Jul 11 14:16:39 CEST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26439 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3687 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,61 +68,84 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser()'><b>LoginAsAdminUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,246). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
+<td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.f()'><b>f</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin<br>Parameters: IExplorer</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:45827/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 01501d91-664c-41de-adf4-4cddea811f9a
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
-	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:26)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1917161212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1917161212'><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,246). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1562764987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1562764987'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:45827/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 01501d91-664c-41de-adf4-4cddea811f9a
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
-	at testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser(ButtonCheckLoggedInAsAdmin.java:26)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
 	at org.testng.TestRunner.run(TestRunner.java:505)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -140,102 +163,60 @@ Session ID: 01501d91-664c-41de-adf4-4cddea811f9a
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>3</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63</td></tr>
-<tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser()'><b>LoginAsNormalUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,247). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:2885/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
-	at testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:27)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace373973695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace373973695'><pre>org.openqa.selenium.ElementClickInterceptedException: Element not clickable at point (1178,247). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot; style=&quot;z-index: 1040;&quot;&gt;&lt;/div&gt;
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
-System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:2885/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at driverAndCommands.LoginLogic.InputUntilUsernameAndPasswordIsFilled(LoginLogic.java:25)
-	at testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:27)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>3</td>
-<td>testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991</td></tr>
+<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCasesSAT.LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()'><b>CheckIfLogOutButtonIsPresentVerifyLoginSuccess</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td title='testCasesSAT.ButtonCheckLoggedInAsUser.f()'><b>f</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
 <td></td>
 <td>0</td>
-<td>testCasesSAT.LoginAsValidUser@c03cf28</td></tr>
+<td>testCasesSAT.ButtonCheckLoggedInAsUser@5552768b</td></tr>
 <tr>
-<td title='testCasesSAT.LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()'><b>CheckThatLogginInWithFalseInfoNotPossible</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.f()'><b>f</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
 <td></td>
 <td>0</td>
-<td>testCasesSAT.LoginAsInvalidUser@55f616cf</td></tr>
+<td>testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a</td></tr>
 <tr>
-<td title='testCasesSAT.LoginAsInvalidUser.InputUserWithInvalidInfo()'><b>InputUserWithInvalidInfo</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td title='testCasesSAT.LoginAsInvalidUser.f()'><b>f</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
 <td></td>
-<td>3</td>
-<td>testCasesSAT.LoginAsInvalidUser@55f616cf</td></tr>
+<td>0</td>
+<td>testCasesSAT.LoginAsInvalidUser@76f2bbc1</td></tr>
 <tr>
-<td title='testCasesSAT.LoginAsValidUser.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td title='testCasesSAT.LoginAsValidUser.f()'><b>f</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
 <td></td>
-<td>5</td>
-<td>testCasesSAT.LoginAsValidUser@c03cf28</td></tr>
+<td>0</td>
+<td>testCasesSAT.LoginAsValidUser@6f27a732</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsUser@5552768b</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsInvalidUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsInvalidUser@76f2bbc1</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsValidUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsValidUser@6f27a732</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -245,10 +226,88 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.AddForskarUtbildning()'><b>AddForskarUtbildning</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.AddForskarUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1502668485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1502668485'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.AddForskarUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()'><b>CheckIfLogOutButtonIsPresentVerifyLoginSuccess</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td><div><pre>java.lang.Throwable: Method LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()[pri:0, instance:testCasesSAT.LoginAsValidUser@6f27a732] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace820878444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace820878444'><pre>java.lang.Throwable: Method LoginAsValidUser.CheckIfLogOutButtonIsPresentVerifyLoginSuccess()[pri:0, instance:testCasesSAT.LoginAsValidUser@6f27a732] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()'><b>CheckThatLogginInWithFalseInfoNotPossible</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td><div><pre>java.lang.Throwable: Method LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()[pri:0, instance:testCasesSAT.LoginAsInvalidUser@76f2bbc1] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace52451302", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace52451302'><pre>java.lang.Throwable: Method LoginAsInvalidUser.CheckThatLogginInWithFalseInfoNotPossible()[pri:0, instance:testCasesSAT.LoginAsInvalidUser@76f2bbc1] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()'><b>ClickAnsökningarOchBidrag</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1842881670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1842881670'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2111882926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2111882926'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -272,9 +331,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickArbetslivButton()'><b>ClickArbetslivButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1751753651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1751753651'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace732597634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace732597634'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -298,9 +357,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()'><b>ClickBeredningsgrupperButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace755759908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace755759908'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1806378373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1806378373'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -324,9 +383,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()'><b>ClickFinansiärButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944348744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace944348744'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1629454900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1629454900'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -350,9 +409,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickFormulärButton()'><b>ClickFormulärButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2068100669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2068100669'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1682733268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1682733268'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -375,10 +434,36 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>0</td>
 <td>null</td></tr>
 <tr>
-<td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickGranskarkompetens()'><b>ClickGranskarkompetens</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1673389762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1673389762'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetens()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.ClickForskarUtbildning()'><b>ClickForskarUtbildning</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ClickForskarUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace338620258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace338620258'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ClickForskarUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()'><b>ClickGranskarkompetensIfVisible</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace49318987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace49318987'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -402,9 +487,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickGranskning()'><b>ClickGranskning</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1510009630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1510009630'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace215759534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215759534'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -428,9 +513,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()'><b>ClickImmaterialrättButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1280959582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1280959582'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace925803196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace925803196'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -454,9 +539,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()'><b>ClickIntressentregisterButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1226298219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1226298219'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace26357357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace26357357'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -480,9 +565,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()'><b>ClickMeriterOchUtmärkelserButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1126112943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1126112943'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1967617997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1967617997'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -506,9 +591,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()'><b>ClickMyProfileButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1320869181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1320869181'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1997357673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1997357673'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -532,9 +617,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()'><b>ClickOrganisationsKonto</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace757332719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace757332719'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace559050604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace559050604'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -558,9 +643,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()'><b>ClickOrganisationsUppgifter</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace447486093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace447486093'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace98351968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace98351968'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -584,9 +669,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()'><b>ClickPersonuppgifterButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1252713736", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1252713736'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1241938981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1241938981'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -610,9 +695,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()'><b>ClickPortaladministrationButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace397309480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace397309480'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2092885124", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2092885124'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -636,9 +721,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickPublikationerButton()'><b>ClickPublikationerButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace665641137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace665641137'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2031927175", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2031927175'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -662,9 +747,35 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickStartButton()'><b>ClickStartButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace179233442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace179233442'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace175595853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace175595853'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.ClickUtbildning()'><b>ClickUtbildning</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ClickUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1349025531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1349025531'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ClickUtbildning()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -688,9 +799,9 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.ClickUtbildningButton()'><b>ClickUtbildningButton</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2076627578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2076627578'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1004430079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1004430079'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -713,10 +824,564 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>0</td>
 <td>null</td></tr>
 <tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.EfternamnHandledare()'><b>EfternamnHandledare</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.EfternamnHandledare()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1000171161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1000171161'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.EfternamnHandledare()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.Examensdatum()'><b>Examensdatum</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.Examensdatum()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace290096578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace290096578'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.Examensdatum()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.FörnamnHandledare()'><b>FörnamnHandledare</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.FörnamnHandledare()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace745627268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace745627268'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.FörnamnHandledare()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.ISSNISBNNummer()'><b>ISSNISBNNummer</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ISSNISBNNummer()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1174881426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1174881426'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.ISSNISBNNummer()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsInvalidUser.InputUserWithInvalidInfo()'><b>InputUserWithInvalidInfo</b><br>Test class: testCasesSAT.LoginAsInvalidUser</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace453671855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace453671855'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsInvalidUser@76f2bbc1</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser()'><b>LoginAsAdminUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1556520190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1556520190'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be</td></tr>
+<tr>
+<td title='testCasesSAT.ButtonCheckLoggedInAsUser.LoginAsNormalUser()'><b>LoginAsNormalUser</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace194107588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace194107588'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSAT.ButtonCheckLoggedInAsUser@5552768b</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1006624255", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1006624255'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a</td></tr>
+<tr>
+<td title='testCasesSAT.LoginAsValidUser.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSAT.LoginAsValidUser</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace105321150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace105321150'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100%
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;172.17.159.241&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: driver.version: InternetExplorerDriver
+remote stacktrace: 
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:215)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:152)
+	at driverAndCommands.BeforeAfterTestBrowsers.f(BeforeAfterTestBrowsers.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSAT.LoginAsValidUser@6f27a732</td></tr>
+<tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsAdmin.Logout()'><b>Logout</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsAdmin</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1702478809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1702478809'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@11c9af63] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1653751526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1653751526'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsAdmin@3943a2be] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -740,9 +1405,165 @@ Session ID: b74960a1-a814-48a0-b6e1-1cb7480b04c8
 <td>null</td></tr>
 <tr>
 <td title='testCasesSAT.ButtonCheckLoggedInAsUser.Logout()'><b>Logout</b><br>Test class: testCasesSAT.ButtonCheckLoggedInAsUser</td>
-<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace103433239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace103433239'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@dd0c991] depends on not successfully finished methods
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace697460450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace697460450'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSAT.ButtonCheckLoggedInAsUser@5552768b] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.SelectOrganization()'><b>SelectOrganization</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.SelectOrganization()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace903268937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace903268937'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.SelectOrganization()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.SparaForskarutbildningKnapp()'><b>SparaForskarutbildningKnapp</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.SparaForskarutbildningKnapp()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace560549459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace560549459'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.SparaForskarutbildningKnapp()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningAddLicentiatexamen()'><b>TypAvForskarUtbildningAddLicentiatexamen</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningAddLicentiatexamen()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1193841543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193841543'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningAddLicentiatexamen()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningSelectSubjects()'><b>TypAvForskarUtbildningSelectSubjects</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningSelectSubjects()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace217470033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217470033'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.TypAvForskarUtbildningSelectSubjects()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelEngelska()'><b>WriteAvhandlingensTitelEngelska</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelEngelska()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace211031000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace211031000'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelEngelska()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSAT.ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelOrginalSpråk()'><b>WriteAvhandlingensTitelOrginalSpråk</b><br>Test class: testCasesSAT.ForskarUtbildningAddLicentiatexamen</td>
+<td><div><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelOrginalSpråk()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938405008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938405008'><pre>java.lang.Throwable: Method ForskarUtbildningAddLicentiatexamen.WriteAvhandlingensTitelOrginalSpråk()[pri:0, instance:testCasesSAT.ForskarUtbildningAddLicentiatexamen@41c2284a] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)

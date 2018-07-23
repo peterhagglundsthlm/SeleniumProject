@@ -7,8 +7,10 @@ import org.openqa.selenium.WebElement;
 public class SAT_Home_Page_Not_Logged_In {
 
 	private static WebElement element = null;
-
-	public static WebElement LoginButtonChrome(WebDriver driver){
+	
+	public static final String LoginButtonChrome_Xpath = "/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]"; {
+	}
+	public static WebElement LoginButtonChrome_Xpath(WebDriver driver){
 
 		element = driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]"));
 		return element;

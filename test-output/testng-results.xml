@@ -1,69 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-06T08:15:20Z" name="Default suite" finished-at="2018-07-06T08:15:39Z" duration-ms="19095">
+  <suite started-at="2018-07-23T07:24:17Z" name="Ett testfall" finished-at="2018-07-23T07:24:50Z" duration-ms="32940">
     <groups>
     </groups>
-    <test started-at="2018-07-06T08:15:20Z" name="Default test" finished-at="2018-07-06T08:15:39Z" duration-ms="19095">
-      <class name="testCasesSAT.AddEducationsINTEKLAR">
-        <test-method signature="LoginAsUser()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:20Z" name="LoginAsUser" finished-at="2018-07-06T08:15:33Z" duration-ms="12358" status="PASS">
+    <test started-at="2018-07-23T07:24:17Z" name="Ett test" finished-at="2018-07-23T07:24:50Z" duration-ms="32940">
+      <class name="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter">
+        <test-method is-config="true" signature="f(java.lang.String)[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:17Z" name="f" finished-at="2018-07-23T07:24:22Z" duration-ms="5492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method signature="LoginAsUser()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:22Z" name="LoginAsUser" finished-at="2018-07-23T07:24:44Z" duration-ms="21485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginAsUser -->
-        <test-method signature="ClickUtbildning()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:33Z" name="ClickUtbildning" finished-at="2018-07-06T08:15:34Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.LoginAsUser" duration-ms="771" status="PASS">
+        <test-method signature="ClickMeriterOchUtmärkelser()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:44Z" name="ClickMeriterOchUtmärkelser" finished-at="2018-07-23T07:24:47Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.LoginAsUser" duration-ms="3200" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickUtbildning -->
-        <test-method signature="ClickForskarUtbildning()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:34Z" name="ClickForskarUtbildning" finished-at="2018-07-06T08:15:34Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.ClickUtbildning" duration-ms="117" status="PASS">
+        </test-method> <!-- ClickMeriterOchUtmärkelser -->
+        <test-method signature="LäggTill()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:47Z" name="LäggTill" finished-at="2018-07-23T07:24:47Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.ClickMeriterOchUtmärkelser" duration-ms="119" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickForskarUtbildning -->
-        <test-method signature="AddForskarUtbildning()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:34Z" name="AddForskarUtbildning" finished-at="2018-07-06T08:15:34Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.ClickForskarUtbildning" duration-ms="78" status="PASS">
+        </test-method> <!-- LäggTill -->
+        <test-method signature="StartårAndSlutÅr()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:47Z" name="StartårAndSlutÅr" finished-at="2018-07-23T07:24:48Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.LäggTill" duration-ms="1248" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddForskarUtbildning -->
-        <test-method signature="SelectOrganization()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:34Z" name="SelectOrganization" finished-at="2018-07-06T08:15:37Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.AddForskarUtbildning" duration-ms="3482" status="PASS">
+        </test-method> <!-- StartårAndSlutÅr -->
+        <test-method signature="TypAvMerit()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:48Z" name="TypAvMerit" finished-at="2018-07-23T07:24:49Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.StartårAndSlutÅr" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectOrganization -->
-        <test-method signature="TypAvForskarUtbildningAddLicentiatexamen()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:37Z" name="TypAvForskarUtbildningAddLicentiatexamen" finished-at="2018-07-06T08:15:38Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.SelectOrganization" duration-ms="355" status="PASS">
+        </test-method> <!-- TypAvMerit -->
+        <test-method signature="Beskrivning()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:49Z" name="Beskrivning" finished-at="2018-07-23T07:24:49Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.TypAvMerit" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TypAvForskarUtbildningAddLicentiatexamen -->
-        <test-method signature="Examensdatum()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:38Z" name="Examensdatum" finished-at="2018-07-06T08:15:38Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.TypAvForskarUtbildningAddLicentiatexamen" duration-ms="472" status="PASS">
+        </test-method> <!-- Beskrivning -->
+        <test-method signature="Spara()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:49Z" name="Spara" finished-at="2018-07-23T07:24:49Z" depends-on-methods="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter.Beskrivning" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Examensdatum -->
-        <test-method signature="TypAvForskarUtbildningSelectSubjects()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:38Z" name="TypAvForskarUtbildningSelectSubjects" finished-at="2018-07-06T08:15:38Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.TypAvForskarUtbildningAddLicentiatexamen" duration-ms="438" status="PASS">
+        </test-method> <!-- Spara -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter@7c83dc97]" started-at="2018-07-23T07:24:49Z" name="tearDown" finished-at="2018-07-23T07:24:50Z" duration-ms="838" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TypAvForskarUtbildningSelectSubjects -->
-        <test-method signature="WriteAvhandlingensTitelOrginalSpråk()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:38Z" name="WriteAvhandlingensTitelOrginalSpråk" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.TypAvForskarUtbildningSelectSubjects" duration-ms="205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WriteAvhandlingensTitelOrginalSpråk -->
-        <test-method signature="WriteAvhandlingensTitelEngelska()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:39Z" name="WriteAvhandlingensTitelEngelska" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.WriteAvhandlingensTitelOrginalSpråk" duration-ms="216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WriteAvhandlingensTitelEngelska -->
-        <test-method signature="ISSNISBNNummer()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:39Z" name="ISSNISBNNummer" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.WriteAvhandlingensTitelEngelska" duration-ms="125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ISSNISBNNummer -->
-        <test-method signature="FörnamnHandledare()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:39Z" name="FörnamnHandledare" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.ISSNISBNNummer" duration-ms="94" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FörnamnHandledare -->
-        <test-method signature="EfternamnHandledare()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:39Z" name="EfternamnHandledare" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.FörnamnHandledare" duration-ms="137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EfternamnHandledare -->
-        <test-method signature="SparaForskarutbildningKnapp()[pri:0, instance:testCasesSAT.AddEducationsINTEKLAR@762ef0ea]" started-at="2018-07-06T08:15:39Z" name="SparaForskarutbildningKnapp" finished-at="2018-07-06T08:15:39Z" depends-on-methods="testCasesSAT.AddEducationsINTEKLAR.EfternamnHandledare" duration-ms="190" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SparaForskarutbildningKnapp -->
-      </class> <!-- testCasesSAT.AddEducationsINTEKLAR -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter -->
+    </test> <!-- Ett test -->
+  </suite> <!-- Ett testfall -->
 </testng-results>

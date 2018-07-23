@@ -13,13 +13,16 @@ import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
+	String TestCaseInfo = "Försöker logga in med felaktiga inloggningsuppgifter. Kontrollerar att felmeddelande visas";
 
 	@Test 
 	public void InputUserWithInvalidInfo() {
+		
+		System.out.println("Testfall = " + TestCaseInfo);
 
 		//FÖRSÖKER LOGGA IN MED OGILTIGA ANVÄNDARUPPGIFTER
 		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome_Xpath(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, "Ett falskt användarnamn", "Ett falskt lösenord");	
 	}
 

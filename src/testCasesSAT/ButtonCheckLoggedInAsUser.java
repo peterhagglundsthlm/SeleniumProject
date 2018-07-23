@@ -18,12 +18,16 @@ import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
+	String TestCaseInfo = "Loggar in som en organisationsanvändare och testar att alla synliga knappar är klickbara";
+
 	@Test 
 	public void LoginAsNormalUser() {
 
+		System.out.println("Testfall = " + TestCaseInfo);
+
 		//Loggar in som användare kkprisma@yahoo.com
 		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome_Xpath(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.kkprismayahooSATusername, UserCredentials.kkprismayahooSATpassword);
 		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Xpath);
 	}
@@ -33,7 +37,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
 		//KLICKAR PÅ START
 		PortalLoggedInAsUserMinProfil.MinProfil_Start_Xpath(driver).click();
-		
+
 
 	}
 
@@ -51,7 +55,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 		//KLICKAR PÅ ALLA RUBRIKER UNDER UTBILDNING
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Xpath(driver).click();
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning_Xpath(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOch_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå_CSS(driver).click();
 
 	}
 
@@ -113,12 +117,12 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickAnsökningarOchBidrag() {
 
 		//Klickar på alla knappar som finns på "Ansökningar och bidrag" sidan
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragButton_CSS(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragUtlysningarButton_Xpath(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragAnsokningarButton_Xpath(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragBidragButton_Xpath(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragAnsökOmEtikprövning_Xpath(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsokningarOchBidragEtikprövningsansökningar_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton_CSS(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragUtlysningarButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsokningarButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragBidragButton_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsökOmEtikprövning_Xpath(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragEtikprövningsansökningar_Xpath(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickAnsökningarOchBidrag"})

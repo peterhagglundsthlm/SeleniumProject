@@ -13,13 +13,16 @@ import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginAsValidUser extends BeforeAfterTestBrowsers {
 
+	String TestCaseInfo = "Testar att logga in med riktiga inloggningsuppgifter. Kontrollerar att inloggning har skett korrekt.";
 
 	@Test 
 	public void LoginAsUser() {
-	
+
+		System.out.println("Testfall = " + TestCaseInfo);
+
 		//LOGGAR IN SOM ADMIN MED GILTIGT INLOGGNING
 		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome_Xpath(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
 		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsAdmin.LoggaUt_Xpath);
 

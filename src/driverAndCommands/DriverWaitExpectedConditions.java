@@ -36,5 +36,12 @@ public class DriverWaitExpectedConditions {
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText(LinktextLocator)));
 		return null;
 	}
+	
+	public static WebElement WebDriverWaitForExpectedCssSelectorLocator(WebDriver driver, String LinktextLocator){
+
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LinktextLocator)));
+		return null;
+	}
 
 }

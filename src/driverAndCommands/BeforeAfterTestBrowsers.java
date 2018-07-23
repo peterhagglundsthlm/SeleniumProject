@@ -14,30 +14,32 @@ import org.testng.annotations.Parameters;
 public class BeforeAfterTestBrowsers {
 	public static WebDriver driver;
 
+	
+
 	@Parameters({"browser"})
 	@BeforeClass
 	public void f(String browser) {
-
+		
 		if (browser.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Selenium 3.12.0\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
-			System.setProperty("webdriver.gecko.driver","C:\\Geckodriver\\geckodriver-v0.21.0-win64\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\Selenium 3.12.0\\Geckodriver\\geckodriver-v0.21.0-win64\\geckodriver.exe");
 			driver = new FirefoxDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
 
 		if (browser.equalsIgnoreCase("IExplorer")) {
-			System.setProperty("webdriver.ie.driver","C:\\IEDriver\\IEDriverServer_Win32_3.13.0\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver","C:\\Selenium 3.12.0\\IEDriver\\IEDriverServer_Win32_3.13.0\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
 
 

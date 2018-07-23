@@ -63,9 +63,9 @@ public class PortalLoggedInAsUserMinProfil {
 	}
 
 	//MIN PROFIL - UTBILDNING - KNAPP FÖR ATT LÄGGA TILL FORSKARUTBILDNING - SÖK ORGANISATION
-	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation = "Search.autoCompleteTextBox"; {
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation_Name = "Search.autoCompleteTextBox"; {
 	}
-	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(WebDriver driver){
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation_Name(WebDriver driver){
 
 		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
 		return element;
@@ -84,25 +84,67 @@ public class PortalLoggedInAsUserMinProfil {
 	public static final String MinProfil_Utbildning_TypDropDownForskarUtbildning_ID = "Type"; {
 	}
 
-	////MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN - EXAMENSDATUM
-	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatexamenExamensdatum_NAME = "DateDoctorsDegree"; {
+	////MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN/DOKTORSEXAMEN - EXAMENSDATUM
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatum_NAME = "DateDoctorsDegree"; {
 	}
-	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatexamenExamensdatum_NAME(WebDriver driver) {
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatum_NAME(WebDriver driver) {
 
 		element = driver.findElement(By.name("DateDoctorsDegree"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - FORSKNINGSKOMPETENS MOSVARANDE DOKTORSEXAMEN- DATUM FÖR NÄR FORSKNINGSKOMPETENS UPPNÅTTS
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts_NAME = "CompetenceAchievedDate"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts_NAME(WebDriver driver) {
+
+		element = driver.findElement(By.name("CompetenceAchievedDate"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - FORSKNINGSKOMPETENS MOSVARANDE DOKTORSEXAMEN- BESKRVINING AV KOMPETENS - SVENSKA
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV_ID = "DescriptionCompetenceSV"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV_ID(WebDriver driver) {
+
+		element = driver.findElement(By.id("DescriptionCompetenceSV"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - FORSKNINGSKOMPETENS MOSVARANDE DOKTORSEXAMEN- BESKRVINING AV KOMPETENS - ENGELSKA
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN_ID = "DescriptionCompetenceEN"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN_ID(WebDriver driver) {
+
+		element = driver.findElement(By.id("DescriptionCompetenceEN"));
 		return element;
 	}
 
 	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING Ämne1 (DROPDOWN SELECT) 
 	public static final String MinProfil_Utbildning_Ämne1DropDownForskarUtbildning_ID = "SubjectId_select_0"; {
 	}
+	public static WebElement MinProfil_Utbildning_Ämne1DropDownForskarUtbildning_ID(WebDriver driver) {
+
+		element = driver.findElement(By.id("SubjectId_select_0"));
+		return element;
+	}
 
 	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING Ämne2 (DROPDOWN SELECT) 
 	public static final String MinProfil_Utbildning_Ämne2DropDownForskarUtbildning_ID = "SubjectId_select_1"; {
 	}
+	public static WebElement MinProfil_Utbildning_Ämne2DropDownForskarUtbildning_ID(WebDriver driver) {
+
+		element = driver.findElement(By.id("SubjectId_select_1"));
+		return element;
+	}
 
 	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING Ämne3 (DROPDOWN SELECT) 
 	public static final String MinProfil_Utbildning_Ämne3DropDownForskarUtbildning_ID = "SubjectId_select_2"; {
+	}
+	public static WebElement MinProfil_Utbildning_Ämne3DropDownForskarUtbildning_ID(WebDriver driver) {
+
+		element = driver.findElement(By.id("SubjectId_select_2"));
+		return element;
 	}
 
 	////MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - AVHANDLINGENS TITEL (ORGINALSPRÅK)
@@ -161,11 +203,101 @@ public class PortalLoggedInAsUserMinProfil {
 
 
 	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ	
-	public static final String MinProfil_Utbildning_UtbildningPåGrundOch_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/ul/li[2]/a"; {
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå_CSS = "#mainContentBody > div > div > aside > section:nth-child(1) > div > div > ul > li.active.menuItem-educationalhistory > div > ul > li:nth-child(2) > a"; {
 	}
-	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOch_Xpath(WebDriver driver){
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå_CSS(WebDriver driver){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/ul/li[2]/a"));
+		element = driver.findElement(By.cssSelector("#mainContentBody > div > div > aside > section:nth-child(1) > div > div > ul > li.active.menuItem-educationalhistory > div > ul > li:nth-child(2) > a"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - KNAPP FÖR ATT LÄGGA TILL LÄGG TILL
+	public static final String MinProfil_LäggTillUtbildning_UtbildningPåGrundOchAvanceradNivå_CSS = "#basicEducationManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillUtbildningPåGrundOchAvanceradNivå_CSS(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#basicEducationManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - ÅR FÖR EXAMEN
+	public static final String MinProfil_LäggTillUtbildning_UtbildningPåGrundOchAvanceradNivåÅrFörExamen_ID = "YearBasicDegree"; {
+	}
+	public static WebElement MinProfil_LäggTillUtbildning_UtbildningPåGrundOchAvanceradNivåÅrFörExamen_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("YearBasicDegree"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - EXAMENSINRIKTNING - ÄMNE1 (DROPDOWN SELECT) 
+	public static final String MinProfil_LäggTillUtbildning_Ämne1UtbildningPåGrundOchAvanceradNivå_ID = "BasicTrainingId_select_0"; {
+	}
+	public static WebElement MinProfil_LäggTillUtbildning_Ämne1UtbildningPåGrundOchAvanceradNivå_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("BasicTrainingId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - EXAMENSINRIKTNING - ÄMNE 2 (DROPDOWN SELECT) 
+	public static final String MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå_ID = "BasicTrainingId_select_1"; {
+	}
+	public static WebElement MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("BasicTrainingId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - EXAMENSINRIKTNING - ÄMNE 3 (DROPDOWN SELECT) 
+	public static final String MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå_ID = "BasicTrainingId_select_2"; {
+	}
+	public static WebElement MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("BasicTrainingId_select_2"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - EXAMEN
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåExamen_ID = "BasicEducationDegree"; {
+	}
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåExamen_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("BasicEducationDegree"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - SPECIALISTKOMPETENS
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSpecialistkompetens_ID = "SpecialistTrainingId"; {
+	}
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSpecialistkompetens_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("SpecialistTrainingId"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - SPECIALISTKOMPETENS ÅR
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSpecialistkompetensÅR_ID = "SpecialistTrainingYear"; {
+	}
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSpecialistkompetensÅR_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("SpecialistTrainingYear"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ - OMRÅDE/BESKRIVNING
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning_NAME = "SpecialistTrainingDescription"; {
+	}
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("SpecialistTrainingDescription"));
+		return element;
+	}
+
+	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ -SPARAKNAPP
+	public static final String MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSparaKnapp_ID = "Submitter"; {
+	}
+	public static WebElement MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSparaKnapp_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
 		return element;
 	}
 
@@ -188,6 +320,114 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - KNAPP LÄGG TILL ANSTÄLLNING
+	public static final String MinProfil_Arbetsliv_Anställningar_LäggTill_CSS = "#employmentManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_LäggTill_CSS(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#employmentManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - SÖK ARBETSGIVARE
+	public static final String MinProfil_Arbetsliv_Anställningar_SökArbetsgivare_NAME = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_SökArbetsgivare_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - SPARA SÖKT ARBETSGIVARE
+	public static final String MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare_xpath = "//button[contains(text(), 'Spara val')]"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare_xpath (WebDriver driver){
+
+		element = driver.findElement(By.xpath("//button[contains(text(), 'Spara val')]"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNING DROPDOWN
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningDropDown_ID = "Position"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningDropDown_ID (WebDriver driver){
+
+		element = driver.findElement(By.id("Position"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNINGSFORM DROPDOWN
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningsFormDropDown_ID = "FormOfEmployment"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningsFormDropDown_ID (WebDriver driver){
+
+		element = driver.findElement(By.id("FormOfEmployment"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - DEL AV FORSKNING I ANSTÄLLNINGEN BASERAD PÅ HELTID (%)*
+	public static final String MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid_ID = "PartOfResearchInEmployment"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("PartOfResearchInEmployment"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNINGENS BÖRJAN (YEAR)
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear_NAME = "StartDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("StartDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNINGENS BÖRJAN (MONTH)
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningensBörjanMonth_NAME = "StartDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningensBörjanMonth_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("StartDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNINGENS SLUT (YEAR)
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningensSlutYear_NAME = "EndDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningensSlutYear_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("EndDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ANSTÄLLNINGENS SLUT (MONTH)
+	public static final String MinProfil_Arbetsliv_Anställningar_AnställningensSlutMonth_NAME = "EndDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_AnställningensSlutMonth_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("EndDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - ÖVRIG INFORMATION
+	public static final String MinProfil_Arbetsliv_Anställningar_ÖvrigInformation_ID = "OtherInformation"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_ÖvrigInformation_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("OtherInformation"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - SPARA ANSTÄLLNING
+	public static final String MinProfil_Arbetsliv_Anställningar_SparaAnställning_ID = "Submitter"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_Anställningar_SparaAnställning_ID(WebDriver driver){
+
+		element = driver.findElement(By.name("Submitter"));
+		return element;
+	}
+
 	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser
 	public static final String MinProfil_Arbetsliv_Postdoktorvistelser_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[2]/a"; {
 	}
@@ -196,6 +436,106 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[2]/a"));
 		return element;
 	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - LÄGG TILL KNAPP
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserLäggTill_CSS = "#postDoctorialManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserLäggTill_CSS(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#postDoctorialManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - SÖK ORGANISATION
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation_NAME = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation_NAME(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - SPARA SÖKt ORGANISATION
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation_Tagname = "Button"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation_Tagname(WebDriver driver){
+
+		element = driver.findElement(By.tagName("Button"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - ÄMNE 1 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserÄmne1_ID = "SubjectId_select_0"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserÄmne_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("SubjectId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - ÄMNE 2 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserÄmne2_ID = "SubjectId_select_1"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserÄmne2_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("SubjectId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - ÄMNE 3 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserÄmne3_ID = "SubjectId_select_2"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserÄmne3_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("SubjectId_select_2"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - PERIODSTART ÅR
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserPeriodStartYear_Name = "PeriodStartDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserPeriodStartYear_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("PeriodStartDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - PERIODSLUT ÅR
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserPeriodEndYear_Name = "PeriodStopDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserPeriodEndYear_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("PeriodStopDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - PERIODSTART MÅNAD
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserPeriodStartMonth_Name = "PeriodStartDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserPeriodStartMonth_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("PeriodStartDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - PERIODSLUT MÅNAD
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserPeriodEndMonth_Name = "PeriodStopDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserPeriodEndMonth_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("PeriodStopDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - Postdoktorvistelser - SPARA Postdoktorvistelser
+	public static final String MinProfil_Arbetsliv_PostdoktorvistelserSpara_ID = "Submitter"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_PostdoktorvistelserSpara_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
 	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN
 	public static final String MinProfil_Arbetsliv_Forskarutbyten_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[3]/a"; {
 	}
@@ -204,12 +544,166 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[3]/a"));
 		return element;
 	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - LÄGG TILL KNAPP
+	public static final String MinProfil_Arbetsliv_ForskarutbytenLäggTill_CSS = "#ResearchExchangeManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytenLäggTill_CSS(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#ResearchExchangeManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - SÖK ORGANISATION
+	public static final String MinProfil_Arbetsliv_ForskarutbytenSökOrganisation_Name = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytenSökOrganisation_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - SPARA SÖKT ORGANISATION
+	public static final String MinProfil_Arbetsliv_ForskarutbytenSparaSöktOrganisation_Tagname = "Button"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytenSparaSöktOrganisation_Tagname(WebDriver driver){
+
+		element = driver.findElement(By.tagName("Button"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - ÄMNE 1 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbyteÄmne1_ID = "ScbTableId_select_0"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbyteÄmne1_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("ScbTableId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - ÄMNE 2 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbyteÄmne2_ID = "ScbTableId_select_1"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbyteÄmne2_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("ScbTableId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - ÄMNE 3 (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbyteÄmne3_ID = "ScbTableId_select_2"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbyteÄmne3_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("ScbTableId_select_2"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - TYP (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbyteTyp_ID = "Type"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbyteTyp_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("Type"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - PERIODSTART (YEAR) (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbytenPeriodStartYear_Name = "StartDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytePeriodStartYear_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("StartDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - PERIODSTART (MONTH) (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbytenPeriodStartMonth_Name = "StartDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytePeriodStartMonth_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("StartDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - PERIODSLUT (YEAR) (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbytenPeriodSlutYear_Name = "StopDate.yearPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytenPeriodSlutYear_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("StopDate.yearPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - PERIODSLUT (MONTH) (DROPDOWN)
+	public static final String MinProfil_Arbetsliv_ForskarutbytenPeriodSlutMonth_Name = "StopDate.monthPicker"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytePeriodSlutMonth_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("StopDate.monthPicker"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - FORSKARUTBYTEN - SPARA FORSKARUTBYTE
+	public static final String MinProfil_Arbetsliv_ForskarutbytenSpara_ID = "Submitter"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_ForskarutbytenSpara_ID(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
 	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN
 	public static final String MinProfil_Arbetsliv_UppehållIForskningen_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[4]/a"; {
 	}
 	public static WebElement MinProfil_Arbetsliv_UppehållIForskningen_Xpath(WebDriver driver){
 
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/ul/li[4]/a"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN - LÄGG TILL KNAPP
+	public static final String MinProfil_Arbetsliv_UppehållIForskningenLäggTill_Css = "#InterruptionInResearchManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_UppehållIForskningenLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#InterruptionInResearchManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN - STARTDATUM
+	public static final String MinProfil_Arbetsliv_UppehållIForskningenStartDatum_Name = "StartDate"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_UppehållIForskningenStartDatum_Name (WebDriver driver){
+
+		element = driver.findElement(By.name("StartDate"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN - SLUTDATUM
+	public static final String MinProfil_Arbetsliv_UppehållIForskningenSlutDatum_Name = "EndDate"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_UppehållIForskningenSlutDatum_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("EndDate"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN - SLUTDATUM
+	public static final String MinProfil_Arbetsliv_UppehållIForskningenBeskrivning_Id = "Description"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_UppehållIForskningenBeskrivning_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Description"));
+		return element;
+	}
+
+	//MIN PROFIL - ARBETSLIV - UPPEHÅLL I FORSKNINGEN - SPARA
+	public static final String MinProfil_Arbetsliv_UppehållIForskningenSpara_Id = "Submitter"; {
+	}
+	public static WebElement MinProfil_Arbetsliv_UppehållIForskningenSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
 		return element;
 	}
 
@@ -231,6 +725,258 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
+	//MIN PROFIL - PUBLIKATIONER - LÄGG TILL
+	public static final String MinProfil_Publikationer_LäggTill_Css = "#PublicationManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_Publikationer_LäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#PublicationManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - PUBLIKATIONSTYP
+	public static final String MinProfil_Publikationer_Publikationstyp_Id = "PublicationType"; {
+	}
+	public static WebElement MinProfil_Publikationer_Publikationstyp_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PublicationType"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FACKGRANSKADE (DROPDOWN) - Bidrag till bok, Bok, Konferensbidrag osv
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown_Id = "PublicationFormPeerReviewed"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PublicationFormPeerReviewed"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION -  INTE FACKGRANSKADE (DROPDOWN) - Bidrag till bok, Bok, Konferensbidrag osv
+	public static final String MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown_Id = "PublicationFormNotPeerReviewed"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PublicationFormNotPeerReviewed"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - TITEL
+	public static final String MinProfil_Publikationer_VetenskapligPublikationTitel_Id = "Title"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationTitel_Id (WebDriver driver){
+
+		element = driver.findElement(By.id("Title"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRFATTARE-KNAPP
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp_Id = "btnAuthorAdd"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp_Id (WebDriver driver){
+
+		element = driver.findElement(By.id("btnAuthorAdd"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRFATTARE-FÖRNAMN
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn_Id = "Authors_0__FirstName"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Authors_0__FirstName"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRFATTARE-EFTERNAMN
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn_Id = "Authors_0__LastName"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Authors_0__LastName"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - NAMN PÅ TIDSKRIFT
+	public static final String MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift_Id = "JournalName"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("JournalName"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - VOLYM
+	public static final String MinProfil_Publikationer_VetenskapligPublikationVolym_Id = "Volume"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationVolym_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Volume"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - UTFÄRDANDENUMMER
+	public static final String MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer_Id = "IssueNumber"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("IssueNumber"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - REDAKTÖR-KNAPP
+	public static final String MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp_Id = "btnEditorAdd"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("btnEditorAdd"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - REDAKTÖR-NAMN
+	public static final String MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn_Id = "Editors_0__Name"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Editors_0__Name"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRLAG
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörlag_Id = "PublishingHouse"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörlag_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PublishingHouse"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRLAGSPLATS
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörlagsplats_Id = "PublishingPlace"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörlagsplats_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PublishingPlace"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FÖRSTA SIDNUMMER
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer_Id = "FirstPageNumber"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("FirstPageNumber"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - SISTA SIDNUMMER
+	public static final String MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer_Id = "LastPageNumber"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("LastPageNumber"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - ISBN
+	public static final String MinProfil_Publikationer_VetenskapligPublikationISBN_Id = "Isbn"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationISBN_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Isbn"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - DOI
+	public static final String MinProfil_Publikationer_VetenskapligPublikationDOI_Id = "Doi"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationDOI_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Doi"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - UTGIVARE-STATUS(DROPDOWN)
+	public static final String MinProfil_Publikationer_VetenskapligPublikationStatus_Id = "MagazineStatus"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationStatus_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("MagazineStatus"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - KÄLLA FÖR PUBLIKATION (DROPDOWN)
+	public static final String MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation_Id = "SourceImportedDocument"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("SourceImportedDocument"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - KÄLLA ID
+	public static final String MinProfil_Publikationer_VetenskapligPublikationKällaID_Id = "Source"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationKällaID_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Source"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - VAR TEXTEN PUBLICERAD I OPEN ACCESS (DROPDOWN)
+	public static final String MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown_Id = "OpenAccessStatus"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("OpenAccessStatus"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - LÄNK/EXTERN LÄNK FÖR PUBLICERING
+	public static final String MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering_Id = "LinkExternal"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("LinkExternal"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - FORM AV OA (DROPDOWN)
+	public static final String MinProfil_Publikationer_VetenskapligPublikationFormAvOA_Id = "OAForm"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationFormAvOA_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("OAForm"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - DOKUMENTVERSION (DROPDOWN)
+	public static final String MinProfil_Publikationer_VetenskapligPublikationDokumentversion_Id = "DocumentVersion"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationDokumentversion_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("DocumentVersion"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - SAMMANFATTNING
+	public static final String MinProfil_Publikationer_VetenskapligPublikationSammanfattning_Id = "Abstract"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationSammanfattning_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Abstract"));
+		return element;
+	}
+
+	//MIN PROFIL - PUBLIKATIONER - VETENSKAPLIG PUBLIKATION - SPARA KNAPP
+	public static final String MinProfil_Publikationer_VetenskapligPublikationSpara_Id = "Submitter"; {
+	}
+	public static WebElement MinProfil_Publikationer_VetenskapligPublikationSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
 	//MIN PROFIL - MERITER OCH UTMÄRKELSER
 	public static final String MinProfil_MeriterOchUtmärkelser_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a"; {
 	}
@@ -249,6 +995,69 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - LÄGG TILL KNAPP
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturLäggTill_Css = "#associateProfessorManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#associateProfessorManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - SÖK ORGANISATION
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturSökOrganisation_Name = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturSökOrganisation_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - SPARA SÖKT ORGANISATION
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturSparaSöktOrganisation_Tagname = "Button"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturSparaSöktOrganisation_Tagname(WebDriver driver){
+
+		element = driver.findElement(By.tagName("Button"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - ÄMNE1
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturÄmne1_Id = "SubjectId_select_0"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturÄmne1_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("SubjectId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - ÄMNE2
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturÄmne2_Id = "SubjectId_select_1"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturÄmne2_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("SubjectId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - ÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturÅr_Id = "Year"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturÅr_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Year"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - DOCENTUR - SPARA
+	public static final String MinProfil_MeriterOchUtmärkelser_DocenturSpara_Id = "Submitter"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_DocenturSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
 	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER
 	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersoner_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[2]/a"; {
 	}
@@ -258,7 +1067,107 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
-	//MIN PROFIL - MERITER OCH UTMÄRKELSER - Bidrag Erhållna I Konkurrens
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - LÄGG TILL ENSKILD PERSON KNAPP
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerLäggTillEnskildPersonKnapp_Css = "#supervisedPersonManagementSectionId > div.row-fluid.button-wrapper > div > a:nth-child(1)"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerLäggTillEnskildPersonKnapp_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#supervisedPersonManagementSectionId > div.row-fluid.button-wrapper > div > a:nth-child(1)"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SÖK LÄROSÄTE HANDLEDARE
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSökOrganisationHandledare_Name = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSökOrganisationHandledare_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SPARA SÖKT LÄROSÄTE HANDLEDARE
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaSökOrganisationHandledare_Tagname = "Button"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaSökOrganisationHandledare_Tagname(WebDriver driver){
+
+		element = driver.findElement(By.tagName("Button"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SÖK LÄROSÄTE STUDENT/DOKTORAND/POSTDOK
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSökOrganisationStudent_Name = "Search.autoCompleteTextBox"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSökOrganisationStudent_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("Search.autoCompleteTextBox"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SPARA SÖKT LÄROSÄTE STUDENT
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaSökOrganisationStudent_Tagname = "Button"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaSökOrganisationStudent_Tagname(WebDriver driver){
+
+		element = driver.findElement(By.tagName("Button"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - FÖRNAMN
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn_Id = "FirstName"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("FirstName"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - FÖRNAMN
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn_Id = "LastName"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("LastName"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SLUTÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSlutår_Id = "SupervisionEndYear"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSlutår_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("SupervisionEndYear"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - TYP AV HANDLEDDA PERSONER
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerTypAvHandleddaPerson_Id = "TypeId"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerTypAvHandleddaPerson_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("TypeId"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - ROLL
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerRoll_Id = "RoleId"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerRoll_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("RoleId"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - HANDLEDDA PERSONER - SPARA ENSKILD PERSON
+	public static final String MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaEnskildPerson_Id = "Submitter"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaEnskildPerson_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS
 	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[3]/a"; {
 	}
 	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens_XpathXpath(WebDriver driver){
@@ -266,6 +1175,118 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[3]/a"));
 		return element;
 	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - LÄGG TILL
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensLäggTill_Css = "#ResearchGrantsAwardedInCompetitionManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#ResearchGrantsAwardedInCompetitionManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - FINANSIÄR DROPDOWN 1
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensFinansiärDropDown1_Name = "FunderId_select_0"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensFinansiärDropDown1_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("FunderId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - FINANSIÄR DROPDOWN 2
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensFinansiärDropDown2_Name = "FunderId_select_1"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensFinansiärDropDown2_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("FunderId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - PROJEKTLEDARE
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensProjektledare_Id = "Applicant"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensProjektledare_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Applicant"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - LAND
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensLand_Id = "OtherCountry"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensLand_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("OtherCountry"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - PROJEKTTITEL
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensProjekttitel_Id = "ProjectTitle"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensProjekttitel_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("ProjectTitle"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - DNR
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensDnr_Id = "DiaryNumber"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensDnr_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("DiaryNumber"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - STARTÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensStartår_Id = "PeriodStartYear"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensStartår_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PeriodStartYear"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - SLUTÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensSlutår_Id = "PeriodEndYear"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensSlutår_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("PeriodEndYear"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - DIN ROLL
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensDinRoll_Id = "RoleId"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensDinRoll_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("RoleId"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - TOTALT BELOPP (KR)
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensTotaltBeloppKr_Id = "Amount"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensTotaltBeloppKr_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Amount"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - BIDRAG ERHÅLLNA I KONKURRENS - SPARA
+	public static final String MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensSpara_Id = "Create"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrensSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Create"));
+		return element;
+	}
+
+
+
+
 	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER
 	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelser_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[4]/a"; {
 	}
@@ -274,6 +1295,73 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[4]/a"));
 		return element;
 	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - LÄGG TILL
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserLäggTill_Css= "#AwardAndDistinctionManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#AwardAndDistinctionManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - ÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserÅr_Id= "YearOfAward"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserÅr_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("YearOfAward"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - LAND
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserLand_Id= "selectedCountryDropDown"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserLand_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("selectedCountryDropDown"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - NAMN PÅ PRISET/UTMÄRKELSEN
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserNamnPåPriset_Id= "Award"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserNamnPåPriset_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Award"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - UTFÄRDARE
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserUtfärdare_Id= "Issuer"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserUtfärdare_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Issuer"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - BESKRIVNING
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserBeskrivning_Id= "Description"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserBeskrivning_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Description"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - PRISER OCH UTMÄRKELSER - SPARA
+	public static final String MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserSpara_Id= "Submitter"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelserSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}
+
+
+
+
 	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER
 	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriter_Xpath = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/ul/li[5]/a"; {
 	}
@@ -283,6 +1371,63 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - LÄGG TILL
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterLäggTill_Css = "#RelevantAndOtherMeritsManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#RelevantAndOtherMeritsManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - STARTÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterStartår_Id = "StartYear"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterStartår_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("StartYear"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - SLUTÅR
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår_Id = "EndYear"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("EndYear"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - TYP AV MERIT
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit_Name = "OtherMerits"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("OtherMerits"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - BESKRIVNING
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning_Id = "RelevantMerits"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning_Id(WebDriver driver){
+
+		element = driver.findElement(By.name("RelevantMerits"));
+		return element;
+	}
+
+	//MIN PROFIL - MERITER OCH UTMÄRKELSER - ÖVRIGA MERITER - SPARA
+	public static final String MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSpara_Id = "Submitter"; {
+	}
+	public static WebElement MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSpara_Id(WebDriver driver){
+
+		element = driver.findElement(By.name("Submitter"));
+		return element;
+	}
+
+
+
+
 	//MIN PROFIL - IMMATERIALRÄTT
 	public static final String MinProfil_Immaterialrätt = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/a"; {
 	}
@@ -291,6 +1436,7 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/a"));
 		return element;
 	}
+
 	//MIN PROFIL - IMMATERIALRÄTT - IMMATERIALRÄTT
 	public static final String MinProfil_Immaterialrätt_Immaterialrätt = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/ul/li/a"; {
 	}
@@ -299,6 +1445,94 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/ul/li/a"));
 		return element;
 	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - LÄGG TILL
+	public static final String MinProfil_ImmaterialrättLäggTill_Css = "#patentManagementSectionId > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättLäggTill_Css(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#patentManagementSectionId > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - TYP
+	public static final String MinProfil_ImmaterialrättTyp_Id = "Type"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättTyp_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("Type"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - ID
+	public static final String MinProfil_ImmaterialrättId_Id = "IPNumber"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättId_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("IPNumber"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - DATUM FÖR BEVILJANDE
+	public static final String MinProfil_ImmaterialrättDatumFörBeviljande_Name = "DateApproved"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättDatumFörBeviljande_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("DateApproved"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - PRODUKTKLASSIFICERING 1
+	public static final String MinProfil_ImmaterialrättProduktKlassificering1_Name = "ProductClassificationId_select_0"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättProduktKlassificering1_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("ProductClassificationId_select_0"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - PRODUKTKLASSIFICERING 2
+	public static final String MinProfil_ImmaterialrättProduktKlassificering2_Name = "ProductClassificationId_select_1"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättProduktKlassificering2_Name(WebDriver driver){
+
+		element = driver.findElement(By.name("ProductClassificationId_select_1"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - LICENSIERAD TILL ANNAN
+	public static final String MinProfil_ImmaterialrättLicensieradTillAnnan_Id = "LicensedToOtherPart"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättLicensieradTillAnnan_Id(WebDriver driver){
+
+		element = driver.findElement(By.id("LicensedToOtherPart"));
+		return element;
+	}
+	
+	//MIN PROFIL - IMMATERIALRÄTT - LICENSIERAD TILL ANNAN DROPDOWN
+		public static final String MinProfil_ImmaterialrättLicensieradTillAnnanDropwDown_Id = "LicensedToOtherTypeId"; {
+		}
+		public static WebElement MinProfil_ImmaterialrättLicensieradTillAnnanDropwDown_Id(WebDriver driver){
+
+			element = driver.findElement(By.id("LicensedToOtherTypeId"));
+			return element;
+		}
+
+		//MIN PROFIL - IMMATERIALRÄTT - SPARA
+				public static final String MinProfil_ImmaterialrättSpara_Id = "Submitter"; {
+				}
+				public static WebElement MinProfil_ImmaterialrättSpara_Id(WebDriver driver){
+
+					element = driver.findElement(By.id("Submitter"));
+					return element;
+				}
+
+
+
+
+
+
+
 
 	//MIN PROFIL - GRANSKARKOMPETENS
 	public static final String MinProfil_Granskarkompetens = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[8]/div/a"; {
