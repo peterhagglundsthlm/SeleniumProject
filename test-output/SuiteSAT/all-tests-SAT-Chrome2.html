@@ -1,0 +1,734 @@
+<html>
+<head>
+<title>TestNG:  all-tests-SAT-Chrome2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>all-tests-SAT-Chrome2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/32</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 25 14:59:29 CEST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6778 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.tearDown()'><b>tearDown</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.NullPointerException
+	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
+	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:65)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace469097448", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace469097448'><pre>java.lang.NullPointerException
+	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
+	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.tearDown()'><b>tearDown</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.LoginAsNormalUser()'><b>LoginAsNormalUser</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.NullPointerException
+	at driverAndCommands.DriverGetWebsite.OpenSatPortal(DriverGetWebsite.java:11)
+	at testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:29)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace96921787", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace96921787'><pre>java.lang.NullPointerException
+	at driverAndCommands.DriverGetWebsite.OpenSatPortal(DriverGetWebsite.java:11)
+	at testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.LoginAsNormalUser(ButtonCheckLoggedInAsUser.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.LoginAsAdminUser()'><b>LoginAsAdminUser</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td></td>
+<td>3</td>
+<td>testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()'><b>ClickAnsökningarOchBidrag</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1408452762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1408452762'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickAnsökningarOchBidrag()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickArbetslivButton()'><b>ClickArbetslivButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1638370996", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1638370996'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickArbetslivButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()'><b>ClickBeredningsgrupperButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace68987874", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace68987874'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickBeredningsgrupperButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()'><b>ClickFinansiärButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace583895583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace583895583'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFinansiärButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickFormulärButton()'><b>ClickFormulärButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace568751349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace568751349'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickFormulärButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()'><b>ClickGranskarkompetensIfVisible</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace54165478", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace54165478'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskarkompetensIfVisible()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickGranskning()'><b>ClickGranskning</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace556508033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace556508033'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickGranskning()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()'><b>ClickImmaterialrättButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace559624606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace559624606'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickImmaterialrättButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()'><b>ClickIntressentregisterButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace703273962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace703273962'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickIntressentregisterButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()'><b>ClickMeriterOchUtmärkelserButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1974867646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1974867646'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickMeriterOchUtmärkelserButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickMyProfileButton()'><b>ClickMyProfileButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.NullPointerException
+	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
+	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:65)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace579465851", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace579465851'><pre>java.lang.NullPointerException
+	at driverAndCommands.EndDriver.DriverQuit(EndDriver.java:10)
+	at driverAndCommands.BeforeAfterTestBrowsers.tearDown(BeforeAfterTestBrowsers.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()'><b>ClickOrganisationsKonto</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1573939925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1573939925'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsKonto()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()'><b>ClickOrganisationsUppgifter</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace555564975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace555564975'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickOrganisationsUppgifter()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()'><b>ClickPersonuppgifterButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1709774836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1709774836'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPersonuppgifterButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()'><b>ClickPortaladministrationButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace810590958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace810590958'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.ClickPortaladministrationButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickPublikationerButton()'><b>ClickPublikationerButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace133797430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace133797430'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickPublikationerButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickStartButton()'><b>ClickStartButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace881413268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace881413268'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickStartButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.ClickUtbildningButton()'><b>ClickUtbildningButton</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1591926570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1591926570'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.ClickUtbildningButton()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärEPN()'><b>FinansiärEPN</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärEPN()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace84858081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace84858081'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärEPN()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärFormas()'><b>FinansiärFormas</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärFormas()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace294553713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace294553713'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärFormas()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärForte()'><b>FinansiärForte</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärForte()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1664375282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1664375282'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärForte()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärKarolinskaInstitutet()'><b>FinansiärKarolinskaInstitutet</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärKarolinskaInstitutet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace441917718", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace441917718'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärKarolinskaInstitutet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärSkolfi()'><b>FinansiärSkolfi</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärSkolfi()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652792005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace652792005'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärSkolfi()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FinansiärVetenskapsrådet()'><b>FinansiärVetenskapsrådet</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärVetenskapsrådet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace840068145", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace840068145'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FinansiärVetenskapsrådet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärEPN()'><b>FormulärEPN</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärEPN()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790592053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1790592053'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärEPN()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärFormas()'><b>FormulärFormas</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärFormas()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace798789389", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace798789389'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärFormas()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärForte()'><b>FormulärForte</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärForte()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1461181063", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1461181063'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärForte()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärKarolinskaInstitutet()'><b>FormulärKarolinskaInstitutet</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärKarolinskaInstitutet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1965995001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1965995001'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärKarolinskaInstitutet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärSkolfi()'><b>FormulärSkolfi</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärSkolfi()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1504025574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1504025574'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärSkolfi()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.FormulärVetenskapsrådet()'><b>FormulärVetenskapsrådet</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärVetenskapsrådet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1495158569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495158569'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.FormulärVetenskapsrådet()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsUser.Logout()'><b>Logout</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsUser</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1694947334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694947334'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsUser.Logout()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsUser@41e1e210] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin.Logout()'><b>Logout</b><br>Test class: testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin</td>
+<td><div><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace539952101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace539952101'><pre>java.lang.Throwable: Method ButtonCheckLoggedInAsAdmin.Logout()[pri:0, instance:testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin@c333c60] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+</body>
+</html>
