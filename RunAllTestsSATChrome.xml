@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel="none">
+<suite name="SuiteSAT" verbose="1" parallel = "none" preserve-order="true">
 
-	<test name="all-tests-SAT-Chrome">
-		<parameter name="browser" value="Chrome" />
+	<test name="Arbetsliv">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSAT" />
+			<package name="testCasesMinProfilArbetsliv" />
 		</packages>
 	</test>
-	
+
+	<test name="GranskningBetalningsinformation">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATGranskningBetalningsinformation" />
+		</packages>
+	</test>
+
+	<test name="Immaterialrätt">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilImmaterialrätt" />
+		</packages>
+	</test>
+
+	<test name="MeriterOchUtmärkelser">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilMeriterOchUtmärkelser" />
+		</packages>
+	</test>
+
+	<test name="Publikationer">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilPublikationer" />
+		</packages>
+	</test>
+
+	<test name="Utbildning">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilUtbildning" />
+		</packages>
+	</test>
+
+	<test name="Övriga">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value=""></parameter>
+		<parameter name="Password" value=""></parameter>
+		<classes>
+			<class
+				name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin"></class>
+			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser"></class>
+			<class name="testCasesSATÖvrigt.GranskarkompetensKID"></class>
+			<class name="testCasesSATÖvrigt.LoginAsInvalidUser"></class>
+			<class name="testCasesSATÖvrigt.LoginAsValidUser"></class>
+		</classes>
+	</test>
+
+
 </suite>
+

@@ -3,19 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCasesSAT.ImmaterialrättAddNewImmaterialRätt">
+      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
         <methods>
-          <include name="Typ"/>
-          <include name="DatumFörBeviljande"/>
-          <include name="Id"/>
-          <include name="ProduktKlassificering"/>
-          <include name="LäggTill"/>
-          <include name="LicensieradTillAnnan"/>
+          <include name="ÖvrigInformation"/>
+          <include name="AnställningDropDown"/>
+          <include name="AnställningensBörjanMonth"/>
+          <include name="Setup"/>
           <include name="LoginAsUser"/>
-          <include name="ClickImmaterialrätt"/>
-          <include name="Spara"/>
+          <include name="ClickArbetsliv"/>
+          <include name="SelectOrganization"/>
+          <include name="DelAvForskningIAnställningenBaseradPåHeltid"/>
+          <include name="AddAnställning"/>
+          <include name="AnställningensSlutMonth"/>
+          <include name="AnställningsFormDropDown"/>
+          <include name="AnställningensBörjanOchSlutYear"/>
+          <include name="tearDown"/>
+          <include name="SparaAnställning"/>
         </methods>
-      </class> <!-- testCasesSAT.ImmaterialrättAddNewImmaterialRätt -->
+      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

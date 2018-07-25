@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
-import pageObjectsSAT.PortalLoggedInAsUserMinProfil;
-import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class RemoveArbetsliv {
 	public static WebDriver driver;
@@ -27,12 +27,12 @@ public class RemoveArbetsliv {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome_Xpath(driver).click();
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Xpath);
+		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Xpath(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
 	}
 
 	

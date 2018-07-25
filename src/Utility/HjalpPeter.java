@@ -11,10 +11,11 @@ import org.testng.annotations.Test;
 
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.IfStatements;
 import driverAndCommands.LoginLogic;
-import pageObjectsSAT.PortalLoggedInAsAdmin;
-import pageObjectsSAT.PortalLoggedInAsAdminIntressentregister;
-import pageObjectsSAT.SAT_Home_Page_Not_Logged_In;
+import pageElementsSAT.PortalLoggedInAsAdmin;
+import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
+import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class HjalpPeter {
 	public static WebDriver driver;
@@ -29,10 +30,16 @@ public class HjalpPeter {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome_Xpath(driver).click();
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsAdmin.LoggaUt_Xpath);
+		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsAdmin.LoggaUt);
 
+		
+		IfStatements.IfCssSelctorIsNotVisibleThenFail(driver, PortalLoggedInAsAdminIntressentregister.IntressentregisterButton);
+		
+		
+		
+		/*
 		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_CSS(driver).click();
 		
 		driver.findElement(By.cssSelector("#StakeholderGrid > div.fix-grid-scroll > table > thead > tr > th:nth-child(10) > a.k-header-column-menu > span")).click();
@@ -46,7 +53,7 @@ public class HjalpPeter {
 		driver.findElement(By.cssSelector("body > div.k-animation-container > div > ul > li.k-item.k-filter-item.k-state-default.k-last.k-state-border-left > div > ul > li > div > form > div > input:nth-child(3)")).sendKeys("minimalt konto");
 		
 		driver.findElement(By.cssSelector("body > div.k-animation-container > div > ul > li.k-item.k-filter-item.k-state-default.k-last.k-state-border-left > div > ul > li > div > form > div > div:nth-child(7) > button:nth-child(1)")).click();
-		
+		*/
 
 
 	}

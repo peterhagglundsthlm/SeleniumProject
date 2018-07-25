@@ -19,7 +19,6 @@ public class DriverWaitExpectedConditions {
 
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(IdLocator)));
-
 		return null;
 	}
 
@@ -37,11 +36,17 @@ public class DriverWaitExpectedConditions {
 		return null;
 	}
 	
-	public static WebElement WebDriverWaitForExpectedCssSelectorLocator(WebDriver driver, String LinktextLocator){
+	public static WebElement WebDriverWaitForExpectedCssSelectorLocator(WebDriver driver, String CssLocator){
 
 		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LinktextLocator)));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(CssLocator)));
 		return null;
 	}
+	
+	
+	
+
+
+
 
 }

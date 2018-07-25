@@ -6,26 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
-
-
 public class IfStatements {
-
-	@Test
-	public static void IfTextIsnotPresentOnPageThenFail(String TextOnPage, WebDriver driver) {
-
-
-		if (driver.getPageSource().contains(TextOnPage))
-		{ 
-			System.out.println("Texten finns");
-
-
-		} else {
-			System.out.println("Texten finns inte");
-			Assert.fail();
-
-		}
-	}
 
 	@Test
 	public static void IfCssSelctorIsNotVisibleThenFail(WebDriver driver, String CssSelectorOnPage) {
@@ -34,11 +15,11 @@ public class IfStatements {
 		if (driver.findElements(By.cssSelector(CssSelectorOnPage)).size() != 0)
 
 		{ 
-			System.out.println("Elementet hittades. Testfallet fortsätter");
+			System.out.println("Elementet " + CssSelectorOnPage + " hittades. Testfallet fortsätter");
 
 		} else {
 
-			System.out.println("Elementet kunde inte hittas. Testfall abvryts");
+			System.out.println("Elementet " + CssSelectorOnPage + " kunde inte hittas. Testfall abvryts");
 			Assert.fail();
 
 		}
@@ -52,11 +33,11 @@ public class IfStatements {
 		if (driver.findElements(By.xpath(XpathOnPage)).size() != 0) 
 		{ 
 
-			System.out.println("Elementet hittades. Testfallet fortsätter");
+			System.out.println("Elementet " + XpathOnPage + " hittades. Testfallet fortsätter");
 
 		} else {
 
-			System.out.println("Elementet kunde inte hittas. Testfall abvryts");
+			System.out.println("Elementet " + XpathOnPage + " kunde inte hittas. Testfall abvryts");
 			Assert.fail();
 
 		}
@@ -68,11 +49,12 @@ public class IfStatements {
 
 		if (driver.findElements(By.id(IDonPage)).size() != 0)
 		{ 
-			System.out.println("Elementet hittades. Testfallet fortsätter");
+			
+			System.out.println("Elementet " + IDonPage + " hittades. Testfallet fortsätter");
 
 		} else {
 
-			System.out.println("Elementet kunde inte hittas. Testfall abvryts");
+			System.out.println("Elementet " + IDonPage + " kunde inte hittas. Testfall abvryts");
 			Assert.fail();
 
 		}
@@ -84,11 +66,12 @@ public class IfStatements {
 
 		if (driver.findElements(By.name(NameOnPage)).size() !=0)
 		{ 
-			System.out.println("Elementet hittades. Testfallet fortsätter");
+			
+			System.out.println("Elementet " + NameOnPage + " hittades. Testfallet fortsätter");
 
 		} else {
 
-			System.out.println("Elementet kunde inte hittas. Testfall abvryts");
+			System.out.println("Elementet " + NameOnPage + " kunde inte hittas. Testfall abvryts");
 			Assert.fail();
 
 		}
@@ -100,14 +83,14 @@ public class IfStatements {
 
 		if (driver.findElements(By.linkText(LinkTextOnPage)).size() !=0)
 		{ 
-			System.out.println("Elementet hittades. Testfallet fortsätter");
+			
+			System.out.println("Elementet " + LinkTextOnPage + " hittades. Testfallet fortsätter");
 
 		} else {
 
-			System.out.println("Elementet kunde inte hittas. Testfall abvryts");
+			System.out.println("Elementet " + LinkTextOnPage + " kunde inte hittas. Testfall abvryts");
 			Assert.fail();
 		}
-
 
 
 

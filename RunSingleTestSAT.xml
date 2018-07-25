@@ -2,10 +2,10 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Ett testfall" verbose="1" parallel="none">
+<parameter name="browser" value="Chrome"  />
  <test name="Ett test">
- <parameter name="browser" value="Chrome" />
      <classes>
-         <class name="testCasesSAT.MeriterOchUtmärkelserAddNewÖvrigaMeriter"></class>
+         <class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin"></class>
      </classes> 
- </test>
+     </test>
 </suite>
