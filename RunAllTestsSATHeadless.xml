@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel = "none" preserve-order="true">
+<suite name="SuiteSAT" verbose="1" parallel="none"
+	preserve-order="true">
 
 	<test name="Arbetsliv">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -13,7 +14,7 @@
 	</test>
 
 	<test name="GranskningBetalningsinformation">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -22,7 +23,7 @@
 	</test>
 
 	<test name="Immaterialrätt">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -31,7 +32,7 @@
 	</test>
 
 	<test name="MeriterOchUtmärkelser">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -40,7 +41,7 @@
 	</test>
 
 	<test name="Publikationer">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -49,25 +50,16 @@
 	</test>
 
 	<test name="Utbildning">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
 			<package name="testCasesSATMinProfilUtbildning" />
 		</packages>
 	</test>
-	
-	<test name="Granskarkompetens">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
-		<parameter name="Password" value="Vr1234"></parameter>
-		<packages>
-			<package name="testCasesSATMinProfilGranskarkompetens" />
-		</packages>
-	</test>
 
 	<test name="Övriga">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value=""></parameter>
 		<parameter name="Password" value=""></parameter>
 		<classes>

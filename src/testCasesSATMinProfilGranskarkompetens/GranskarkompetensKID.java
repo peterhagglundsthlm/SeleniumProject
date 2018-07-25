@@ -1,4 +1,4 @@
-package testCasesSATÖvrigt;
+package testCasesSATMinProfilGranskarkompetens;
 
 import java.util.Random;
 import org.openqa.selenium.By;
