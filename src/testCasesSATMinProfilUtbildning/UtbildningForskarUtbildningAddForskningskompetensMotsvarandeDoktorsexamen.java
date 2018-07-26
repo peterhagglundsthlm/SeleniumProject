@@ -19,7 +19,7 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 
 	}
 
@@ -71,7 +71,7 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 	@Test (dependsOnMethods={"SelectOrganization"})
 	public void TypAvForskarUtbildningAddForskningskompetensMotsvarandeDoktorsexamen() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning));
 		driver.findElement(By.id("Type")).click();
 
 		Select typ = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning)));
@@ -100,7 +100,7 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 		
 		
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning));
 		Select ämne2 = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning)));
 		Random randomOption2 = new Random();  
 		int startOption2 = 1;
@@ -110,7 +110,7 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 		
 		
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning));
 		Select ämne3 = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning)));
 		Random randomOption3 = new Random();  
 		int startOption3 = 1;

@@ -3,13 +3,9 @@ package testCasesSATÖvrigt;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import Utility.UserCredentials;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsAdmin;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginAsValidUser extends BeforeAfterTestBrowsers {
 
@@ -21,10 +17,8 @@ public class LoginAsValidUser extends BeforeAfterTestBrowsers {
 		System.out.println("Testfall = " + TestCaseInfo);
 
 		//LOGGAR IN SOM ADMIN MED GILTIGT INLOGGNING
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsAdmin.LoggaUt);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdmin.LoggaUt));
+		
 
 	}
 	@Test (dependsOnMethods={"LoginAsUser"})

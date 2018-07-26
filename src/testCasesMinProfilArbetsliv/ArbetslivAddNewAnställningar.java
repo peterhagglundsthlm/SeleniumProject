@@ -19,10 +19,10 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-		
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -147,18 +147,18 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"ÖvrigInformation"})
 	public void SparaAnställning() {
-		
-			((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaAnställning(driver).click();	
-			
+
+		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
+		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaAnställning(driver).click();	
+
 	}
 }
-			
-			
-		
-		
-			
-		
-		
-	
+
+
+
+
+
+
+
+
 

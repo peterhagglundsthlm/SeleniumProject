@@ -19,7 +19,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -84,7 +84,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		ämne1.selectByIndex(number);
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå));
 		Select ämne2 = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå)));
 		Random randomOption2 = new Random();  
 		int startOption2 = 1;
@@ -93,7 +93,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		ämne2.selectByIndex(number2);
 
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå));
 		Select ämne3 = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå)));
 		Random randomOption3 = new Random();  
 		int startOption3 = 1;

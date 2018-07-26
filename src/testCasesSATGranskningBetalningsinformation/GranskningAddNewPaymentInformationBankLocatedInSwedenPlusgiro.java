@@ -18,7 +18,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);	
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})

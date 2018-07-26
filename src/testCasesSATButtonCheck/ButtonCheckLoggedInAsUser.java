@@ -2,6 +2,7 @@ package testCasesSATButtonCheck;
 
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import Utility.UserCredentials;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -26,10 +27,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 		System.out.println("Testfall = " + TestCaseInfo);
 
 		//Loggar in som användare kkprisma@yahoo.com
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.kkprismayahooSATusername, UserCredentials.kkprismayahooSATpassword);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsNormalUser"})

@@ -18,7 +18,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -36,7 +36,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
 		Publikationstyp.selectByIndex(1);
 	}
@@ -44,7 +44,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
 	public void DropDownRecensionArtikel() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
 		Publikationstyp.selectByIndex(6);
 	}
@@ -59,7 +59,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	@Test (dependsOnMethods={"RecensionArtikelFörfattareKnapp"})
 	public void RecensionArtikelTitel() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys("TestTitel123");
 
 	}
@@ -148,7 +148,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	@Test (dependsOnMethods={"RecensionArtikelVarTextenPubliceradIOpenAcessJa"})
 	public void RecensionArtikelLänkExternLänkFörPublicering() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys("Testlänk");
 	}
 
@@ -186,7 +186,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
 		
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, "//button[contains(text(), 'Ok')]");
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 

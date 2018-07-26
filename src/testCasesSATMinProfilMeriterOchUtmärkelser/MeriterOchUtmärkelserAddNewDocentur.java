@@ -21,7 +21,7 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -69,7 +69,7 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 		ämne1.selectByIndex(number);
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2));
 		Select ämne2 = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2)));
 		Random randomOption2 = new Random();  
 		int startOption2 = 1;

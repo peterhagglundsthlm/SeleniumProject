@@ -19,7 +19,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -37,7 +37,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
 		Publikationstyp.selectByIndex(2);
 	}
@@ -45,7 +45,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
 	public void DropDownBidragTillEnBok() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown)));
 		Publikationstyp.selectByIndex(1);
 	}
@@ -53,7 +53,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test (dependsOnMethods={"DropDownBidragTillEnBok"})
 	public void BidragTillEnBokTitel() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys("TestTitel123");
 
 	}
@@ -83,14 +83,14 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test (dependsOnMethods={"BidragTillEnBokFörfattareEfternamn"})
 	public void BidragTillEnBokRedaktörKnapp() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp(driver).click();
 	}
 
 	@Test (dependsOnMethods={"BidragTillEnBokRedaktörKnapp"})
 	public void BidragTillEnBokRedaktörNamn() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn(driver).sendKeys("NamnTest");
 	}
 
@@ -164,7 +164,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test (dependsOnMethods={"BidragTillEnBokVarTextenPubliceradIOpenAcessJa"})
 	public void BidragTillEnBokOpenAccessLänkExternLänkFörPublicering() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys("Testlänk");
 	}
 
@@ -202,7 +202,7 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
 		
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, "//button[contains(text(), 'Ok')]");
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

@@ -18,7 +18,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	public void LoginAsUser() {
 
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 
 		
 	}
@@ -39,7 +39,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	@Test (dependsOnMethods={"ClickPublikationer"})
 	public void VäljPublikationsTyp() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
 		Publikationstyp.selectByIndex(1);
 	}
@@ -47,7 +47,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
 	public void DropDownBok() {
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
 		Publikationstyp.selectByIndex(2);
 	}
@@ -63,7 +63,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	public void BokTitel() {
 
 		String Boktitel = "TestTitel123";
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(Boktitel);
 
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).getAttribute("value") != Boktitel)
@@ -185,7 +185,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	public void BokOpenAccessLänkExternLänkFörPublicering() {
 
 		String LänkFörPublicering = "Testlänk";
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedIdLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys(LänkFörPublicering);
 		
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).getAttribute("value") != LänkFörPublicering)
@@ -235,8 +235,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
-		
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, "//button[contains(text(), 'Ok')]");
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 

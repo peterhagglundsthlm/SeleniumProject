@@ -2,12 +2,10 @@ package testCasesSATButtonCheck;
 
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import Utility.UserCredentials;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsAdmin;
 import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 import pageElementsSAT.PortalLoggedInAsAdminFinansiär;
@@ -15,7 +13,7 @@ import pageElementsSAT.PortalLoggedInAsAdminFormulär;
 import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
 import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
 import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+
 
 public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
@@ -28,10 +26,8 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		System.out.println("Testfall = " + TestCaseInfo);
 
 		//Loggar in som användare kkprisma@yahoo.com
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsAdminMinProfil.MinProfilButton);
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminMinProfil.MinProfilButton));
 		
 	}
 
@@ -80,7 +76,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void FormulärKarolinskaInstitutet() {
 
 		//KAROLINSKA
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsAdminFormulär.KarolinskaInstitutet);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminFormulär.KarolinskaInstitutet));
 		PortalLoggedInAsAdminFormulär.KarolinskaInstitutet(driver).click();
 		PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär(driver).click();
 		PortalLoggedInAsAdminFormulär.KarolinskaInstitutetSidmallar(driver).click();
@@ -174,7 +170,8 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void FinansiärKarolinskaInstitutet() {
 
 		//KAROLINSKA INSTITUTET
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet));
+		
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet(driver).click();
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar(driver).click();
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetGranskarpoolinställningar(driver).click();

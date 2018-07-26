@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
@@ -18,7 +17,7 @@ public class BeforeAfterTestBrowsers {
 	
 	@Parameters({"browser",  "Username", "Password" })
 	@BeforeClass
-	public void Setup(String browser, @Optional String Username , @Optional String Password) {
+	public void Setup(String browser, String Username , String Password) {
 		
 		if (browser.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver","C:\\Selenium 3.12.0\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
@@ -71,7 +70,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);
+		//EndDriver.DriverQuit(driver);
 		
 	}
 

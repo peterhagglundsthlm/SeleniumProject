@@ -93,6 +93,24 @@ public class PortalLoggedInAsUserMinProfil {
 		return element;
 	}
 
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN/DOKTORSEXAMEN - EXAMENSDATUM - ÅR (DROPDOWN)
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumÅrDropdown = "#ui-datepicker-div > div > div > select.ui-datepicker-year"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumÅrDropdown(WebDriver driver) {
+
+		element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-year"));
+		return element;
+	}
+	
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN/DOKTORSEXAMEN - EXAMENSDATUM - MÅNAD (DROPDOWN)
+		public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown = "#ui-datepicker-div > div > div > select.ui-datepicker-month"; {
+		}
+		public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown(WebDriver driver) {
+
+			element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-month"));
+			return element;
+		}
+
 	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - FORSKNINGSKOMPETENS MOSVARANDE DOKTORSEXAMEN- DATUM FÖR NÄR FORSKNINGSKOMPETENS UPPNÅTTS
 	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts = "CompetenceAchievedDate"; {
 	}
@@ -1672,7 +1690,7 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.id("competenceSelectors_14__SelectedItemId"));
 		return element;
 	}
-	
+
 	//MIN PROFIL - GRANSKARKOMPETENS - KID - SPARA
 	public static final String MinProfil_GranskarkompetensKIDSpara = "//input[@value='Spara']"; {
 	}
@@ -1681,8 +1699,8 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.xpath("//input[@value='Spara']"));
 		return element;
 	}
-	
-	
+
+
 
 
 

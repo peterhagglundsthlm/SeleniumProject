@@ -31,7 +31,7 @@ public class RemoveUtbildningar {
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
 
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning(driver).click();
 	}

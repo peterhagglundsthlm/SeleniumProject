@@ -1,6 +1,7 @@
 package testCasesMinProfilArbetsliv;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -16,7 +17,7 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 

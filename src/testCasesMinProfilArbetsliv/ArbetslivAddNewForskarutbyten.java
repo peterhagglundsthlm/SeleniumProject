@@ -21,7 +21,7 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	
 	}

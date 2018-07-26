@@ -20,6 +20,15 @@
 			<package name="testCasesSATGranskningBetalningsinformation" />
 		</packages>
 	</test>
+	
+	<test name="Granskarkompetens">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilGranskarkompetens" />
+		</packages>
+	</test>
 
 	<test name="Immaterialrätt">
 		<parameter name="browser" value="Chrome"></parameter>
@@ -57,29 +66,40 @@
 		</packages>
 	</test>
 	
-	<test name="Granskarkompetens">
+	<test name="ButtonCheckAdmin">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="kristofer.klarin@vr.se"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<classes>
+			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin" />
+		</classes>
+	</test>
+	
+		<test name="LoginInvalidUserr">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="fgdfg"></parameter>
+		<parameter name="Password" value="dfgdfg"></parameter>
+		<classes>
+			<class name="testCasesSATÖvrigt.LoginAsInvalidUser"/>
+		</classes>
+	</test>
+	
+		<test name="LoginAsValidUser">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
-		<packages>
-			<package name="testCasesSATMinProfilGranskarkompetens" />
-		</packages>
-	</test>
-
-	<test name="Övriga">
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="Username" value=""></parameter>
-		<parameter name="Password" value=""></parameter>
 		<classes>
-			<class
-				name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin"></class>
-			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser"></class>
-			<class name="testCasesSATÖvrigt.GranskarkompetensKID"></class>
-			<class name="testCasesSATÖvrigt.LoginAsInvalidUser"></class>
-			<class name="testCasesSATÖvrigt.LoginAsValidUser"></class>
+			<class name="testCasesSATÖvrigt.LoginAsValidUser"/>
 		</classes>
 	</test>
-
-
+	
+		<test name="ButtonCheckOrgUser">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<classes>
+			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser"/>
+		</classes>
+	</test>
 </suite>
 

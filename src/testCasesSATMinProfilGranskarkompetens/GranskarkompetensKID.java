@@ -4,13 +4,10 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import Utility.UserCredentials;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+
 
 public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	
@@ -21,12 +18,9 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test
 	public void LoginAsUser() {
 		
-		driver.manage().window().maximize();
 		System.out.println("Testfall = " + TestCaseInfo);
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedCssSelectorLocator(driver, PortalLoggedInAsUserMinProfil.MinProfil);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})

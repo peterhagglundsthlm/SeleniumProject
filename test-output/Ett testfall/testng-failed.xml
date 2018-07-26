@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
-  <parameter name="Username" value=""/>
+  <parameter name="Username" value="jagtestarprisma@gmail.com"/>
   <parameter name="browser" value="Chrome"/>
+  <parameter name="Password" value="Vr1234"/>
   <test thread-count="5" name="Ett test(failed)">
     <classes>
-      <class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin">
+      <class name="testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddLicentiatexamen">
         <methods>
-          <include name="FormulärEPN"/>
-          <include name="ClickIntressentregisterButton"/>
-          <include name="FormulärFormas"/>
-          <include name="LoginAsAdminUser"/>
-          <include name="FormulärForte"/>
-          <include name="ClickMyProfileButton"/>
-          <include name="FinansiärFormas"/>
-          <include name="FinansiärForte"/>
-          <include name="FinansiärEPN"/>
+          <include name="TypAvForskarUtbildningAddLicentiatexamen"/>
+          <include name="ClickForskarUtbildning"/>
           <include name="Setup"/>
-          <include name="Logout"/>
-          <include name="FormulärKarolinskaInstitutet"/>
-          <include name="FinansiärVetenskapsrådet"/>
-          <include name="ClickFinansiärButton"/>
-          <include name="ClickFormulärButton"/>
-          <include name="FinansiärSkolfi"/>
-          <include name="FormulärVetenskapsrådet"/>
-          <include name="ClickPortaladministrationButton"/>
+          <include name="TypAvForskarUtbildningSelectSubjects"/>
+          <include name="FörnamnHandledare"/>
+          <include name="LoginAsUser"/>
+          <include name="SelectOrganization"/>
+          <include name="WriteAvhandlingensTitelEngelska"/>
           <include name="tearDown"/>
-          <include name="ClickBeredningsgrupperButton"/>
-          <include name="FormulärSkolfi"/>
-          <include name="FinansiärKarolinskaInstitutet"/>
+          <include name="SparaForskarutbildningKnapp"/>
+          <include name="ISSNISBNNummer"/>
+          <include name="ClickUtbildning"/>
+          <include name="AddForskarUtbildning"/>
+          <include name="EfternamnHandledare"/>
+          <include name="WriteAvhandlingensTitelOrginalSpråk"/>
+          <include name="Examensdatum"/>
         </methods>
-      </class> <!-- testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin -->
+      </class> <!-- testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddLicentiatexamen -->
     </classes>
   </test> <!-- Ett test(failed) -->
 </suite> <!-- Failed suite [Ett testfall] -->

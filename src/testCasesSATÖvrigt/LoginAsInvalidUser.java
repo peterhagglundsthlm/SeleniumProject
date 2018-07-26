@@ -5,11 +5,7 @@ package testCasesSATÖvrigt;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
-import driverAndCommands.LoginLogic;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
@@ -21,9 +17,7 @@ public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 		System.out.println("Testfall = " + TestCaseInfo);
 
 		//FÖRSÖKER LOGGA IN MED OGILTIGA ANVÄNDARUPPGIFTER
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, "Ett falskt användarnamn", "Ett falskt lösenord");	
+		
 	}
 
 	@Test (dependsOnMethods={"InputUserWithInvalidInfo"})

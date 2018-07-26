@@ -32,7 +32,8 @@ public class HjalpPeter {
 		DriverGetWebsite.OpenSatPortal(driver);
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
-		DriverWaitExpectedConditions.WebDriverWaitForExpectedXpathLocator(driver, PortalLoggedInAsAdmin.LoggaUt);
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdmin.LoggaUt));
 
 		
 		IfStatements.IfCssSelctorIsNotVisibleThenFail(driver, PortalLoggedInAsAdminIntressentregister.IntressentregisterButton);
