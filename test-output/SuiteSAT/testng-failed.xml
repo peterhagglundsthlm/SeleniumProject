@@ -1,53 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SuiteSAT]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="MeriterOchUtmärkelser(failed)">
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="5" name="Publikationer(failed)">
     <parameter name="Username" value="jagtestarprisma@gmail.com"/>
-    <parameter name="browser" value="Chrome"/>
     <parameter name="Password" value="Vr1234"/>
     <classes>
-      <class name="testCasesSATMinProfilMeriterOchUtmärkelser.MeriterOchUtmärkelserAddNewPriserOchUtmärkelser">
+      <class name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadÖvrigLitteratur">
         <methods>
-          <include name="ClickMeriterOchUtmärkelser"/>
-          <include name="Land"/>
-          <include name="tearDown"/>
-          <include name="År"/>
+          <include name="VäljPublikationsTyp"/>
+          <include name="ÖvrigLitteraturSpara"/>
+          <include name="ÖvrigLitteraturDOI"/>
+          <include name="LäggTillPublikationer"/>
+          <include name="ÖvrigLitteraturFörfattareEfternamn"/>
+          <include name="ÖvrigLitteraturVarTextenPubliceradIOpenAcessJa"/>
+          <include name="ÖvrigLitteraturOpenAccessFormAvOA"/>
+          <include name="ÖvrigLitteraturOpenAccessDokumentVersion"/>
+          <include name="ÖvrigLitteraturOpenAccessLänkExternLänkFörPublicering"/>
+          <include name="ÖvrigLitteraturFörfattareKnapp"/>
+          <include name="ÖvrigLitteraturFörlag"/>
+          <include name="Setup"/>
+          <include name="ÖvrigLitteraturISBN"/>
+          <include name="ÖvrigLitteraturStatus"/>
+          <include name="ÖvrigLitteraturTitel"/>
+          <include name="ÖvrigLitteraturFörfattareFörnamn"/>
+          <include name="DropDownÖvrigLitteratur"/>
           <include name="LoginAsUser"/>
-          <include name="NamnPåPriset"/>
-          <include name="Setup"/>
-          <include name="LäggTill"/>
-          <include name="Utfärdare"/>
-          <include name="Beskrivning"/>
-          <include name="Spara"/>
-        </methods>
-      </class> <!-- testCasesSATMinProfilMeriterOchUtmärkelser.MeriterOchUtmärkelserAddNewPriserOchUtmärkelser -->
-    </classes>
-  </test> <!-- MeriterOchUtmärkelser(failed) -->
-  <test thread-count="5" name="ButtonCheckOrgUser(failed)">
-    <parameter name="Username" value="kkprisma1@yahoo.com"/>
-    <parameter name="browser" value="Chrome"/>
-    <parameter name="Password" value="Vr1234"/>
-    <classes>
-      <class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser">
-        <methods>
-          <include name="ClickGranskarkompetensIfVisible"/>
-          <include name="Logout"/>
-          <include name="ClickGranskning"/>
-          <include name="ClickStartButton"/>
-          <include name="ClickOrganisationsKonto"/>
-          <include name="Setup"/>
-          <include name="ClickAnsökningarOchBidrag"/>
-          <include name="ClickOrganisationsUppgifter"/>
-          <include name="ClickMeriterOchUtmärkelserButton"/>
-          <include name="ClickPersonuppgifterButton"/>
+          <include name="ÖvrigLitteraturKällaID"/>
           <include name="tearDown"/>
-          <include name="ClickUtbildningButton"/>
-          <include name="ClickImmaterialrättButton"/>
-          <include name="ClickArbetslivButton"/>
-          <include name="ClickPublikationerButton"/>
-          <include name="LoginAsNormalUser"/>
+          <include name="ClickPublikationer"/>
+          <include name="ÖvrigLitteraturFörlagsplats"/>
+          <include name="ÖvrigLitteraturKällaFörPublikation"/>
+          <include name="ÖvrigLitteraturOpenAcessSammanfattning"/>
         </methods>
-      </class> <!-- testCasesSATButtonCheck.ButtonCheckLoggedInAsUser -->
+      </class> <!-- testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadÖvrigLitteratur -->
     </classes>
-  </test> <!-- ButtonCheckOrgUser(failed) -->
+  </test> <!-- Publikationer(failed) -->
 </suite> <!-- Failed suite [SuiteSAT] -->

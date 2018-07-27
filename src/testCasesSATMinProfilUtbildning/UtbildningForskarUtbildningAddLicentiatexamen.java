@@ -22,6 +22,7 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 
 	}
 

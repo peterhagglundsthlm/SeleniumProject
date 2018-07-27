@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel="none"
-	preserve-order="true">
+<suite name="SuiteSAT" verbose="1" parallel = "none" preserve-order="true">
+<parameter name="browser" value="Headless"></parameter>
 
 	<test name="Arbetsliv">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -14,16 +13,22 @@
 	</test>
 
 	<test name="GranskningBetalningsinformation">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
 			<package name="testCasesSATGranskningBetalningsinformation" />
 		</packages>
 	</test>
+	
+	<test name="Granskarkompetens">
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilGranskarkompetens" />
+		</packages>
+	</test>
 
 	<test name="Immaterialrätt">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -32,7 +37,6 @@
 	</test>
 
 	<test name="MeriterOchUtmärkelser">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -41,7 +45,6 @@
 	</test>
 
 	<test name="Publikationer">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
@@ -50,28 +53,42 @@
 	</test>
 
 	<test name="Utbildning">
-		<parameter name="browser" value="Headless"></parameter>
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
 			<package name="testCasesSATMinProfilUtbildning" />
 		</packages>
 	</test>
-
-	<test name="Övriga">
-		<parameter name="browser" value="Headless"></parameter>
-		<parameter name="Username" value=""></parameter>
-		<parameter name="Password" value=""></parameter>
+	
+	<test name="ButtonCheckAdmin">
+		<parameter name="Username" value="kristofer.klarin@vr.se"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
 		<classes>
-			<class
-				name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin"></class>
-			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser"></class>
-			<class name="testCasesSATÖvrigt.GranskarkompetensKID"></class>
-			<class name="testCasesSATÖvrigt.LoginAsInvalidUser"></class>
-			<class name="testCasesSATÖvrigt.LoginAsValidUser"></class>
+			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsAdmin" />
 		</classes>
 	</test>
-
-
+	
+		<test name="LoginInvalidUserr">
+		<parameter name="Username" value="fgdfg"></parameter>
+		<parameter name="Password" value="dfgdfg"></parameter>
+		<classes>
+			<class name="testCasesSATÖvrigt.LoginAsInvalidUser"/>
+		</classes>
+	</test>
+	
+		<test name="LoginAsValidUser">
+		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<classes>
+			<class name="testCasesSATÖvrigt.LoginAsValidUser"/>
+		</classes>
+	</test>
+	
+		<test name="ButtonCheckOrgUser">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<classes>
+			<class name="testCasesSATButtonCheck.ButtonCheckLoggedInAsUser"/>
+		</classes>
+	</test>
 </suite>
-

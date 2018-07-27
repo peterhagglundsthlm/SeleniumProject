@@ -19,6 +19,7 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 
 	}
 

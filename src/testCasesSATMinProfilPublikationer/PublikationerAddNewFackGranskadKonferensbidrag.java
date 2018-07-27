@@ -19,7 +19,7 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
-		
+		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
