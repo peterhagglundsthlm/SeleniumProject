@@ -1,80 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-27T13:40:57Z" name="Default suite" finished-at="2018-07-27T13:41:16Z" duration-ms="19039">
+  <suite started-at="2018-07-27T14:15:50Z" name="Ett testfall" finished-at="2018-07-27T14:16:19Z" duration-ms="28899">
     <groups>
     </groups>
-    <test started-at="2018-07-27T13:40:57Z" name="Default test" finished-at="2018-07-27T13:41:16Z" duration-ms="19039">
-      <class name="Utility.testIE">
-        <test-method signature="f()[pri:0, instance:Utility.testIE@2898ac89]" started-at="2018-07-27T13:40:57Z" name="f" finished-at="2018-07-27T13:41:16Z" duration-ms="19018" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with css selector == #defaultFrame
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:03.216Z'
-System info: host: '77DWHM2', ip: '172.17.159.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:7810/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3f80ab47-a762-4121-9aae-8fcb26a425e8
-*** Element info: {Using=id, value=defaultFrame}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == #defaultFrame
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:03.216Z'
-System info: host: '77DWHM2', ip: '172.17.159.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:7810/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3f80ab47-a762-4121-9aae-8fcb26a425e8
-*** Element info: {Using=id, value=defaultFrame}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:363)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-at Utility.testIE.f(testIE.java:42)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+    <test started-at="2018-07-27T14:15:50Z" name="Ett test" finished-at="2018-07-27T14:16:19Z" duration-ms="28899">
+      <class name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok">
+        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:15:50Z" name="Setup" finished-at="2018-07-27T14:15:59Z" duration-ms="8093" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jagtestarprisma@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vr1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- Utility.testIE -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- Setup -->
+        <test-method signature="LoginAsUser()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:15:59Z" name="LoginAsUser" finished-at="2018-07-27T14:16:08Z" duration-ms="9580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAsUser -->
+        <test-method signature="ClickPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:08Z" name="ClickPublikationer" finished-at="2018-07-27T14:16:10Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LoginAsUser" duration-ms="1441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickPublikationer -->
+        <test-method signature="LäggTillPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:10Z" name="LäggTillPublikationer" finished-at="2018-07-27T14:16:10Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.ClickPublikationer" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LäggTillPublikationer -->
+        <test-method signature="VäljPublikationsTyp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:10Z" name="VäljPublikationsTyp" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LäggTillPublikationer" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VäljPublikationsTyp -->
+        <test-method signature="DropDownBidragTillEnBok()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="DropDownBidragTillEnBok" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.VäljPublikationsTyp" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DropDownBidragTillEnBok -->
+        <test-method signature="BidragTillEnBokTitel()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="BidragTillEnBokTitel" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.DropDownBidragTillEnBok" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokTitel -->
+        <test-method signature="BidragTillEnBokFörfattareKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="BidragTillEnBokFörfattareKnapp" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokTitel" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokFörfattareKnapp -->
+        <test-method signature="BidragTillEnBokFörfattareFörnamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokFörfattareFörnamn" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareKnapp" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokFörfattareFörnamn -->
+        <test-method signature="BidragTillEnBokFörfattareEfternamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokFörfattareEfternamn" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareFörnamn" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokFörfattareEfternamn -->
+        <test-method signature="BidragTillEnBokRedaktörKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokRedaktörKnapp" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareEfternamn" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokRedaktörKnapp -->
+        <test-method signature="BidragTillEnBokRedaktörNamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokRedaktörNamn" finished-at="2018-07-27T14:16:13Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörKnapp" duration-ms="934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokRedaktörNamn -->
+        <test-method signature="BidragTillEnBokUtgivareFörlag()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:13Z" name="BidragTillEnBokUtgivareFörlag" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörNamn" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareFörlag -->
+        <test-method signature="BidragTillEnBokUtgivareFörlagsplats()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareFörlagsplats" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlag" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareFörlagsplats -->
+        <test-method signature="BidragTillEnBokUtgivareFörstaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareFörstaSidnummer" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlagsplats" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareFörstaSidnummer -->
+        <test-method signature="BidragTillEnBokUtgivareSistaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareSistaSidnummer" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörstaSidnummer" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareSistaSidnummer -->
+        <test-method signature="BidragTillEnBokUtgivareISBN()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareISBN" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareSistaSidnummer" duration-ms="421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareISBN -->
+        <test-method signature="BidragTillEnBokUtgivareDOI()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareDOI" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareISBN" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareDOI -->
+        <test-method signature="BidragTillEnBokUtgivareStatus()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareStatus" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareDOI" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareStatus -->
+        <test-method signature="BidragTillEnBokUtgivareKällaFörPublikation()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareKällaFörPublikation" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareStatus" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareKällaFörPublikation -->
+        <test-method signature="BidragTillEnBokUtgivareKällaID()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareKällaID" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaFörPublikation" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokUtgivareKällaID -->
+        <test-method signature="BidragTillEnBokVarTextenPubliceradIOpenAcessJa()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokVarTextenPubliceradIOpenAcessJa" finished-at="2018-07-27T14:16:16Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaID" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokVarTextenPubliceradIOpenAcessJa -->
+        <test-method signature="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:16Z" name="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" finished-at="2018-07-27T14:16:16Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokVarTextenPubliceradIOpenAcessJa" duration-ms="839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokOpenAccessLänkExternLänkFörPublicering -->
+        <test-method signature="BidragTillEnBokOpenAccessFormAvOA()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:16Z" name="BidragTillEnBokOpenAccessFormAvOA" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokOpenAccessFormAvOA -->
+        <test-method signature="BidragTillEnBokOpenAccessDokumentVersion()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokOpenAccessDokumentVersion" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessFormAvOA" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokOpenAccessDokumentVersion -->
+        <test-method signature="BidragTillEnBokOpenAcessSammanfattning()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokOpenAcessSammanfattning" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessDokumentVersion" duration-ms="655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokOpenAcessSammanfattning -->
+        <test-method signature="BidragTillEnBokSpara()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokSpara" finished-at="2018-07-27T14:16:19Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAcessSammanfattning" duration-ms="1245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BidragTillEnBokSpara -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:19Z" name="tearDown" finished-at="2018-07-27T14:16:19Z" duration-ms="762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok -->
+    </test> <!-- Ett test -->
+  </suite> <!-- Ett testfall -->
 </testng-results>

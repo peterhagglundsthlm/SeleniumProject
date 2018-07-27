@@ -8,7 +8,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-				name="testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddLicentiatexamen"></class>
+				name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok"></class>
 		</classes>
 	</test>
 </suite>

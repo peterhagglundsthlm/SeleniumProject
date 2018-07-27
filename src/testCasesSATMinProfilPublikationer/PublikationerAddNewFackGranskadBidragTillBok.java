@@ -85,6 +85,9 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 		{
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys(Förnamn);
+			
+			String PrintFirstName = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).getAttribute("value");
+			System.out.println("Författarens förnamn är = " + PrintFirstName);
 		}
 	}
 
