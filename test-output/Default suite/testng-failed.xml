@@ -3,26 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddLicentiatexamen">
+      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
         <methods>
-          <include name="TypAvForskarUtbildningAddLicentiatexamen"/>
-          <include name="ClickForskarUtbildning"/>
+          <include name="ÖvrigInformation"/>
+          <include name="AnställningDropDown"/>
+          <include name="AnställningensBörjanMonth"/>
           <include name="Setup"/>
-          <include name="TypAvForskarUtbildningSelectSubjects"/>
-          <include name="FörnamnHandledare"/>
           <include name="LoginAsUser"/>
+          <include name="ClickArbetsliv"/>
           <include name="SelectOrganization"/>
-          <include name="WriteAvhandlingensTitelEngelska"/>
+          <include name="DelAvForskningIAnställningenBaseradPåHeltid"/>
+          <include name="AddAnställning"/>
+          <include name="AnställningensSlutMonth"/>
+          <include name="AnställningsFormDropDown"/>
+          <include name="AnställningensBörjanOchSlutYear"/>
           <include name="tearDown"/>
-          <include name="SparaForskarutbildningKnapp"/>
-          <include name="ISSNISBNNummer"/>
-          <include name="ClickUtbildning"/>
-          <include name="AddForskarUtbildning"/>
-          <include name="EfternamnHandledare"/>
-          <include name="WriteAvhandlingensTitelOrginalSpråk"/>
-          <include name="Examensdatum"/>
+          <include name="SparaAnställning"/>
         </methods>
-      </class> <!-- testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddLicentiatexamen -->
+      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

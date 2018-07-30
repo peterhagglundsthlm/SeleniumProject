@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
   <parameter name="Username" value="jagtestarprisma@gmail.com"/>
-  <parameter name="browser" value="Chrome"/>
+  <parameter name="browser" value="Headless"/>
   <parameter name="Password" value="Vr1234"/>
   <test thread-count="5" name="Ett test(failed)">
     <classes>
