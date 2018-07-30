@@ -159,15 +159,13 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = randomOption .nextInt(endOption);  
 		AnställningensSlutMonth.selectByIndex(number);
 		
-		WebElement AnställningensSlutManad = AnställningensSlutMonth.getFirstSelectedOption();
-		String Value = AnställningensSlutManad.getText();
-		System.out.println("Anställning slut månad = " + Value ); 
+		 	
 	}
 
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})
 	public void ÖvrigInformation() {
 
-		String ÖvrigInformation = "Mycket bra övrig information3";
+		String ÖvrigInformation = "Mycket bra övrig information";
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).sendKeys(ÖvrigInformation);
 
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).getAttribute("value") != ÖvrigInformation);

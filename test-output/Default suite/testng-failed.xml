@@ -3,36 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
-=======
-      <class name="Utility.testIE">
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
+      <class name="Utility.RemoveArbetsliv">
         <methods>
-<<<<<<< HEAD
-          <include name="ÖvrigInformation"/>
-          <include name="AnställningDropDown"/>
-          <include name="AnställningensBörjanMonth"/>
-          <include name="Setup"/>
-          <include name="LoginAsUser"/>
-          <include name="ClickArbetsliv"/>
-          <include name="SelectOrganization"/>
-          <include name="DelAvForskningIAnställningenBaseradPåHeltid"/>
-          <include name="AddAnställning"/>
-          <include name="AnställningensSlutMonth"/>
-          <include name="AnställningsFormDropDown"/>
-          <include name="AnställningensBörjanOchSlutYear"/>
-          <include name="tearDown"/>
-          <include name="SparaAnställning"/>
-=======
           <include name="f"/>
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
+          <include name="f2"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
-=======
-      </class> <!-- Utility.testIE -->
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
+      </class> <!-- Utility.RemoveArbetsliv -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

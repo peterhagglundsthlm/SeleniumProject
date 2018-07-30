@@ -8,7 +8,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-				name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar"></class>
+				name="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten"></class>
 		</classes>
 	</test>
 </suite>
