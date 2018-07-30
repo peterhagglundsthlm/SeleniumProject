@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-30T13:13:54Z" name="Ett testfall" finished-at="2018-07-30T13:14:19Z" duration-ms="24594">
+  <suite started-at="2018-07-30T13:16:24Z" name="Ett testfall" finished-at="2018-07-30T13:16:46Z" duration-ms="21472">
     <groups>
     </groups>
-    <test started-at="2018-07-30T13:13:54Z" name="Ett test" finished-at="2018-07-30T13:14:19Z" duration-ms="24594">
+    <test started-at="2018-07-30T13:16:24Z" name="Ett test" finished-at="2018-07-30T13:16:46Z" duration-ms="21472">
       <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten">
-        <test-method is-config="true" signature="CheckTimeBeforeSuite()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:13:54Z" name="CheckTimeBeforeSuite" finished-at="2018-07-30T13:13:54Z" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="CheckTimeBeforeSuite()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:24Z" name="CheckTimeBeforeSuite" finished-at="2018-07-30T13:16:24Z" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTimeBeforeSuite -->
-        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:13:54Z" name="Setup" finished-at="2018-07-30T13:14:03Z" duration-ms="8897" status="PASS">
+        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:24Z" name="Setup" finished-at="2018-07-30T13:16:29Z" duration-ms="5196" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,51 +32,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="LoginAsUser4()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:03Z" name="LoginAsUser4" finished-at="2018-07-30T13:14:12Z" duration-ms="8723" status="PASS">
+        <test-method signature="LoginAsUser4()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:29Z" name="LoginAsUser4" finished-at="2018-07-30T13:16:38Z" duration-ms="9002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginAsUser4 -->
-        <test-method signature="ClickArbetsliv()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:12Z" name="ClickArbetsliv" finished-at="2018-07-30T13:14:12Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.LoginAsUser4" duration-ms="602" status="PASS">
+        <test-method signature="ClickArbetsliv()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:38Z" name="ClickArbetsliv" finished-at="2018-07-30T13:16:39Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.LoginAsUser4" duration-ms="632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickArbetsliv -->
-        <test-method signature="AddForskarUbyten()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:12Z" name="AddForskarUbyten" finished-at="2018-07-30T13:14:12Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.ClickArbetsliv" duration-ms="102" status="PASS">
+        <test-method signature="AddForskarUbyten()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:39Z" name="AddForskarUbyten" finished-at="2018-07-30T13:16:39Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.ClickArbetsliv" duration-ms="84" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddForskarUbyten -->
-        <test-method signature="SelectOrganization()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:12Z" name="SelectOrganization" finished-at="2018-07-30T13:14:14Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.AddForskarUbyten" duration-ms="2155" status="PASS">
+        <test-method signature="SelectOrganization()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:39Z" name="SelectOrganization" finished-at="2018-07-30T13:16:41Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.AddForskarUbyten" duration-ms="2096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectOrganization -->
-        <test-method signature="Ämne()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:14Z" name="Ämne" finished-at="2018-07-30T13:14:15Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.SelectOrganization" duration-ms="702" status="PASS">
+        <test-method signature="Ämne()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:41Z" name="Ämne" finished-at="2018-07-30T13:16:42Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.SelectOrganization" duration-ms="656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ämne -->
-        <test-method signature="Typ()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:15Z" name="Typ" finished-at="2018-07-30T13:14:15Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.Ämne" duration-ms="205" status="PASS">
+        <test-method signature="Typ()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:42Z" name="Typ" finished-at="2018-07-30T13:16:42Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.Ämne" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Typ -->
-        <test-method signature="PeriodStartOchSlutYear()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:15Z" name="PeriodStartOchSlutYear" finished-at="2018-07-30T13:14:17Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.Typ" duration-ms="1890" status="PASS">
+        <test-method signature="PeriodStartOchSlutYear()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:42Z" name="PeriodStartOchSlutYear" finished-at="2018-07-30T13:16:44Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.Typ" duration-ms="2273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PeriodStartOchSlutYear -->
-        <test-method signature="PeriodStartMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:17Z" name="PeriodStartMonth" finished-at="2018-07-30T13:14:18Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodStartOchSlutYear" duration-ms="225" status="PASS">
+        <test-method signature="PeriodStartMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:44Z" name="PeriodStartMonth" finished-at="2018-07-30T13:16:44Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodStartOchSlutYear" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PeriodStartMonth -->
-        <test-method signature="PeriodEndMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:18Z" name="PeriodEndMonth" finished-at="2018-07-30T13:14:18Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodStartMonth" duration-ms="180" status="PASS">
+        <test-method signature="PeriodEndMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:44Z" name="PeriodEndMonth" finished-at="2018-07-30T13:16:45Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodStartMonth" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PeriodEndMonth -->
-        <test-method signature="SparaForskarUbyte()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:18Z" name="SparaForskarUbyte" finished-at="2018-07-30T13:14:18Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodEndMonth" duration-ms="134" status="PASS">
+        <test-method signature="SparaForskarUbyte()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:45Z" name="SparaForskarUbyte" finished-at="2018-07-30T13:16:45Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten.PeriodEndMonth" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SparaForskarUbyte -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:18Z" name="tearDown" finished-at="2018-07-30T13:14:19Z" duration-ms="744" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:45Z" name="tearDown" finished-at="2018-07-30T13:16:46Z" duration-ms="752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="CheckTimeAfterSuite()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:14:19Z" name="CheckTimeAfterSuite" finished-at="2018-07-30T13:14:19Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="CheckTimeAfterSuite()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten@57250572]" started-at="2018-07-30T13:16:46Z" name="CheckTimeAfterSuite" finished-at="2018-07-30T13:16:46Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTimeAfterSuite -->
