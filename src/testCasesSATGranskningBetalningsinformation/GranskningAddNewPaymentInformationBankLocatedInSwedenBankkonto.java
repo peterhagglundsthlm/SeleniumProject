@@ -3,6 +3,7 @@ package testCasesSATGranskningBetalningsinformation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -39,6 +40,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
 		BankensLand.selectByVisibleText("Sverige");
+		
+		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
+		String BankeslandValue = BankensLandSelect.getText();
+		System.out.println("Bankens land är = " + BankeslandValue ); 
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
@@ -46,6 +51,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		Select Betalningstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp)));
 		Betalningstyp.selectByVisibleText("Bankkonto");
+		
+		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
+		String BetalningstypValue = BetalningstypSelect.getText();
+		System.out.println("Betalningstyp är = " + BetalningstypValue ); 
 	}
 
 	@Test (dependsOnMethods={"Betalningstyp"})
@@ -54,6 +63,11 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn));
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).sendKeys("Sveriges bästa bank");
+		
+		String BankensNamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
+		System.out.println("Bankens namn är = " + BankensNamnString); 
+
+
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
@@ -61,6 +75,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).sendKeys("Sveriges bästa kontoinnehavare");
+		
+		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
+		System.out.println("Kontoinnehavare är = " + KontoinnehavareString); 
 	}
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
@@ -68,6 +85,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer(driver).sendKeys("123456-78");
+		
+		String ClearingnummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer(driver).getAttribute("value");
+		System.out.println("Clearingnummer är = " + ClearingnummerString); 
 	}
 
 	@Test (dependsOnMethods={"Clearingnummer"})
@@ -75,6 +95,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).sendKeys("123-4545");
+		
+		String BankkontonummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).getAttribute("value");
+		System.out.println("Kontonummer är = " + BankkontonummerString); 
 	}
 
 	@Test (dependsOnMethods={"Bankkontonummer"})
@@ -82,6 +105,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).sendKeys("33");
+		
+		String Skatteprocent = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).getAttribute("value");
+		System.out.println("Skatteprocent är = " + Skatteprocent + "%"); 
 	}
 
 	@Test (dependsOnMethods={"Skatteprocent"})
@@ -89,6 +115,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("1234567");
+		
+		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
+		System.out.println("Skatteprocent är = " + TINString); 
 	}
 
 	@Test (dependsOnMethods={"TIN"})
