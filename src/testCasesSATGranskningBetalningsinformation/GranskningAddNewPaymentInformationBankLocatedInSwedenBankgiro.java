@@ -3,6 +3,7 @@ package testCasesSATGranskningBetalningsinformation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -40,6 +41,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
 		BankensLand.selectByVisibleText("Sverige");
+		
+		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
+		String BankeslandValue = BankensLandSelect.getText();
+		System.out.println("Bankens land är = " + BankeslandValue ); 
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
@@ -47,6 +52,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		Select Betalningstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp)));
 		Betalningstyp.selectByVisibleText("Bankgiro");
+		
+		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
+		String BetalningstypValue = BetalningstypSelect.getText();
+		System.out.println("Betalningstyp är = " + BetalningstypValue ); 
 	}
 	
 	@Test (dependsOnMethods={"Betalningstyp"})
@@ -54,6 +63,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id(driver).sendKeys("1234-1234");
+		
+		String BankgiroString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id(driver).getAttribute("value");
+		System.out.println("Bankgiro = " + BankgiroString); 
 	}
 	
 	@Test (dependsOnMethods={"Bankgiro"})
@@ -61,6 +73,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).sendKeys("35");
+		
+		String SkatteprocentString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).getAttribute("value");
+		System.out.println("Skatteprocent = " + SkatteprocentString + "%"); 
 	}
 	
 	@Test (dependsOnMethods={"Skatteprocent"})
@@ -68,6 +83,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("1234567");
+		
+		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
+		System.out.println("Skatteprocent = " + TINString); 
 	}
 	
 	@Test (dependsOnMethods={"TIN"})
