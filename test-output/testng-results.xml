@@ -1,86 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-30T09:02:01Z" name="Ett testfall" finished-at="2018-07-30T09:02:28Z" duration-ms="26779">
+  <suite started-at="2018-07-30T12:43:57Z" name="Default suite" finished-at="2018-07-30T12:44:23Z" duration-ms="26366">
     <groups>
     </groups>
-    <test started-at="2018-07-30T09:02:01Z" name="Ett test" finished-at="2018-07-30T09:02:28Z" duration-ms="26779">
-      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
-        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:01Z" name="Setup" finished-at="2018-07-30T09:02:08Z" duration-ms="6826" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[jagtestarprisma@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vr1234]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2018-07-30T12:43:57Z" name="Default test" finished-at="2018-07-30T12:44:23Z" duration-ms="26366">
+      <class name="Utility.RemoveArbetsliv">
+        <test-method signature="f()[pri:0, instance:Utility.RemoveArbetsliv@37271612]" started-at="2018-07-30T12:43:57Z" name="f" finished-at="2018-07-30T12:44:10Z" duration-ms="13509" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="LoginAsUser()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:08Z" name="LoginAsUser" finished-at="2018-07-30T09:02:17Z" duration-ms="8768" status="PASS">
+        </test-method> <!-- f -->
+        <test-method signature="f2()[pri:0, instance:Utility.RemoveArbetsliv@37271612]" started-at="2018-07-30T12:44:10Z" name="f2" finished-at="2018-07-30T12:44:23Z" depends-on-methods="Utility.RemoveArbetsliv.f" duration-ms="12828" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginAsUser -->
-        <test-method signature="ClickArbetsliv()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:17Z" name="ClickArbetsliv" finished-at="2018-07-30T09:02:19Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.LoginAsUser" duration-ms="2554" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ClickArbetsliv -->
-        <test-method signature="AddAnställning()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:19Z" name="AddAnställning" finished-at="2018-07-30T09:02:19Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.ClickArbetsliv" duration-ms="119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddAnställning -->
-        <test-method signature="SelectOrganization()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:19Z" name="SelectOrganization" finished-at="2018-07-30T09:02:22Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AddAnställning" duration-ms="2302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectOrganization -->
-        <test-method signature="AnställningDropDown()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:22Z" name="AnställningDropDown" finished-at="2018-07-30T09:02:22Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.SelectOrganization" duration-ms="279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnställningDropDown -->
-        <test-method signature="AnställningsFormDropDown()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:22Z" name="AnställningsFormDropDown" finished-at="2018-07-30T09:02:22Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AnställningDropDown" duration-ms="237" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnställningsFormDropDown -->
-        <test-method signature="DelAvForskningIAnställningenBaseradPåHeltid()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:22Z" name="DelAvForskningIAnställningenBaseradPåHeltid" finished-at="2018-07-30T09:02:22Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AnställningDropDown" duration-ms="255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DelAvForskningIAnställningenBaseradPåHeltid -->
-        <test-method signature="AnställningensBörjanOchSlutYear()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:22Z" name="AnställningensBörjanOchSlutYear" finished-at="2018-07-30T09:02:26Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.DelAvForskningIAnställningenBaseradPåHeltid" duration-ms="3249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnställningensBörjanOchSlutYear -->
-        <test-method signature="AnställningensBörjanMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:26Z" name="AnställningensBörjanMonth" finished-at="2018-07-30T09:02:26Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AnställningensBörjanOchSlutYear" duration-ms="233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnställningensBörjanMonth -->
-        <test-method signature="AnställningensSlutMonth()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:26Z" name="AnställningensSlutMonth" finished-at="2018-07-30T09:02:26Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AnställningensBörjanMonth" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AnställningensSlutMonth -->
-        <test-method signature="ÖvrigInformation()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:26Z" name="ÖvrigInformation" finished-at="2018-07-30T09:02:27Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.AnställningensSlutMonth" duration-ms="742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ÖvrigInformation -->
-        <test-method signature="SparaAnställning()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:27Z" name="SparaAnställning" finished-at="2018-07-30T09:02:27Z" depends-on-methods="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar.ÖvrigInformation" duration-ms="153" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SparaAnställning -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar@6a03bcb1]" started-at="2018-07-30T09:02:27Z" name="tearDown" finished-at="2018-07-30T09:02:28Z" duration-ms="745" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
-    </test> <!-- Ett test -->
-  </suite> <!-- Ett testfall -->
+        </test-method> <!-- f2 -->
+      </class> <!-- Utility.RemoveArbetsliv -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -6,24 +6,22 @@
   <parameter name="Password" value="Vr1234"/>
   <test thread-count="5" name="Ett test(failed)">
     <classes>
-      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
+      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten">
         <methods>
-          <include name="ÖvrigInformation"/>
-          <include name="AnställningDropDown"/>
-          <include name="AnställningensBörjanMonth"/>
-          <include name="Setup"/>
-          <include name="LoginAsUser"/>
-          <include name="ClickArbetsliv"/>
-          <include name="SelectOrganization"/>
-          <include name="DelAvForskningIAnställningenBaseradPåHeltid"/>
-          <include name="AddAnställning"/>
-          <include name="AnställningensSlutMonth"/>
-          <include name="AnställningsFormDropDown"/>
-          <include name="AnställningensBörjanOchSlutYear"/>
+          <include name="Ämne"/>
+          <include name="Typ"/>
+          <include name="PeriodStartOchSlutYear"/>
+          <include name="PeriodStartMonth"/>
           <include name="tearDown"/>
-          <include name="SparaAnställning"/>
+          <include name="SelectOrganization"/>
+          <include name="AddForskarUbyten"/>
+          <include name="PeriodEndMonth"/>
+          <include name="Setup"/>
+          <include name="LoginAsUser4"/>
+          <include name="ClickArbetsliv"/>
+          <include name="SparaForskarUbyte"/>
         </methods>
-      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
+      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten -->
     </classes>
   </test> <!-- Ett test(failed) -->
 </suite> <!-- Failed suite [Ett testfall] -->

@@ -22,10 +22,11 @@ public class RemoveArbetsliv {
 	public void f() throws InterruptedException {
 
 
-		System.setProperty("webdriver.chrome.driver","C:\\Selenium 3.12.0\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\\\ChromeDriver\\\\chromedriver_win32\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
 		DriverGetWebsite.OpenSatPortal(driver);
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);

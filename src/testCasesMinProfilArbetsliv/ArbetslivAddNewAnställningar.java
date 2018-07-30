@@ -159,9 +159,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = randomOption .nextInt(endOption);  
 		AnställningensSlutMonth.selectByIndex(number);
 		
-		WebElement AnställningensSlutManad = AnställningensSlutMonth.getFirstSelectedOption();
-		String Value = AnställningensSlutManad.getText();
-		System.out.println("Anställning slut månad = " + Value ); 
+		 	
 	}
 
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})
