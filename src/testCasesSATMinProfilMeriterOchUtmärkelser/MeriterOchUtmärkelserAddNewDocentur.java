@@ -14,7 +14,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers {
 
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till en Docentur";
+	String TestCaseInfo = "Loggar in som en projektledare och lägger till en Docentur123";
 
 
 	@Test
