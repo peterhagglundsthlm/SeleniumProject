@@ -167,7 +167,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})
 	public void ÖvrigInformation() {
 
-		String ÖvrigInformation = "Mycket bra övrig information3";
+		String ÖvrigInformation = "Mycket bra övrig information";
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).sendKeys(ÖvrigInformation);
 
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).getAttribute("value") != ÖvrigInformation);
