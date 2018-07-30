@@ -42,7 +42,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AddAnställning"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet";
+		String universitet = "Uppsala Universitet1";
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).sendKeys(universitet);
 
