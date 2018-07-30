@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-27T14:15:50Z" name="Ett testfall" finished-at="2018-07-27T14:16:19Z" duration-ms="28899">
+  <suite started-at="2018-07-27T14:19:18Z" name="Ett testfall" finished-at="2018-07-27T14:19:49Z" duration-ms="30669">
     <groups>
     </groups>
-    <test started-at="2018-07-27T14:15:50Z" name="Ett test" finished-at="2018-07-27T14:16:19Z" duration-ms="28899">
+    <test started-at="2018-07-27T14:19:18Z" name="Ett test" finished-at="2018-07-27T14:19:49Z" duration-ms="30669">
       <class name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok">
-        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:15:50Z" name="Setup" finished-at="2018-07-27T14:15:59Z" duration-ms="8093" status="PASS">
+        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:18Z" name="Setup" finished-at="2018-07-27T14:19:28Z" duration-ms="9819" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,111 +28,111 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="LoginAsUser()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:15:59Z" name="LoginAsUser" finished-at="2018-07-27T14:16:08Z" duration-ms="9580" status="PASS">
+        <test-method signature="LoginAsUser()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:28Z" name="LoginAsUser" finished-at="2018-07-27T14:19:37Z" duration-ms="9098" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginAsUser -->
-        <test-method signature="ClickPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:08Z" name="ClickPublikationer" finished-at="2018-07-27T14:16:10Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LoginAsUser" duration-ms="1441" status="PASS">
+        <test-method signature="ClickPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:37Z" name="ClickPublikationer" finished-at="2018-07-27T14:19:38Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LoginAsUser" duration-ms="1288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickPublikationer -->
-        <test-method signature="LäggTillPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:10Z" name="LäggTillPublikationer" finished-at="2018-07-27T14:16:10Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.ClickPublikationer" duration-ms="123" status="PASS">
+        <test-method signature="LäggTillPublikationer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:38Z" name="LäggTillPublikationer" finished-at="2018-07-27T14:19:38Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.ClickPublikationer" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LäggTillPublikationer -->
-        <test-method signature="VäljPublikationsTyp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:10Z" name="VäljPublikationsTyp" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LäggTillPublikationer" duration-ms="793" status="PASS">
+        <test-method signature="VäljPublikationsTyp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:38Z" name="VäljPublikationsTyp" finished-at="2018-07-27T14:19:39Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.LäggTillPublikationer" duration-ms="774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VäljPublikationsTyp -->
-        <test-method signature="DropDownBidragTillEnBok()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="DropDownBidragTillEnBok" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.VäljPublikationsTyp" duration-ms="208" status="PASS">
+        <test-method signature="DropDownBidragTillEnBok()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:39Z" name="DropDownBidragTillEnBok" finished-at="2018-07-27T14:19:39Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.VäljPublikationsTyp" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DropDownBidragTillEnBok -->
-        <test-method signature="BidragTillEnBokTitel()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="BidragTillEnBokTitel" finished-at="2018-07-27T14:16:11Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.DropDownBidragTillEnBok" duration-ms="731" status="PASS">
+        <test-method signature="BidragTillEnBokTitel()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:39Z" name="BidragTillEnBokTitel" finished-at="2018-07-27T14:19:40Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.DropDownBidragTillEnBok" duration-ms="743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokTitel -->
-        <test-method signature="BidragTillEnBokFörfattareKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:11Z" name="BidragTillEnBokFörfattareKnapp" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokTitel" duration-ms="93" status="PASS">
+        <test-method signature="BidragTillEnBokFörfattareKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:40Z" name="BidragTillEnBokFörfattareKnapp" finished-at="2018-07-27T14:19:40Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokTitel" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokFörfattareKnapp -->
-        <test-method signature="BidragTillEnBokFörfattareFörnamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokFörfattareFörnamn" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareKnapp" duration-ms="425" status="PASS">
+        <test-method signature="BidragTillEnBokFörfattareFörnamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:40Z" name="BidragTillEnBokFörfattareFörnamn" finished-at="2018-07-27T14:19:41Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareKnapp" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokFörfattareFörnamn -->
-        <test-method signature="BidragTillEnBokFörfattareEfternamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokFörfattareEfternamn" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareFörnamn" duration-ms="357" status="PASS">
+        <test-method signature="BidragTillEnBokFörfattareEfternamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:41Z" name="BidragTillEnBokFörfattareEfternamn" finished-at="2018-07-27T14:19:41Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareFörnamn" duration-ms="306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokFörfattareEfternamn -->
-        <test-method signature="BidragTillEnBokRedaktörKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokRedaktörKnapp" finished-at="2018-07-27T14:16:12Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareEfternamn" duration-ms="118" status="PASS">
+        <test-method signature="BidragTillEnBokRedaktörKnapp()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:41Z" name="BidragTillEnBokRedaktörKnapp" finished-at="2018-07-27T14:19:41Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokFörfattareEfternamn" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokRedaktörKnapp -->
-        <test-method signature="BidragTillEnBokRedaktörNamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:12Z" name="BidragTillEnBokRedaktörNamn" finished-at="2018-07-27T14:16:13Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörKnapp" duration-ms="934" status="PASS">
+        <test-method signature="BidragTillEnBokRedaktörNamn()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:41Z" name="BidragTillEnBokRedaktörNamn" finished-at="2018-07-27T14:19:43Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörKnapp" duration-ms="1977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokRedaktörNamn -->
-        <test-method signature="BidragTillEnBokUtgivareFörlag()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:13Z" name="BidragTillEnBokUtgivareFörlag" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörNamn" duration-ms="286" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareFörlag()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:43Z" name="BidragTillEnBokUtgivareFörlag" finished-at="2018-07-27T14:19:43Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokRedaktörNamn" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareFörlag -->
-        <test-method signature="BidragTillEnBokUtgivareFörlagsplats()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareFörlagsplats" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlag" duration-ms="395" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareFörlagsplats()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:43Z" name="BidragTillEnBokUtgivareFörlagsplats" finished-at="2018-07-27T14:19:44Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlag" duration-ms="348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareFörlagsplats -->
-        <test-method signature="BidragTillEnBokUtgivareFörstaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareFörstaSidnummer" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlagsplats" duration-ms="178" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareFörstaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:44Z" name="BidragTillEnBokUtgivareFörstaSidnummer" finished-at="2018-07-27T14:19:44Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörlagsplats" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareFörstaSidnummer -->
-        <test-method signature="BidragTillEnBokUtgivareSistaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareSistaSidnummer" finished-at="2018-07-27T14:16:14Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörstaSidnummer" duration-ms="180" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareSistaSidnummer()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:44Z" name="BidragTillEnBokUtgivareSistaSidnummer" finished-at="2018-07-27T14:19:44Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareFörstaSidnummer" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareSistaSidnummer -->
-        <test-method signature="BidragTillEnBokUtgivareISBN()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:14Z" name="BidragTillEnBokUtgivareISBN" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareSistaSidnummer" duration-ms="421" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareISBN()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:44Z" name="BidragTillEnBokUtgivareISBN" finished-at="2018-07-27T14:19:44Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareSistaSidnummer" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareISBN -->
-        <test-method signature="BidragTillEnBokUtgivareDOI()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareDOI" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareISBN" duration-ms="221" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareDOI()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:44Z" name="BidragTillEnBokUtgivareDOI" finished-at="2018-07-27T14:19:44Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareISBN" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareDOI -->
-        <test-method signature="BidragTillEnBokUtgivareStatus()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareStatus" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareDOI" duration-ms="72" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareStatus()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:44Z" name="BidragTillEnBokUtgivareStatus" finished-at="2018-07-27T14:19:45Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareDOI" duration-ms="63" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareStatus -->
-        <test-method signature="BidragTillEnBokUtgivareKällaFörPublikation()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareKällaFörPublikation" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareStatus" duration-ms="114" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareKällaFörPublikation()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:45Z" name="BidragTillEnBokUtgivareKällaFörPublikation" finished-at="2018-07-27T14:19:45Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareStatus" duration-ms="107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareKällaFörPublikation -->
-        <test-method signature="BidragTillEnBokUtgivareKällaID()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokUtgivareKällaID" finished-at="2018-07-27T14:16:15Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaFörPublikation" duration-ms="185" status="PASS">
+        <test-method signature="BidragTillEnBokUtgivareKällaID()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:45Z" name="BidragTillEnBokUtgivareKällaID" finished-at="2018-07-27T14:19:45Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaFörPublikation" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokUtgivareKällaID -->
-        <test-method signature="BidragTillEnBokVarTextenPubliceradIOpenAcessJa()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:15Z" name="BidragTillEnBokVarTextenPubliceradIOpenAcessJa" finished-at="2018-07-27T14:16:16Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaID" duration-ms="125" status="PASS">
+        <test-method signature="BidragTillEnBokVarTextenPubliceradIOpenAcessJa()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:45Z" name="BidragTillEnBokVarTextenPubliceradIOpenAcessJa" finished-at="2018-07-27T14:19:45Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokUtgivareKällaID" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokVarTextenPubliceradIOpenAcessJa -->
-        <test-method signature="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:16Z" name="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" finished-at="2018-07-27T14:16:16Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokVarTextenPubliceradIOpenAcessJa" duration-ms="839" status="PASS">
+        <test-method signature="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:45Z" name="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" finished-at="2018-07-27T14:19:46Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokVarTextenPubliceradIOpenAcessJa" duration-ms="837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokOpenAccessLänkExternLänkFörPublicering -->
-        <test-method signature="BidragTillEnBokOpenAccessFormAvOA()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:16Z" name="BidragTillEnBokOpenAccessFormAvOA" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" duration-ms="118" status="PASS">
+        <test-method signature="BidragTillEnBokOpenAccessFormAvOA()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:46Z" name="BidragTillEnBokOpenAccessFormAvOA" finished-at="2018-07-27T14:19:46Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessLänkExternLänkFörPublicering" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokOpenAccessFormAvOA -->
-        <test-method signature="BidragTillEnBokOpenAccessDokumentVersion()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokOpenAccessDokumentVersion" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessFormAvOA" duration-ms="117" status="PASS">
+        <test-method signature="BidragTillEnBokOpenAccessDokumentVersion()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:46Z" name="BidragTillEnBokOpenAccessDokumentVersion" finished-at="2018-07-27T14:19:46Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessFormAvOA" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokOpenAccessDokumentVersion -->
-        <test-method signature="BidragTillEnBokOpenAcessSammanfattning()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokOpenAcessSammanfattning" finished-at="2018-07-27T14:16:17Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessDokumentVersion" duration-ms="655" status="PASS">
+        <test-method signature="BidragTillEnBokOpenAcessSammanfattning()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:46Z" name="BidragTillEnBokOpenAcessSammanfattning" finished-at="2018-07-27T14:19:47Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAccessDokumentVersion" duration-ms="597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokOpenAcessSammanfattning -->
-        <test-method signature="BidragTillEnBokSpara()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:17Z" name="BidragTillEnBokSpara" finished-at="2018-07-27T14:16:19Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAcessSammanfattning" duration-ms="1245" status="PASS">
+        <test-method signature="BidragTillEnBokSpara()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:47Z" name="BidragTillEnBokSpara" finished-at="2018-07-27T14:19:48Z" depends-on-methods="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok.BidragTillEnBokOpenAcessSammanfattning" duration-ms="1220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BidragTillEnBokSpara -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:16:19Z" name="tearDown" finished-at="2018-07-27T14:16:19Z" duration-ms="762" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok@ba54932]" started-at="2018-07-27T14:19:48Z" name="tearDown" finished-at="2018-07-27T14:19:49Z" duration-ms="770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
