@@ -23,7 +23,6 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-
 	@Parameters({"browser",  "Username", "Password" })
 	@BeforeClass
 	public void Setup(String browser, String Username , String Password) {
