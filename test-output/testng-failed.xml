@@ -3,8 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
+=======
+      <class name="Utility.testIE">
+>>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
         <methods>
+<<<<<<< HEAD
           <include name="ÖvrigInformation"/>
           <include name="AnställningDropDown"/>
           <include name="AnställningensBörjanMonth"/>
@@ -19,8 +24,15 @@
           <include name="AnställningensBörjanOchSlutYear"/>
           <include name="tearDown"/>
           <include name="SparaAnställning"/>
+=======
+          <include name="f"/>
+>>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
         </methods>
+<<<<<<< HEAD
       </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
+=======
+      </class> <!-- Utility.testIE -->
+>>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

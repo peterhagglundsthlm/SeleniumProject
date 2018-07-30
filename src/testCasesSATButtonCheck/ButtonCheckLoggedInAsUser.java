@@ -1,21 +1,16 @@
 package testCasesSATButtonCheck;
 
-
-
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import Utility.UserCredentials;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationsuppgifter;
 import pageElementsSAT.PortalLoggedInAsUser;
 import pageElementsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+
 
 public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
@@ -35,8 +30,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
 		//KLICKAR PÅ START
 		PortalLoggedInAsUserMinProfil.MinProfil_Start(driver).click();
-
-
 	}
 
 	@Test (dependsOnMethods={"ClickStartButton"})

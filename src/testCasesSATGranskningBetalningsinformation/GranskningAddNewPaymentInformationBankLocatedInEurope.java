@@ -18,6 +18,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})

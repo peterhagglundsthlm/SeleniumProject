@@ -28,6 +28,7 @@ public class BeforeAfterTestBrowsers {
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
 			
+			
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
@@ -70,7 +71,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);
+		EndDriver.DriverQuit(driver);
 		
 	}
 

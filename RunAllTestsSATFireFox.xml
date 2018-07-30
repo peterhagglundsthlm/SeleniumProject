@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="SuiteSAT" verbose="1" parallel = "none" preserve-order="true">
-<parameter name="browser" value="Chrome"></parameter>
+<parameter name="browser" value="FireFox"></parameter>
 
 	<test name="Arbetsliv">
 		<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
@@ -92,4 +92,3 @@
 		</classes>
 	</test>
 </suite>
-
