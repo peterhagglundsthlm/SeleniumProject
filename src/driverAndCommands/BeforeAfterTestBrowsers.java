@@ -1,5 +1,6 @@
 package driverAndCommands;
 
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,28 +8,39 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
-	public static WebDriver driver;
-	
-	
+	public static WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite;
+
+
+	@BeforeSuite
+	public void CheckTimeBeforeSuite() {
+		startTimeSuite = System.currentTimeMillis();
+	}
+
+
 	@Parameters({"browser",  "Username", "Password" })
 	@BeforeClass
 	public void Setup(String browser, String Username , String Password) {
-		
+
 		if (browser.equalsIgnoreCase("Chrome")) {
-			//System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
+
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			ChromeOptions fullscreen = new ChromeOptions();
+			fullscreen.addArguments("start-maximized");
+			driver = new ChromeDriver(fullscreen);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-			
-			
+
+
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
@@ -39,7 +51,7 @@ public class BeforeAfterTestBrowsers {
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-		
+
 		}
 
 		if (browser.equalsIgnoreCase("IExplorer")) {
@@ -50,7 +62,7 @@ public class BeforeAfterTestBrowsers {
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-			
+
 		}
 
 		if (browser.equalsIgnoreCase("Headless")) {
@@ -62,17 +74,26 @@ public class BeforeAfterTestBrowsers {
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-	
+
 		}
-
-		
 	}
-
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);
-		
+		EndDriver.DriverQuit(driver);
+		duration = System.currentTimeMillis() - startTime;
+		System.out.println("Detta testfall tog " + duration /1000 + " sekunder att utföra");
+	}
+
+
+	@AfterSuite
+	public void CheckTimeAfterSuite() {
+		durationSuite = System.currentTimeMillis() - startTimeSuite;
+		float sekunder = durationSuite/1000;
+		float minuter = sekunder/60;
+		System.out.println("Denna testsuite tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
+
+
 	}
 
 }
