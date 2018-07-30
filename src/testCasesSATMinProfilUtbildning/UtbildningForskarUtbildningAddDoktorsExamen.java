@@ -49,7 +49,7 @@ public class UtbildningForskarUtbildningAddDoktorsExamen extends BeforeAfterTest
 	@Test (dependsOnMethods={"AddForskarUtbildning"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet1";
+		String universitet = "Uppsala Universitet2";
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).sendKeys(universitet);
 
