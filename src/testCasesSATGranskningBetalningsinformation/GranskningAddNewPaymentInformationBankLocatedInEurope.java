@@ -42,7 +42,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		
 		WebElement AnställningsNamnSelect = BankensLand.getFirstSelectedOption();
 		String SelectValue = AnställningsNamnSelect.getText();
-		System.out.println("Anställning = " + SelectValue ); 
+		System.out.println("Bankens land är = " + SelectValue ); 
 
 	}
 
@@ -95,7 +95,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("12134234");
 		
 		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
-		System.out.println("SWIFT = " + TINString); 
+		System.out.println("TIN = " + TINString); 
 	}
 
 	@Test (dependsOnMethods={"TIN"})

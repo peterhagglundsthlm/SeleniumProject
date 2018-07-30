@@ -8,7 +8,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-				name="testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope"></class>
+				name="testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope"></class>
 		</classes>
 	</test>
 </suite>
