@@ -42,7 +42,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AddAnställning"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet2";
+		String universitet = "Uppsala Universitet";
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).sendKeys(universitet);
 
@@ -57,7 +57,6 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		Thread.sleep(500);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare(driver).click();
-		
 		
 		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).getAttribute("value");
 		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
@@ -177,7 +176,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).sendKeys(ÖvrigInformation);
 			
 			String ÖvrigInformation1 = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).getAttribute("value");
-			System.out.println("Övrig information = " + ÖvrigInformation); 
+			System.out.println("Övrig information = " + ÖvrigInformation1); 
 		}
 
 	}

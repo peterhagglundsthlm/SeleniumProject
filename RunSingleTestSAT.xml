@@ -8,11 +8,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-<<<<<<< HEAD
 				name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar"></class>
-=======
-				name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadBidragTillBok"></class>
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
 		</classes>
 	</test>
 </suite>

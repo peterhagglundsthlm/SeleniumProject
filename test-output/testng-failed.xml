@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
+  <parameter name="Username" value="jagtestarprisma@gmail.com"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="Password" value="Vr1234"/>
+  <test thread-count="5" name="Ett test(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar">
-=======
-      <class name="Utility.testIE">
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
         <methods>
-<<<<<<< HEAD
           <include name="ÖvrigInformation"/>
           <include name="AnställningDropDown"/>
           <include name="AnställningensBörjanMonth"/>
@@ -24,15 +22,8 @@
           <include name="AnställningensBörjanOchSlutYear"/>
           <include name="tearDown"/>
           <include name="SparaAnställning"/>
-=======
-          <include name="f"/>
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
         </methods>
-<<<<<<< HEAD
       </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewAnställningar -->
-=======
-      </class> <!-- Utility.testIE -->
->>>>>>> branch 'master' of https://github.com/KristoferKlarin/SeleniumProject.git
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Ett test(failed) -->
+</suite> <!-- Failed suite [Ett testfall] -->
