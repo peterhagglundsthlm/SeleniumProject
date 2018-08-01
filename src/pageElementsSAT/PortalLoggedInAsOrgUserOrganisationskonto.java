@@ -51,6 +51,46 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
+	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN
+	public static final String Organisationskonto_Struktur_RedigeraHögstaNivån = "#contentBody > section > div.content > form > div > div > div > ul > li > div > div.span5 > div > div > a"; {
+	}
+	public static WebElement Organisationskonto_Struktur_RedigeraHögstaNivån(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#contentBody > section > div.content > form > div > div > div > ul > li > div > div.span5 > div > div > a"));
+		return element;
+	}
+
+	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN - SVENSKT NAMN
+	public static final String Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet = "OrganizationStructure_Name"; {
+	}
+	public static WebElement Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(WebDriver driver){
+
+		element = driver.findElement(By.id("OrganizationStructure_Name"));
+		return element;
+	}
+
+	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN - ENGELSKT NAMN
+	public static final String Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet = "OrganizationStructure_NameEN"; {
+	}
+	public static WebElement Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(WebDriver driver){
+
+		element = driver.findElement(By.id("OrganizationStructure_NameEN"));
+		return element;
+	}
+
+	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN - LÄGG TILL (KNAPP)
+	public static final String Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp = "#editDialogBodyFormId > div.row-fluid.button-wrapper > div"; {
+	}
+	public static WebElement Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#editDialogBodyFormId > div.row-fluid.button-wrapper > div"));
+		return element;
+	}
+
+
+
+
+
 	//ORGANISATIONSKONTO - ANVÄNDARE
 	public static final String Organisationskonto_Användare = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[5]/div/a"; {
 	}
