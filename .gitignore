@@ -1,4 +1,6 @@
 /bin/
-/test-output/
-.classpath
+
+test-output/
+
+.classpath/
 

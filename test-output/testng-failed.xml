@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Ett testfall]" guice-stage="DEVELOPMENT">
-  <parameter name="Username" value="jagtestarprisma@gmail.com"/>
+<suite name="Failed suite [Failed suite [SuiteSAT]]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="Chrome"/>
-  <parameter name="Password" value="Vr1234"/>
-  <test thread-count="5" name="Ett test(failed)">
+  <test thread-count="5" name="Utbildning(failed)(failed)">
+    <parameter name="Username" value="jagtestarprisma@gmail.com"/>
+    <parameter name="Password" value="Vr1234"/>
     <classes>
-      <class name="testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten">
+      <class name="testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddDoktorsExamen">
         <methods>
-          <include name="Ämne"/>
-          <include name="Typ"/>
-          <include name="PeriodStartOchSlutYear"/>
-          <include name="PeriodStartMonth"/>
-          <include name="tearDown"/>
           <include name="SelectOrganization"/>
-          <include name="AddForskarUbyten"/>
-          <include name="PeriodEndMonth"/>
+          <include name="FörnamnHandledare"/>
+          <include name="LoginAsUser"/>
+          <include name="CheckTimeBeforeSuite"/>
+          <include name="ClickUtbildning"/>
+          <include name="TypAvForskarUtbildningSelectSubjects"/>
+          <include name="WriteAvhandlingensTitelEngelska"/>
+          <include name="Examensdatum"/>
           <include name="Setup"/>
-          <include name="LoginAsUser4"/>
-          <include name="ClickArbetsliv"/>
-          <include name="SparaForskarUbyte"/>
+          <include name="ISSNISBNNummer"/>
+          <include name="WriteAvhandlingensTitelOrginalSpråk"/>
+          <include name="AddForskarUtbildning"/>
+          <include name="EfternamnHandledare"/>
+          <include name="ClickForskarUtbildning"/>
+          <include name="SparaForskarutbildningKnapp"/>
+          <include name="tearDown"/>
+          <include name="TypAvForskarUtbildningAddDoktorsexamen"/>
+          <include name="CheckTimeAfterSuite"/>
         </methods>
-      </class> <!-- testCasesMinProfilArbetsliv.ArbetslivAddNewForskarutbyten -->
+      </class> <!-- testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddDoktorsExamen -->
     </classes>
-  </test> <!-- Ett test(failed) -->
-</suite> <!-- Failed suite [Ett testfall] -->
+  </test> <!-- Utbildning(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [SuiteSAT]] -->

@@ -50,19 +50,19 @@ public class UtbildningForskarUtbildningAddDoktorsExamen extends BeforeAfterTest
 	@Test (dependsOnMethods={"AddForskarUtbildning"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet2";
+		String universitet = "Uppsala Universitet";
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).sendKeys(universitet);
 
-		Thread.sleep(500);
+		Thread.sleep(800);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).sendKeys(Keys.DOWN);
 
-		Thread.sleep(500);
+		Thread.sleep(800);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).sendKeys(Keys.ENTER);
 
-		Thread.sleep(500);
+		Thread.sleep(800);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp(driver).click();
 

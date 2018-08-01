@@ -2,38 +2,32 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SuiteSAT]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="Chrome"/>
-  <test thread-count="5" name="Publikationer(failed)">
+  <test thread-count="5" name="Utbildning(failed)">
     <parameter name="Username" value="jagtestarprisma@gmail.com"/>
     <parameter name="Password" value="Vr1234"/>
     <classes>
-      <class name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadÖvrigLitteratur">
+      <class name="testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddDoktorsExamen">
         <methods>
-          <include name="VäljPublikationsTyp"/>
-          <include name="ÖvrigLitteraturSpara"/>
-          <include name="ÖvrigLitteraturDOI"/>
-          <include name="LäggTillPublikationer"/>
-          <include name="ÖvrigLitteraturFörfattareEfternamn"/>
-          <include name="ÖvrigLitteraturVarTextenPubliceradIOpenAcessJa"/>
-          <include name="ÖvrigLitteraturOpenAccessFormAvOA"/>
-          <include name="ÖvrigLitteraturOpenAccessDokumentVersion"/>
-          <include name="ÖvrigLitteraturOpenAccessLänkExternLänkFörPublicering"/>
-          <include name="ÖvrigLitteraturFörfattareKnapp"/>
-          <include name="ÖvrigLitteraturFörlag"/>
-          <include name="Setup"/>
-          <include name="ÖvrigLitteraturISBN"/>
-          <include name="ÖvrigLitteraturStatus"/>
-          <include name="ÖvrigLitteraturTitel"/>
-          <include name="ÖvrigLitteraturFörfattareFörnamn"/>
-          <include name="DropDownÖvrigLitteratur"/>
+          <include name="SelectOrganization"/>
+          <include name="FörnamnHandledare"/>
           <include name="LoginAsUser"/>
-          <include name="ÖvrigLitteraturKällaID"/>
+          <include name="CheckTimeBeforeSuite"/>
+          <include name="ClickUtbildning"/>
+          <include name="TypAvForskarUtbildningSelectSubjects"/>
+          <include name="WriteAvhandlingensTitelEngelska"/>
+          <include name="Examensdatum"/>
+          <include name="Setup"/>
+          <include name="ISSNISBNNummer"/>
+          <include name="WriteAvhandlingensTitelOrginalSpråk"/>
+          <include name="AddForskarUtbildning"/>
+          <include name="EfternamnHandledare"/>
+          <include name="ClickForskarUtbildning"/>
+          <include name="SparaForskarutbildningKnapp"/>
           <include name="tearDown"/>
-          <include name="ClickPublikationer"/>
-          <include name="ÖvrigLitteraturFörlagsplats"/>
-          <include name="ÖvrigLitteraturKällaFörPublikation"/>
-          <include name="ÖvrigLitteraturOpenAcessSammanfattning"/>
+          <include name="TypAvForskarUtbildningAddDoktorsexamen"/>
+          <include name="CheckTimeAfterSuite"/>
         </methods>
-      </class> <!-- testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadÖvrigLitteratur -->
+      </class> <!-- testCasesSATMinProfilUtbildning.UtbildningForskarUtbildningAddDoktorsExamen -->
     </classes>
-  </test> <!-- Publikationer(failed) -->
+  </test> <!-- Utbildning(failed) -->
 </suite> <!-- Failed suite [SuiteSAT] -->
