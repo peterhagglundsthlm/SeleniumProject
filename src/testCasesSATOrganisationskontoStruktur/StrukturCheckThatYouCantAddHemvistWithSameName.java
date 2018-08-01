@@ -63,8 +63,6 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	@Test (dependsOnMethods={"SvensktNamnPÂNyEnhet"})
 	public void EngelsktNamnPÂNyEnhet() {
 
-
-
 		EngelsktNamnPÂEnhet = "Earths Coolest Heroes";
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHˆgstaNivÂnEngelsktNamnPÂNyEnhet(driver).sendKeys(EngelsktNamnPÂEnhet);
 

@@ -36,7 +36,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
 	}
 
-	@Test (dependsOnMethods={"ClickPublikationer"})
+	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
