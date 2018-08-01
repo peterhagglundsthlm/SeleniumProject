@@ -1,4 +1,4 @@
-package testCasesMinProfilArbetsliv;
+package testCasesSATMinProfilArbetsliv;
 
 
 import org.openqa.selenium.By;
