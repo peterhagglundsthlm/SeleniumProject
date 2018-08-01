@@ -1,6 +1,6 @@
 /bin/
 
-test-output/
+.classpath
 
-.classpath/
+*/SeleniumProject/test-output/
 
