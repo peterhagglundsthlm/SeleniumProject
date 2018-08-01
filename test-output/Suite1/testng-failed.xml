@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="all-tests(failed)">
+    <classes>
+      <class name="TestcasesSAT.ButtonCheckLoggedInAsUser">
+        <methods>
+          <include name="ClickPublikationerButton"/>
+          <include name="ClickImmaterialrättButton"/>
+          <include name="ClickUtbildningButton"/>
+          <include name="ClickArbetslivButton"/>
+          <include name="ClickGranskarkompetens"/>
+          <include name="ClickPersonuppgifterButton"/>
+          <include name="setUp"/>
+          <include name="ClickOrganisationsUppgifter"/>
+          <include name="ClickMeriterOchUtmärkelserButton"/>
+          <include name="ClickStartButton"/>
+          <include name="ClickAnsökningarOchBidrag"/>
+          <include name="Logout"/>
+          <include name="ClickOrganisationsKonto"/>
+          <include name="ClickGranskning"/>
+          <include name="LoginAsUser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestcasesSAT.ButtonCheckLoggedInAsUser -->
+      <class name="TestcasesSAT.LoginAsInvalidUser">
+        <methods>
+          <include name="CheckThatNotPossibleLoggingInWithFalseInformation"/>
+          <include name="tearDown"/>
+          <include name="LoginAsUserWithInvalidInfo"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestcasesSAT.LoginAsInvalidUser -->
+      <class name="TestcasesSAT.ButtonCheckLoggedInAsAdmin">
+        <methods>
+          <include name="ClickMyProfileButton"/>
+          <include name="ClickPortaladministrationButton"/>
+          <include name="ClickBeredningsgrupperButton"/>
+          <include name="ClickFinansiärButton"/>
+          <include name="LoginAsAdminUser"/>
+          <include name="Logout"/>
+          <include name="ClickFormulärButton"/>
+          <include name="tearDown"/>
+          <include name="ClickIntressentregisterButton"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestcasesSAT.ButtonCheckLoggedInAsAdmin -->
+      <class name="TestcasesSAT.LoginAsValidUser">
+        <methods>
+          <include name="CheckIfLogOutButtonIsPresentVerifyLoginSuccess"/>
+          <include name="tearDown"/>
+          <include name="LoginAsUser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestcasesSAT.LoginAsValidUser -->
+    </classes>
+  </test> <!-- all-tests(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

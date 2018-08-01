@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Parallel test suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test 1(failed)">
+    <classes>
+      <class name="TestcasesSAT.ButtonCheckLoggedInAsUser">
+        <methods>
+          <include name="ClickPublikationerButton"/>
+          <include name="ClickImmaterialrättButton"/>
+          <include name="ClickUtbildningButton"/>
+          <include name="ClickArbetslivButton"/>
+          <include name="ClickGranskarkompetens"/>
+          <include name="ClickPersonuppgifterButton"/>
+          <include name="setUp"/>
+          <include name="ClickOrganisationsUppgifter"/>
+          <include name="ClickMeriterOchUtmärkelserButton"/>
+          <include name="ClickStartButton"/>
+          <include name="ClickAnsökningarOchBidrag"/>
+          <include name="Logout"/>
+          <include name="ClickOrganisationsKonto"/>
+          <include name="ClickGranskning"/>
+          <include name="LoginAsUser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestcasesSAT.ButtonCheckLoggedInAsUser -->
+      <class name="TestcasesSAT.ButtonCheckLoggedInAsAdmin">
+        <methods>
+          <include name="ClickMyProfileButton"/>
+          <include name="ClickPortaladministrationButton"/>
+          <include name="ClickBeredningsgrupperButton"/>
+          <include name="ClickFinansiärButton"/>
+          <include name="Logout"/>
+          <include name="ClickFormulärButton"/>
+          <include name="tearDown"/>
+          <include name="ClickIntressentregisterButton"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestcasesSAT.ButtonCheckLoggedInAsAdmin -->
+    </classes>
+  </test> <!-- Test 1(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->

@@ -1,0 +1,1272 @@
+<html>
+<head>
+<title>TestNG:  MinProfilArbetsliv2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>MinProfilArbetsliv2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/3/32</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 25 16:34:53 CEST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>18 seconds (18368 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.ClickGranskningsfliken()'><b>ClickGranskningsfliken</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 88). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.java:35)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace731584462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace731584462'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 88). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.ClickGranskningsfliken()'><b>ClickGranskningsfliken</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 88). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.java:33)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2011815080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2011815080'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 88). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.ClickGranskningsfliken()'><b>ClickGranskningsfliken</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 99). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.java:36)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1058892307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1058892307'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;li class=&quot;mainMenuReview active&quot;&gt;...&lt;/li&gt; is not clickable at point (659, 99). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-fade swal2-in&quot; style=&quot;overflow-y: hidden;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T15:15:03.216Z&apos;
+System info: host: &apos;77DWHM2&apos;, ip: &apos;10.251.12.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\krkl\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: fedb45d245eca48d0c7fdae7a19b6eda
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.ClickGranskningsfliken(GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.AcceptAlert()'><b>AcceptAlert</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.AccepteraAlert()'><b>AccepteraAlert</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.BankensLand()'><b>BankensLand</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.BankensLand()'><b>BankensLand</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.BankensNamn()'><b>BankensNamn</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.Betalningsinformation()'><b>Betalningsinformation</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.Betalningsinformation()'><b>Betalningsinformation</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.Betalningstyp()'><b>Betalningstyp</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.ClickGranskningsfliken()'><b>ClickGranskningsfliken</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.ClickGranskningsfliken()'><b>ClickGranskningsfliken</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.IBAN()'><b>IBAN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.Kontoinnehavare()'><b>Kontoinnehavare</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>4</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.LoginAsUser()'><b>LoginAsUser</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.Plusgiro()'><b>Plusgiro</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.SWIFTBIC()'><b>SWIFTBIC</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.Skatteprocent()'><b>Skatteprocent</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.Spara()'><b>Spara</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.Spara()'><b>Spara</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope.TIN()'><b>TIN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInEurope@65f095f8</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro.TIN()'><b>TIN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro</td>
+<td></td>
+<td>0</td>
+<td>testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro@72cde7cc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.AcceptAlert()'><b>AcceptAlert</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1281325903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1281325903'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.AcceptAlert()'><b>AcceptAlert</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace734097378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace734097378'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.AcceptAlert()'><b>AcceptAlert</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1092170861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1092170861'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.AcceptAlert()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankadress()'><b>Bankadress</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankadress()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace52850797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace52850797'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankadress()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.BankensLand()'><b>BankensLand</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace490567348", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace490567348'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensLand()'><b>BankensLand</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace603259018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace603259018'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensLand()'><b>BankensLand</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1793511544", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1793511544'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensLand()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensNamn()'><b>BankensNamn</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensNamn()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2007716372", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2007716372'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.BankensNamn()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensNamn()'><b>BankensNamn</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensNamn()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace443021492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace443021492'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensNamn()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostadress()'><b>BankensPostadress</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostadress()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1151421920", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1151421920'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostadress()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostnummer()'><b>BankensPostnummer</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostnummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1409004212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1409004212'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.BankensPostnummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Bankgiro()'><b>Bankgiro</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Bankgiro()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1421101177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1421101177'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Bankgiro()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkod()'><b>Bankkod</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkod()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1314050802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1314050802'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkod()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Bankkontonummer()'><b>Bankkontonummer</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Bankkontonummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace805976295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace805976295'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Bankkontonummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkontonummer()'><b>Bankkontonummer</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkontonummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1124773518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1124773518'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Bankkontonummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningsinformation()'><b>Betalningsinformation</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace659271212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace659271212'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningsinformation()'><b>Betalningsinformation</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1313671691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1313671691'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Betalningsinformation()'><b>Betalningsinformation</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1438936769", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1438936769'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Betalningsinformation()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningstyp()'><b>Betalningstyp</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningstyp()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace366513168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace366513168'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Betalningstyp()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningstyp()'><b>Betalningstyp</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningstyp()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1645251795", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1645251795'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Betalningstyp()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Clearingnummer()'><b>Clearingnummer</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Clearingnummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1426344756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1426344756'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Clearingnummer()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Kontoinnehavare()'><b>Kontoinnehavare</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Kontoinnehavare()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace198341554", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace198341554'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Kontoinnehavare()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Kontoinnehavare()'><b>Kontoinnehavare</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Kontoinnehavare()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1578964260", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1578964260'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Kontoinnehavare()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.SWIFTBIC()'><b>SWIFTBIC</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.SWIFTBIC()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace76032922", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace76032922'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.SWIFTBIC()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Skatteprocent()'><b>Skatteprocent</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Skatteprocent()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace700523674", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace700523674'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Skatteprocent()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Skatteprocent()'><b>Skatteprocent</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Skatteprocent()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace733012599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace733012599'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Skatteprocent()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Spara()'><b>Spara</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace835175041", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace835175041'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Spara()'><b>Spara</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace753570330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace753570330'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Spara()'><b>Spara</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1978869783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1978869783'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.Spara()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.TIN()'><b>TIN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace761923430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace761923430'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro@62230c58] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.TIN()'><b>TIN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace243801670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace243801670'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto@3738449f] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.TIN()'><b>TIN</b><br>Test class: testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope</td>
+<td><div><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace651726990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace651726990'><pre>java.lang.Throwable: Method GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope.TIN()[pri:0, instance:testCasesSATGranskningBetalningsinformation.GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope@2f8dad04] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+</body>
+</html>

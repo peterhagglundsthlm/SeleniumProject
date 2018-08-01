@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [SuiteSAT]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="all-tests-SAT-Chrome(failed)(failed)(failed)">
+    <parameter name="browser" value="Headless"/>
+    <classes>
+      <class name="testCasesSAT.ArbetslivAddNewForskarutbyten">
+        <methods>
+          <include name="ClickArbetsliv"/>
+          <include name="PeriodStartOchSlutYear"/>
+          <include name="LoginAsUser"/>
+          <include name="PeriodStartMonth"/>
+          <include name="SparaForskarUbyte"/>
+          <include name="Ämne"/>
+          <include name="AddForskarUbyten"/>
+          <include name="PeriodEndMonth"/>
+          <include name="Typ"/>
+          <include name="tearDown"/>
+          <include name="Setup"/>
+          <include name="SelectOrganization"/>
+        </methods>
+      </class> <!-- testCasesSAT.ArbetslivAddNewForskarutbyten -->
+      <class name="testCasesSAT.ArbetslivAddNewINTEFackGranskadBidragTillBok">
+        <methods>
+          <include name="BidragTillEnBokOpenAccessFormAvOA"/>
+          <include name="BidragTillEnBokUtgivareISBN"/>
+          <include name="BidragTillEnBokRedaktörKnapp"/>
+          <include name="BidragTillEnBokFörfattareEfternamn"/>
+          <include name="DropDownBidragTillEnBok"/>
+          <include name="BidragTillEnBokUtgivareKällaID"/>
+          <include name="BidragTillEnBokUtgivareFörlagsplats"/>
+          <include name="BidragTillEnBokUtgivareFörlag"/>
+          <include name="ClickPublikationer"/>
+          <include name="tearDown"/>
+          <include name="BidragTillEnBokUtgivareStatus"/>
+          <include name="VäljPublikationsTyp"/>
+          <include name="BidragTillEnBokFörfattareFörnamn"/>
+          <include name="LäggTillPublikationer"/>
+          <include name="BidragTillEnBokUtgivareFörstaSidnummer"/>
+          <include name="BidragTillEnBokOpenAcessSammanfattning"/>
+          <include name="BidragTillEnBokOpenAccessDokumentVersion"/>
+          <include name="BidragTillEnBokVarTextenPubliceradIOpenAcessJa"/>
+          <include name="BidragTillEnBokTitel"/>
+          <include name="BidragTillEnBokUtgivareKällaFörPublikation"/>
+          <include name="Setup"/>
+          <include name="BidragTillEnBokUtgivareSistaSidnummer"/>
+          <include name="LoginAsUser"/>
+          <include name="BidragTillEnBokOpenAccessLänkExternLänkFörPublicering"/>
+          <include name="BidragTillEnBokSpara"/>
+          <include name="BidragTillEnBokFörfattareKnapp"/>
+          <include name="BidragTillEnBokUtgivareDOI"/>
+          <include name="BidragTillEnBokRedaktörNamn"/>
+        </methods>
+      </class> <!-- testCasesSAT.ArbetslivAddNewINTEFackGranskadBidragTillBok -->
+      <class name="testCasesSAT.GranskningAddNewPaymentInformationBankLocatedInEurope">
+        <methods>
+          <include name="SWIFTBIC"/>
+          <include name="ClickGranskningsfliken"/>
+          <include name="TIN"/>
+          <include name="BankensNamn"/>
+          <include name="LoginAsUser"/>
+          <include name="Setup"/>
+          <include name="Kontoinnehavare"/>
+          <include name="Spara"/>
+          <include name="BankensLand"/>
+          <include name="Betalningsinformation"/>
+          <include name="tearDown"/>
+          <include name="AccepteraAlert"/>
+          <include name="IBAN"/>
+        </methods>
+      </class> <!-- testCasesSAT.GranskningAddNewPaymentInformationBankLocatedInEurope -->
+      <class name="testCasesSAT.ArbetslivAddNewPostdoktorvistelser">
+        <methods>
+          <include name="PeriodStartOchSlutYear"/>
+          <include name="PeriodStartMonth"/>
+          <include name="ÄmneDropDown"/>
+          <include name="AddPostdoktorvistelser"/>
+          <include name="tearDown"/>
+          <include name="PeriodEndMonth"/>
+          <include name="SparaPostdoktorvistelser"/>
+          <include name="Setup"/>
+          <include name="ClickArbetsliv"/>
+          <include name="SelectOrganization"/>
+          <include name="LoginAsUser"/>
+        </methods>
+      </class> <!-- testCasesSAT.ArbetslivAddNewPostdoktorvistelser -->
+    </classes>
+  </test> <!-- all-tests-SAT-Chrome(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [SuiteSAT]]] -->
