@@ -14,7 +14,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Forskarutbyte2";
+	String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Forskarutbyte";
 
 
 	@Test
