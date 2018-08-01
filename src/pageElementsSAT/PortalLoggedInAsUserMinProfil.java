@@ -101,15 +101,15 @@ public class PortalLoggedInAsUserMinProfil {
 		element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-year"));
 		return element;
 	}
-	
-	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN/DOKTORSEXAMEN - EXAMENSDATUM - MÅNAD (DROPDOWN)
-		public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown = "#ui-datepicker-div > div > div > select.ui-datepicker-month"; {
-		}
-		public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown(WebDriver driver) {
 
-			element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-month"));
-			return element;
-		}
+	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - LICENTIATEXAMEN/DOKTORSEXAMEN - EXAMENSDATUM - MÅNAD (DROPDOWN)
+	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown = "#ui-datepicker-div > div > div > select.ui-datepicker-month"; {
+	}
+	public static WebElement MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatumMånadDropdown(WebDriver driver) {
+
+		element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-month"));
+		return element;
+	}
 
 	//MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - FORSKNINGSKOMPETENS MOSVARANDE DOKTORSEXAMEN- DATUM FÖR NÄR FORSKNINGSKOMPETENS UPPNÅTTS
 	public static final String MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts = "CompetenceAchievedDate"; {
@@ -1497,6 +1497,24 @@ public class PortalLoggedInAsUserMinProfil {
 	public static WebElement MinProfil_ImmaterialrättDatumFörBeviljande(WebDriver driver){
 
 		element = driver.findElement(By.name("DateApproved"));
+		return element;
+	}
+
+	//MIN PROFIL - IMMATERIALRÄTT - DATUM FÖR BEVILJANDE - ÅR DROPDOWN I KALENDER
+	public static final String MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown = "#ui-datepicker-div > div > div > select.ui-datepicker-year"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-year"));
+		return element;
+	}
+	
+	//MIN PROFIL - IMMATERIALRÄTT - DATUM FÖR BEVILJANDE - Månad DROPDOWN I KALENDER
+	public static final String MinProfil_ImmaterialrättDatumFörBeviljandeKalenderMånadDropDown = "#ui-datepicker-div > div > div > select.ui-datepicker-month"; {
+	}
+	public static WebElement MinProfil_ImmaterialrättDatumFörBeviljandeKalenderMånadDropDown(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#ui-datepicker-div > div > div > select.ui-datepicker-month"));
 		return element;
 	}
 

@@ -79,7 +79,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);
+		//EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		System.out.println("Detta testfall tog " + duration /1000 + " sekunder att utföra");
 	}

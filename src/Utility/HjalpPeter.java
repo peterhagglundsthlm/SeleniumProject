@@ -1,17 +1,14 @@
 package Utility;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.IfStatements;
 import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsAdmin;
 import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
@@ -36,9 +33,7 @@ public class HjalpPeter {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdmin.LoggaUt));
 
 		
-		IfStatements.IfCssSelctorIsNotVisibleThenFail(driver, PortalLoggedInAsAdminIntressentregister.IntressentregisterButton);
-		
-		
+	
 		
 		/*
 		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_CSS(driver).click();
