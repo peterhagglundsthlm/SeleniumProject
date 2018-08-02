@@ -13,6 +13,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
@@ -26,8 +27,9 @@ public class BeforeAfterTestBrowsers {
 	}
 
 	@Parameters({"browser",  "Username", "Password"})
+	
 	@BeforeClass
-	public void Setup(String browser, String Username , String Password) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -40,6 +42,18 @@ public class BeforeAfterTestBrowsers {
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
+
+		}
+		
+		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			ChromeOptions fullscreen = new ChromeOptions();
+			fullscreen.addArguments("start-maximized");
+			driver = new ChromeDriver(fullscreen);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTime = System.currentTimeMillis();
+			DriverGetWebsite.OpenSatPortal(driver);
+			
 
 		}
 
