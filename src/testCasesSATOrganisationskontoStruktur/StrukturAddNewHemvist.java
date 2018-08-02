@@ -1,6 +1,7 @@
 package testCasesSATOrganisationskontoStruktur;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -9,6 +10,7 @@ import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
+	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;
 
 	String TestCaseInfo = "Loggar in som en organisationskontoansvarig och lägger till en ny hemvist under fliken organisationskonto, sidan struktur.";
 
@@ -53,8 +55,8 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).clear();
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
 
-			String SvenskNamnPåEnhetString = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetString); 
+			SvenskNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
+			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
 		}
 
 
@@ -73,8 +75,8 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).clear();
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
 
-			String EngelsktNamnPåEnhetString = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetString); 
+			EngelsktNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
+			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
 		}
 	}
 
@@ -82,9 +84,30 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	public void SparaNyHemvist() throws InterruptedException {
 
 		Thread.sleep(1000);
-		
+
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp(driver).click();
-	
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng));
+
+		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng(driver).click();
+
+	}
+
+	@Test (dependsOnMethods={"SparaNyHemvist"})
+	public void KontrollerAttHemvistenHarLagtsTill() {
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån));
+
+		if (driver.getPageSource().contains((SvenskNamnPåEnhetValue)))
+		{
+			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
+		}
+		else {
+			String FailedTest = "Hemvisten har inte lagts till i strukturen. Testet har misslyckats";
+			System.out.println(FailedTest);
+			Assert.fail();
+		}
+
 	}
 
 }

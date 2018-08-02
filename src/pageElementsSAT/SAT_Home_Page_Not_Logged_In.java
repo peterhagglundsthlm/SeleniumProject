@@ -16,6 +16,8 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
+	public static final String EnterUserName = "Email"; {
+	}
 	public static WebElement EnterUserName(WebDriver driver){
 
 		element = driver.findElement(By.id("Email"));

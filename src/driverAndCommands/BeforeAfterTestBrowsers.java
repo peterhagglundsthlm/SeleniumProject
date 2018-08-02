@@ -1,11 +1,17 @@
 package driverAndCommands;
 
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -23,12 +29,11 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-	@Parameters({"browser",  "Username", "Password" })
+	@Parameters({"browser",  "Username", "Password"})
 	@BeforeClass
 	public void Setup(String browser, String Username , String Password) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
-
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions fullscreen = new ChromeOptions();
 			fullscreen.addArguments("start-maximized");
@@ -37,8 +42,8 @@ public class BeforeAfterTestBrowsers {
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 		}
 
@@ -50,6 +55,8 @@ public class BeforeAfterTestBrowsers {
 			DriverGetWebsite.OpenSatPortal(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
+
+
 
 		}
 

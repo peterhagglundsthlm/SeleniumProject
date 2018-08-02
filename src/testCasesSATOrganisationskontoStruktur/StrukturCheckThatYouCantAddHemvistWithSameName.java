@@ -9,10 +9,11 @@ import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterTestBrowsers {
-	String EngelsktNamnPåEnhet; String SvenskNamnPåEnhet;
+	
+	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;
 
 
-	String TestCaseInfo = "Loggar in som en organisationskontoansvarig och förösker lägga till en hemvist med namn som redan finns. Testet kontrollerar att valideringsmeddelande visas korrekt.";
+	String TestCaseInfo = "Loggar in som en organisationskontoansvarig och försöker lägga till en hemvist med namn som redan finns. Testet kontrollerar att valideringsmeddelande visas korrekt.";
 
 	@Test
 	public void LoginAsUser() {
@@ -45,7 +46,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	@Test (dependsOnMethods={"RedigeraHögstaNivån"})
 	public void SvensktNamnPåNyEnhet() {
 
-		SvenskNamnPåEnhet = "Jordens Coolaste Hjältar";
+		String SvenskNamnPåEnhet = "Jordens Coolaste Hjältar";
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
 
 		if (PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value") != SvenskNamnPåEnhet);
@@ -53,17 +54,16 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).clear();
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
 
-			String SvenskNamnPåEnhetString = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetString); 
+			SvenskNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
+			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
 		}
-
 
 	}
 
 	@Test (dependsOnMethods={"SvensktNamnPåNyEnhet"})
 	public void EngelsktNamnPåNyEnhet() {
 
-		EngelsktNamnPåEnhet = "Earths Coolest Heroes";
+		String EngelsktNamnPåEnhet = "Earths Coolest Heroes";
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
 
 		if (PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value") != EngelsktNamnPåEnhet);
@@ -71,8 +71,8 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).clear();
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
 
-			String EngelsktNamnPåEnhetString = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetString); 
+			EngelsktNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
+			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
 		}
 	}
 
@@ -80,6 +80,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	public void SparaNyHemvist() {
 
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp(driver).click();
+		
 	}
 
 	@Test (dependsOnMethods={"SparaNyHemvist"})
@@ -87,7 +88,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#organizationStructureCreate > div > ul > li:nth-child(1)"));
 		
-		if (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+EngelsktNamnPåEnhet+"'")) && (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+SvenskNamnPåEnhet+"'"))))  {
+		if (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+SvenskNamnPåEnhetValue+"'"))))  {
 
 			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 

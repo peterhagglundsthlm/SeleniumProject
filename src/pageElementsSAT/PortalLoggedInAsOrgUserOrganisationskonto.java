@@ -87,6 +87,15 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
+	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN - STÄNG (KNAPP)
+	public static final String Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng = "#editDialogBody > section > div > div:nth-child(2) > div > div.row-fluid.button-wrapper > div > a"; {
+	}
+	public static WebElement Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#editDialogBody > section > div > div:nth-child(2) > div > div.row-fluid.button-wrapper > div > a"));
+		return element;
+	}
+
 
 
 
