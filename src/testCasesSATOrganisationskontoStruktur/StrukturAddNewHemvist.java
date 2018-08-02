@@ -8,7 +8,6 @@ import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 
-
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	String EngelsktNamnPÂEnhetValue; String SvenskNamnPÂEnhetValue;
 
@@ -58,8 +57,6 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 			SvenskNamnPÂEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHˆgstaNivÂnSvensktNamnPÂNyEnhet(driver).getAttribute("value");
 			System.out.println("Svensk namn pÂ enhet ‰r = " + SvenskNamnPÂEnhetValue); 
 		}
-
-
 	}
 
 	@Test (dependsOnMethods={"SvensktNamnPÂNyEnhet"})
