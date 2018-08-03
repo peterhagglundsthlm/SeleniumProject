@@ -12,12 +12,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class MeriterOchUtm‰rkelserAddNew÷vrigaMeriter extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och l‰gger till en ÷vriga meriter";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}

@@ -9,14 +9,10 @@ import driverAndCommands.BeforeAfterTestBrowsers;
 
 public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Försöker logga in med felaktiga inloggningsuppgifter. Kontrollerar att felmeddelande visas";
+
 
 	@Test 
 	public void InputUserWithInvalidInfo() {
-		
-		System.out.println("Testfall = " + TestCaseInfo);
-
-		//FÖRSÖKER LOGGA IN MED OGILTIGA ANVÄNDARUPPGIFTER
 		
 	}
 

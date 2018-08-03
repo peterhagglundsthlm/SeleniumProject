@@ -11,13 +11,13 @@ import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInEurope extends BeforeAfterTestBrowsers {
-
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land i Europa (Frankrike)";
-
+	
+	
+	
+	
 	@Test
 	public void LoginAsUser() {
-
-		System.out.println("Testfall = " + TestCaseInfo);
+	
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		
 	}

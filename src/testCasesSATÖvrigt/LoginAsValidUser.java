@@ -9,17 +9,13 @@ import pageElementsSAT.PortalLoggedInAsAdmin;
 
 public class LoginAsValidUser extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Testar att logga in med riktiga inloggningsuppgifter. Kontrollerar att inloggning har skett korrekt.";
+
 
 	@Test 
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
-
-		//LOGGAR IN SOM ADMIN MED GILTIGT INLOGGNING
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdmin.LoggaUt));
 		
-
 	}
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void CheckIfLogOutButtonIsPresentVerifyLoginSuccess() {

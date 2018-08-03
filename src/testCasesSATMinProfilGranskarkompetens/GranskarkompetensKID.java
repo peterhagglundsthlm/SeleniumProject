@@ -12,14 +12,10 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	
-	
 
-	String TestCaseInfo = "Loggar in som en projektledare och väljer slumpmässiga värden i KID dropdowns under granskarkompetens";
-	
 	@Test
 	public void LoginAsUser() {
 		
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();

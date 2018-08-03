@@ -1,8 +1,11 @@
 package driverAndCommands;
 
 
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,34 +21,44 @@ import org.testng.annotations.Parameters;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
-	public static WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite;
+	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
 
 
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
 		startTimeSuite = System.currentTimeMillis();
+		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
 	}
 
-	@Parameters({"browser",  "Username", "Password"})
-	
+	@Parameters({"browser",  "Username", "Password", "TestCaseInfo"})
+
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String TestCaseInfo) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
+
+			System.out.println("\u001b[1;31mNytt Testfall påbörjas nu\u001b[0m");
+			System.out.println("Beskrivning av testfall: " + TestCaseInfo);
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			ChromeOptions fullscreen = new ChromeOptions();
-			fullscreen.addArguments("start-maximized");
-			driver = new ChromeDriver(fullscreen);
+			ChromeOptions ChromeOption = new ChromeOptions();
+			ChromeOption.addArguments("start-maximized");
+			LogManager.getLogManager().reset();
+			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 		}
-		
+
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
+			System.out.println("\u001b[1;31mNytt Testfall påbörjas nu\u001b[0m");
+			System.out.println(TestCaseInfo);
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions fullscreen = new ChromeOptions();
 			fullscreen.addArguments("start-maximized");
@@ -53,7 +66,7 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
-			
+
 
 		}
 
@@ -99,6 +112,7 @@ public class BeforeAfterTestBrowsers {
 		EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		System.out.println("Detta testfall tog " + duration /1000 + " sekunder att utföra");
+		System.out.println("");
 	}
 
 

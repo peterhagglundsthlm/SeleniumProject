@@ -14,14 +14,10 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Forskarutbyte123";
-
-
+	
 	@Test
 	public void LoginAsUser4() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
-		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();

@@ -17,21 +17,13 @@ import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
 
 public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en admin och testar att alla synliga knappar är klickbara";
-
-	
 	@Test 
 	public void LoginAsAdminUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
-
-		//Loggar in som användare kkprisma@yahoo.com
-		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminMinProfil.MinProfilButton));
 		
 	}
 
-	
 	@Test (dependsOnMethods={"LoginAsAdminUser"})
 	public void ClickMyProfileButton() {
 

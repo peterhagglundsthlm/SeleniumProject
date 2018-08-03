@@ -16,12 +16,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extends BeforeAfterTestBrowsers {
 
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land utanför Europa (Chile)";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 

@@ -12,12 +12,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class PublikationerAddNewINTEFackGranskadRecensionArtikel extends BeforeAfterTestBrowsers {
 	
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till en INTE fackgranskad Konferensbidrag";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}

@@ -12,13 +12,9 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	
 	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;
 
-
-	String TestCaseInfo = "Loggar in som en organisationskontoansvarig och försöker lägga till en hemvist med namn som redan finns. Testet kontrollerar att valideringsmeddelande visas korrekt.";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto));
 
 	}

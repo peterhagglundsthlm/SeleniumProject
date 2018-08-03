@@ -11,12 +11,10 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class MeriterOchUtmärkelserAddNewPriserOchUtmärkelser extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till en Priser och Utmärkelser";
 	
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}

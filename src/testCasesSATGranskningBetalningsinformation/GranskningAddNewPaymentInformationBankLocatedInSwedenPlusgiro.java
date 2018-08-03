@@ -13,12 +13,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för Sverige (PLUSGIRO)";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 

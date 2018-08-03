@@ -14,12 +14,11 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för Sverige (BANKKONTO)";
+	
 
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 

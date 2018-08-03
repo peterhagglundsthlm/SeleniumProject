@@ -9,14 +9,12 @@ import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
+	
 	String EngelsktNamnPÂEnhetValue; String SvenskNamnPÂEnhetValue;
-
-	String TestCaseInfo = "Loggar in som en organisationskontoansvarig och l‰gger till en ny hemvist under fliken organisationskonto, sidan struktur.";
 
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto));
 
 	}

@@ -12,12 +12,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestBrowsers {
 	
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till en Postdoktorvistelser";
-	
+
 	@Test
 	public void LoginAsUser3() {
-		
-		System.out.println("Testfall = " + TestCaseInfo);
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		

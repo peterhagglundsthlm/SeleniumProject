@@ -12,12 +12,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers {
 
 
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad Bok";
-
 	@Test
 	public void LoginAsUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 		

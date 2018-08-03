@@ -14,14 +14,9 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
-	String TestCaseInfo = "Loggar in som en organisationsanvändare och testar att alla synliga knappar är klickbara";
-
 	@Test 
 	public void LoginAsNormalUser() {
 
-		System.out.println("Testfall = " + TestCaseInfo);
-
-		//Loggar in som användare kkprisma@yahoo.com
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 

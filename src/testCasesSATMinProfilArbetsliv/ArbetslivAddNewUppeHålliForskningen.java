@@ -10,19 +10,16 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers {
 	
-	String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Uppehåll i forskningen";
-
+	
 	@Test
-	public void LoginAsUser2() {
-
-		System.out.println("Testfall = " + TestCaseInfo);
+	public void LoginAsUser() {
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
-	@Test (dependsOnMethods={"LoginAsUser2"})
+	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickArbetsliv() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
