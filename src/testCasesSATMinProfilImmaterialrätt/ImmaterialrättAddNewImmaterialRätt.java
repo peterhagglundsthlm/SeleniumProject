@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -12,6 +13,14 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers {
+
+
+	@BeforeTest
+	public void TestCaseInfo() {
+
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Immaterialrätt";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
 
 	@Test
 	public void LoginAsUser() {
@@ -58,7 +67,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).sendKeys(id);
 		}	
-		
+
 		String IdString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).getAttribute("value");
 		System.out.println("Id = " + IdString); 
 	}
@@ -67,7 +76,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 	public void DatumFörBeviljande() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljande(driver).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown));
 
 		Select År = new Select (driver.findElement(By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown)));
@@ -75,17 +84,17 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		int endOption = År.getOptions().size(); 
 		int numberÅr = randomÅr .nextInt(endOption);  
 		År.selectByIndex(numberÅr);
-		
+
 		Select Månad = new Select (driver.findElement(By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderMånadDropDown)));
 		Random randomMånad = new Random();  
 		int endOptionMånad = Månad.getOptions().size(); 
 		int numberMånad = randomMånad .nextInt(endOptionMånad);  
 		Månad.selectByIndex(numberMånad);
-		
+
 		int RandomDatum = 1 + (int)(Math.random() * 28); 
 		String Datum = Integer.toString(RandomDatum);
 		driver.findElement(By.linkText(Datum)).click();
-		
+
 		String DatumFörBeviljandeString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljande(driver).getAttribute("value");
 		System.out.println("Datum för beviljande = " + DatumFörBeviljandeString); 
 	}

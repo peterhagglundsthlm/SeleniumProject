@@ -4,6 +4,7 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -12,18 +13,25 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers {
 
 
+	@BeforeTest
+	public void TestCaseInfo() {
+
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad Bok";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
+
 	@Test
 	public void LoginAsUser() {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-		
+
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickPublikationer() {
 
-		
+
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
 	}
 
@@ -184,7 +192,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		String LänkFörPublicering = "Testlänk";
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys(LänkFörPublicering);
-		
+
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).getAttribute("value") != LänkFörPublicering)
 		{
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).clear();
@@ -219,7 +227,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 
 		String Sammanfattning = "Jag skriver en riktigt bra sammanfattning";
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys(Sammanfattning);
-		
+
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).getAttribute("value") != Sammanfattning)
 		{
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).clear();

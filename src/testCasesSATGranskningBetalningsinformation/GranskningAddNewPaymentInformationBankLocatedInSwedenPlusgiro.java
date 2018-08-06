@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -12,6 +14,15 @@ import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro extends BeforeAfterTestBrowsers {
+
+
+	@BeforeClass
+	public void TestCaseInfo() {
+
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för Sverige (PLUSGIRO)";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
+
 
 	@Test
 	public void LoginAsUser() {
@@ -36,7 +47,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
 		BankensLand.selectByVisibleText("Sverige");
-		
+
 		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
 		String BankeslandValue = BankensLandSelect.getText();
 		System.out.println("Bankens land är = " + BankeslandValue ); 
@@ -47,7 +58,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 		Select Betalningstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp)));
 		Betalningstyp.selectByVisibleText("Plusgiro");
-		
+
 		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
 		String BetalningstypValue = BetalningstypSelect.getText();
 		System.out.println("Betalningstyp är = " + BetalningstypValue ); 
@@ -58,7 +69,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).sendKeys("1234-45-67");
-		
+
 		String PlusgiroString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).getAttribute("value");
 		System.out.println("Plusgiro är = " + PlusgiroString); 
 	}
@@ -68,7 +79,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).sendKeys("35");
-		
+
 		String SkatteprocentString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).getAttribute("value");
 		System.out.println("Skatteprocent är = " + SkatteprocentString + "%"); 
 	}
@@ -78,7 +89,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("1234567");
-		
+
 		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
 		System.out.println("Skatteprocent är = " + TINString); 
 	}
@@ -87,7 +98,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara(driver).click();
 	}
 
@@ -95,7 +106,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	public void AcceptAlert() {
 
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
-		
+
 	}
 }
 

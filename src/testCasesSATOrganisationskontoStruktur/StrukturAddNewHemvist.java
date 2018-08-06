@@ -2,6 +2,7 @@ package testCasesSATOrganisationskontoStruktur;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -11,6 +12,13 @@ import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	
 	String EngelsktNamnPÂEnhetValue; String SvenskNamnPÂEnhetValue;
+	
+	@BeforeTest
+	public void TestCaseInfo() {
+		
+		String TestCaseInfo = "Loggar in som en organisationskontoansvarig och l‰gger till en ny hemvist under fliken organisationskonto, sidan struktur";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
 
 	@Test
 	public void LoginAsUser() {

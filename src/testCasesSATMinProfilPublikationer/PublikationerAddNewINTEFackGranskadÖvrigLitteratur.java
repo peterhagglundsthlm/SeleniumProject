@@ -4,6 +4,7 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -11,6 +12,13 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAfterTestBrowsers {
+	
+	@BeforeTest
+	public void TestCaseInfo() {
+		
+		String TestCaseInfo = "Loggar in som en projektledare och l‰gger till en INTE fackgranskad ÷vrigLitteratur";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
 	
 	@Test
 	public void LoginAsUser() {

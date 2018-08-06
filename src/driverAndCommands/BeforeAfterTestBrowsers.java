@@ -32,15 +32,18 @@ public class BeforeAfterTestBrowsers {
 		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
 	}
 
-	@Parameters({"browser",  "Username", "Password", "TestCaseInfo"})
+	@Parameters({"browser",  "Username", "Password"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String TestCaseInfo) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
-			System.out.println("\u001b[1;31mNytt Testfall påbörjas nu\u001b[0m");
-			System.out.println("Beskrivning av testfall: " + TestCaseInfo);
+			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			
+			//System.out.println("Beskrivning av testfall: " + TestCaseInfo);
+			
+			
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
@@ -58,7 +61,6 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 			System.out.println("\u001b[1;31mNytt Testfall påbörjas nu\u001b[0m");
-			System.out.println(TestCaseInfo);
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions fullscreen = new ChromeOptions();
 			fullscreen.addArguments("start-maximized");
