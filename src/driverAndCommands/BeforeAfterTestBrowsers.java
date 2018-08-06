@@ -40,10 +40,6 @@ public class BeforeAfterTestBrowsers {
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
-			
-			//System.out.println("Beskrivning av testfall: " + TestCaseInfo);
-			
-			
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
@@ -60,14 +56,16 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
-			System.out.println("\u001b[1;31mNytt Testfall påbörjas nu\u001b[0m");
+			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			ChromeOptions fullscreen = new ChromeOptions();
-			fullscreen.addArguments("start-maximized");
-			driver = new ChromeDriver(fullscreen);
+			ChromeOptions ChromeOption = new ChromeOptions();
+			ChromeOption.addArguments("start-maximized");
+			LogManager.getLogManager().reset();
+			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 
 
 		}

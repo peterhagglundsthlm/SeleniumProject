@@ -15,4 +15,5 @@ public class GetCurrentUrl {
 	  System.out.println(InformationsText + CurrentUrl);
 	  return null;
   }
+ 
 }

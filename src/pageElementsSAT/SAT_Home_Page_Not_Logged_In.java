@@ -62,6 +62,24 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(1) > a"));
 		return element;
 	}
+	
+	//KNAPP FÖR ATT ÖPPNA BEHANDLING AV PERSONUPPGIFTER
+	public static final String BehandlingAvPersonuppgifterButton = "#processingofpersonaldata"; {	
+	}
+	public static WebElement BehandlingAvPersonuppgifterButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#processingofpersonaldata"));
+		return element;
+	}
+	
+	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP)
+	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
+	}
+	public static WebElement HjälpButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"));
+		return element;
+	}
 
 
 
