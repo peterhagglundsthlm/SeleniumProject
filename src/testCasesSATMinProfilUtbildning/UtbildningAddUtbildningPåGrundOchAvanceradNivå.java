@@ -4,6 +4,7 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -65,6 +66,9 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		Thread.sleep(500);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp(driver).click();
+		
+		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).getAttribute("value");
+		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
 	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
@@ -76,6 +80,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = år.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		år.selectByIndex(number);
+		
+		WebElement Startår = år.getFirstSelectedOption();
+		String Value = Startår.getText();
+		System.out.println("Start år = " + Value );
 	}
 
 	@Test (dependsOnMethods={"ÅrFörExamen"})
@@ -88,6 +96,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = ämne1.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
+		
+		WebElement ämneEtt = ämne1.getFirstSelectedOption();
+		String Value1 = ämneEtt.getText();
+		System.out.println("Ämne 1 = " + Value1 ); 
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne2UtbildningPåGrundOchAvanceradNivå));
@@ -97,6 +109,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption2 = ämne2.getOptions().size(); 
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
+		
+		WebElement ämneTvå = ämne2.getFirstSelectedOption();
+		String Value2 = ämneTvå.getText();
+		System.out.println("Ämne 2 = " + Value2 ); 
 
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_Ämne3UtbildningPåGrundOchAvanceradNivå));
@@ -106,6 +122,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption3 = ämne3.getOptions().size(); 
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		ämne3.selectByIndex(number3);
+		
+		WebElement ämneTre = ämne3.getFirstSelectedOption();
+		String Value3 = ämneTre.getText();
+		System.out.println("Ämne 3 = " + Value3 );
 	}
 
 	@Test (dependsOnMethods={"ExamensinriktningSelectSubjects"})
@@ -117,6 +137,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = TypAvExamen.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		TypAvExamen.selectByIndex(number);
+		
+		WebElement TypAvExamen1 = TypAvExamen.getFirstSelectedOption();
+		String Value = TypAvExamen1.getText();
+		System.out.println("Typ av examen = " + Value );
 	}
 
 	@Test (dependsOnMethods={"Examen"})
@@ -128,6 +152,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = Specialistkompetens.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		Specialistkompetens.selectByIndex(number);
+		
+		WebElement Specialistkompetens1 = Specialistkompetens.getFirstSelectedOption();
+		String Value = Specialistkompetens1.getText();
+		System.out.println("Specialistkompetens = " + Value );
 	}
 
 	@Test (dependsOnMethods={"Specialistkompetens"})
@@ -139,12 +167,20 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = SpecialistkompetensÅr.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		SpecialistkompetensÅr.selectByIndex(number);
+
+		WebElement SpecialistkompetensAr = SpecialistkompetensÅr.getFirstSelectedOption();
+		String Value = SpecialistkompetensAr.getText();
+		System.out.println("Specialistkompetens År = " + Value );
+		
 	}
 
 	@Test (dependsOnMethods={"SpecialistkompetensÅr"})
 	public void OmrådeBeskrivning() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning(driver).sendKeys("Test123");
+		
+		String OmrådeBeskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning(driver).getAttribute("value");
+		System.out.println("OmrådeBeskrivning = " + OmrådeBeskrivning); 
 	}
 
 	@Test (dependsOnMethods={"SpecialistkompetensÅr"})
