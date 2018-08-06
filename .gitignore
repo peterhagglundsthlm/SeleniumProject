@@ -9,3 +9,5 @@ RunAllTestsSATFireFox.xml
 RunAllTestsSATHeadless.xml
 
 RunSingleTestSAT.xml
+
+.classpath
