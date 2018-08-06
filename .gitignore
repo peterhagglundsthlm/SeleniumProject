@@ -1,5 +1,7 @@
 /bin/
 
+.classpath
+
 test-output/
 
 RunAllTestsSATChrome.xml
