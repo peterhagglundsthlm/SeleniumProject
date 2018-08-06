@@ -1,9 +1,7 @@
-package testCasesSATButtonCheck;
-
-
+package testCasesSATButtonCheckAdmin;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -18,7 +16,7 @@ import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
 
 public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	
-	@BeforeTest
+	@BeforeClass
 	public void TestCaseInfo() {
 		
 		String TestCaseInfo = "Loggar in som en admin och testar att alla synliga knappar är klickbara";

@@ -1,12 +1,10 @@
 package testCasesSATGranskningBetalningsinformation;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -74,7 +72,6 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		String BankensNamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
 		System.out.println("Bankens namn är = " + BankensNamnString); 
-
 
 	}
 

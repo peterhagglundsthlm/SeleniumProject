@@ -1,18 +1,26 @@
 package testCasesSATMinProfilArbetsliv;
 
-
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
+	
+	@BeforeClass
+	public void TestCaseInfo() {
+		
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Forskarutbyte";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
+
 
 	
 	@Test

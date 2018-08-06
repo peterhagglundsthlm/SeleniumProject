@@ -1,8 +1,8 @@
 package testCasesSATMinProfilArbetsliv;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -10,6 +10,13 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers {
 	
+	@BeforeClass
+	public void TestCaseInfo() {
+		
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Uppehåll i forskningen";
+		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+	}
+
 	
 	@Test
 	public void LoginAsUser() {

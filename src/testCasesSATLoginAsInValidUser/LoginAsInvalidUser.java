@@ -1,22 +1,18 @@
-package testCasesSATÖvrigt;
-
-
-
+package testCasesSATLoginAsInValidUser;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 
 public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
-	@BeforeTest
+	@BeforeClass
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Försöker logga in med felaktiga inloggningsuppgifter. Kontrollerar att felmeddelande visas";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
-
 
 	@Test 
 	public void InputUserWithInvalidInfo() {

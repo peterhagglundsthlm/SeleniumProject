@@ -2,7 +2,7 @@ package testCasesSATOrganisationskontoStruktur;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -13,7 +13,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	
 	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;
 	
-	@BeforeTest
+	@BeforeClass
 	public void TestCaseInfo() {
 		
 		String TestCaseInfo = "Loggar in som en organisationskontoansvarig och försöker lägga till en hemvist med namn som redan finns. Testet kontrollerar att valideringsmeddelande visas korrekt";

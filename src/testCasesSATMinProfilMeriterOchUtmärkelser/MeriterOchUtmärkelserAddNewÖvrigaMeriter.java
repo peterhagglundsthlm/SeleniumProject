@@ -3,8 +3,9 @@ package testCasesSATMinProfilMeriterOchUtmärkelser;
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -13,7 +14,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBrowsers {
 
-	@BeforeTest
+	@BeforeClass
 	public void TestCaseInfo() {
 		
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Övriga meriter";
@@ -44,13 +45,20 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 		Select Startår = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterStartår)));
 		Random randomOptionStartår = new Random();  
-		int startOptionStartår = 0;
 		int endOptionStartår = Startår.getOptions().size(); 
-		int numberStartår = startOptionStartår + randomOptionStartår .nextInt(endOptionStartår - startOptionStartår);  
+		int numberStartår = randomOptionStartår .nextInt(endOptionStartår);  
 		Startår.selectByIndex(numberStartår);
+		
+		WebElement StartårSelect = Startår.getFirstSelectedOption();
+		String StartårSelectValue = StartårSelect.getText();
+		System.out.println("Startår = " + StartårSelectValue); 
 
 		Select Slutår = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår)));
 		Slutår.selectByIndex(numberStartår + 1);
+		
+		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
+		String SlutårSelectValue = SlutårSelect.getText();
+		System.out.println("Slutår = " + SlutårSelectValue); 
 	}
 
 	@Test (dependsOnMethods={"StartårAndSlutÅr"})
@@ -58,12 +66,17 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit(driver).sendKeys("Test123");
 
+		String TypAvMeritString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit(driver).getAttribute("value");
+		System.out.println("Typ av merit = " + TypAvMeritString); 
 	}
 
 	@Test (dependsOnMethods={"TypAvMerit"})
 	public void Beskrivning() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning(driver).sendKeys("En bra beskrivning");
+		
+		String BeskrivningString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning(driver).getAttribute("value");
+		System.out.println("Beskrivning = " + BeskrivningString); 
 	}
 
 	@Test (dependsOnMethods={"Beskrivning"})

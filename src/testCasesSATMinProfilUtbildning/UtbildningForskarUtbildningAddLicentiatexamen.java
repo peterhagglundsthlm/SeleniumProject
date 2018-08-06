@@ -7,7 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
@@ -16,7 +16,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTestBrowsers {
 	
-	@BeforeTest
+	@BeforeClass
 	public void TestCaseInfo() {
 		
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Licentiatexamen";
