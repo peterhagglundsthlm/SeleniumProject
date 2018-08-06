@@ -35,18 +35,27 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 	public void StartDatum() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).sendKeys("2017-05-19");
+		
+		String StartDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).getAttribute("value");
+		System.out.println("Start Datum Uppehåll = " + StartDatumUppehall); 
 	}
 
 	@Test (dependsOnMethods={"StartDatum"})
 	public void SlutDatum() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).sendKeys("2018-06-17");
+		
+		String SlutDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).getAttribute("value");
+		System.out.println("Slut Datum Uppehåll = " + SlutDatumUppehall); 
 	}
 
 	@Test (dependsOnMethods={"SlutDatum"})
 	public void Beskrivning() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).sendKeys("test");
+		
+		String Beskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).getAttribute("value");
+		System.out.println("Beskrivning fritext = " + Beskrivning); 
 	}
 	
 	@Test (dependsOnMethods={"Beskrivning"})
