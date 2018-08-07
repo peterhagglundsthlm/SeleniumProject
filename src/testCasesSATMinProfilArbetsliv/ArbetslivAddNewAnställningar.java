@@ -34,7 +34,6 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	public void ClickArbetsliv() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
-
 	}
 
 	@Test (dependsOnMethods={"ClickArbetsliv"})

@@ -43,13 +43,6 @@ public class testIE {
 		
 		
 		
-		driver.switchTo().frame(driver.findElement(By.id("defaultFrame")));
-		
-	
-		
-		((JavascriptExecutor)driver).executeScript(
-			    "arguments[0].click();", driver.findElement(By.id("CustomMenuContainer")));
-		
 		
 	//HAR KOMMIT SÅ LÅNGT ATT JAG KAN ÖPPNA MENYN MEN INTE MER. 
 		

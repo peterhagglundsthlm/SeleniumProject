@@ -33,8 +33,16 @@ public class FindID  {
 
 		driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]")).click();
 
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
+		//LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
 		
+		List<WebElement> objID = driver.findElements(By.id("Email"));
+
+		for (WebElement IdOnPage : objID) {
+
+			String Ids = IdOnPage.getAttribute("id");
+			String xpath = IdOnPage.getAttribute("XPath");
+
+			System.out.println("ID = " + Ids + xpath);
 		
 
 		Thread.sleep(300);
@@ -44,30 +52,11 @@ public class FindID  {
 		Set<Cookie> allcookies = driver.manage().getCookies();
 		
 		
-		driver.quit();
 		
-		System.setProperty("webdriver.chrome.driver","C:\\\\Selenium 3.12.0\\\\Chromedriver\\\\chromedriver_win32\\\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://testaprisma.vr.se/");
-		for(Cookie cookie : allcookies)
-		{
-		    driver.manage().addCookie(cookie);
-		}
-	
+		
 
-		driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]")).click();
-		
+
 /*
-		List<WebElement> objID = driver.findElements(By.xpath("//*[@id]"));
-
-		for (WebElement IdOnPage : objID) {
-
-			String Ids = IdOnPage.getAttribute("id");
-
-			System.out.println("ID = " + Ids);
-
 		}
 
 		List<WebElement> objLinks = driver.findElements(By.tagName("a"));
@@ -90,6 +79,7 @@ public class FindID  {
 
 }
 
+	}
 }
 
 

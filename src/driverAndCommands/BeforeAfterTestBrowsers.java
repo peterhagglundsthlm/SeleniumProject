@@ -32,10 +32,10 @@ public class BeforeAfterTestBrowsers {
 		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
 	}
 
-	@Parameters({"browser",  "Username", "Password"})
+	@Parameters({"browser",  "Username", "Password", "Miljö"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Miljö) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -47,12 +47,13 @@ public class BeforeAfterTestBrowsers {
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			DriverGetWebsite.OpenSatPortal(driver);
+			driver.get(Miljö);
 			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-
+	
+			
 		}
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
@@ -95,21 +96,27 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("Headless")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--headless");
-			driver = new ChromeDriver(chromeOptions);
+			
+			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			ChromeOptions ChromeOption = new ChromeOptions();
+			ChromeOption.addArguments("start-maximized", "--headless");
+			LogManager.getLogManager().reset();
+			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			DriverGetWebsite.OpenSatPortal(driver);
+			startTime = System.currentTimeMillis();
+			driver.get(Miljö);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 		}
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);
+		//EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		System.out.println("Detta testfall tog " + duration /1000 + " sekunder att utföra");
 		System.out.println("");

@@ -66,7 +66,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickBeredningsgrupperButton"})
 	public void ClickFormulärButton() {
 
-
 		PortalLoggedInAsAdminFormulär.FormulärButton(driver).click();
 	}
 

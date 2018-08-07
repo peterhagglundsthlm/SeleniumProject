@@ -21,7 +21,7 @@ public class SwitchPortalToEnglish extends BeforeAfterTestBrowsers {
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
 
 	}
 

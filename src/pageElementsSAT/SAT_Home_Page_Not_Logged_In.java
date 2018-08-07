@@ -5,16 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class SAT_Home_Page_Not_Logged_In {
-	
+
 	private static WebElement element = null;
-	
-	
+
+
 	//LOGGA IN KNAPPEN PÅ STARTSIDAN
-	public static final String LoginButtonChrome = "/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]"; {
+	public static final String LoginButtonChrome = "body > div.page-container > div.container > div.row.header-row > header > div > div:nth-child(1) > div > a.btn.btn-discreet.btn-login-left.show-modal"; {
 	}
 	public static WebElement LoginButtonChrome(WebDriver driver){
 
-		element = driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]"));
+		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > div > div:nth-child(1) > div > a.btn.btn-discreet.btn-login-left.show-modal"));
 		return element;
 	}
 
@@ -31,11 +31,11 @@ public class SAT_Home_Page_Not_Logged_In {
 	public static final String EnterPassword = "Password"; {	
 	}
 	public static WebElement EnterPassword(WebDriver driver){
-		
+
 		element = driver.findElement(By.id("Password"));
 		return element;
 	}
-	
+
 	//LOGGA IN KNAPPEN SOM FINNS I MODALEN DÄR MAN SKRIVER EMAIL OCH LÖSENORD.
 	public static final String SubmitUserNameAndPassword = "Submitter"; {	
 	}
@@ -44,7 +44,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.id("Submitter"));
 		return element;
 	}
-	
+
 	//KNAPP FÖR ATT ÄNDRA SPRÅKET TILL ENGELSKA
 	public static final String InEnglishButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(1) > a"; {	
 	}
@@ -53,7 +53,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(1) > a"));
 		return element;
 	}
-	
+
 	//KNAPP FÖR ATT ÄNDRA SPRÅKET TILL SVENSKA
 	public static final String PåSvenskaButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(1) > a"; {	
 	}
@@ -62,7 +62,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(1) > a"));
 		return element;
 	}
-	
+
 	//KNAPP FÖR ATT ÖPPNA BEHANDLING AV PERSONUPPGIFTER
 	public static final String BehandlingAvPersonuppgifterButton = "#processingofpersonaldata"; {	
 	}
@@ -71,7 +71,16 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("#processingofpersonaldata"));
 		return element;
 	}
-	
+
+	//BEHANDLING AV PERSONUPPGIFTER - MODAL
+	public static final String BehandlingAvPersonuppgifterModal = "#editDialogBody > section > div > div.accordion-heading.greenTop > h1"; {	
+	}
+	public static WebElement BehandlingAvPersonuppgifterModal(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#editDialogBody > section > div > div.accordion-heading.greenTop > h1"));
+		return element;
+	}
+
 	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP)
 	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
 	}
