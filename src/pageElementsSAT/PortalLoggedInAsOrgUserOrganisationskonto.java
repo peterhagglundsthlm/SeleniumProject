@@ -109,6 +109,68 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE
+	public static final String Organisationskonto_Användare_Bjud_In = "#organizationUserIndexSectionIdFormId > div > div.content > div.pull-right > a.btn.btn-primary.show-modal"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#organizationUserIndexSectionIdFormId > div > div.content > div.pull-right > a.btn.btn-primary.show-modal"));
+		return element;
+	}
+
+
+
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - FÖRNAMN
+	public static final String Organisationskonto_Användare_Bjud_In_Förnamn = "FirstName"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Förnamn(WebDriver driver){
+
+		element = driver.findElement(By.id("FirstName"));
+		return element;
+	}	
+
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - EFTERNAMN
+	public static final String Organisationskonto_Användare_Bjud_In_Efternamn = "LastName"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Efternamn(WebDriver driver){
+
+		element = driver.findElement(By.id("LastName"));
+		return element;
+	}	
+
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - EPOST
+	public static final String Organisationskonto_Användare_Bjud_In_Email = "Email"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Email(WebDriver driver){
+
+		element = driver.findElement(By.id("Email"));
+		return element;
+	}	
+
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - ROLL
+	public static final String Organisationskonto_Användare_Bjud_In_Roll = "selectedResponsibilityType"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Roll(WebDriver driver){
+
+		element = driver.findElement(By.id("selectedResponsibilityType"));
+		return element;
+	}	
+
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - SKICKA
+	public static final String Organisationskonto_Användare_Bjud_In_Skicka = "Submitter"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Skicka(WebDriver driver){
+
+		element = driver.findElement(By.id("Submitter"));
+		return element;
+	}	
+
+
+
+
+	//	
+
+
 	//ORGANISATIONSKONTO - BYT HEMVIST
 	public static final String Organisationskonto_Byt_Hemvist = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a"; {
 	}
@@ -118,6 +180,10 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
+
+
+
+
 	//ORGANISATIONSKONTO - FÖRESLAGEN HEMVIST
 	public static final String Organisationskonto_Föreslagen_Hemvist = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/a"; {
 	}
@@ -126,6 +192,10 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[7]/div/a"));
 		return element;
 	}
+
+
+
+
 
 	//ORGANISATIONSKONTO - RAPPORTERINGSÖVERSIKT
 	public static final String Organisationskonto_Rapporteringsöversikt = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[8]/div/a"; {

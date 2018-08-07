@@ -3,6 +3,7 @@ package testCasesSATMinProfilPublikationer;
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -45,6 +46,11 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
 		Publikationstyp.selectByIndex(2);
+		
+		
+		//WebElement PublikationsType = Publikationstyp.getFirstSelectedOption();
+		//String Value1 = PublikationsType.getText();
+		//System.out.println("Publikationstyp = " + Value1 ); 
 	}
 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
@@ -53,6 +59,10 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown)));
 		Publikationstyp.selectByIndex(1);
+		
+		WebElement Publikationstype = Publikationstyp.getFirstSelectedOption();
+		String Value2 = Publikationstype.getText();
+		System.out.println("Vetenskaplig publikation - inte fackgranskade = " + Value2 ); 
 	}
 
 	@Test (dependsOnMethods={"DropDownBidragTillEnBok"})
@@ -60,6 +70,9 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys("TestTitel123");
+		
+		String PublikationerVetenskapligPublikationTitel = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).getAttribute("value");
+		System.out.println("Titel  = " + PublikationerVetenskapligPublikationTitel);
 
 	}
 
@@ -76,6 +89,11 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys("Förnamn");
+		
+		String BidragTillEnBokFörfattareFörnamn = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).getAttribute("value");
+		System.out.println("Förnamn  = " + BidragTillEnBokFörfattareFörnamn);
+		
+		
 	}
 
 	@Test (dependsOnMethods={"BidragTillEnBokFörfattareFörnamn"})
@@ -83,6 +101,10 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys("Efternamn");
+		
+		String BidragTillEnBokFörfattareEfternamn = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).getAttribute("value");
+		System.out.println("Efternamn  = " + BidragTillEnBokFörfattareEfternamn);
+		
 	}
 
 	@Test (dependsOnMethods={"BidragTillEnBokFörfattareEfternamn"})
@@ -97,6 +119,9 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn));
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn(driver).sendKeys("NamnTest");
+		
+		//String BidragTillEnBokRedaktörNamn = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn(driver).getAttribute("value");
+		//System.out.println("Redaktör Namn  = " + BidragTillEnBokRedaktörNamn);
 	}
 
 	@Test (dependsOnMethods={"BidragTillEnBokRedaktörNamn"})
