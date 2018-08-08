@@ -12,7 +12,7 @@ public class GetCurrentUrl {
   public static WebElement GetUrlAndPrintInConsole(WebDriver driver, String InformationsText) {
 	  
 	  String CurrentUrl = driver.getCurrentUrl();
-	  System.out.println(InformationsText + CurrentUrl);
+	  System.out.println(CurrentUrl);
 	  return null;
   }
  

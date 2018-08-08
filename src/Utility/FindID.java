@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,16 +36,17 @@ public class FindID  {
 
 		//LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
 		
-		List<WebElement> objID = driver.findElements(By.id("Email"));
+		List<WebElement> objID = driver.findElements(By.tagName("input"));
 
 		for (WebElement IdOnPage : objID) {
 
 			String Ids = IdOnPage.getAttribute("id");
-			String xpath = IdOnPage.getAttribute("XPath");
 
-			System.out.println("ID = " + Ids + xpath);
+			System.out.println("ID = " + Ids);
+			
+			
+			
 		
-
 		Thread.sleep(300);
 		
 		//driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview > a")).click();
