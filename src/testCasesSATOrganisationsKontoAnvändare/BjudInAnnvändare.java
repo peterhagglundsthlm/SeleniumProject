@@ -1,21 +1,14 @@
 package testCasesSATOrganisationsKontoAnvändare;
 
 import org.testng.annotations.Test;
-
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-
 import java.util.Random;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
@@ -116,9 +109,7 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 		} else {
 			System.out.println("Testet misslyckats");
 			Assert.fail();
-
-
-
+			
 		}
 	}
 
@@ -130,9 +121,6 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", test);
 
-
-
-
 	}
 
 	@Test (dependsOnMethods={"ClickCheckBox"})
@@ -140,9 +128,7 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort));
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort(driver).click();
 	
-
 		driver.switchTo().alert().accept();
-		
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();

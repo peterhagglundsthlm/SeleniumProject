@@ -96,10 +96,6 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
-
-
-
-
 	//ORGANISATIONSKONTO - ANVÄNDARE
 	public static final String Organisationskonto_Användare = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[5]/div/a"; {
 	}
@@ -117,8 +113,6 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		element = driver.findElement(By.cssSelector("#organizationUserIndexSectionIdFormId > div > div.content > div.pull-right > a.btn.btn-primary.show-modal"));
 		return element;
 	}
-
-
 
 	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - FÖRNAMN
 	public static final String Organisationskonto_Användare_Bjud_In_Förnamn = "FirstName"; {
@@ -164,27 +158,26 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		element = driver.findElement(By.id("Submitter"));
 		return element;
 	}	
-	
+
 	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - CHECKBOX FÖR RADERA
-		public static final String Organisationskonto_Användare_Bjud_In_Checkbox_Radera = "userModels_3__IsChecked"; {
-		}
-		public static WebElement Organisationskonto_Användare_Bjud_In_Checkbox_Radera(WebDriver driver){
+	public static final String Organisationskonto_Användare_Bjud_In_Checkbox_Radera = "userModels_3__IsChecked"; {
+	}
+	public static WebElement Organisationskonto_Användare_Bjud_In_Checkbox_Radera(WebDriver driver){
 
-			element = driver.findElement(By.cssSelector("#userModels_3__IsChecked"));
-			return element;
-		}
+		element = driver.findElement(By.cssSelector("#userModels_3__IsChecked"));
+		return element;
+	}
 
-		
-		//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - TA BORT KNAPP
-				public static final String Organisationskonto_Användare_Ta_Bort = "DeleteUsers"; {
-				}
-				public static WebElement Organisationskonto_Användare_Ta_Bort(WebDriver driver){
 
-					element = driver.findElement(By.id("DeleteUsers"));
-					return element;
-				}
-		
-		
+	//ORGANISATIONSKONTO - ANVÄNDARE - BJUD IN ANVÄNDARE - TA BORT KNAPP
+	public static final String Organisationskonto_Användare_Ta_Bort = "DeleteUsers"; {
+	}
+	public static WebElement Organisationskonto_Användare_Ta_Bort(WebDriver driver){
+
+		element = driver.findElement(By.id("DeleteUsers"));
+		return element;
+	}
+
 
 	//ORGANISATIONSKONTO - BYT HEMVIST
 	public static final String Organisationskonto_Byt_Hemvist = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a"; {
