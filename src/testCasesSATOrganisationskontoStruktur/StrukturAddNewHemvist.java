@@ -10,20 +10,17 @@ import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
-	
 	String EngelsktNamnPÂEnhetValue; String SvenskNamnPÂEnhetValue;
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en organisationskontoansvarig och l‰gger till en ny hemvist under fliken organisationskonto, sidan struktur";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test
 	public void LoginAsUser() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto));
 
 	}
 
@@ -105,7 +102,12 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 		{
 			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
 		}
-		else {
+		if ((driver.getPageSource().contains((EngelsktNamnPÂEnhetValue)))) 
+		{
+			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
+		}
+		else 
+		{
 			String FailedTest = "Hemvisten har inte lagts till i strukturen. Testet har misslyckats";
 			System.out.println(FailedTest);
 			Assert.fail();
@@ -114,3 +116,5 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	}
 
 }
+
+

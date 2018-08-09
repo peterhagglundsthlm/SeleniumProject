@@ -9,23 +9,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Anställning UTAN att kopiera redan tillagd post.";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
-	
 	@Test
 	public void LoginAsUser() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
@@ -59,7 +55,14 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Thread.sleep(500);
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare(driver).click();
+		if (driver.getPageSource().contains("Anställningar"))
+		{
+			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare(driver).click();
+		}
+		else if (driver.getPageSource().contains("Employments")) 
+		{
+			driver.findElement(By.xpath("//button[contains(text(), 'Save choice')]")).click();	
+		}
 
 		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).getAttribute("value");
 		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 

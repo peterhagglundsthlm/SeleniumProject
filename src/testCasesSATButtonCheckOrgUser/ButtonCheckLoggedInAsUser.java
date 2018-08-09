@@ -1,13 +1,11 @@
 package testCasesSATButtonCheckOrgUser;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationsuppgifter;
-import pageElementsSAT.PortalLoggedInAsUser;
+import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
@@ -25,7 +23,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test 
 	public void LoginAsNormalUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsNormalUser"})
@@ -162,7 +159,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void Logout() {
 
 		//LOGGAR UT
-		PortalLoggedInAsUser.LoggaUt(driver).click();
+		PortalLoggedInAsUserLoggaUt.LoggaUt(driver).click();
 
 	}
 

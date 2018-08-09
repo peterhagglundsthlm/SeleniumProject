@@ -24,7 +24,6 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 

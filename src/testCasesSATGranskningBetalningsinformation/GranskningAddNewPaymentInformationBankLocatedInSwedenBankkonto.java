@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto extends BeforeAfterTestBrowsers {
@@ -25,8 +24,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test
 	public void LoginAsUser() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -45,7 +43,15 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 	public void BankensLand() {
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
-		BankensLand.selectByVisibleText("Sverige");
+		
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Sverige");
+		}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("Sweden");
+		}
 
 		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
 		String BankeslandValue = BankensLandSelect.getText();
@@ -56,7 +62,15 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 	public void Betalningstyp() {
 
 		Select Betalningstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp)));
-		Betalningstyp.selectByVisibleText("Bankkonto");
+		
+		if (driver.getPageSource().contains("Betalningstyp"))
+		{
+			Betalningstyp.selectByVisibleText("Bankkonto");
+		}
+		else if (driver.getPageSource().contains("Payment account type")) 
+		{
+			Betalningstyp.selectByVisibleText("Bank account");
+		}
 
 		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
 		String BetalningstypValue = BetalningstypSelect.getText();

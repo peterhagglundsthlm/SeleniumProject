@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -24,7 +23,6 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
@@ -63,9 +61,8 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 
 		Select Slutår = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSlutår)));
 		Random randomOption = new Random();  
-		int startOption = 0;
 		int endOption = Slutår.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
+		int number =  randomOption .nextInt(endOption);  
 		Slutår.selectByIndex(number);
 		
 		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
