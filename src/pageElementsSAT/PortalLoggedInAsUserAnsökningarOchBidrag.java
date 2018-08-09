@@ -27,17 +27,17 @@ public class PortalLoggedInAsUserAnsökningarOchBidrag {
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - ANSÖKNINGAR
-	public static final String AnsökningarOchBidragAnsokningarButton = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"; {
+	public static final String AnsökningarOchBidragAnsokningar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"; {
 	}
-	public static WebElement AnsökningarOchBidragAnsokningarButton(WebDriver driver){
+	public static WebElement AnsökningarOchBidragAnsokningar(WebDriver driver){
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"));
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - BIDRAG
-	public static final String AnsökningarOchBidragBidragButton = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"; {
+	public static final String AnsökningarOchBidragBidrag = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"; {
 	}
-	public static WebElement AnsökningarOchBidragBidragButton(WebDriver driver){
+	public static WebElement AnsökningarOchBidragBidrag(WebDriver driver){
 		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"));
 		return element;
 	}

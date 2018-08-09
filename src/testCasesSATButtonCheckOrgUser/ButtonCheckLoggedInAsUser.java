@@ -113,8 +113,8 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 		//Klickar på alla knappar som finns på "Ansökningar och bidrag" sidan
 		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton(driver).click();
 		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragUtlysningarButton(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsokningarButton(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragBidragButton(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsokningar(driver).click();
+		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragBidrag(driver).click();
 		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsökOmEtikprövning(driver).click();
 		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragEtikprövningsansökningar(driver).click();
 	}
