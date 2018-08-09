@@ -25,7 +25,6 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 

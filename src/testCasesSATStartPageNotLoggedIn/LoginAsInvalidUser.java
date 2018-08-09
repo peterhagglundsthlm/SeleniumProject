@@ -1,9 +1,10 @@
-package testCasesSATLoginAsInValidUser;
+package testCasesSATStartPageNotLoggedIn;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
+import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
@@ -16,6 +17,11 @@ public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 
 	@Test 
 	public void InputUserWithInvalidInfo() {
+		
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+		SAT_Home_Page_Not_Logged_In.EnterUserName(driver).sendKeys("aasdad");
+		SAT_Home_Page_Not_Logged_In.EnterPassword(driver).sendKeys("retert");
+		SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword(driver).click();
 
 	}
 
@@ -26,11 +32,12 @@ public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 		if (driver.getPageSource().contains("Den angivna e-postadressen är inte korrekt"))
 		{ 
 			//Testet lyckas
-			System.out.println();
+			System.out.println("Felmeddelande visas korrekt. Det är inte möjligt att logga in med felaktiga uppgifter");
 
 
 		} else {
 			//Testet misslyckas
+			System.out.println("Felmeddelandet visas inte korrekt");
 			Assert.fail();
 
 

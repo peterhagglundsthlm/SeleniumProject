@@ -14,10 +14,10 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterTestBrowsers {
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Utbildning på grund- och avancerad nivå";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
@@ -25,7 +25,6 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
@@ -66,7 +65,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		Thread.sleep(500);
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp(driver).click();
-		
+
 		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).getAttribute("value");
 		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
 	}
@@ -76,11 +75,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 
 		Select år = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_LäggTillUtbildning_UtbildningPåGrundOchAvanceradNivåÅrFörExamen)));
 		Random randomOption = new Random();  
-		int startOption = 0;
 		int endOption = år.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
+		int number =  randomOption .nextInt(endOption);  
 		år.selectByIndex(number);
-		
+
 		WebElement Startår = år.getFirstSelectedOption();
 		String Value = Startår.getText();
 		System.out.println("Start år = " + Value );
@@ -96,7 +94,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = ämne1.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
-		
+
 		WebElement ämneEtt = ämne1.getFirstSelectedOption();
 		String Value1 = ämneEtt.getText();
 		System.out.println("Ämne 1 = " + Value1 ); 
@@ -109,7 +107,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption2 = ämne2.getOptions().size(); 
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
-		
+
 		WebElement ämneTvå = ämne2.getFirstSelectedOption();
 		String Value2 = ämneTvå.getText();
 		System.out.println("Ämne 2 = " + Value2 ); 
@@ -122,7 +120,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption3 = ämne3.getOptions().size(); 
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		ämne3.selectByIndex(number3);
-		
+
 		WebElement ämneTre = ämne3.getFirstSelectedOption();
 		String Value3 = ämneTre.getText();
 		System.out.println("Ämne 3 = " + Value3 );
@@ -137,7 +135,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = TypAvExamen.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		TypAvExamen.selectByIndex(number);
-		
+
 		WebElement TypAvExamen1 = TypAvExamen.getFirstSelectedOption();
 		String Value = TypAvExamen1.getText();
 		System.out.println("Typ av examen = " + Value );
@@ -152,7 +150,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		int endOption = Specialistkompetens.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		Specialistkompetens.selectByIndex(number);
-		
+
 		WebElement Specialistkompetens1 = Specialistkompetens.getFirstSelectedOption();
 		String Value = Specialistkompetens1.getText();
 		System.out.println("Specialistkompetens = " + Value );
@@ -171,14 +169,14 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		WebElement SpecialistkompetensAr = SpecialistkompetensÅr.getFirstSelectedOption();
 		String Value = SpecialistkompetensAr.getText();
 		System.out.println("Specialistkompetens År = " + Value );
-		
+
 	}
 
 	@Test (dependsOnMethods={"SpecialistkompetensÅr"})
 	public void OmrådeBeskrivning() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning(driver).sendKeys("Test123");
-		
+
 		String OmrådeBeskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåOmrådeBeskrivning(driver).getAttribute("value");
 		System.out.println("OmrådeBeskrivning = " + OmrådeBeskrivning); 
 	}
@@ -187,7 +185,7 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivåSparaKnapp(driver).click();
 	}
 

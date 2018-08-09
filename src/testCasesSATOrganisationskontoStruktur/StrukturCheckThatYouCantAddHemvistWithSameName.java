@@ -23,8 +23,6 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto));
-
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -96,9 +94,14 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 
 			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 
-		} else {
+		} if (driver.getPageSource().contains(("This object with name " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("This object with name " + "'"+SvenskNamnPåEnhetValue+"'")))) {
 
-			Assert.fail("Felmeddelandet visas inte korrekt. Testet har misslyckats");
+			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
+		}
+		else 
+		{
+			System.out.print("Felmeddelande visas inte korrekt. Testet har misslyckats");
+			Assert.fail();
 		}
 	}
 

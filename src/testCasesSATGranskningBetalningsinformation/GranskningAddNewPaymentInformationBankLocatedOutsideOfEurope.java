@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extends BeforeAfterTestBrowsers {
@@ -25,7 +24,6 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -44,7 +42,15 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 	public void BankensLand() {
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
-		BankensLand.selectByVisibleText("Chile");
+		
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Chile");
+		}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("Chile");
+		}
 
 		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
 		String BankeslandValue = BankensLandSelect.getText();
@@ -138,7 +144,7 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 	public void TIN() {
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("1234567");
+		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("9797987");
 
 		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
 		System.out.println("TIN är = " + TINString); 

@@ -7,9 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro extends BeforeAfterTestBrowsers {
 
@@ -25,7 +23,6 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -44,7 +41,15 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	public void BankensLand() {
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
-		BankensLand.selectByVisibleText("Sverige");
+	
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Sverige");
+		}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("Sweden");
+		}
 
 		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
 		String BankeslandValue = BankensLandSelect.getText();
@@ -55,7 +60,15 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	public void Betalningstyp() {
 
 		Select Betalningstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp)));
-		Betalningstyp.selectByVisibleText("Plusgiro");
+		
+		if (driver.getPageSource().contains("Betalningstyp"))
+		{
+			Betalningstyp.selectByVisibleText("Plusgiro");
+		}
+		else if (driver.getPageSource().contains("PaymentAccountType")) 
+		{
+			Betalningstyp.selectByVisibleText("Postal giro");
+		}
 
 		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
 		String BetalningstypValue = BetalningstypSelect.getText();

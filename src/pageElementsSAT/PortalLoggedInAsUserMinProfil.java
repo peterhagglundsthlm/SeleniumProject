@@ -1710,11 +1710,11 @@ public class PortalLoggedInAsUserMinProfil {
 	}
 
 	//MIN PROFIL - GRANSKARKOMPETENS - KID - SPARA
-	public static final String MinProfil_GranskarkompetensKIDSpara = "//input[@value='Spara']"; {
+	public static final String MinProfil_GranskarkompetensKIDSpara = "Submitter"; {
 	}
 	public static WebElement MinProfil_GranskarkompetensKIDSpara(WebDriver driver){
 
-		element = driver.findElement(By.xpath("//input[@value='Spara']"));
+		element = driver.findElement(By.id("Submitter"));
 		return element;
 	}
 

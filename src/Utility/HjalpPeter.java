@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
-import pageElementsSAT.PortalLoggedInAsAdmin;
+import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
@@ -30,7 +30,7 @@ public class HjalpPeter {
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.KristoferKlarinAdminUserNameSAT, UserCredentials.KristoferKlarinAdminPasswordSAT);
 		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdmin.LoggaUt));
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsAdminLoggaUt.LoggaUt));
 
 		
 	

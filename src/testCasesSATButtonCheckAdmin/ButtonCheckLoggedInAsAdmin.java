@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsAdmin;
+import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 import pageElementsSAT.PortalLoggedInAsAdminFinansiär;
 import pageElementsSAT.PortalLoggedInAsAdminFormulär;
@@ -26,8 +26,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test 
 	public void LoginAsAdminUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminMinProfil.MinProfilButton));
-		
 	}
 
 	@Test (dependsOnMethods={"LoginAsAdminUser"})
@@ -290,7 +288,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void Logout() {
 
 		//LOGGAR UT
-		PortalLoggedInAsAdmin.LoggaUt(driver).click();
+		PortalLoggedInAsAdminLoggaUt.LoggaUt(driver).click();
 
 	}
 

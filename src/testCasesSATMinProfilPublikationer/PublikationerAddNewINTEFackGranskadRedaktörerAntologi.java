@@ -23,7 +23,6 @@ public class PublikationerAddNewINTEFackGranskadRedaktörerAntologi extends Befor
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
