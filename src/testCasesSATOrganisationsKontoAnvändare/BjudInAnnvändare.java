@@ -14,10 +14,10 @@ import org.testng.annotations.BeforeClass;
 
 public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
-	@BeforeClass
+	@BeforeClass 	
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Anställning UTAN att kopiera redan tillagd post.";
+		String TestCaseInfo = "Loggar in och skickar en inbjudan till en användare. Efter genomfört test så raderas även posten i PP.";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	  
 	}
 
