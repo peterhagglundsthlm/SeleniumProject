@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
@@ -32,10 +33,10 @@ public class BeforeAfterTestBrowsers {
 		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Miljö"})
+	@Parameters({"browser",  "Username", "Password", "Miljö", "Språk"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Miljö) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Miljö, @Optional String Språk) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -52,8 +53,16 @@ public class BeforeAfterTestBrowsers {
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-	
 			
+			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+			
+			if (Språk.equalsIgnoreCase("Engelska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
+			
+			if (Språk.equalsIgnoreCase("Svenska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
+
+
 		}
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
@@ -66,7 +75,7 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL");
 
 
 		}
@@ -96,7 +105,7 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("Headless")) {
-			
+
 			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
@@ -116,9 +125,11 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);
+		EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
-		System.out.println("Detta testfall tog " + duration /1000 + " sekunder att utföra");
+		float sekunder = duration/1000;
+		float minuter = sekunder/60;
+		System.out.println("Detta testfall tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
 		System.out.println("");
 	}
 

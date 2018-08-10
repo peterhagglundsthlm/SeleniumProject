@@ -23,7 +23,6 @@ public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAf
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 

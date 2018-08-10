@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -24,8 +23,6 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 
 	@Test
 	public void LoginAsUser() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
 
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
@@ -95,8 +92,6 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		WebElement ForskningsområdeFyra = Forskningsområde4.getFirstSelectedOption();
 		String Value = ForskningsområdeFyra.getText();
 		System.out.println("Forskningsområde4 = " + Value ); 
-
-
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde4"})

@@ -9,22 +9,19 @@ import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class GranskningAddNewPaymentInformationBankLocatedInEurope extends BeforeAfterTestBrowsers {
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land i Europa (Frankrike)";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
-	
+
 	@Test
 	public void LoginAsUser() {
-	
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
-		
+
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -43,8 +40,16 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	public void BankensLand() {
 
 		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
-		BankensLand.selectByVisibleText("Frankrike");
 		
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Frankrike");
+		}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("France");
+		}
+
 		WebElement AnställningsNamnSelect = BankensLand.getFirstSelectedOption();
 		String SelectValue = AnställningsNamnSelect.getText();
 		System.out.println("Bankens land är = " + SelectValue ); 
@@ -57,7 +62,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn));
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).sendKeys("Frankrikes största bank");
-		
+
 		String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
 		System.out.println("Bankens namn är = " + BankensnamnString); 
 	}
@@ -67,18 +72,18 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).sendKeys("BankmanTest");
-		
+
 		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
 		System.out.println("Kontoinnehavare = " + KontoinnehavareString); 
 	}
-	
+
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void IBAN() {
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).sendKeys("9943595");
-		
+
 		String IBANString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).getAttribute("value");
 		System.out.println("IBAN = " + IBANString); 
 	}
@@ -88,7 +93,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).sendKeys("Abc1234567");
-		
+
 		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
 		System.out.println("SWIFT = " + SWIFTBICString); 
 	}
@@ -98,7 +103,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("12134234");
-		
+
 		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
 		System.out.println("TIN = " + TINString); 
 	}
@@ -114,7 +119,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	public void AccepteraAlert() {
 
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
-		
-		
+
+
 	}
 }

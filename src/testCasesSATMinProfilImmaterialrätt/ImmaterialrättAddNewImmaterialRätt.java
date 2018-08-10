@@ -25,8 +25,6 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 	@Test
 	public void LoginAsUser() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
-
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
 	}
 
@@ -131,6 +129,15 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		Select LicensieradTillAnnan = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättLicensieradTillAnnan)));
 		LicensieradTillAnnan.selectByIndex(0);
 
+		if (driver.getPageSource().contains("Immaterialrätt"))  
+		{
+			LicensieradTillAnnan.selectByVisibleText("Ja");
+		}
+		else if (driver.getPageSource().contains("Intellectual property"))
+		{
+			LicensieradTillAnnan.selectByVisibleText("Yes");
+		}
+
 		WebElement LicensieradTillAnnanSelect = LicensieradTillAnnan.getFirstSelectedOption();
 		String LicensieradTillAnnanValue = LicensieradTillAnnanSelect.getText();
 		System.out.println("LicensieradTillAnnan = " + LicensieradTillAnnanValue); 
@@ -157,6 +164,6 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
 
-		//PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättSpara(driver).click();
+		PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättSpara(driver).click();
 	}
 }

@@ -21,11 +21,9 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	  
 	}
 
-
 	@Test
 	public void CheckForOrganisationButton() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto));
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto(driver).click();
 	}
 
@@ -103,7 +101,6 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 		if (driver.getPageSource().contains("Inbjudan skickad"))
 		{ 
-
 			System.out.println("Testet lyckats");
 
 		} else {
@@ -125,12 +122,15 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"ClickCheckBox"})
 	public void ClickTaBortButton() {
+		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort));
+		
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort(driver).click();
 	
 		driver.switchTo().alert().accept();
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
+		
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 
