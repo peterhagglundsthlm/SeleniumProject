@@ -94,7 +94,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 
 			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 
-		} if (driver.getPageSource().contains(("This object with name " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("This object with name " + "'"+SvenskNamnPåEnhetValue+"'")))) {
+		}  else if (driver.getPageSource().contains(("This object with name " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("This object with name " + "'"+SvenskNamnPåEnhetValue+"'")))) {
 
 			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 		}

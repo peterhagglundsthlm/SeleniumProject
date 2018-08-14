@@ -3,7 +3,6 @@ package testCasesSATMinProfilPublikationer;
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,7 +24,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 	public void LoginAsUser() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
@@ -46,7 +44,15 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		Publikationstyp.selectByIndex(1);
+		
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
+		}
 	}
 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
@@ -54,16 +60,19 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
-		Publikationstyp.selectByIndex(2);
 		
-		WebElement PublikationstypSelect = Publikationstyp.getFirstSelectedOption();
-		String PublikationstypSelectValue = PublikationstypSelect.getText();
-		System.out.println("Vetenskaplig publikation = " + PublikationstypSelectValue ); 
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("Bok");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Book");
+		}
 	}
 
 	@Test (dependsOnMethods={"DropDownBok"})
 	public void BokFörfattareKnapp() {
-
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp(driver).click();
 	}
@@ -81,9 +90,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(Boktitel);
 		}
-		String BoktitelValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).getAttribute("value");
-		System.out.println("Boktitel = " + BoktitelValue); 
-
 	}
 
 	@Test (dependsOnMethods={"BokTitel"})
@@ -92,13 +98,12 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		String FörfattareFörnamn = "Förnamn";
 		
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys(FörfattareFörnamn);
+		
 		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).getAttribute("value") != FörfattareFörnamn)
 		{
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys(FörfattareFörnamn);
 		}
-		String FörfattareFörnamnValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).getAttribute("value");
-		System.out.println("Förnamn = " + FörfattareFörnamnValue); 
 	}
 
 	@Test (dependsOnMethods={"BokFörfattareFörnamn"})
@@ -113,8 +118,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(FörfattareEfternamn);
 		}
-		String FörfattareEfternamnValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).getAttribute("value");
-		System.out.println("Efternamn = " + FörfattareEfternamnValue); 
 	}
 
 	@Test (dependsOnMethods={"BokFörfattareEfternamn"})
@@ -129,8 +132,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).sendKeys(Förlag);
 		}
-		String FörlagValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).getAttribute("value");
-		System.out.println("Förlag = " + FörlagValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareFörlag"})
@@ -145,8 +146,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).sendKeys(Förlagsplats);
 		}
-		String FörlagsplatsValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).getAttribute("value");
-		System.out.println("Förlagsplats = " + FörlagsplatsValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareFörlagsplats"})
@@ -161,8 +160,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationISBN(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationISBN(driver).sendKeys(ISBN);
 		}
-		String ISBNValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationISBN(driver).getAttribute("value");
-		System.out.println("ISBN = " + ISBNValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareISBN"})
@@ -177,8 +174,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys(DOI);
 		}
-		String DOIValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).getAttribute("value");
-		System.out.println("DOI = " + DOIValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareDOI"})
@@ -190,9 +185,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		int number = randomOption .nextInt(endOption);  
 		KällaFörPublikation.selectByIndex(number);
 		
-		WebElement KällaFörPublikationSelect = KällaFörPublikation.getFirstSelectedOption();
-		String KällaFörPublikationSelectValue = KällaFörPublikationSelect.getText();
-		System.out.println("KällaFörPublikation = " + KällaFörPublikationSelectValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareKällaFörPublikation"})
@@ -207,8 +199,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys(KällaId);
 		}
-		String KällaIdValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).getAttribute("value");
-		System.out.println("KällaId = " + KällaIdValue); 
 	}
 
 	@Test (dependsOnMethods={"BokUtgivareKällaID"})
@@ -216,10 +206,7 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 
 		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
 		TextenPubliceradIOpenAcess.selectByIndex(1);
-		
-		WebElement TextenPubliceradIOpenAcessSelect = TextenPubliceradIOpenAcess.getFirstSelectedOption();
-		String TextenPubliceradIOpenAcessSelectValue = TextenPubliceradIOpenAcessSelect.getText();
-		System.out.println("Var texten publicerad i open acess? = " + TextenPubliceradIOpenAcessSelectValue); 
+
 	}
 	
 
@@ -236,8 +223,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys(LänkFörPublicering);
 		}
-		String LänkFörPubliceringValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).getAttribute("value");
-		System.out.println("Länk för publicering = " + LänkFörPubliceringValue); 
 	}
 
 	@Test (dependsOnMethods={"BokOpenAccessLänkExternLänkFörPublicering"})
@@ -250,9 +235,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		FormAvOA.selectByIndex(number);
 		
-		WebElement FormAvOASelect = FormAvOA.getFirstSelectedOption();
-		String FormAvOASelectValue = FormAvOASelect.getText();
-		System.out.println("Form av OA = " + FormAvOASelectValue); 
 	}
 
 	@Test (dependsOnMethods={"BokOpenAccessFormAvOA"})
@@ -265,9 +247,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		DokumentVersion.selectByIndex(number);
 		
-		WebElement DokumentVersionSelect = DokumentVersion.getFirstSelectedOption();
-		String DokumentVersionSelectValue = DokumentVersionSelect.getText();
-		System.out.println("Dokumentversion = " + DokumentVersionSelectValue); 
 	}
 
 	@Test (dependsOnMethods={"BokOpenAccessDokumentVersion"})
@@ -282,8 +261,6 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys(Sammanfattning);
 		}
-		String SammanfattningValue = PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).getAttribute("value");
-		System.out.println("Sammanfattning = " + SammanfattningValue); 
 	}
 
 	@Test (dependsOnMethods={"BokOpenAcessSammanfattning"})

@@ -102,7 +102,7 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 		{
 			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
 		}
-		if ((driver.getPageSource().contains((EngelsktNamnPÂEnhetValue)))) 
+		else if ((driver.getPageSource().contains((EngelsktNamnPÂEnhetValue)))) 
 		{
 			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
 		}
