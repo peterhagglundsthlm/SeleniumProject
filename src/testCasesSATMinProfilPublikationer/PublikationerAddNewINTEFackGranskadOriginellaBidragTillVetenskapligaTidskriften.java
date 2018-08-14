@@ -43,7 +43,15 @@ public class PublikationerAddNewINTEFackGranskadOriginellaBidragTillVetenskaplig
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		Publikationstyp.selectByIndex(2);
+
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - inte fackgranskade");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Scientific publication - not peer-reviewed");
+		}
 	}
 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
@@ -51,7 +59,15 @@ public class PublikationerAddNewINTEFackGranskadOriginellaBidragTillVetenskaplig
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown)));
-		Publikationstyp.selectByIndex(3);
+
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("Originella bidrag till vetenskapliga tidskriften");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Original contribution to science journal");
+		}
 	}
 
 	@Test (dependsOnMethods={"DropDownOriginellaBidragTillVetenskapligaTidskriften"})

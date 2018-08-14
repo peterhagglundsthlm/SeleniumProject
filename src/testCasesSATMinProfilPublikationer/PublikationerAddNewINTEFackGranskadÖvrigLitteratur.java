@@ -43,7 +43,15 @@ public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAf
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		Publikationstyp.selectByIndex(2);
+
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - inte fackgranskade");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Scientific publication - not peer-reviewed");
+		}
 	}
 
 	@Test (dependsOnMethods={"V‰ljPublikationsTyp"})
@@ -51,7 +59,15 @@ public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAf
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown)));
-		Publikationstyp.selectByIndex(6);
+
+		if (driver.getPageSource().contains("Publikationer"))
+		{
+			Publikationstyp.selectByVisibleText("÷vrig litteratur");
+		}
+		else if (driver.getPageSource().contains("Publications")) 
+		{
+			Publikationstyp.selectByVisibleText("Other literature");
+		}
 	}
 
 	@Test (dependsOnMethods={"DropDown÷vrigLitteratur"})
