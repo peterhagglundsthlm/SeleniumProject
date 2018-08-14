@@ -21,6 +21,7 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	  
 	}
 
+	
 	@Test
 	public void CheckForOrganisationButton() {
 
@@ -37,34 +38,31 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"ClickAnvändareButton"})
 	public void BjudInAnvändareButton() {
-
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In(driver).click();
 	}
 
 
 	@Test (dependsOnMethods={"BjudInAnvändareButton"})
 	public void BjudInAnvändareButtonFörnamn() {
-
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver).sendKeys("Förnamn");
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver), "Förnamn"); 
 
 		String BjudInAnvändareButtonFörnamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver).getAttribute("value");
 		System.out.println("Förnamn = " + BjudInAnvändareButtonFörnamn); 
 	}
 
+	
 	@Test (dependsOnMethods={"BjudInAnvändareButtonFörnamn"})
 	public void BjudInAnvändareButtonEfternamn() {
-
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver).sendKeys("Efternamn");
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver), "Efternamn"); 
 
 		String BjudInAnvändareButtonEfternamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver).getAttribute("value");
 		System.out.println("Efternamn = " + BjudInAnvändareButtonEfternamn);
-
 	}
 
+	
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEfternamn"})
 	public void BjudInAnvändareButtonEmail() {
-
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver).sendKeys("email1@vr.se");
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver), "email1@vr.se"); 
 
 		String BjudInAnvändareButtonEmail = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver).getAttribute("value");
 		System.out.println("Email = " + BjudInAnvändareButtonEmail);
@@ -73,7 +71,6 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEmail"})
 	public void BjudInAnvändareButtonRoll() {
-
 		Select ResponsibilityType = new Select (driver.findElement(By.id(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Roll)));
 		Random randomOption = new Random();  
 		int endOption = ResponsibilityType.getOptions().size(); 
@@ -84,56 +81,49 @@ public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonRoll"})
 	public void ClickAnvändareButtonSkicka() {
-
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka(driver).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickAnvändareButtonSkicka"})
 	public void AccepteraAlert() {
-
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 
 
 	@Test (dependsOnMethods={"AccepteraAlert"})
 	public void CheckThatInvitationIsSent()  {
-
-		if (driver.getPageSource().contains("Inbjudan skickad"))
-		{ 
-			System.out.println("Testet lyckats");
-
-		} else {
-			System.out.println("Testet misslyckats");
-			Assert.fail();
-			
+		if (driver.getPageSource().contains("Inbjudan skickad"))  
+		{
+			System.out.println("Testet har lyckats");
 		}
-	}
-
+		else if (driver.getPageSource().contains("Invitation sent"))
+		{
+			System.out.println("Testet har lyckats");
+		}
+		else
+		{
+			System.out.println ("Testet har misslyckats");
+			Assert.fail("Testet har misslyckats");
+		}
+	} 	
+	
+	
 	@Test (dependsOnMethods={"CheckThatInvitationIsSent"})
 	public void ClickCheckBox() {
-
 		WebElement test = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Checkbox_Radera(driver);
-
-
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", test);
-
 	}
 
+	
 	@Test (dependsOnMethods={"ClickCheckBox"})
 	public void ClickTaBortButton() {
-		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort));
-		
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort(driver).click();
-	
 		driver.switchTo().alert().accept();
-		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
-		
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
-
 }
 
 
