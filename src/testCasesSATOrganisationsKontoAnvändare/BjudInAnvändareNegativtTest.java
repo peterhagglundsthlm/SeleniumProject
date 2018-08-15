@@ -74,6 +74,7 @@ public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonRoll"})
 	public void ClickAnvändareButtonSkicka() {
+		
 		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka(driver).click();
 
 	}

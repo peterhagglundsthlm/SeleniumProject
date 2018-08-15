@@ -53,12 +53,12 @@ public class BeforeAfterTestBrowsers {
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			
+
 			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
-			
+
 			if (Språk.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
-			
+
 			if (Språk.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 
@@ -120,12 +120,19 @@ public class BeforeAfterTestBrowsers {
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
+			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+
+			if (Språk.equalsIgnoreCase("Engelska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
+
+			if (Språk.equalsIgnoreCase("Svenska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);
+		EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		float sekunder = duration/1000;
 		float minuter = sekunder/60;
