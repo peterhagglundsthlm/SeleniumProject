@@ -126,7 +126,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP)
+	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP) 2
 	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
 	}
 	public static WebElement HjälpButton(WebDriver driver){
