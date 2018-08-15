@@ -81,6 +81,51 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
+	//KNAPP FÖR ATT ÖPPNA INFORMATION 
+	public static final String InformationButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(3) > div > a"; {	
+	}
+	public static WebElement InformationButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(3) > div > a"));
+		return element;
+	}
+
+	//KNAPP FÖR ATT ÖPPNA OM PRISMA (INFORMATION) 
+	public static final String OmPrismaButton = "#aboutprisma"; {	
+	}
+	public static WebElement OmPrismaButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#aboutprisma"));
+		return element;
+	}
+
+	//OM PRISMA - MODAL
+	public static final String OmPrismaModal = "#editDialogBody > section > div"; {	
+	}
+	public static WebElement OmPrisma(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#editDialogBody > section > div"));
+		return element;
+	}
+
+	//KNAPP FÖR ATT ÖPPNA OM WEBBPLATSEN (INFORMATION) 
+	public static final String OmWebbplatsenButton = "#aboutwebsite"; {	
+	}
+	public static WebElement OmWebbplatsenButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#aboutwebsite"));
+		return element;
+	}
+	
+	//OM WEBBPLATSEN - MODAL
+	public static final String OmWebbplatsenModal = "#editDialogBody > section > div"; {	
+	}
+	public static WebElement OmWebbplatsenModal(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("#editDialogBody > section > div"));
+		return element;
+	}
+
 	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP)
 	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
 	}
@@ -89,6 +134,8 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"));
 		return element;
 	}
+
+
 
 
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
-public class BjudInAnnvändare extends BeforeAfterTestBrowsers {
+public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 
 	@BeforeClass 	
 	public void TestCaseInfo() {
