@@ -39,7 +39,7 @@ public class BeforeAfterTestBrowsers {
 	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Miljö, @Optional String Språk) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
-
+			
 			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
@@ -66,6 +66,7 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
+			
 			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
@@ -81,19 +82,35 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
-			System.setProperty("webdriver.gecko.driver","C:\\Selenium 3.12.0\\Geckodriver\\geckodriver-v0.21.0-win64\\geckodriver.exe");
+			
+			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
+			LogManager.getLogManager().reset();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			DriverGetWebsite.OpenSatPortal(driver);
+			startTime = System.currentTimeMillis();
+			driver.get(Miljö);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
+
+			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+
+			if (Språk.equalsIgnoreCase("Engelska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
+
+			if (Språk.equalsIgnoreCase("Svenska"))
+				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 
 
 
 		}
 
 		if (browser.equalsIgnoreCase("IExplorer")) {
+			
 			System.setProperty("webdriver.ie.driver","C:\\Selenium 3.12.0\\IEDriver\\IEDriverServer_Win32_3.13.0\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
