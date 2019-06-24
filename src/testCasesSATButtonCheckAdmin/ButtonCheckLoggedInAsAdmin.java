@@ -15,10 +15,10 @@ import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
 
 
 public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en admin och testar att alla synliga knappar är klickbara";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
@@ -142,15 +142,17 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärSkolfi"})
 	public void FormulärEPN() {
 
+		System.out.println("EPM ANVÄNDS EJ I DENNA MILJÖ");
+		
 		//EPN
-		PortalLoggedInAsAdminFormulär.EPN(driver).click();
+		/*PortalLoggedInAsAdminFormulär.EPN(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNFormulär(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNSidmallar(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNAvsnittsmallar(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNUnderhållstabeller(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNDatainställningar(driver).click();
 		PortalLoggedInAsAdminFormulär.EpnKontroller(driver).click();
-
+		 */
 	}
 
 	@Test (dependsOnMethods={"FormulärEPN"})
@@ -166,7 +168,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		//KAROLINSKA INSTITUTET
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet));
-		
+
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet(driver).click();
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar(driver).click();
 		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetGranskarpoolinställningar(driver).click();
@@ -252,7 +254,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärSkolfi"})
 	public void FinansiärEPN() {
 
+		System.out.println("EPM ANVÄNDS EJ I DENNA MILJÖ");
+		
 		//EPN
+		/*
 		PortalLoggedInAsAdminFinansiär.EPN(driver).click();
 		PortalLoggedInAsAdminFinansiär.EPNFinansiärsinställningar(driver).click();
 		PortalLoggedInAsAdminFinansiär.EPNGranskarpoolinställningar(driver).click();
@@ -264,9 +269,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		PortalLoggedInAsAdminFinansiär.EPNOrganisationskonton(driver).click();
 		PortalLoggedInAsAdminFinansiär.EPNInternaFörfråningar(driver).click();
 		PortalLoggedInAsAdminFinansiär.EPNAvgiftskategorier(driver).click();
+		 */
 	}
 
-	
+
 	@Test (dependsOnMethods={"FinansiärEPN"})
 	public void ClickPortaladministrationButton() {
 
