@@ -149,7 +149,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);
+		//EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		float sekunder = duration/1000;
 		float minuter = sekunder/60;
