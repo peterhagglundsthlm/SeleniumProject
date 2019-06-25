@@ -10,7 +10,7 @@ import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers {
+public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers  {
 
 
 	@BeforeClass

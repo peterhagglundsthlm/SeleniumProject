@@ -44,9 +44,9 @@ public class InformationOmWebbplatsen extends BeforeAfterTestBrowsers {
 		
 		if (driver.getPageSource().contains("är uppbyggd för att vara tillgänglig och användbar för så många som möjligt. Vi strävar efter att skriva på enkel och lättläst svenska."))
 		{
-			System.out.println("Informationstexten Om Webbplatsen visas korrekt. Testet har lyckats");
+//			System.out.println("Informationstexten Om Webbplatsen visas korrekt. Testet har lyckats");
 		} else {
-			System.out.println("Informationstexten Om Webbplatsen visas INTE korrekt. Testet har misslyckats");
+//			System.out.println("Informationstexten Om Webbplatsen visas INTE korrekt. Testet har misslyckats");
 			Assert.fail();
 		}
 			

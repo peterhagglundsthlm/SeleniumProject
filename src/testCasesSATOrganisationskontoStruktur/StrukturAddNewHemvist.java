@@ -58,7 +58,7 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
 
 			SvenskNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
+//			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
 		}
 	}
 
@@ -76,7 +76,7 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
 
 			EngelsktNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
+//			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
 		}
 	}
 
@@ -100,16 +100,19 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 
 		if (driver.getPageSource().contains((SvenskNamnPåEnhetValue)))
 		{
-			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
+			System.out.println(" ");
+//			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
 		}
 		else if ((driver.getPageSource().contains((EngelsktNamnPåEnhetValue)))) 
 		{
-			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
+			System.out.println(" ");
+//			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
 		}
 		else 
 		{
-			String FailedTest = "Hemvisten har inte lagts till i strukturen. Testet har misslyckats";
-			System.out.println(FailedTest);
+			System.out.println(" ");
+//			String FailedTest = "Hemvisten har inte lagts till i strukturen. Testet har misslyckats";
+//			System.out.println(FailedTest);
 			Assert.fail();
 		}
 

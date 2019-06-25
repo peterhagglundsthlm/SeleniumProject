@@ -70,8 +70,8 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp(driver).click();
 
-		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).getAttribute("value");
-		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
+//		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(driver).getAttribute("value");
+//		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
 
 	}
 
@@ -92,9 +92,9 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 			typ.selectByVisibleText("Research competence corresponding to PhD degree");
 		}
 
-		WebElement Typ1 = typ.getFirstSelectedOption();
-		String Value = Typ1.getText();
-		System.out.println("Typ = " + Value ); 
+//		WebElement Typ1 = typ.getFirstSelectedOption();
+//		String Value = Typ1.getText();
+//		System.out.println("Typ = " + Value ); 
 	}
 
 
@@ -104,8 +104,8 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts(driver).sendKeys("2018-05-15");
 
-		String Datumförnärforskningskompetensuppnåtts = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts(driver).getAttribute("value");
-		System.out.println("Datum för när forskningskompetens uppnåtts  = " + Datumförnärforskningskompetensuppnåtts); 
+//		String Datumförnärforskningskompetensuppnåtts = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts(driver).getAttribute("value");
+//		System.out.println("Datum för när forskningskompetens uppnåtts  = " + Datumförnärforskningskompetensuppnåtts); 
 
 	}
 
@@ -120,9 +120,9 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
 
-		WebElement ämneEtt = ämne1.getFirstSelectedOption();
-		String Value1 = ämneEtt.getText();
-		System.out.println("Ämne 1 = " + Value1 ); 
+//		WebElement ämneEtt = ämne1.getFirstSelectedOption();
+//		String Value1 = ämneEtt.getText();
+//		System.out.println("Ämne 1 = " + Value1 ); 
 
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
@@ -134,9 +134,9 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
 
-		WebElement ämneTvå = ämne2.getFirstSelectedOption();
-		String Value2 = ämneTvå.getText();
-		System.out.println("Ämne 2 = " + Value2 ); 
+//		WebElement ämneTvå = ämne2.getFirstSelectedOption();
+//		String Value2 = ämneTvå.getText();
+//		System.out.println("Ämne 2 = " + Value2 ); 
 
 
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
@@ -148,9 +148,9 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		ämne3.selectByIndex(number3);
 
-		WebElement ämneTre = ämne3.getFirstSelectedOption();
-		String Value3 = ämneTre.getText();
-		System.out.println("Ämne 3 = " + Value3 );
+//		WebElement ämneTre = ämne3.getFirstSelectedOption();
+//		String Value3 = ämneTre.getText();
+//		System.out.println("Ämne 3 = " + Value3 );
 	}
 
 	@Test (dependsOnMethods={"TypAvForskarUtbildningSelectSubjects"})
@@ -158,8 +158,8 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV(driver).sendKeys("TestSvenska");
 
-		String BeskrivningAvKompetensSvenska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV(driver).getAttribute("value");
-		System.out.println("Beskrivning Av Kompetens Svenska  = " + BeskrivningAvKompetensSvenska);
+//		String BeskrivningAvKompetensSvenska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV(driver).getAttribute("value");
+//		System.out.println("Beskrivning Av Kompetens Svenska  = " + BeskrivningAvKompetensSvenska);
 	}
 
 	@Test (dependsOnMethods={"BeskrivningAvKompetensSvenska"})
@@ -169,8 +169,8 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN(driver).sendKeys("TestEngelska");
 
-		String BeskrivningAvKompetensEngelska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN(driver).getAttribute("value");
-		System.out.println("Beskrivning Av Kompetens Engelska  = " + BeskrivningAvKompetensEngelska);
+//		String BeskrivningAvKompetensEngelska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN(driver).getAttribute("value");
+//		System.out.println("Beskrivning Av Kompetens Engelska  = " + BeskrivningAvKompetensEngelska);
 
 
 	}

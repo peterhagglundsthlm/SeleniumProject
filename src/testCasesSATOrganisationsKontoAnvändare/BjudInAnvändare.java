@@ -46,8 +46,8 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 	public void BjudInAnvändareButtonFörnamn() {
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver), "Förnamn"); 
 
-		String BjudInAnvändareButtonFörnamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver).getAttribute("value");
-		System.out.println("Förnamn = " + BjudInAnvändareButtonFörnamn); 
+//		String BjudInAnvändareButtonFörnamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver).getAttribute("value");
+//		System.out.println("Förnamn = " + BjudInAnvändareButtonFörnamn); 
 	}
 
 	
@@ -55,8 +55,8 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 	public void BjudInAnvändareButtonEfternamn() {
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver), "Efternamn"); 
 
-		String BjudInAnvändareButtonEfternamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver).getAttribute("value");
-		System.out.println("Efternamn = " + BjudInAnvändareButtonEfternamn);
+//		String BjudInAnvändareButtonEfternamn = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver).getAttribute("value");
+//		System.out.println("Efternamn = " + BjudInAnvändareButtonEfternamn);
 	}
 
 	
@@ -64,8 +64,8 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 	public void BjudInAnvändareButtonEmail() {
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver), "email1@vr.se"); 
 
-		String BjudInAnvändareButtonEmail = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver).getAttribute("value");
-		System.out.println("Email = " + BjudInAnvändareButtonEmail);
+//		String BjudInAnvändareButtonEmail = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver).getAttribute("value");
+//		System.out.println("Email = " + BjudInAnvändareButtonEmail);
 	}
 
 
@@ -95,16 +95,16 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 	public void CheckThatInvitationIsSent()  {
 		if (driver.getPageSource().contains("Inbjudan skickad"))  
 		{
-			System.out.println("Testet har lyckats");
+//			System.out.println("Testet har lyckats");
 		}
 		else if (driver.getPageSource().contains("Invitation sent"))
 		{
-			System.out.println("Testet har lyckats");
+//			System.out.println("Testet har lyckats");
 		}
 		else
 		{
-			System.out.println ("Testet har misslyckats");
-			Assert.fail("Testet har misslyckats");
+//			System.out.println ("Testet har misslyckats");
+			Assert.fail();
 		}
 	} 	
 	

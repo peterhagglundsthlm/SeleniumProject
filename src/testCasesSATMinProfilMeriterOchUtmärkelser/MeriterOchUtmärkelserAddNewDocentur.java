@@ -59,8 +59,8 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSparaSöktOrganisation(driver).click();
 		
-		String UniversitetValue = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSökOrganisation(driver).getAttribute("value");
-		System.out.println("Namn på universitet = " + UniversitetValue); 
+//		String UniversitetValue = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSökOrganisation(driver).getAttribute("value");
+//		System.out.println("Namn på universitet = " + UniversitetValue); 
 	}
 
 
@@ -75,9 +75,9 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
 		
-		WebElement Ämne1Select = ämne1.getFirstSelectedOption();
-		String Ämne1SelectValue = Ämne1Select.getText();
-		System.out.println("Ämne1 = " + Ämne1SelectValue ); 
+//		WebElement Ämne1Select = ämne1.getFirstSelectedOption();
+//		String Ämne1SelectValue = Ämne1Select.getText();
+//		System.out.println("Ämne1 = " + Ämne1SelectValue ); 
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2));
@@ -88,9 +88,9 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
 		
-		WebElement Ämne2Select = ämne2.getFirstSelectedOption();
-		String Ämne2SelectValue = Ämne2Select.getText();
-		System.out.println("Ämne2 = " + Ämne2SelectValue ); 
+//		WebElement Ämne2Select = ämne2.getFirstSelectedOption();
+//		String Ämne2SelectValue = Ämne2Select.getText();
+//		System.out.println("Ämne2 = " + Ämne2SelectValue ); 
 
 	}
 
@@ -105,9 +105,9 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 		int number = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		år.selectByIndex(number);
 		
-		WebElement ÅrSelect = år.getFirstSelectedOption();
-		String ÅrSelectValue = ÅrSelect.getText();
-		System.out.println("År = " + ÅrSelectValue ); 
+//		WebElement ÅrSelect = år.getFirstSelectedOption();
+//		String ÅrSelectValue = ÅrSelect.getText();
+//		System.out.println("År = " + ÅrSelectValue ); 
 	}
 
 	@Test (dependsOnMethods={"År"})

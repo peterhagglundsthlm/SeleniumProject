@@ -57,7 +57,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
 
 			SvenskNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
+//			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
 		}
 
 	}
@@ -74,7 +74,7 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
 
 			EngelsktNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
-			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
+//			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
 		}
 	}
 
@@ -92,15 +92,17 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 		
 		if (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("Det finns redan ett objekt i strukturen med namnet: " + "'"+SvenskNamnPåEnhetValue+"'"))))  {
 
-			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
+//			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 
 		}  else if (driver.getPageSource().contains(("This object with name " + "'"+EngelsktNamnPåEnhetValue+"'")) && (driver.getPageSource().contains(("This object with name " + "'"+SvenskNamnPåEnhetValue+"'")))) {
 
-			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
+			System.out.println(" ");
+//			System.out.println("Felmeddelande visas korrekt både på svenska och engelska. Testet har lyckats"); 
 		}
 		else 
 		{
-			System.out.print("Felmeddelande visas inte korrekt. Testet har misslyckats");
+			System.out.println(" ");
+//			System.out.print("Felmeddelande visas inte korrekt. Testet har misslyckats");
 			Assert.fail();
 		}
 	}

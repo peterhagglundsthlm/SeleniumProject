@@ -32,12 +32,12 @@ public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 		if (driver.getPageSource().contains("Den angivna e-postadressen är inte korrekt"))
 		{ 
 			//Testet lyckas
-			System.out.println("Felmeddelande visas korrekt. Det är inte möjligt att logga in med felaktiga uppgifter");
+//			System.out.println("Felmeddelande visas korrekt. Det är inte möjligt att logga in med felaktiga uppgifter");
 
 
 		} else {
 			//Testet misslyckas
-			System.out.println("Felmeddelandet visas inte korrekt");
+//			System.out.println("Felmeddelandet visas inte korrekt");
 			Assert.fail();
 
 
