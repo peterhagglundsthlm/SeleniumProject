@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel="tests"
+<suite name="SuiteSAT" verbose="1" parallel="true"
 	preserve-order="true">
 
 	<!--Denna parameter avgör vilket språk som testsuiten kommer köras på. Alternativ 
