@@ -22,7 +22,7 @@ import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
-	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
+	 public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
 
 
 	@BeforeSuite
@@ -31,6 +31,9 @@ public class BeforeAfterTestBrowsers {
 		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
 		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
+		
+		
+		
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Miljö", "Språk"})
@@ -40,16 +43,17 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 			
-			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
 			LogManager.getLogManager().reset();
+		
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			driver.get(Miljö);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
@@ -67,16 +71,16 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 			
-			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
-			ChromeOption.addArguments("start-maximized");
+			ChromeOption.addArguments("start-maximized", "--headless");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			DriverGetWebsite.OpenSatPortal(driver);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL");
+//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL");
 
 
 		}
@@ -123,7 +127,7 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("Headless")) {
 
-			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized", "--headless");
@@ -132,7 +136,7 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			driver.get(Miljö);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
@@ -149,12 +153,12 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);
+		EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		float sekunder = duration/1000;
 		float minuter = sekunder/60;
-		System.out.println("Detta testfall tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
-		System.out.println("");
+		//System.out.println("Detta testfall tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
+		//System.out.println("");
 	}
 
 

@@ -44,9 +44,9 @@ public class InformationOmPrisma extends BeforeAfterTestBrowsers {
 		
 		if (driver.getPageSource().contains("Prisma är ett ansöknings- och ärendehanteringssystem. Systemet riktar sig till svenska forskningsutförare, såsom universitet och högskolor, samt till enskilda forskare"))
 		{
-			System.out.println("Informationstexten Om Prisma visas korrekt. Testet har lyckats");
+//			System.out.println("Informationstexten Om Prisma visas korrekt. Testet har lyckats");
 		} else {
-			System.out.println("Informationstexten Om Prisma visas INTE korrekt. Testet har misslyckats");
+//			System.out.println("Informationstexten Om Prisma visas INTE korrekt. Testet har misslyckats");
 			Assert.fail();
 		}
 			

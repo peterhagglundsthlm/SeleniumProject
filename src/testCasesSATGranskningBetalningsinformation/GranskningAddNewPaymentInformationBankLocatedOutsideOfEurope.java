@@ -52,9 +52,9 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 			BankensLand.selectByVisibleText("Chile");
 		}
 
-		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
-		String BankeslandValue = BankensLandSelect.getText();
-		System.out.println("Bankens land är = " + BankeslandValue ); 
+//		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
+//		String BankeslandValue = BankensLandSelect.getText();
+//		System.out.println("Bankens land är = " + BankeslandValue ); 
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
@@ -64,8 +64,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).sendKeys("Chiles bästa bank2");
 
-		String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
-		System.out.println("Bankensnamn = " + BankensnamnString); 
+//		String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
+//		System.out.println("Bankensnamn = " + BankensnamnString); 
 
 	}
 
@@ -75,8 +75,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress(driver).sendKeys("Bankgata123");
 
-		String BankadressString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress(driver).getAttribute("value");
-		System.out.println("Bankadress = " + BankadressString); 
+//		String BankadressString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress(driver).getAttribute("value");
+//		System.out.println("Bankadress = " + BankadressString); 
 	}
 
 	@Test (dependsOnMethods={"Bankadress"})
@@ -85,8 +85,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer(driver).sendKeys("55555");
 
-		String BankensPostnummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer(driver).getAttribute("value");
-		System.out.println("Bankens postnummer är = " + BankensPostnummerString); 
+//		String BankensPostnummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer(driver).getAttribute("value");
+//		System.out.println("Bankens postnummer är = " + BankensPostnummerString); 
 
 	}
 
@@ -96,8 +96,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress(driver).sendKeys("GatanIStan");
 
-		String BankensPostadressString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress(driver).getAttribute("value");
-		System.out.println("Bankens postadress är = " + BankensPostadressString); 
+//		String BankensPostadressString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress(driver).getAttribute("value");
+//		System.out.println("Bankens postadress är = " + BankensPostadressString); 
 	}
 
 	@Test (dependsOnMethods={"BankensPostadress"})
@@ -106,8 +106,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).sendKeys("Testkontoperson");
 
-		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
-		System.out.println("Kontoinnehavare är = " + KontoinnehavareString); 
+//		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
+//		System.out.println("Kontoinnehavare är = " + KontoinnehavareString); 
 	}
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
@@ -116,8 +116,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).sendKeys("1234-56");
 
-		String BankkontonummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).getAttribute("value");
-		System.out.println("Bankkontonummer är = " + BankkontonummerString); 
+//		String BankkontonummerString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(driver).getAttribute("value");
+//		System.out.println("Bankkontonummer är = " + BankkontonummerString); 
 	}
 
 	@Test (dependsOnMethods={"Bankkontonummer"})
@@ -126,8 +126,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod(driver).sendKeys("1234");
 
-		String BankkodString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod(driver).getAttribute("value");
-		System.out.println("Bankkod är = " + BankkodString); 
+//		String BankkodString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod(driver).getAttribute("value");
+//		System.out.println("Bankkod är = " + BankkodString); 
 	}
 
 	@Test (dependsOnMethods={"Bankkod"})
@@ -136,8 +136,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).sendKeys("12345678");
 
-		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
-		System.out.println("SWIFTBIC är = " + SWIFTBICString); 
+//		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
+//		System.out.println("SWIFTBIC är = " + SWIFTBICString); 
 	}
 
 	@Test (dependsOnMethods={"SWIFTBIC"})
@@ -146,8 +146,8 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("9797987");
 
-		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
-		System.out.println("TIN är = " + TINString); 
+//		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
+//		System.out.println("TIN är = " + TINString); 
 	}
 
 	@Test (dependsOnMethods={"TIN"})

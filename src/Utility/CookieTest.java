@@ -24,26 +24,31 @@ public class CookieTest {
 	@Test
 	public void LoggaIn() {
 
-		System.setProperty("webdriver.chrome.driver","C:\\\\Selenium 3.12.0\\\\Chromedriver\\\\chromedriver_win32\\\\chromedriver.exe");
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://testaprisma.vr.se/");
+		driver.get("https://testaprisma.vr.se/UniqueKeyRow");
 
-		driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/header/div/div[1]/div/a[1]")).click();
-
+		Cookie ck = new Cookie("[ASP.NET_SessionId", "5qfpappihtubwi0g3ny1pgcq");
+		driver.manage().addCookie(ck);
+		
+		/*
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+	
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 
 		LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, "jagtestarprisma@gmail.com", "Vr1234");
 
 		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton(driver).click();
+		*/
 	}
 
 	@Test (dependsOnMethods={"LoggaIn"})
 	public void Cookies() {
 
-		AUTH = driver.manage().getCookieNamed(".ASPXAUTH");
-		System.out.println(AUTH);
+		Set<Cookie> allcookies = driver.manage().getCookies();
+		System.out.println(allcookies);
 
 	}
 

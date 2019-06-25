@@ -36,11 +36,11 @@ public class LoginLogic {
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", SAT_Home_Page_Not_Logged_In.EnterUserName(driver), AnyUsername);
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", SAT_Home_Page_Not_Logged_In.EnterPassword(driver), AnyPassword);
 
-		String UsernameValue = SAT_Home_Page_Not_Logged_In.EnterUserName(driver).getAttribute("value");
-		System.out.println("Användare för detta testfall är = " + UsernameValue); 
+		//String UsernameValue = SAT_Home_Page_Not_Logged_In.EnterUserName(driver).getAttribute("value");
+		//System.out.println("Användare för detta testfall är = " + UsernameValue); 
 		
-		String PassWordValue = SAT_Home_Page_Not_Logged_In.EnterPassword(driver).getAttribute("value");
-		System.out.println("Användarens lösenord är = " + PassWordValue); 
+		//String PassWordValue = SAT_Home_Page_Not_Logged_In.EnterPassword(driver).getAttribute("value");
+		//System.out.println("Användarens lösenord är = " + PassWordValue); 
 		
 		SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword(driver).click();
 

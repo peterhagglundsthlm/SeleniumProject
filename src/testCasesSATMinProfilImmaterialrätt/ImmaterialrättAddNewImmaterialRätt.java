@@ -50,9 +50,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		int numberTyp = startOptionTyp + randomOptionTyp .nextInt(endOptionTyp - startOptionTyp);  
 		Typ.selectByIndex(numberTyp);
 
-		WebElement TypSelect = Typ.getFirstSelectedOption();
-		String TypValue = TypSelect.getText();
-		System.out.println("Typ = " + TypValue ); 
+//		WebElement TypSelect = Typ.getFirstSelectedOption();
+//		String TypValue = TypSelect.getText();
+//		System.out.println("Typ = " + TypValue ); 
 	}
 
 	@Test (dependsOnMethods={"Typ"})
@@ -66,8 +66,8 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 			PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).sendKeys(id);
 		}	
 
-		String IdString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).getAttribute("value");
-		System.out.println("Id = " + IdString); 
+//		String IdString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(driver).getAttribute("value");
+//		System.out.println("Id = " + IdString); 
 	}
 
 	@Test (dependsOnMethods={"Id"})
@@ -93,8 +93,8 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		String Datum = Integer.toString(RandomDatum);
 		driver.findElement(By.linkText(Datum)).click();
 
-		String DatumFörBeviljandeString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljande(driver).getAttribute("value");
-		System.out.println("Datum för beviljande = " + DatumFörBeviljandeString); 
+//		String DatumFörBeviljandeString = PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljande(driver).getAttribute("value");
+//		System.out.println("Datum för beviljande = " + DatumFörBeviljandeString); 
 	}
 
 	@Test (dependsOnMethods={"DatumFörBeviljande"})
@@ -107,9 +107,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		int numberProduktKlassificering1 = startOptionProduktKlassificering1 + randomOptionProduktKlassificering1 .nextInt(endOptionProduktKlassificering1 - startOptionProduktKlassificering1);  
 		ProduktKlassificering1.selectByIndex(numberProduktKlassificering1);
 
-		WebElement ProduktKlassificering1Select = ProduktKlassificering1.getFirstSelectedOption();
-		String ProduktKlassificering1StringValue1 = ProduktKlassificering1Select.getText();
-		System.out.println("ProduktKlassificering 1 = " + ProduktKlassificering1StringValue1 ); 
+//		WebElement ProduktKlassificering1Select = ProduktKlassificering1.getFirstSelectedOption();
+//		String ProduktKlassificering1StringValue1 = ProduktKlassificering1Select.getText();
+//		System.out.println("ProduktKlassificering 1 = " + ProduktKlassificering1StringValue1 ); 
 
 		Select ProduktKlassificering2 = new Select (driver.findElement(By.name(PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättProduktKlassificering2)));
 		Random randomOptionProduktKlassificering2 = new Random();  
@@ -118,9 +118,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		int numberProduktKlassificering2 = startOptionProduktKlassificering2 + randomOptionProduktKlassificering2 .nextInt(endOptionProduktKlassificering2 - startOptionProduktKlassificering2);  
 		ProduktKlassificering2.selectByIndex(numberProduktKlassificering2);
 
-		WebElement ProduktKlassificering2Select = ProduktKlassificering2.getFirstSelectedOption();
-		String ProduktKlassificering2StringValue2 = ProduktKlassificering2Select.getText();
-		System.out.println("ProduktKlassificering 2 = " + ProduktKlassificering2StringValue2 ); 
+//		WebElement ProduktKlassificering2Select = ProduktKlassificering2.getFirstSelectedOption();
+//		String ProduktKlassificering2StringValue2 = ProduktKlassificering2Select.getText();
+//		System.out.println("ProduktKlassificering 2 = " + ProduktKlassificering2StringValue2 ); 
 	}
 
 	@Test (dependsOnMethods={"ProduktKlassificering"})
@@ -138,9 +138,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 			LicensieradTillAnnan.selectByVisibleText("Yes");
 		}
 
-		WebElement LicensieradTillAnnanSelect = LicensieradTillAnnan.getFirstSelectedOption();
-		String LicensieradTillAnnanValue = LicensieradTillAnnanSelect.getText();
-		System.out.println("LicensieradTillAnnan = " + LicensieradTillAnnanValue); 
+//		WebElement LicensieradTillAnnanSelect = LicensieradTillAnnan.getFirstSelectedOption();
+//		String LicensieradTillAnnanValue = LicensieradTillAnnanSelect.getText();
+//		System.out.println("LicensieradTillAnnan = " + LicensieradTillAnnanValue); 
 
 	}
 
@@ -154,9 +154,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		int numberLicensieradTillAnnanDropDown = startOptionLicensieradTillAnnanDropDown + randomOptionLicensieradTillAnnanDropDown .nextInt(endOptionLicensieradTillAnnanDropDown - startOptionLicensieradTillAnnanDropDown);  
 		LicensieradTillAnnanDropDown.selectByIndex(numberLicensieradTillAnnanDropDown);
 
-		WebElement LicensieradTillAnnanDropDownSelect = LicensieradTillAnnanDropDown.getFirstSelectedOption();
-		String LicensieradTillAnnanDropDownValue = LicensieradTillAnnanDropDownSelect.getText();
-		System.out.println("LicensieradTillAnnanDropDown = " + LicensieradTillAnnanDropDownValue); 
+//		WebElement LicensieradTillAnnanDropDownSelect = LicensieradTillAnnanDropDown.getFirstSelectedOption();
+//		String LicensieradTillAnnanDropDownValue = LicensieradTillAnnanDropDownSelect.getText();
+//		System.out.println("LicensieradTillAnnanDropDown = " + LicensieradTillAnnanDropDownValue); 
 	}
 
 	@Test (dependsOnMethods={"LicensieradTillAnnan"})

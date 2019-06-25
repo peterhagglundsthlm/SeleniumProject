@@ -47,16 +47,16 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 		int numberStartår = randomOptionStartår .nextInt(endOptionStartår);  
 		Startår.selectByIndex(numberStartår);
 		
-		WebElement StartårSelect = Startår.getFirstSelectedOption();
-		String StartårSelectValue = StartårSelect.getText();
-		System.out.println("Startår = " + StartårSelectValue); 
+//		WebElement StartårSelect = Startår.getFirstSelectedOption();
+//		String StartårSelectValue = StartårSelect.getText();
+//		System.out.println("Startår = " + StartårSelectValue); 
 
 		Select Slutår = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår)));
 		Slutår.selectByIndex(numberStartår + 1);
 		
-		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
-		String SlutårSelectValue = SlutårSelect.getText();
-		System.out.println("Slutår = " + SlutårSelectValue); 
+//		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
+//		String SlutårSelectValue = SlutårSelect.getText();
+//		System.out.println("Slutår = " + SlutårSelectValue); 
 	}
 
 	@Test (dependsOnMethods={"StartårAndSlutÅr"})
@@ -64,8 +64,8 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit(driver).sendKeys("Test123");
 
-		String TypAvMeritString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit(driver).getAttribute("value");
-		System.out.println("Typ av merit = " + TypAvMeritString); 
+//		String TypAvMeritString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterTypAvMerit(driver).getAttribute("value");
+//		System.out.println("Typ av merit = " + TypAvMeritString); 
 	}
 
 	@Test (dependsOnMethods={"TypAvMerit"})
@@ -73,8 +73,8 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning(driver).sendKeys("En bra beskrivning");
 		
-		String BeskrivningString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning(driver).getAttribute("value");
-		System.out.println("Beskrivning = " + BeskrivningString); 
+//		String BeskrivningString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterBeskrivning(driver).getAttribute("value");
+//		System.out.println("Beskrivning = " + BeskrivningString); 
 	}
 
 	@Test (dependsOnMethods={"Beskrivning"})

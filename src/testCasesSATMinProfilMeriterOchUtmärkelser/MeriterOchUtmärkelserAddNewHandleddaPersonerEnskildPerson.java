@@ -43,8 +43,8 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn(driver).sendKeys("Förnamn3");
 		
-		String FörnamnString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn(driver).getAttribute("value");
-		System.out.println("Förnamn = " + FörnamnString); 
+//		String FörnamnString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn(driver).getAttribute("value");
+//		System.out.println("Förnamn = " + FörnamnString); 
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonFörnamn"})
@@ -52,8 +52,8 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn(driver).sendKeys("Efternamn123");
 		
-		String EfternamnString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn(driver).getAttribute("value");
-		System.out.println("Efternamn = " + EfternamnString); 
+//		String EfternamnString = PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn(driver).getAttribute("value");
+//		System.out.println("Efternamn = " + EfternamnString); 
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonEfternamn"})
@@ -65,9 +65,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 		int number =  randomOption .nextInt(endOption);  
 		Slutår.selectByIndex(number);
 		
-		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
-		String SlutårSelectValue = SlutårSelect.getText();
-		System.out.println("Slutår = " + SlutårSelectValue );
+//		WebElement SlutårSelect = Slutår.getFirstSelectedOption();
+//		String SlutårSelectValue = SlutårSelect.getText();
+//		System.out.println("Slutår = " + SlutårSelectValue );
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonSlutår"})
@@ -80,9 +80,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		TypAvHandleddaPersoner.selectByIndex(number2);
 		
-		WebElement TypAvHandleddaPersonerSelect = TypAvHandleddaPersoner.getFirstSelectedOption();
-		String TypAvHandleddaPersonerSelectValue = TypAvHandleddaPersonerSelect.getText();
-		System.out.println("Typ av handledda personer = " + TypAvHandleddaPersonerSelectValue);
+//		WebElement TypAvHandleddaPersonerSelect = TypAvHandleddaPersoner.getFirstSelectedOption();
+//		String TypAvHandleddaPersonerSelectValue = TypAvHandleddaPersonerSelect.getText();
+//		System.out.println("Typ av handledda personer = " + TypAvHandleddaPersonerSelectValue);
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonTypAvHandleddaPersoner"})
@@ -95,9 +95,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		Roll.selectByIndex(number3);
 		
-		WebElement RollSelect = Roll.getFirstSelectedOption();
-		String RollSelectValue = RollSelect.getText();
-		System.out.println("Roll = " + RollSelectValue);
+//		WebElement RollSelect = Roll.getFirstSelectedOption();
+//		String RollSelectValue = RollSelect.getText();
+//		System.out.println("Roll = " + RollSelectValue);
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonRoll"})

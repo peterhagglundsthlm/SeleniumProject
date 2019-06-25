@@ -50,10 +50,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 		{
 			BankensLand.selectByVisibleText("Sweden");
 		}
-
-		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
-		String BankeslandValue = BankensLandSelect.getText();
-		System.out.println("Bankens land är = " + BankeslandValue ); 
+//
+//		WebElement BankensLandSelect = BankensLand.getFirstSelectedOption();
+//		String BankeslandValue = BankensLandSelect.getText();
+//		System.out.println("Bankens land är = " + BankeslandValue ); 
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
@@ -70,9 +70,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 			Betalningstyp.selectByVisibleText("Postal giro");
 		}
 
-		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
-		String BetalningstypValue = BetalningstypSelect.getText();
-		System.out.println("Betalningstyp är = " + BetalningstypValue ); 
+//		WebElement BetalningstypSelect = Betalningstyp.getFirstSelectedOption();
+//		String BetalningstypValue = BetalningstypSelect.getText();
+//		System.out.println("Betalningstyp är = " + BetalningstypValue ); 
 	}
 
 	@Test (dependsOnMethods={"Betalningstyp"})
@@ -81,8 +81,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).sendKeys("1234-45-67");
 
-		String PlusgiroString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).getAttribute("value");
-		System.out.println("Plusgiro är = " + PlusgiroString); 
+//		String PlusgiroString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro(driver).getAttribute("value");
+//		System.out.println("Plusgiro är = " + PlusgiroString); 
 	}
 
 	@Test (dependsOnMethods={"Plusgiro"})
@@ -91,8 +91,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).sendKeys("35");
 
-		String SkatteprocentString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).getAttribute("value");
-		System.out.println("Skatteprocent är = " + SkatteprocentString + "%"); 
+//		String SkatteprocentString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(driver).getAttribute("value");
+//		System.out.println("Skatteprocent är = " + SkatteprocentString + "%"); 
 	}
 
 	@Test (dependsOnMethods={"Skatteprocent"})
@@ -101,8 +101,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("1234567");
 
-		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
-		System.out.println("Skatteprocent är = " + TINString); 
+//		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
+//		System.out.println("Skatteprocent är = " + TINString); 
 	}
 
 	@Test (dependsOnMethods={"TIN"})

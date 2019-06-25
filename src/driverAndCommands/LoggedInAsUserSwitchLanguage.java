@@ -12,11 +12,11 @@ public class LoggedInAsUserSwitchLanguage {
 		
 		if (driver.getPageSource().contains("Min profil"))
 		{
-			System.out.println("Detta test genomförs på den engelska versionen av portalen");
+			//System.out.println("Detta test genomförs på den engelska versionen av portalen");
 			driver.findElement(By.linkText("In English")).click();
 		}
 		else {
-			System.out.println("Detta test genomförs på den engelska versionen av portalen");
+			//System.out.println("Detta test genomförs på den engelska versionen av portalen");
 		}
 		return null;
 	}
@@ -26,11 +26,11 @@ public class LoggedInAsUserSwitchLanguage {
 		
 		if (driver.getPageSource().contains("My profile"))
 		{
-			System.out.println("Detta test genomförs på den svenska versionen av portalen");
+			//System.out.println("Detta test genomförs på den svenska versionen av portalen");
 			driver.findElement(By.linkText("På svenska")).click();
 		}
 		else {
-			System.out.println("Detta test genomförs på den svenska versionen av portalen");
+			//System.out.println("Detta test genomförs på den svenska versionen av portalen");
 		}
 		return null;
 
