@@ -44,7 +44,7 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"NyAnsökan"})
 	public void Projekttitel() {
 
-		String Projekttitel = "Automatiserad Ansökan";
+		String Projekttitel = "Etikansökan 3";
 		driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
 
 		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != Projekttitel);

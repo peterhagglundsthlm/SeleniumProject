@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel="false"
+<suite name="SuiteSAT" verbose="1" parallel="tests"
 	preserve-order="true">
 
 	<!--Denna parameter avgör vilket språk som testsuiten kommer köras på. Alternativ 
@@ -16,11 +16,11 @@
 		Alternativ är "Chrome", "ChromeNotLoggedIn" "FireFox", "IExplorer" och "Headless" -->
 	<parameter name="browser" value="Chrome" />
 
-	<test name="testCasesSATOrganisationskontoStruktur">
+	<test name="testCasesSATGranskningBetalningsinformation">
 		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSATOrganisationskontoStruktur" />
+			<package name="testCasesSATGranskningBetalningsinformation" />
 		</packages>
 	</test>
 </suite> 
