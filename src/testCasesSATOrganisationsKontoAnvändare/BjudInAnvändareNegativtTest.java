@@ -88,14 +88,14 @@ public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
 		if (driver.getPageSource().contains("Bjud in användare"))
 		{
-			String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Svenska  "+valueFörnamn + " visas korrekt");
+			//String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+			//System.out.println("Felmeddelande på Svenska  "+valueFörnamn + " visas korrekt");
 		}
 
 		else if (driver.getPageSource().contains("Invite user"))
 		{
-			String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Engelska  "+valueFörnamn + " visas korrekt");
+			//String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+			//System.out.println("Felmeddelande på Engelska  "+valueFörnamn + " visas korrekt");
 
 		}
 	}
@@ -108,14 +108,14 @@ public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
 		if (driver.getPageSource().contains("Bjud in användare"))
 		{
-			String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Svenska  "+valueEfternamn + " visas korrekt");
+			//String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+			//System.out.println("Felmeddelande på Svenska  "+valueEfternamn + " visas korrekt");
 		}
 
 		else if (driver.getPageSource().contains("Invite user"))
 		{
-			String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Engelska  "+valueEfternamn + " visas korrekt");
+			//String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+			//System.out.println("Felmeddelande på Engelska  "+valueEfternamn + " visas korrekt");
 
 		}
 	}
@@ -128,14 +128,14 @@ public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
 		if (driver.getPageSource().contains("Bjud in användare"))
 		{
-			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Svenska  "+valueEpost + " visas korrekt");
+//			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+//			System.out.println("Felmeddelande på Svenska  "+valueEpost + " visas korrekt");
 		}
 
 		else if (driver.getPageSource().contains("Invite user"))
 		{
-			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			System.out.println("Felmeddelande på Engelska  "+valueEpost + " visas korrekt");
+//			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
+//			System.out.println("Felmeddelande på Engelska  "+valueEpost + " visas korrekt");
 
 		}
 	}

@@ -70,7 +70,7 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp(driver).click();
 
-		System.out.println("Organisation = " + universitet);
+//		System.out.println("Organisation = " + universitet);
 
 	}
 
@@ -91,9 +91,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 			typ.selectByVisibleText("Licentiate degree");
 		}
 
-		WebElement TypAvExamen = typ.getFirstSelectedOption();
-		String Value = TypAvExamen.getText();
-		System.out.println("Typ av examen = " + Value);
+//		WebElement TypAvExamen = typ.getFirstSelectedOption();
+//		String Value = TypAvExamen.getText();
+//		System.out.println("Typ av examen = " + Value);
 	}
 
 
@@ -120,8 +120,8 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 		String Datum = Integer.toString(RandomDatum);
 		driver.findElement(By.linkText(Datum)).click();
 
-		String Examensdatum = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatum(driver).getAttribute("value");
-		System.out.println("Datum för examen = " + Examensdatum);
+//		String Examensdatum = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_LicentiatOchDoktorsexamenExamensdatum(driver).getAttribute("value");
+//		System.out.println("Datum för examen = " + Examensdatum);
 
 	}
 
@@ -136,9 +136,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
 
-		WebElement FörstÄmne = ämne1.getFirstSelectedOption();
-		String ValueÄmne1 = FörstÄmne.getText();
-		System.out.println("Ämne 1 = " + ValueÄmne1);
+//		WebElement FörstÄmne = ämne1.getFirstSelectedOption();
+//		String ValueÄmne1 = FörstÄmne.getText();
+//		System.out.println("Ämne 1 = " + ValueÄmne1);
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning));
@@ -149,9 +149,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
 
-		WebElement AndraÄmne = ämne2.getFirstSelectedOption();
-		String ValueÄmne2 = AndraÄmne.getText();
-		System.out.println("Ämne 2 = " + ValueÄmne2);
+//		WebElement AndraÄmne = ämne2.getFirstSelectedOption();
+//		String ValueÄmne2 = AndraÄmne.getText();
+//		System.out.println("Ämne 2 = " + ValueÄmne2);
 
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning));
@@ -162,9 +162,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		ämne3.selectByIndex(number3);
 
-		WebElement TredjeÄmne = ämne3.getFirstSelectedOption();
-		String ValueÄmne3 = TredjeÄmne.getText();
-		System.out.println("Ämne 3 = " + ValueÄmne3);
+//		WebElement TredjeÄmne = ämne3.getFirstSelectedOption();
+//		String ValueÄmne3 = TredjeÄmne.getText();
+//		System.out.println("Ämne 3 = " + ValueÄmne3);
 	}
 
 
@@ -172,8 +172,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 	public void WriteAvhandlingensTitelOrginalSpråk() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelOrginalspråk(driver).sendKeys("Test av avhandling");
-		String Orginalspråk = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelOrginalspråk(driver).getAttribute("value");
-		System.out.println("Avhandlingens titel på orginalspråk är = " + Orginalspråk);
+		
+//		String Orginalspråk = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelOrginalspråk(driver).getAttribute("value");
+//		System.out.println("Avhandlingens titel på orginalspråk är = " + Orginalspråk);
 
 	}
 
@@ -181,8 +182,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 	public void WriteAvhandlingensTitelEngelska() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelEngelska(driver).sendKeys("Test Dissertation title");
-		String Engelska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelEngelska(driver).getAttribute("value");
-		System.out.println("Avhandlingens titel på engelska är = " + Engelska);
+		
+//		String Engelska = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_AvhandlingensTitelEngelska(driver).getAttribute("value");
+//		System.out.println("Avhandlingens titel på engelska är = " + Engelska);
 
 	}
 
@@ -191,8 +193,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 	public void ISSNISBNNummer() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_IssIsBnNummer(driver).sendKeys("12345678");
-		String ISBN = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_IssIsBnNummer(driver).getAttribute("value");
-		System.out.println("ISBN-Nummer är = " + ISBN);
+		
+//		String ISBN = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_IssIsBnNummer(driver).getAttribute("value");
+//		System.out.println("ISBN-Nummer är = " + ISBN);
 
 	}
 
@@ -200,8 +203,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 	public void FörnamnHandledare() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_FörnamnHandledare(driver).sendKeys("Per");
-		String FörnamnHandledare = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_FörnamnHandledare(driver).getAttribute("value");
-		System.out.println("Handledarens förnamn är = " + FörnamnHandledare);
+		
+//		String FörnamnHandledare = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_FörnamnHandledare(driver).getAttribute("value");
+//		System.out.println("Handledarens förnamn är = " + FörnamnHandledare);
 
 	}
 
@@ -209,8 +213,9 @@ public class UtbildningForskarUtbildningAddLicentiatexamen extends BeforeAfterTe
 	public void EfternamnHandledare() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_EfternamnHandledare(driver).sendKeys("Persson");
-		String EfternamnHandledare = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_EfternamnHandledare(driver).getAttribute("value");
-		System.out.println("Handledarens efternamn är = " + EfternamnHandledare);
+		
+//		String EfternamnHandledare = PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_EfternamnHandledare(driver).getAttribute("value");
+//		System.out.println("Handledarens efternamn är = " + EfternamnHandledare);
 
 	}
 

@@ -1,5 +1,6 @@
 package testCasesSATButtonCheckAdmin;
 
+
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 	@Test 
 	public void LoginAsAdminUser() {
-
+		
 	}
 
 	@Test (dependsOnMethods={"LoginAsAdminUser"})
@@ -142,7 +143,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärSkolfi"})
 	public void FormulärEPN() {
 
-		System.out.println("EPM ANVÄNDS EJ I DENNA MILJÖ");
 		
 		//EPN
 		/*PortalLoggedInAsAdminFormulär.EPN(driver).click();
@@ -254,8 +254,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärSkolfi"})
 	public void FinansiärEPN() {
 
-		System.out.println("EPM ANVÄNDS EJ I DENNA MILJÖ");
-		
 		//EPN
 		/*
 		PortalLoggedInAsAdminFinansiär.EPN(driver).click();
@@ -295,6 +293,8 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		//LOGGAR UT
 		PortalLoggedInAsAdminLoggaUt.LoggaUt(driver).click();
+		
+		
 
 	}
 

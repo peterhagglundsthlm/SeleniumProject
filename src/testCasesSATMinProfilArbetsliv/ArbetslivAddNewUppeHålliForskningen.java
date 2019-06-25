@@ -38,8 +38,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).sendKeys("2017-05-19");
 		
-		String StartDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).getAttribute("value");
-		System.out.println("Start Datum Uppehåll = " + StartDatumUppehall); 
+//		String StartDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).getAttribute("value");
+//		System.out.println("Start Datum Uppehåll = " + StartDatumUppehall); 
 	}
 
 	@Test (dependsOnMethods={"StartDatum"})
@@ -47,8 +47,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).sendKeys("2018-06-17");
 		
-		String SlutDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).getAttribute("value");
-		System.out.println("Slut Datum Uppehåll = " + SlutDatumUppehall); 
+//		String SlutDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).getAttribute("value");
+//		System.out.println("Slut Datum Uppehåll = " + SlutDatumUppehall); 
 	}
 
 	@Test (dependsOnMethods={"SlutDatum"})
@@ -56,8 +56,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).sendKeys("test");
 		
-		String Beskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).getAttribute("value");
-		System.out.println("Beskrivning fritext = " + Beskrivning); 
+//		String Beskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).getAttribute("value");
+//		System.out.println("Beskrivning fritext = " + Beskrivning); 
 	}
 	
 	@Test (dependsOnMethods={"Beskrivning"})

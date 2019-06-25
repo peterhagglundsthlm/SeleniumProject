@@ -65,10 +65,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 			driver.findElement(By.xpath("//button[contains(text(), 'Save choice')]")).click();	
 		}
 
-
-
-		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation(driver).getAttribute("value");
-		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
+//		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation(driver).getAttribute("value");
+//		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
 	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
@@ -82,9 +80,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
 
-		WebElement ämneEtt = ämne1.getFirstSelectedOption();
-		String Value1 = ämneEtt.getText();
-		System.out.println("Ämne 1 = " + Value1 ); 
+//		WebElement ämneEtt = ämne1.getFirstSelectedOption();
+//		String Value1 = ämneEtt.getText();
+//		System.out.println("Ämne 1 = " + Value1 ); 
 
 
 		//VÄLJER SLUMPMÄSSIGT I ANDRA DROPDOWN
@@ -95,9 +93,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
 
-		WebElement ämneTvå = ämne2.getFirstSelectedOption();
-		String Value2 = ämneTvå.getText();
-		System.out.println("Ämne 2 = " + Value2 ); 
+//		WebElement ämneTvå = ämne2.getFirstSelectedOption();
+//		String Value2 = ämneTvå.getText();
+//		System.out.println("Ämne 2 = " + Value2 ); 
 
 
 		//VÄLJER SLUMPMÄSSIGT I TREDJE DROPDOWN
@@ -108,9 +106,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
 		ämne3.selectByIndex(number3);
 
-		WebElement ämneTre = ämne3.getFirstSelectedOption();
-		String Value3 = ämneTre.getText();
-		System.out.println("Ämne 3 = " + Value3 ); 
+//		WebElement ämneTre = ämne3.getFirstSelectedOption();
+//		String Value3 = ämneTre.getText();
+//		System.out.println("Ämne 3 = " + Value3 ); 
 
 	}
 
@@ -124,9 +122,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		Typ.selectByIndex(number);
 
-		WebElement Typ1 = Typ.getFirstSelectedOption();
-		String Value = Typ1.getText();
-		System.out.println("Typ = " + Value ); 
+//		WebElement Typ1 = Typ.getFirstSelectedOption();
+//		String Value = Typ1.getText();
+//		System.out.println("Typ = " + Value ); 
 
 	}
 
@@ -141,17 +139,17 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		PeriodStartYear.selectByIndex(number);
 
-		WebElement PeriodStartAr = PeriodStartYear.getFirstSelectedOption();
-		String Value = PeriodStartAr.getText();
-		System.out.println("Periodstart år = " + Value ); 
+//		WebElement PeriodStartAr = PeriodStartYear.getFirstSelectedOption();
+//		String Value = PeriodStartAr.getText();
+//		System.out.println("Periodstart år = " + Value ); 
 
 		//PERIODSLUT HÄMTAR STARTÅR OCH LÄGGER TILL 1 ÅR 
 		Select PeriodEndYear = new Select (driver.findElement(By.name(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenPeriodSlutYear))); 
 		PeriodEndYear.selectByIndex(number + 1);
 
-		WebElement PeriodEndAr = PeriodEndYear.getFirstSelectedOption();
-		String Value1 = PeriodEndAr.getText();
-		System.out.println("Periodslut år = " + Value1 ); 
+//		WebElement PeriodEndAr = PeriodEndYear.getFirstSelectedOption();
+//		String Value1 = PeriodEndAr.getText();
+//		System.out.println("Periodslut år = " + Value1 ); 
 	}
 
 	@Test (dependsOnMethods={"PeriodStartOchSlutYear"})
@@ -164,9 +162,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		PeriodStartMonth.selectByIndex(number);
 
-		WebElement PeriodStartManad = PeriodStartMonth.getFirstSelectedOption();
-		String Value = PeriodStartManad.getText();
-		System.out.println("Periodstart månad = " + Value );
+//		WebElement PeriodStartManad = PeriodStartMonth.getFirstSelectedOption();
+//		String Value = PeriodStartManad.getText();
+//		System.out.println("Periodstart månad = " + Value );
 	}
 
 	@Test (dependsOnMethods={"PeriodStartMonth"})
@@ -179,9 +177,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		PeriodEndMonth.selectByIndex(number);
 
-		WebElement PeriodEndManad = PeriodEndMonth.getFirstSelectedOption();
-		String Value = PeriodEndManad.getText();
-		System.out.println("Periodslut månad = " + Value );
+//		WebElement PeriodEndManad = PeriodEndMonth.getFirstSelectedOption();
+//		String Value = PeriodEndManad.getText();
+//		System.out.println("Periodslut månad = " + Value );
 	}
 
 	@Test (dependsOnMethods={"PeriodEndMonth"})

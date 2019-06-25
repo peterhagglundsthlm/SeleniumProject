@@ -36,10 +36,10 @@ public class SwitchPortalToEnglish extends BeforeAfterTestBrowsers {
 
 		if (driver.getPageSource().contains("Welcome to Prisma"))
 		{
-			System.out.println("Portalen har bytt språk till Engelska. Testet har lyckats");
+//			System.out.println("Portalen har bytt språk till Engelska. Testet har lyckats");
 		}
 		else {
-			System.out.println("Portalen har inte bytt språk korrekt. Testet har misslyckats");
+//			System.out.println("Portalen har inte bytt språk korrekt. Testet har misslyckats");
 			Assert.fail();
 		}
 	}

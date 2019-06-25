@@ -50,9 +50,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 			BankensLand.selectByVisibleText("France");
 		}
 
-		WebElement AnställningsNamnSelect = BankensLand.getFirstSelectedOption();
-		String SelectValue = AnställningsNamnSelect.getText();
-		System.out.println("Bankens land är = " + SelectValue ); 
+		//WebElement AnställningsNamnSelect = BankensLand.getFirstSelectedOption();
+		//String SelectValue = AnställningsNamnSelect.getText();
+		//System.out.println("Bankens land är = " + SelectValue ); 
 
 	}
 
@@ -63,8 +63,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).sendKeys("Frankrikes största bank");
 
-		String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
-		System.out.println("Bankens namn är = " + BankensnamnString); 
+		//String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
+		//System.out.println("Bankens namn är = " + BankensnamnString); 
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
@@ -73,8 +73,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).sendKeys("BankmanTest");
 
-		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
-		System.out.println("Kontoinnehavare = " + KontoinnehavareString); 
+//		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
+//		System.out.println("Kontoinnehavare = " + KontoinnehavareString); 
 	}
 
 
@@ -84,8 +84,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).sendKeys("9943595");
 
-		String IBANString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).getAttribute("value");
-		System.out.println("IBAN = " + IBANString); 
+//		String IBANString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).getAttribute("value");
+//		System.out.println("IBAN = " + IBANString); 
 	}
 
 	@Test (dependsOnMethods={"IBAN"})
@@ -94,8 +94,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).sendKeys("Abc1234567");
 
-		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
-		System.out.println("SWIFT = " + SWIFTBICString); 
+//		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
+//		System.out.println("SWIFT = " + SWIFTBICString); 
 	}
 
 	@Test (dependsOnMethods={"SWIFTBIC"})
@@ -104,8 +104,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
 		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("12134234");
 
-		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
-		System.out.println("TIN = " + TINString); 
+//		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
+//		System.out.println("TIN = " + TINString); 
 	}
 
 	@Test (dependsOnMethods={"TIN"})

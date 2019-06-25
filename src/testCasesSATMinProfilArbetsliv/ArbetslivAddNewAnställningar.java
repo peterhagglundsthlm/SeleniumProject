@@ -64,8 +64,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 			driver.findElement(By.xpath("//button[contains(text(), 'Save choice')]")).click();	
 		}
 
-		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).getAttribute("value");
-		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
+//		String NamnPåUniversitet = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(driver).getAttribute("value");
+//		System.out.println("Namn På Universitet = " + NamnPåUniversitet); 
 
 	}
 
@@ -79,9 +79,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		Anställning.selectByIndex(number);
 
-		WebElement AnställningsNamn = Anställning.getFirstSelectedOption();
-		String Value = AnställningsNamn.getText();
-		System.out.println("Anställning = " + Value ); 
+//		WebElement AnställningsNamn = Anställning.getFirstSelectedOption();
+//		String Value = AnställningsNamn.getText();
+//		System.out.println("Anställning = " + Value ); 
 
 
 	}
@@ -97,9 +97,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		AnställningsForm.selectByIndex(number);
 
 
-		WebElement AnställningsForm1 = AnställningsForm.getFirstSelectedOption();
-		String Value = AnställningsForm1.getText();
-		System.out.println("Anställningsform = " + Value ); 
+//		WebElement AnställningsForm1 = AnställningsForm.getFirstSelectedOption();
+//		String Value = AnställningsForm1.getText();
+//		System.out.println("Anställningsform = " + Value ); 
 	}
 
 	@Test (dependsOnMethods={"AnställningDropDown"})
@@ -113,8 +113,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid(driver).sendKeys(DelAvForskningIAnställningenBaseradPåHeltid);
 
-			String DelAvForskningIAnställningenBaseradPåHeltid1 = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid(driver).getAttribute("value");
-			System.out.println("Del av forskning = " + DelAvForskningIAnställningenBaseradPåHeltid1 + "%"); 
+//			String DelAvForskningIAnställningenBaseradPåHeltid1 = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid(driver).getAttribute("value");
+//			System.out.println("Del av forskning = " + DelAvForskningIAnställningenBaseradPåHeltid1 + "%"); 
 		}
 	}
 
@@ -128,17 +128,17 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = randomOption .nextInt(endOption);  
 		AnställningensBörjanYear.selectByIndex(number);
 
-		WebElement AnställningensBörjanAr = AnställningensBörjanYear.getFirstSelectedOption();
-		String Value = AnställningensBörjanAr.getText();
-		System.out.println("Anställning år = " + Value ); 
+//		WebElement AnställningensBörjanAr = AnställningensBörjanYear.getFirstSelectedOption();
+//		String Value = AnställningensBörjanAr.getText();
+//		System.out.println("Anställning år = " + Value ); 
 
 		//ANSTÄLLNINGENS SLUT ÅT. HÄMTAR STARTÅR OCH LÄGGER TILL 1 ÅR 
 		Select AnställningensSlutYear = new Select (driver.findElement(By.name(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensSlutYear))); 
 		AnställningensSlutYear.selectByIndex(number + 1);
 
-		WebElement AnställningensSlutjanAr = AnställningensSlutYear.getFirstSelectedOption();
-		String Value2 = AnställningensSlutjanAr.getText();
-		System.out.println("Anställning slut år = " + Value2); 
+//		WebElement AnställningensSlutjanAr = AnställningensSlutYear.getFirstSelectedOption();
+//		String Value2 = AnställningensSlutjanAr.getText();
+//		System.out.println("Anställning slut år = " + Value2); 
 	}
 
 	@Test (dependsOnMethods={"AnställningensBörjanOchSlutYear"})
@@ -150,9 +150,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = randomOption .nextInt(endOption);  
 		AnställningensBörjanMonth.selectByIndex(number);
 
-		WebElement AnställningensBörjanManadSelect = AnställningensBörjanMonth.getFirstSelectedOption();
-		String AnställningensBörjanManadSelectValue = AnställningensBörjanManadSelect.getText();
-		System.out.println("Anställnings startmånad = " + AnställningensBörjanManadSelectValue ); 
+//		WebElement AnställningensBörjanManadSelect = AnställningensBörjanMonth.getFirstSelectedOption();
+//		String AnställningensBörjanManadSelectValue = AnställningensBörjanManadSelect.getText();
+//		System.out.println("Anställnings startmånad = " + AnställningensBörjanManadSelectValue ); 
 	}
 
 	@Test (dependsOnMethods={"AnställningensBörjanMonth"})
@@ -164,9 +164,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		int number = randomOption .nextInt(endOption);  
 		AnställningensSlutMonth.selectByIndex(number);
 
-		WebElement AnställningensSlutMonthSelect = AnställningensSlutMonth.getFirstSelectedOption();
-		String AnställningensSlutMonthValue = AnställningensSlutMonthSelect.getText();
-		System.out.println("Anställnings slutmånad = " + AnställningensSlutMonthValue );  	
+//		WebElement AnställningensSlutMonthSelect = AnställningensSlutMonth.getFirstSelectedOption();
+//		String AnställningensSlutMonthValue = AnställningensSlutMonthSelect.getText();
+//		System.out.println("Anställnings slutmånad = " + AnställningensSlutMonthValue );  	
 	}
 
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})
@@ -180,8 +180,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).clear();
 			PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).sendKeys(ÖvrigInformation);
 
-			String ÖvrigInformation1 = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).getAttribute("value");
-			System.out.println("Övrig information = " + ÖvrigInformation1); 
+//			String ÖvrigInformation1 = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(driver).getAttribute("value");
+//			System.out.println("Övrig information = " + ÖvrigInformation1); 
 		}
 
 	}
