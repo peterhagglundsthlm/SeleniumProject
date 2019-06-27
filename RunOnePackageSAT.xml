@@ -16,11 +16,11 @@
 		Alternativ är "Chrome", "ChromeNotLoggedIn" "FireFox", "IExplorer" och "Headless" -->
 	<parameter name="browser" value="Headless" />
 
-	<test name="testCasesSATGranskningBetalningsinformation">
+	<test name="testCasesSATMinProfilMeriterOchUtmärkelser">
 		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSATMinProfilPublikationer" />
+			<package name="testCasesSATMinProfilMeriterOchUtmärkelser" />
 		</packages>
 	</test>
 </suite> 
