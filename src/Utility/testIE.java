@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -34,7 +35,7 @@ public class testIE {
 
 	public void f() throws InterruptedException {
 
-		System.setProperty("webdriver.ie.driver","C:\\Selenium 3.12.0\\IEDriver\\IEDriverServer_Win32_3.13.0\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver","C:\\Selenium\\IEDriverServer_Win32_3.14.0\\IEDriverServer.exe");
 
 		driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
@@ -78,15 +79,33 @@ public class testIE {
 		js2.executeScript("arguments[0].setAttribute('value', arguments[1])", VäljHandläggare , "Peter Hägglund");
 
 		driver.findElement(By.id("handlingOfficer_handlingOfficerAlias")).sendKeys(Keys.ENTER);
-	
+		
+		Thread.sleep(500);
 
-	
+		Actions action1 = new Actions(driver);
+		action1.sendKeys(Keys.DOWN).build().perform();
+		
+		Thread.sleep(500);
+		
 		Actions action2 = new Actions(driver);
-		WebElement element2= driver.findElement(By.id("searchResultScrollDiv"));
-		action2.moveToElement(element2).perform();
-		action2.doubleClick(element2).perform();
+		action2.sendKeys(Keys.ENTER).build().perform();
+		
+		Thread.sleep(500);
+		
+		driver.switchTo().alert().accept();
+		
+		Thread.sleep(500);
+
+		driver.findElement(By.id("btnApply")).click();
+		
+		Thread.sleep(2000);
+
+		driver.switchTo().alert().accept();
+
+		driver.findElement(By.id("formOfGrantSupport_btnSaveSupplier")).click();
 
 
+		
 
 
 
