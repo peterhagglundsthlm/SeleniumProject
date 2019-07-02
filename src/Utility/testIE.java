@@ -40,6 +40,8 @@ public class testIE {
 		driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		
 		driver.get("http://prismaecmvrsat.ad.vr.se/Platina/Modules/InfoHeap/JournalizedCase_Sapphire.aspx?propID=0&topPropID=1000&parentPropID=1000&basedOnPropID=0&objectID=0&typeID=199&typeGroupID=0&moduleID=100&ObjectBrowser=0&isDraged=0&titleBase64Encoded=&uploadedFilePathBase64=&extension=&cardTxt=&hasFullControl=1&phaseID=0&devRowID=0&filter=&groupFilter=&processID=&processShapeID=&processRevision=&fromClient=&businessCodeID=&deedTypeID=&caseTypeID=1&readOnly=&customParam1=&customParam2=&customParam3=&customParam4=&customParam5=&isMultiSelect=&isArchived=&CreatedFromOffice=&requestingInstance=&displayMode=");
 
 		Thread.sleep(500);
@@ -101,8 +103,13 @@ public class testIE {
 		Thread.sleep(2000);
 
 		driver.switchTo().alert().accept();
+		
+		Thread.sleep(2000);
+		
+		//driver.get("http://prismaecmvrsat.ad.vr.se/Platina/PlatinaCustomControls/Customized/ObjectRelation/ObjectRelationSearch.aspx?parentPropID=10086712&typeID=1001011&relationType=packageObjectRelation&groupName=199_1001011&structureType=createFolderStructure&folderName=QmlkcmFnc2Zvcm0=&customfolderID=4&languageSet=ObjRel_FormOfGrant&storedProcedureToCall=pri_pObjectFormOfGrantSupportGet");
+		
 
-		driver.findElement(By.id("formOfGrantSupport_btnSaveSupplier")).click();
+			driver.findElement(By.id("formOfGrantSupport_btnSaveSupplier")).click();
 
 
 		

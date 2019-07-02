@@ -53,6 +53,12 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
 			driver.get(Miljö);
+			
+			String Version = driver.findElement(By.className("copyrightContainer")).getText();
+			
+			System.out.println("Version " + Version);
+			
+			
 			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
