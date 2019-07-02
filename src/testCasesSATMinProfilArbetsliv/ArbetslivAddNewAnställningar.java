@@ -125,7 +125,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		Select AnställningensBörjanYear = new Select (driver.findElement(By.name(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear)));
 		Random randomOption = new Random();  
 		int endOption = AnställningensBörjanYear.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
+		int number = randomOption.nextInt(endOption);  
 		AnställningensBörjanYear.selectByIndex(number);
 
 //		WebElement AnställningensBörjanAr = AnställningensBörjanYear.getFirstSelectedOption();
