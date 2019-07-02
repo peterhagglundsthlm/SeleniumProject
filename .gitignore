@@ -4,9 +4,10 @@ test-output/
 
 RunAllTestsSATChrome.xml
 
-RunAllTestsSATFireFox.xml
-
-RunAllTestsSATHeadless.xml
-
 RunSingleTestSAT.xml
 
+RunOnePackageSAT.xml
+
+EPMFormular.xml
+
+.classpath
