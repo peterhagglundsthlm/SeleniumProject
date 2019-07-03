@@ -11,8 +11,6 @@ import org.testng.annotations.Test;
 
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
-import pageElementsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
-import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 

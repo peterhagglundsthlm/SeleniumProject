@@ -1,25 +1,16 @@
 package Utility;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Set;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 
@@ -44,7 +35,7 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"NyAnsökan"})
 	public void Projekttitel() {
 
-		String Projekttitel = "Etikansökan 3";
+		String Projekttitel = "Automatansökan";
 		driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
 
 		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != Projekttitel);
@@ -386,59 +377,83 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	}
 
 	@Test (dependsOnMethods={"Page12"})
-	public void Page13() throws AWTException {
+	public void Page13() {
 
 		driver.findElement(By.linkText("15. BILAGOR")).click();
-		
+
 		WebDriverWait wait1 = new WebDriverWait(driver, 10);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Select Disp = new Select (driver.findElement(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Disp.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait2 = new WebDriverWait(driver, 10);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Select Disp2 = new Select (driver.findElement(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Disp2.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait3 = new WebDriverWait(driver, 10);
 		wait3.until(ExpectedConditions.elementToBeClickable(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Select Disp3 = new Select (driver.findElement(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Disp3.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait4 = new WebDriverWait(driver, 10);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 		Select Disp4 = new Select (driver.findElement(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 		Disp4.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait5 = new WebDriverWait(driver, 10);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Select Disp5 = new Select (driver.findElement(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Disp5.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait6 = new WebDriverWait(driver, 10);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Select Disp6 = new Select (driver.findElement(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Disp6.selectByVisibleText("Nej");
-	
+
 		WebDriverWait wait7 = new WebDriverWait(driver, 10);
 		wait7.until(ExpectedConditions.elementToBeClickable(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Select Disp7 = new Select (driver.findElement(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Disp7.selectByVisibleText("Nej");
 	}
-	
+
 	@Test (dependsOnMethods={"Page13"})
-	public void Page14() {
-		
+	public void FileUpload1() throws InterruptedException, IOException {
+
+		driver.findElement(By.id("select-file")).click();
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec("C:\\Users\\krkl\\Desktop\\FileUpload.exe");
+		Thread.sleep(3000);
+
+	}
+
+	@Test (dependsOnMethods={"FileUpload1"})
+	public void AcceptTerms() {
+
 		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-		
+
 		if (driver.getPageSource().contains("Registrera ansökan"))
 
 		{
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();	
 			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-			driver.findElement(By.id("Submitter")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+		}
+		else {
+			Assert.fail();
+		}
 	}
 
-}
+	@Test (dependsOnMethods={"AcceptTerms"})
+	public void Register() {
+
+		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
+		WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+
+	}
 }
 
 

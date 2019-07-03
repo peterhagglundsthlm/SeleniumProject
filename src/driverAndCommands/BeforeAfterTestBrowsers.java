@@ -34,6 +34,7 @@ public class BeforeAfterTestBrowsers {
 		
 		
 		
+		
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Miljö", "Språk"})
@@ -54,9 +55,6 @@ public class BeforeAfterTestBrowsers {
 			startTime = System.currentTimeMillis();
 			driver.get(Miljö);
 			
-			String Version = driver.findElement(By.className("copyrightContainer")).getText();
-			
-			System.out.println("Version " + Version);
 			
 			
 			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
@@ -80,12 +78,12 @@ public class BeforeAfterTestBrowsers {
 			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
-			ChromeOption.addArguments("start-maximized", "--headless");
+			ChromeOption.addArguments("start-maximized");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			DriverGetWebsite.OpenSatPortal(driver);
+			driver.get(Miljö);
 //			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL");
 
 

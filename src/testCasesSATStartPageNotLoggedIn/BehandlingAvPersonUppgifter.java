@@ -9,12 +9,14 @@ import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BehandlingAvPersonUppgifter extends BeforeAfterTestBrowsers {
+	String Url; String NyURL;
 
 	@BeforeClass
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen " + "Behandling av personuppgifter " + "fungerar som tänkt";
+		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Behandling av personuppgifter fungerar som tänkt";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+		Url = driver.getCurrentUrl();
 	}
 
 	@Test
@@ -30,17 +32,22 @@ public class BehandlingAvPersonUppgifter extends BeforeAfterTestBrowsers {
 	}
 
 	@Test (dependsOnMethods={"ClicBehandlingAvPersonuppgifter"})
-	public void VerifyBehandlingAvPersonuppgifter() {
+	public void VerifyBehandlingAvPersonuppgifter() throws InterruptedException {
 
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterModal));
-		
-		if (driver.getPageSource().contains("I enlighet med den allmänna dataskyddsförordningen (EU 2016/679), GDPR, och kompletterande nationell lagstiftning lämnas följande information för behandlingen av dina personuppgifter i Prisma"))
+
+		NyURL = driver.getCurrentUrl();
+
+		if (!NyURL.equals((Url + "#processingofpersonaldata")))
 		{
-//			System.out.println("Informationstexten om behandling av personuppgifter visas korrekt. Testet har lyckats");
-		} else {
-//			System.out.println("Informationstexten om behandling av personuppgifter visas INTE korrekt. Testet har misslyckats");
-			Assert.fail();
-		}
-			
+			Assert.fail("Url stämmer inte");
+		} 
+
 	}
 }
+
+
+
+
+
+
