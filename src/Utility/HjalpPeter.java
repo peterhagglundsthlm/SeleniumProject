@@ -3,15 +3,12 @@ package Utility;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
-import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class HjalpPeter {
