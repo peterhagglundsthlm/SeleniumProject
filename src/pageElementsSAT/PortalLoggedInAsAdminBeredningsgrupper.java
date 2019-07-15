@@ -7,15 +7,16 @@ import org.openqa.selenium.WebElement;
 
 public class PortalLoggedInAsAdminBeredningsgrupper {
 	private static WebElement element = null;
+	
 
 
 	//BEREDNINGSGRUPPERKNAPPEN
 	public static final String BeredningsgrupperButton = "body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview > a"; {
 	}
 	public static WebElement BeredningsgrupperButton(WebDriver driver){
-
+		
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview > a"));
-		return element;
+		return element;	
 	}
 
 	//BEREDNINGSGRUPPER - ADMINISTRERA BEREDNINGSGRUPPER

@@ -5,7 +5,9 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
+import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.GetCurrentUrl;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 import pageElementsSAT.PortalLoggedInAsAdminFinansiär;
@@ -20,13 +22,14 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@BeforeClass
 	public void TestCaseInfo() {
 
+
 		String TestCaseInfo = "Loggar in som en admin och testar att alla synliga knappar är klickbara";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test 
 	public void LoginAsAdminUser() {
-		
+
 	}
 
 	@Test (dependsOnMethods={"LoginAsAdminUser"})
@@ -143,7 +146,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärSkolfi"})
 	public void FormulärEPN() {
 
-		
+
 		//EPN
 		/*PortalLoggedInAsAdminFormulär.EPN(driver).click();
 		PortalLoggedInAsAdminFormulär.EPNFormulär(driver).click();
@@ -293,8 +296,8 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		//LOGGAR UT
 		PortalLoggedInAsAdminLoggaUt.LoggaUt(driver).click();
-		
-		
+
+
 
 	}
 

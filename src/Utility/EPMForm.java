@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
+import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 
 
 
@@ -19,6 +20,7 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test
 	public void Utlysning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
+
 	}
 
 
@@ -449,9 +451,9 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 
 		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 2);
-        wait.until(ExpectedConditions.alertIsPresent());
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+		wait.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 
 	}
 }
