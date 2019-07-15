@@ -99,7 +99,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-	//OM PRISMA - MODAL
+	//OM PRISMA - MODAL (INFORMATION) 
 	public static final String InformationOmPrismaModal = "editDialog"; {	
 	}
 	public static WebElement InformationOmPrismaModal(WebDriver driver){
@@ -117,7 +117,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-	//OM WEBBPLATSEN - MODAL
+	//OM WEBBPLATSEN - MODAL (INFORMATION) 
 	public static final String InformationOmWebbplatsenModal = "#editDialogBody > section > div"; {	
 	}
 	public static WebElement InformationOmWebbplatsenModal(WebDriver driver){
@@ -144,7 +144,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-	//SWAMID (INFORMATION) - Modal
+	//SWAMID - MODAL (INFORMATION) 
 	public static final String InformationSWAMIDModal = "#editDialogBody"; {	
 	}
 	public static WebElement InformationSWAMIDModal(WebDriver driver){
@@ -162,7 +162,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-	//ORCID (INFORMATION) - Modal
+	//ORCID - MODAL (INFORMATION) 
 	public static final String InformationORCIDModal = "#editDialogBody"; {	
 	}
 	public static WebElement InformationORCIDModal(WebDriver driver){
@@ -171,13 +171,7 @@ public class SAT_Home_Page_Not_Logged_In {
 		return element;
 	}
 
-
-
-
-
-
-
-	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP) 2
+	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP) 
 	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
 	}
 	public static WebElement HjälpButton(WebDriver driver){
@@ -185,6 +179,15 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"));
 		return element;
 	}
+	
+	//KNAPP FÖR ATT ÖPPNA DRIFTINFORMATION
+		public static final String DriftinformationButton = "#start-page > section > div > div:nth-child(1) > div.span3 > div.operation-information > div > p:nth-child(2) > strong > a"; {	
+		}
+		public static WebElement DriftinformationButton(WebDriver driver){
+
+			element = driver.findElement(By.cssSelector("#start-page > section > div > div:nth-child(1) > div.span3 > div.operation-information > div > p:nth-child(2) > strong > a"));
+			return element;
+		}
 
 
 
