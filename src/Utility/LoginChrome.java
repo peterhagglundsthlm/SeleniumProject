@@ -2,6 +2,7 @@ package Utility;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,22 +11,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
 public class LoginChrome {
 
 	public static void main(String[] args) {
-
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		LogManager.getLogManager().reset();
-		
 		ChromeOptions ChromeOption = new ChromeOptions();
 		ChromeOption.addArguments("start-maximized");
-		
 		WebDriver driver = new ChromeDriver(ChromeOption);
-		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
 		driver.get("https://testaprisma.vr.se/");
 
 		WebDriverWait wait = new WebDriverWait(driver, 40);
@@ -35,19 +29,12 @@ public class LoginChrome {
 		WebDriverWait wait2 = new WebDriverWait(driver, 40);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("Email")));
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(By.id("Email")), "maria.hannan.prisma@gmail.com");
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(By.id("Password")), "Gummiplanta1");
-				
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(By.id("Email")), "testaplatina6@gmail.com");
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(By.id("Password")), "TestaPlatina1");
+
 		WebDriverWait wait3 = new WebDriverWait(driver, 40);
 		wait3.until(ExpectedConditions.elementToBeClickable(By.id("Submitter")));
 		driver.findElement(By.id("Submitter")).click();
-
-				
-				
-				
-
-
-
 	}
 
 }
