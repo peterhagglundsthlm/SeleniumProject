@@ -4,7 +4,6 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -125,7 +124,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		Select AnställningensBörjanYear = new Select (driver.findElement(By.name(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear)));
 		Random randomOption = new Random();  
 		int endOption = AnställningensBörjanYear.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
+		int number = randomOption.nextInt(endOption);  
 		AnställningensBörjanYear.selectByIndex(number);
 
 //		WebElement AnställningensBörjanAr = AnställningensBörjanYear.getFirstSelectedOption();

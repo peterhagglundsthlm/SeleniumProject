@@ -91,42 +91,87 @@ public class SAT_Home_Page_Not_Logged_In {
 	}
 
 	//KNAPP FÖR ATT ÖPPNA OM PRISMA (INFORMATION) 
-	public static final String OmPrismaButton = "#aboutprisma"; {	
+	public static final String InformationOmPrismaButton = "#aboutprisma"; {	
 	}
-	public static WebElement OmPrismaButton(WebDriver driver){
+	public static WebElement InformationOmPrismaButton(WebDriver driver){
 
 		element = driver.findElement(By.cssSelector("#aboutprisma"));
 		return element;
 	}
 
-	//OM PRISMA - MODAL
-	public static final String OmPrismaModal = "#editDialogBody > section > div"; {	
+	//OM PRISMA - MODAL (INFORMATION) 
+	public static final String InformationOmPrismaModal = "editDialog"; {	
 	}
-	public static WebElement OmPrisma(WebDriver driver){
+	public static WebElement InformationOmPrismaModal(WebDriver driver){
 
-		element = driver.findElement(By.cssSelector("#editDialogBody > section > div"));
+		element = driver.findElement(By.id("editDialog"));
 		return element;
 	}
 
 	//KNAPP FÖR ATT ÖPPNA OM WEBBPLATSEN (INFORMATION) 
-	public static final String OmWebbplatsenButton = "#aboutwebsite"; {	
+	public static final String InformationOmWebbplatsenButton = "#aboutwebsite"; {	
 	}
-	public static WebElement OmWebbplatsenButton(WebDriver driver){
+	public static WebElement InformationOmWebbplatsenButton(WebDriver driver){
 
 		element = driver.findElement(By.cssSelector("#aboutwebsite"));
 		return element;
 	}
-	
-	//OM WEBBPLATSEN - MODAL
-	public static final String OmWebbplatsenModal = "#editDialogBody > section > div"; {	
+
+	//OM WEBBPLATSEN - MODAL (INFORMATION) 
+	public static final String InformationOmWebbplatsenModal = "#editDialogBody > section > div"; {	
 	}
-	public static WebElement OmWebbplatsenModal(WebDriver driver){
+	public static WebElement InformationOmWebbplatsenModal(WebDriver driver){
 
 		element = driver.findElement(By.cssSelector("#editDialogBody > section > div"));
 		return element;
 	}
 
-	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP) 2
+	//KNAPP FÖR ATT ÖPPNA OM DRIFTINFORMATION (INFORMATION) 
+	public static final String InformationDriftinformationButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(3) > div > ul > li:nth-child(2) > ae"; {	
+	}
+	public static WebElement InformationDriftinformationButton(WebDriver driver){
+
+		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(3) > div > ul > li:nth-child(2) > a"));
+		return element;
+	}
+
+	//KNAPP FÖR ATT ÖPPNA OM SWAMID (INFORMATION) 
+	public static final String InformationSWAMIDButton = "swamid"; {	
+	}
+	public static WebElement InformationSWAMIDButton(WebDriver driver){
+
+		element = driver.findElement(By.id("swamid"));
+		return element;
+	}
+
+	//SWAMID - MODAL (INFORMATION) 
+	public static final String InformationSWAMIDModal = "#editDialogBody"; {	
+	}
+	public static WebElement InformationSWAMIDModal(WebDriver driver){
+
+		element = driver.findElement(By.id("#editDialogBody"));
+		return element;
+	}
+
+	//KNAPP FÖR ATT ÖPPNA OM ORCID (INFORMATION) 
+	public static final String InformationORCIDButton = "orcid"; {	
+	}
+	public static WebElement InformationORCIDButton(WebDriver driver){
+
+		element = driver.findElement(By.id("orcid"));
+		return element;
+	}
+
+	//ORCID - MODAL (INFORMATION) 
+	public static final String InformationORCIDModal = "#editDialogBody"; {	
+	}
+	public static WebElement InformationORCIDModal(WebDriver driver){
+
+		element = driver.findElement(By.id("#editDialogBody"));
+		return element;
+	}
+
+	//KNAPP FÖR ATT ÖPPNA ANVÄNDARSTÖDET (HJÄLP) 
 	public static final String HjälpButton = "body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"; {	
 	}
 	public static WebElement HjälpButton(WebDriver driver){
@@ -134,6 +179,15 @@ public class SAT_Home_Page_Not_Logged_In {
 		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > div > ul > li:nth-child(2) > a"));
 		return element;
 	}
+	
+	//KNAPP FÖR ATT ÖPPNA DRIFTINFORMATION
+		public static final String DriftinformationButton = "#start-page > section > div > div:nth-child(1) > div.span3 > div.operation-information > div > p:nth-child(2) > strong > a"; {	
+		}
+		public static WebElement DriftinformationButton(WebDriver driver){
+
+			element = driver.findElement(By.cssSelector("#start-page > section > div > div:nth-child(1) > div.span3 > div.operation-information > div > p:nth-child(2) > strong > a"));
+			return element;
+		}
 
 
 

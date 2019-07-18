@@ -1,25 +1,17 @@
 package Utility;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Set;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 
 
 
@@ -28,22 +20,24 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test
 	public void Utlysning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
+
 	}
 
 	@Test (dependsOnMethods={"Utlysning"})
-	public void AnsökanOmEtikPrövning() {
+	public void AnsÃ¶kanOmEtikPrÃ¶vning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
 	}
 
 	@Test (dependsOnMethods={"Utlysning"})
-	public void NyAnsökan() {
+	public void NyAnsÃ¶kan() {
 		driver.findElement(By.xpath("//*[@id=\"UniqueKeyRowGrid\"]/div[1]/table/tbody/tr[1]/td[1]/div/a")).click();
 	}
 
-	@Test (dependsOnMethods={"NyAnsökan"})
+	@Test (dependsOnMethods={"NyAnsÃ¶kan"})
 	public void Projekttitel() {
 
-		String Projekttitel = "defaulttitel En fo-huvudman, läkemedelsprövning";
+		String Projekttitel = "defaulttitel En fo-huvudman, lÃ¤kemedelsprÃ¶vning";
+
 		driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
 
 		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != Projekttitel);
@@ -55,13 +49,13 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	}
 
 	@Test (dependsOnMethods={"Projekttitel"})
-	public void SkapaEtikprövning() {
+	public void SkapaEtikprÃ¶vning() {
 
 		driver.findElement(By.id("Submitter")).click();
 	}
 
-	@Test (dependsOnMethods={"SkapaEtikprövning"})
-	public void BytFokusTillFormulär() {
+	@Test (dependsOnMethods={"SkapaEtikprÃ¶vning"})
+	public void BytFokusTillFormulÃ¤r() {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
@@ -71,14 +65,14 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 
 	}
 
-	@Test (dependsOnMethods={"BytFokusTillFormulär"})
+	@Test (dependsOnMethods={"BytFokusTillFormulÃ¤r"})
 	public void SelectPage1() {
 
 		if (driver.getPageSource().contains("Utkast"))
 
 		{
-			Select Forskningshuvudmän = new Select (driver.findElement(By.id("4ec91423-1d5a-4d03-86ed-14792a006821_select_0")));
-			Forskningshuvudmän.selectByVisibleText("En");
+			Select ForskningshuvudmÃ¤n = new Select (driver.findElement(By.id("4ec91423-1d5a-4d03-86ed-14792a006821_select_0")));
+			ForskningshuvudmÃ¤n.selectByVisibleText("En");
 
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			wait.until(ExpectedConditions.elementToBeClickable(By.id("4ec91423-1d5a-4d03-86ed-14792a006821_select_1")));
@@ -91,8 +85,8 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 
 			WebDriverWait wait3 = new WebDriverWait(driver, 10);
 			wait3.until(ExpectedConditions.elementToBeClickable(By.id("90e1b632-c222-4285-8b77-694f538357f2")));
-			Select RådGivande = new Select (driver.findElement(By.id("90e1b632-c222-4285-8b77-694f538357f2")));
-			RådGivande.selectByVisibleText("Nej");
+			Select RÃ¥dGivande = new Select (driver.findElement(By.id("90e1b632-c222-4285-8b77-694f538357f2")));
+			RÃ¥dGivande.selectByVisibleText("Nej");
 
 			WebDriverWait wait4 = new WebDriverWait(driver, 10);
 			wait4.until(ExpectedConditions.elementToBeClickable(By.id("4386ddb6-bee1-4629-8dce-1423f437b7c0")));
@@ -119,7 +113,7 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 			Select Disp = new Select (driver.findElement(By.id("a6a0f8c1-aca7-49ca-8733-b4f10aed8083")));
 			Disp.selectByVisibleText("Ja");
 
-			driver.findElement(By.linkText("3. SYFTE OCH FRÅGESTÄLLNINGAR")).click();	
+			driver.findElement(By.linkText("3. SYFTE OCH FRÃ…GESTÃ„LLNINGAR")).click();	
 		}
 		else {
 			System.out.println("Fail");
@@ -130,9 +124,9 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"SelectPage1"})
 	public void Page2() {
 
-		driver.findElement(By.linkText("3. SYFTE OCH FRÅGESTÄLLNINGAR")).click();	
+		driver.findElement(By.linkText("3. SYFTE OCH FRÃ…GESTÃ„LLNINGAR")).click();	
 
-		if (driver.getPageSource().contains("3. Syfte och frågeställningar"))
+		if (driver.getPageSource().contains("3. Syfte och frÃ¥gestÃ¤llningar"))
 
 		{
 			int size = driver.findElements(By.tagName("iframe")).size();
@@ -227,9 +221,9 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Page5"})
 	public void Page6() throws InterruptedException {
 
-		driver.findElement(By.linkText("7. ETISKA ÖVERVÄGANDEN")).click();
+		driver.findElement(By.linkText("7. ETISKA Ã–VERVÃ„GANDEN")).click();
 
-		if (driver.getPageSource().contains("7. Etiska överväganden"))
+		if (driver.getPageSource().contains("7. Etiska Ã¶vervÃ¤ganden"))
 
 		{
 			int size = driver.findElements(By.tagName("iframe")).size();
@@ -323,7 +317,7 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Page9"})
 	public void Page10() {
 
-		driver.findElement(By.linkText("12. RESULTAT FRÅN DJURFÖRSÖK")).click();
+		driver.findElement(By.linkText("12. RESULTAT FRÃ…N DJURFÃ–RSÃ–K")).click();
 
 		WebDriverWait wait2 = new WebDriverWait(driver, 10);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("44ce99dc-8830-4c6a-9980-0ffc1d18d95f")));
@@ -365,9 +359,9 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Page11"})
 	public void Page12() throws InterruptedException {
 
-		driver.findElement(By.linkText("14. EKONOMISKA FÖRHÅLLANDEN")).click();
+		driver.findElement(By.linkText("14. EKONOMISKA FÃ–RHÃ…LLANDEN")).click();
 
-		if (driver.getPageSource().contains("14. Ekonomiska förhållanden"))
+		if (driver.getPageSource().contains("14. Ekonomiska fÃ¶rhÃ¥llanden"))
 
 		{
 			int size = driver.findElements(By.tagName("iframe")).size();
@@ -385,59 +379,83 @@ public class EPMForm extends BeforeAfterTestBrowsers {
 	}
 
 	@Test (dependsOnMethods={"Page12"})
-	public void Page13() throws AWTException {
+	public void Page13() {
 
 		driver.findElement(By.linkText("15. BILAGOR")).click();
-		
+
 		WebDriverWait wait1 = new WebDriverWait(driver, 10);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Select Disp = new Select (driver.findElement(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Disp.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait2 = new WebDriverWait(driver, 10);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Select Disp2 = new Select (driver.findElement(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Disp2.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait3 = new WebDriverWait(driver, 10);
 		wait3.until(ExpectedConditions.elementToBeClickable(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Select Disp3 = new Select (driver.findElement(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Disp3.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait4 = new WebDriverWait(driver, 10);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 		Select Disp4 = new Select (driver.findElement(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 		Disp4.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait5 = new WebDriverWait(driver, 10);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Select Disp5 = new Select (driver.findElement(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Disp5.selectByVisibleText("Nej");
-		
+
 		WebDriverWait wait6 = new WebDriverWait(driver, 10);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Select Disp6 = new Select (driver.findElement(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Disp6.selectByVisibleText("Nej");
-	
+
 		WebDriverWait wait7 = new WebDriverWait(driver, 10);
 		wait7.until(ExpectedConditions.elementToBeClickable(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Select Disp7 = new Select (driver.findElement(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Disp7.selectByVisibleText("Nej");
 	}
-	
-	@Test (dependsOnMethods={"Page13"})
-	public void Page14() {
-		
-		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-		
-		if (driver.getPageSource().contains("Registrera ansökan"))
 
-		{
-			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-			driver.findElement(By.id("Submitter")).click();
+	@Test (dependsOnMethods={"Page13"})
+	public void FileUpload1() throws InterruptedException, IOException {
+
+		driver.findElement(By.id("select-file")).click();
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec("C:\\Users\\krkl\\Desktop\\FileUpload.exe");
+		Thread.sleep(3000);
+
 	}
 
-}
+	@Test (dependsOnMethods={"FileUpload1"})
+	public void AcceptTerms() {
+
+		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+
+		if (driver.getPageSource().contains("Registrera ansÃ¶kan"))
+
+		{
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();	
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+		}
+		else {
+			Assert.fail();
+		}
+	}
+
+	@Test (dependsOnMethods={"AcceptTerms"})
+	public void Register() {
+
+		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
+		WebDriverWait wait = new WebDriverWait(driver, 2);
+		wait.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+
+	}
 }
 
 
