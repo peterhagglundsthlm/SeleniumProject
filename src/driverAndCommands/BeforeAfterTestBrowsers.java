@@ -30,21 +30,19 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
-		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
-		
-		
-		
-		
+
+		System.out.println("Testsuiten pÃ¥bÃ¶rjades " + dateFormat.format(date));	
+
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Miljö", "Språk"})
+	@Parameters({"browser",  "Username", "Password", "MiljÃ¶", "SprÃ¥k"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Miljö, @Optional String Språk) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String MiljÃ¶, @Optional String SprÃ¥k) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 			
-			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet pÃ¥bÃ¶rjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
@@ -53,29 +51,31 @@ public class BeforeAfterTestBrowsers {
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			driver.get(Miljö);
+			driver.get(MiljÃ¶);
 			
 			
 			
-			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomfÃ¶rs pÃ¥ fÃ¶ljande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
 
-			if (Språk.equalsIgnoreCase("Engelska"))
+			if (SprÃ¥k.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
-			if (Språk.equalsIgnoreCase("Svenska"))
+			if (SprÃ¥k.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
-
-
 		}
+		
+		
+		
+		
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 			
-			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet pÃ¥bÃ¶rjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
@@ -83,15 +83,15 @@ public class BeforeAfterTestBrowsers {
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			driver.get(Miljö);
-//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL");
+			driver.get(MiljÃ¶);
+//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomfÃ¶rs pÃ¥ fÃ¶ljande URL");
 
 
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
 			
-			System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			System.out.println("\u001b[1;31mTestfallet pÃ¥bÃ¶rjas nu\u001b[0m");
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
 			driver = new FirefoxDriver();
@@ -99,18 +99,18 @@ public class BeforeAfterTestBrowsers {
 			LogManager.getLogManager().reset();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			driver.get(Miljö);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			driver.get(MiljÃ¶);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomfÃ¶rs pÃ¥ fÃ¶ljande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
 
-			if (Språk.equalsIgnoreCase("Engelska"))
+			if (SprÃ¥k.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
-			if (Språk.equalsIgnoreCase("Svenska"))
+			if (SprÃ¥k.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 
 
@@ -131,7 +131,7 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("Headless")) {
 
-			//System.out.println("\u001b[1;31mTestfallet påbörjas nu\u001b[0m");
+			//System.out.println("\u001b[1;31mTestfallet pÃ¥bÃ¶rjas nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized", "--headless");
@@ -139,18 +139,18 @@ public class BeforeAfterTestBrowsers {
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			startTime = System.currentTimeMillis();
-			driver.get(Miljö);
-			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomförs på följande URL ");
+			driver.get(MiljÃ¶);
+			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "Detta testfall genomfÃ¶rs pÃ¥ fÃ¶ljande URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
 			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
 
-			if (Språk.equalsIgnoreCase("Engelska"))
+			if (SprÃ¥k.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
-			if (Språk.equalsIgnoreCase("Svenska"))
+			if (SprÃ¥k.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
 	}
@@ -161,7 +161,7 @@ public class BeforeAfterTestBrowsers {
 		duration = System.currentTimeMillis() - startTime;
 		float sekunder = duration/1000;
 		float minuter = sekunder/60;
-		//System.out.println("Detta testfall tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
+		//System.out.println("Detta testfall tog " + sekunder + " sekunder att genomfÃ¶ra. Vilket motsvarar ca " + minuter + " minuter");
 		//System.out.println("");
 	}
 
@@ -171,7 +171,7 @@ public class BeforeAfterTestBrowsers {
 		durationSuite = System.currentTimeMillis() - startTimeSuite;
 		float sekunder = durationSuite/1000;
 		float minuter = sekunder/60;
-		System.out.println("Denna testsuite tog " + sekunder + " sekunder att genomföra. Vilket motsvarar ca " + minuter + " minuter");
+		System.out.println("Denna testsuite tog " + sekunder + " sekunder att genomfÃ¶ra. Vilket motsvarar ca " + minuter + " minuter");
 
 
 	}
