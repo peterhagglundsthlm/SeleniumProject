@@ -359,31 +359,33 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 		}
 	}
 
-	@Test (dependsOnMethods={"s1a2_AnsökanEnFohuvLäk"})
+	@Test (dependsOnMethods={"s14_EkonomiskaFörhållanden"})
 	public void s15_Bilagor() throws AWTException, InterruptedException, IOException {
 
 		driver.findElement(By.linkText("15. BILAGOR")).click();
 
 		//15.1 bifoga forskningsplan - obligatorisk -- ALLA BILAGOR LADDAS UPP SIST
-		//		driver.findElement(By.id("select-file")).click();
-		//		Thread.sleep(3000);
-		//		Runtime.getRuntime().exec("C:\\Users\\anli\\Desktop\\FileUpload.exe");
-		//		Thread.sleep(3000); 
-
+	
+		// Frågor om bilagor: 15.2
 		WebDriverWait wait1 = new WebDriverWait(driver, 10);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Select Disp = new Select (driver.findElement(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Disp.selectByVisibleText("Nej");
-
+		System.out.println("wait1");
+		
+		// Frågor om bilagor: 15.3
 		WebDriverWait wait2 = new WebDriverWait(driver, 10);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Select Disp2 = new Select (driver.findElement(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Disp2.selectByVisibleText("Nej");
-
+		System.out.println("wait2");
+		
+		// Frågor om bilagor: 15.4
 		WebDriverWait wait3 = new WebDriverWait(driver, 10);
 		wait3.until(ExpectedConditions.elementToBeClickable(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Select Disp3 = new Select (driver.findElement(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Disp3.selectByVisibleText("Nej");
+		System.out.println("wait3");
 
 		//15.5 Läkemedelsprövning: JA
 		WebDriverWait wait4a = new WebDriverWait(driver, 10);
@@ -391,67 +393,65 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 		Select Disp4a = new Select (driver.findElement(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 		Disp4a.selectByVisibleText("Ja");
 		System.out.println("Jag har valt Ja på läkemedelsprövning");
+		System.out.println("wait4a");
 
 		// 15.5.1 EudraCT-nr in med javascript
-		WebDriverWait wait4b = new WebDriverWait(driver, 10);
-		wait4b.until(ExpectedConditions.elementToBeClickable(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")));
-		((JavascriptExecutor) driver).executeScript("scroll(0, 200)"); 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")), "2019-123456-99");
-		System.out.println("Eudra-CT-nummer är ifyllt.");
+		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver, "");
+		generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+				
+		System.out.println("Tillbaka i form02-klassen.");
 		
 		// resten av bilagorna etc. 
 		WebDriverWait wait5 = new WebDriverWait(driver, 10);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Select Disp5 = new Select (driver.findElement(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Disp5.selectByVisibleText("Nej");
+		System.out.println("wait5");
 
 		WebDriverWait wait6 = new WebDriverWait(driver, 10);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Select Disp6 = new Select (driver.findElement(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Disp6.selectByVisibleText("Nej");
-
+		System.out.println("wait6");
+		
 		WebDriverWait wait7 = new WebDriverWait(driver, 10);
 		wait7.until(ExpectedConditions.elementToBeClickable(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Select Disp7 = new Select (driver.findElement(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Disp7.selectByVisibleText("Nej");
-
-		WebElement knappFinns = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.linkText("Välj fil att ladda upp")));
-		System.out.println("Jag har identifierat en knapp för att ladda upp fil.");
-
-		while (true) {
-			driver.findElement(By.linkText("Välj fil att ladda upp")).click();
-			Thread.sleep(3000);
-			Runtime.getRuntime().exec("C:\\Users\\anli\\Desktop\\FileUpload.exe");
-			Thread.sleep(3000);
-			System.out.println("Jag har laddat upp en fil.");
-		}
+		System.out.println("wait7");
+		
+		System.out.println("Nu ska jag anropa kod från anliEpmLäkemedel.bilagorLäkemedel");
+		
+		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver, "");
+		generateApplicationEPM.anliEpmLäkemedel.bilagorLäkemedel(driver);
+		
+		System.out.println("Alla filer är uppladdade.");
 	}
-//	
-//	
-//	@Test (dependsOnMethods={"s15_Bilagor"})
-//	public void KontrolleraRegistrera() {
-//
-//		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-//
-//		if (driver.getPageSource().contains("Registrera ansökan"))
-//
-//		{
-//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//		}
-//
-//	}
-//
-//	@Test (dependsOnMethods={"KontrolleraRegistrera"})
-//	public void Register() {
-//
-//		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
-//		WebDriverWait wait = new WebDriverWait(driver, 2);
-//		wait.until(ExpectedConditions.alertIsPresent());
-//		Alert alert = driver.switchTo().alert();
-//		alert.accept();
-//	} 
+	
+	@Test (dependsOnMethods={"s15_Bilagor"})
+	public void KontrolleraRegistrera() {
+
+		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+
+		if (driver.getPageSource().contains("Registrera ansökan"))
+
+		{
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+		}
+
+	}
+
+	@Test (dependsOnMethods={"KontrolleraRegistrera"})
+	public void Register() {
+
+		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
+		WebDriverWait wait = new WebDriverWait(driver, 2);
+		wait.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+	} 
 }
 
 

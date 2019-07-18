@@ -6,12 +6,12 @@
 	<parameter name="browser" value="Chrome" />
 	<parameter name="Username" value="maria.vrsignering@gmail.com"></parameter>
 	<parameter name="Password" value="VRtestare1"></parameter>
-	<parameter name="Miljö" value="https://testaprismaepm.vr.se/"></parameter>
-	<parameter name="Språk" value="svenska"></parameter> 
+	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
+	<parameter name="Language" value="svenska"></parameter> 
 	<test name="Ansökan om etikprövning">
 		<classes>
 			<class
-				name= "generateApplicationEPM.anliEpmForm09EjSambandFlerHuvudman"/> 
+				name= "generateApplicationEPM.anliEpmForm02LäkEn"/> 
 		</classes>
 	</test>
 </suite> 
