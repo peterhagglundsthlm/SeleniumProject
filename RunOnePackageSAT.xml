@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuiteSAT" verbose="1" parallel="true"
+<suite name="SuiteSAT" verbose="1" parallel="false"
 	preserve-order="true">
 
 	<!--Denna parameter avgör vilket språk som testsuiten kommer köras på. Alternativ 
@@ -14,13 +14,13 @@
 
 	<!--Denna parameter avgör vilken Browser som testsuiten kommer köras i. 
 		Alternativ är "Chrome", "ChromeNotLoggedIn" "FireFox", "IExplorer" och "Headless" -->
-	<parameter name="browser" value="Headless" />
+	<parameter name="browser" value="Chrome" />
 
 	<test name="testCasesSATMinProfilMeriterOchUtmärkelser">
 		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSATMinProfilMeriterOchUtmärkelser" />
+			<package name="testCasesSATMinProfilPublikationer" />
 		</packages>
 	</test>
 </suite> 

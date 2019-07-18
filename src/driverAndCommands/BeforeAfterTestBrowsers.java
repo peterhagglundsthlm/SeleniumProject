@@ -30,10 +30,7 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
-		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));
-		
-		
-		
+		System.out.println("Testsuiten påbörjades " + dateFormat.format(date));	
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Miljö", "Språk"})
@@ -65,9 +62,11 @@ public class BeforeAfterTestBrowsers {
 
 			if (Språk.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
-
-
 		}
+		
+		
+		
+		
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 			
@@ -153,7 +152,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);
+		//EndDriver.DriverQuit(driver);
 		duration = System.currentTimeMillis() - startTime;
 		float sekunder = duration/1000;
 		float minuter = sekunder/60;
