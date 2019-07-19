@@ -1,9 +1,11 @@
 package driverAndCommands;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class LoginLogic {
@@ -32,6 +34,9 @@ public class LoginLogic {
 
 	//DENNA ANVÄNDER JAVASCRIPT FÖR ATT DIREKT FYLLA I ANVÄNDARNAMN OCH LÖSENORD. DET GÅR SNABBARE ÄN ATT KÖRA SENDKEYS.
 	public static WebElement InputUserNameAndPassWordUsingJavaScript (WebDriver driver, String AnyUsername, String AnyPassword){
+		
+		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", SAT_Home_Page_Not_Logged_In.EnterUserName(driver), AnyUsername);
 		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", SAT_Home_Page_Not_Logged_In.EnterPassword(driver), AnyPassword);
@@ -43,6 +48,7 @@ public class LoginLogic {
 		//System.out.println("Användarens lösenord är = " + PassWordValue); 
 		
 		SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
 
 		return null;
 	}

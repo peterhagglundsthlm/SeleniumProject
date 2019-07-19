@@ -31,7 +31,7 @@ public class CookieTest {
 		Cookie ck = new Cookie("[ASP.NET_SessionId", "5qfpappihtubwi0g3ny1pgcq");
 		driver.manage().addCookie(ck);
 		
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver, "test");
+		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		
 		/*
 		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
