@@ -396,7 +396,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 		System.out.println("wait4a");
 
 		// 15.5.1 EudraCT-nr in med javascript
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver, "");
+		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
 				
 		System.out.println("Tillbaka i form02-klassen.");
@@ -422,7 +422,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 		
 		System.out.println("Nu ska jag anropa kod från anliEpmLäkemedel.bilagorLäkemedel");
 		
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver, "");
+		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLäkemedel.bilagorLäkemedel(driver);
 		
 		System.out.println("Alla filer är uppladdade.");
