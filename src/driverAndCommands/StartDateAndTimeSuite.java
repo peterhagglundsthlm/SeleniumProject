@@ -5,12 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.openqa.selenium.WebElement;
 
-public class StartTime {
+public class StartDateAndTimeSuite {
 
 
-	public static WebElement StartTimeSuite(long startTimeSuite) {
+	public static WebElement StartDateAndTimeSuitePrint() {
 
-		startTimeSuite = System.currentTimeMillis();
 		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
 		System.out.println("Testsuiten startade " + dateFormat.format(date));

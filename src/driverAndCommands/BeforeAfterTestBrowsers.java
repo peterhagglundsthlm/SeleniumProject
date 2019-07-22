@@ -20,18 +20,13 @@ import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
-	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
+	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
 
 
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
-		
-//		startTimeSuite = System.currentTimeMillis();
-//		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
-//		Date date = new Date();
-//		System.out.println("Testsuiten startad " + dateFormat.format(date));	
-		StartTime.StartTimeSuite(startTimeSuite);
-
+		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
+		startTimeSuite = System.currentTimeMillis();
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
@@ -41,35 +36,15 @@ public class BeforeAfterTestBrowsers {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
-
-
-			//System.out.println("\u001b[1;31mTestfallet inleds nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			//startTime = System.currentTimeMillis();
+			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
-			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-
-
-
-
-			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
-
-
-			//Ändrade loginlogiken så allt görs från en annan klass.. Prolemet är hur man ska hantera parametern för olika miljöer. Kolla med Anna-Maja på måndag 2019-07-22
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			
-			
-
-			//			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			//			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
-			//			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			//
-			//			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
 
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
@@ -77,7 +52,6 @@ public class BeforeAfterTestBrowsers {
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
-
 
 
 
@@ -91,7 +65,6 @@ public class BeforeAfterTestBrowsers {
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL");
 
@@ -107,7 +80,6 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().window().maximize();
 			LogManager.getLogManager().reset();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
@@ -144,7 +116,6 @@ public class BeforeAfterTestBrowsers {
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
@@ -163,25 +134,15 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);		
-//		duration = System.currentTimeMillis() - startTime;
-//		float sekunder = duration/1000;
-//		float minuter = sekunder/60;
-//		//System.out.println("Detta testfall tog " + sekunder + " sekunder, start till slut. Det motsvarar ca " + minuter + " minuter");
-//		//System.out.println("");
+		EndDriver.DriverQuit(driver);	
+		EndTime.EndTimeTest(durationTest, startTimeTest);
+
 	}
 
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
-		
-		EndTime.EndTimeSuite(duration, startTime);
-		
-//		durationSuite = System.currentTimeMillis() - startTimeSuite;
-//		float sekunder = durationSuite/1000;
-//		float minuter = sekunder/60;
-//		System.out.println("Denna testsuite tog " + sekunder + " sekunder, start till slut. Det motsvarar ca " + minuter + " minuter");
-
+		EndTime.EndTimeSuite(duration, startTimeSuite);
 
 	}
 
