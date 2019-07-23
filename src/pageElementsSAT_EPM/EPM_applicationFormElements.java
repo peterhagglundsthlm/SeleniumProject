@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class EPM_applicationForm {
+public class EPM_applicationFormElements {
 	private static WebElement element = null;
 
 	//Dropdown antal forskningshuvudmän
