@@ -11,7 +11,7 @@
 	<test name="Ansökan om etikprövning">
 		<classes>
 			<class
-				name= "generateApplicationEPM.anliEpmForm02LäkEn"/> 
+				name= "generateApplicationEPM.anliEpmForm01PersuppgEnHuvudman"/> 
 		</classes>
 	</test>
 </suite> 

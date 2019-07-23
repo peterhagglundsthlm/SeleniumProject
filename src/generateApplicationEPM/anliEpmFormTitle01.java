@@ -45,7 +45,7 @@ public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
 //		
 //ändra titel på ansökan här!
 //
-		String Projekttitel = "Testa extern klass EudraCT-nummer (190818 15.14) form02";
+		String Projekttitel = "Testa skapa ansökan med formStandard (bas: form01) 190723 11.03";
 		driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
 
 		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != Projekttitel);

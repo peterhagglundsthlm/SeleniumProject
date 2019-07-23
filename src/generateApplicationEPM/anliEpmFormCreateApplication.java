@@ -18,12 +18,13 @@ import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.GeneralSetup;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationForm;
 
 
-public class anliEpmFormCreateApplication extends BeforeAfterTestBrowsers{
+public class anliEpmFormCreateApplication extends GeneralSetup {
 
 	@Test
 	public void Utlysning() {
