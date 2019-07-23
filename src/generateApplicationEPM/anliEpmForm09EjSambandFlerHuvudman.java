@@ -21,7 +21,7 @@ import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT_EPM.EPM_applicationForm;
+import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 public class anliEpmForm09EjSambandFlerHuvudman extends anliEpmFormTitle01{
 
@@ -33,34 +33,34 @@ public class anliEpmForm09EjSambandFlerHuvudman extends anliEpmFormTitle01{
 
 		{
 			// anger antal forskningshuvudmän: FLERA
-			Select AntalFoHuvudman = new Select (driver.findElement(By.id(EPM_applicationForm.AntalFoHuvudman))); 
+			Select AntalFoHuvudman = new Select (driver.findElement(By.id(EPM_applicationFormElements.AntalFoHuvudman))); 
 			AntalFoHuvudman.selectByVisibleText("Flera");
 
 			// anger samband med en av fo-huvudmännen: NEJ
-			Select Samband = new Select (driver.findElement(By.id(EPM_applicationForm.Samband))); 
+			Select Samband = new Select (driver.findElement(By.id(EPM_applicationFormElements.Samband))); 
 			Samband.selectByVisibleText("Nej");
 
 			//Anger läkemedelsprövning: NEJ (för fler fo-huvudmän) 
 			WebDriverWait wait = new WebDriverWait(driver, 10);
-			wait.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationForm.KliniskLäkemedelsprövningFler)));				
-			Select KliniskLäkemedelsPrövning = new Select (driver.findElement(By.id(EPM_applicationForm.KliniskLäkemedelsprövningFler)));
+			wait.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationFormElements.KliniskLäkemedelsprövningFler)));				
+			Select KliniskLäkemedelsPrövning = new Select (driver.findElement(By.id(EPM_applicationFormElements.KliniskLäkemedelsprövningFler)));
 			KliniskLäkemedelsPrövning.selectByVisibleText("Nej");
 
 			// Endast bef uppgifter: NEJ (för flera fo-huvudmän)
 			WebDriverWait wait2 = new WebDriverWait(driver, 10);
-			wait2.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationForm.BefintligaPersuppgFler)));
-			Select PersUppg= new Select (driver.findElement(By.id(EPM_applicationForm.BefintligaPersuppgFler)));
+			wait2.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationFormElements.BefintligaPersuppgFler)));
+			Select PersUppg= new Select (driver.findElement(By.id(EPM_applicationFormElements.BefintligaPersuppgFler)));
 			PersUppg.selectByVisibleText("Nej");
 
 			// ansökanskategori, spara val3
 			WebDriverWait wait2b = new WebDriverWait(driver, 10);
-			wait2b.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationForm.AnsökanskategoriSparaVal3)));
-			driver.findElement(By.id(EPM_applicationForm.AnsökanskategoriSparaVal3)).click();
+			wait2b.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationFormElements.AnsökanskategoriSparaVal3)));
+			driver.findElement(By.id(EPM_applicationFormElements.AnsökanskategoriSparaVal3)).click();
 
 			// Rådgivande yttrande: NEJ 
 			WebDriverWait wait3 = new WebDriverWait(driver, 10);
-			wait3.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationForm.RådgivandeYttrande)));
-			Select RådGivande = new Select (driver.findElement(By.id(EPM_applicationForm.RådgivandeYttrande)));
+			wait3.until(ExpectedConditions.elementToBeClickable(By.id(EPM_applicationFormElements.RådgivandeYttrande)));
+			Select RådGivande = new Select (driver.findElement(By.id(EPM_applicationFormElements.RådgivandeYttrande)));
 			RådGivande.selectByVisibleText("Nej");
 		}
 		else {

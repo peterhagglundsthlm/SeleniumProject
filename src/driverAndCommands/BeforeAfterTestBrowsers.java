@@ -1,7 +1,5 @@
 package driverAndCommands;
 
-
-
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
 import org.openqa.selenium.By;
@@ -20,8 +18,8 @@ import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
+	
 	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
-
 
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
@@ -29,10 +27,10 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language, @Optional String projectTitle) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -45,7 +43,7 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-
+			
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
@@ -129,12 +127,13 @@ public class BeforeAfterTestBrowsers {
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
+			
 		}
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);	
+//		EndDriver.DriverQuit(driver);	
 		EndTime.EndTimeTest(durationTest, startTimeTest);
 
 	}

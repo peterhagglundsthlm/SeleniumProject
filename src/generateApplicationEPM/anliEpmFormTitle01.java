@@ -14,15 +14,27 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT_EPM.EPM_applicationForm;
+import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
+	
+	String titelEPM;
+
+	@Parameters({"projectTitle"})	
+	@BeforeClass 
+	public void skapaTitel(@Optional String projectTitle) {
+		
+		titelEPM = projectTitle;
+	}
 	
 	@Test
 	public void Utlysning() {
@@ -45,14 +57,15 @@ public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
 //		
 //ändra titel på ansökan här!
 //
-		String Projekttitel = "Testa skapa ansökan med formStandard (bas: form01) 190723 11.03";
-		driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
+//		String Projekttitel = "Testa skapa ansökan med formStandard (bas: form01) 190723 11.03";
+		
+		driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
 
-		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != Projekttitel);
+		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != titelEPM);
 
 		{
 			driver.findElement(By.id("ProjectTitleSV")).clear();
-			driver.findElement(By.id("ProjectTitleSV")).sendKeys(Projekttitel);
+			driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
 		}
 	}
 	

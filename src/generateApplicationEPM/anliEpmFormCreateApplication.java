@@ -21,7 +21,7 @@ import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.GeneralSetup;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT_EPM.EPM_applicationForm;
+import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 
 public class anliEpmFormCreateApplication extends GeneralSetup {
