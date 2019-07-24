@@ -341,7 +341,9 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 	@Test (dependsOnMethods={"BidragTillEnBokOpenAcessSammanfattning"})
 	public void BidragTillEnBokSpara() {
 
+		
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
+		
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();

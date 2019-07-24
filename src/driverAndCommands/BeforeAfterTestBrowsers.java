@@ -1,15 +1,25 @@
 package driverAndCommands;
 
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
@@ -18,7 +28,7 @@ import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class BeforeAfterTestBrowsers {
-	
+
 	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
 
 	@BeforeSuite
@@ -30,7 +40,14 @@ public class BeforeAfterTestBrowsers {
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language, @Optional String projectTitle) {
+	public void Setup(
+			@Optional String browser,
+			@Optional String Username , 
+			@Optional String Password, 
+			@Optional String Environment, 
+			@Optional String Language, 
+			@Optional String projectTitle) {
+
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -43,7 +60,7 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			
+
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
@@ -124,8 +141,33 @@ public class BeforeAfterTestBrowsers {
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
-			
+
 		}
+	}
+
+	@AfterMethod
+	public void ScreenShotWhenFail(ITestResult result) {
+		
+		
+		
+		
+		if (ITestResult.FAILURE == result.getStatus()){
+			try{
+				TakesScreenshot ts=(TakesScreenshot) driver;
+				File src= ts.getScreenshotAs(OutputType.FILE);
+				FileHandler.copy(src, new File("C:\\SeleniumScreenshots", result.getInstanceName() + "." + result.getName() + (".png")));
+				
+				
+			}
+
+			catch(Exception e)
+			{
+
+				System.out.println("");
+			}
+		}
+
+
 	}
 
 	@AfterClass
