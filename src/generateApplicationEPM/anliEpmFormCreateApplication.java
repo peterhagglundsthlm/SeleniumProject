@@ -14,6 +14,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -25,7 +28,18 @@ import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 
 public class anliEpmFormCreateApplication extends GeneralSetup {
+	
+	String titelEPM;
 
+	@Parameters({"projectTitle"})	
+	@BeforeClass 
+	public void skapaTitel(@Optional String projectTitle) {
+		
+		titelEPM = projectTitle;
+	}
+	
+	
+	
 	@Test
 	public void Utlysning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
@@ -40,5 +54,18 @@ public class anliEpmFormCreateApplication extends GeneralSetup {
 	public void NyAnsökan() {
 		driver.findElement(By.xpath("//*[@id=\"UniqueKeyRowGrid\"]/div[1]/table/tbody/tr[1]/td[1]/div/a")).click();
 
+	}
+	
+	@Test (dependsOnMethods={"NyAnsökan"})
+	public void Projekttitel() {
+
+		driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
+
+		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != titelEPM);
+
+		{
+			driver.findElement(By.id("ProjectTitleSV")).clear();
+			driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
+		}
 	}
 }
