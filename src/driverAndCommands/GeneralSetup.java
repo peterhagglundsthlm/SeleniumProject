@@ -2,54 +2,64 @@ package driverAndCommands;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
 import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
-public class BeforeAfterTestBrowsers {
+public class GeneralSetup {
 	
-	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
+	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
 
-	@BeforeSuite
-	public void CheckTimeBeforeSuite() {
-		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
-		startTimeSuite = System.currentTimeMillis();
-	}
-
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language, @Optional String projectTitle) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language) {
+
+		
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
+			//System.out.println("\u001b[1;31mTestfallet inleds nu\u001b[0m");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			startTimeTest = System.currentTimeMillis();
+			//startTime = System.currentTimeMillis();
 			driver.get(Environment);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+
+			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
+
+			//Ändrade loginlogiken så allt görs från en annan klass.. Prolemet är hur man ska hantera parametern för olika miljöer. Kolla med Anna-Maja på måndag 2019-07-22
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 			
+
+			//			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+			//			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			//			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
+			//
+			//			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
+
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 
@@ -60,6 +70,7 @@ public class BeforeAfterTestBrowsers {
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL");
 
@@ -75,6 +86,7 @@ public class BeforeAfterTestBrowsers {
 			driver.manage().window().maximize();
 			LogManager.getLogManager().reset();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
@@ -111,6 +123,7 @@ public class BeforeAfterTestBrowsers {
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
 			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
@@ -124,22 +137,7 @@ public class BeforeAfterTestBrowsers {
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
-			
 		}
-	}
-
-	@AfterClass
-	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);	
-		EndTime.EndTimeTest(durationTest, startTimeTest);
-
-	}
-
-
-	@AfterSuite
-	public void CheckTimeAfterSuite() {
-		EndTime.EndTimeSuite(duration, startTimeSuite);
-
 	}
 
 }

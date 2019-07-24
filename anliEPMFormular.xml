@@ -8,10 +8,13 @@
 	<parameter name="Password" value="VRtestare1"></parameter>
 	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
 	<parameter name="Language" value="svenska"></parameter> 
+	<parameter name="applicationType" value="Form02"></parameter> 
+	<parameter name="projectTitle" value="skapa ansökan Form02 190723 16.00"></parameter> 
+
 	<test name="Ansökan om etikprövning">
 		<classes>
 			<class
-				name= "generateApplicationEPM.anliEpmForm02LäkEn"/> 
+				name= "generateApplicationEPM.anliEpmFormStandard"/> 
 		</classes>
 	</test>
 </suite> 

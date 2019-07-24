@@ -29,7 +29,7 @@ import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
-import pageElementsSAT_EPM.EPM_applicationForm;
+import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 import java.io.IOException;
 
