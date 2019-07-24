@@ -51,9 +51,6 @@ public class BeforeAfterTestBrowsers {
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
 
-
-
-
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
 
 			//System.out.println("\u001b[1;31mTestfallet inleds nu\u001b[0m");
@@ -133,7 +130,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-//		EndDriver.DriverQuit(driver);	
+		//EndDriver.DriverQuit(driver);	
 		EndTime.EndTimeTest(durationTest, startTimeTest);
 
 	}
