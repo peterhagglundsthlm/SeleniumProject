@@ -113,7 +113,6 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 	public void SparaDocentur() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-
 		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSpara(driver).click();
 	}
 }
