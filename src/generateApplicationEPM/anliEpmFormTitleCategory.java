@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -47,7 +49,7 @@ public class anliEpmFormTitleCategory extends BeforeAfterTestBrowsers{
 	}
 	
 	@Test
-	public void Utlysning() {
+	public void Utlysning() throws AWTException, InterruptedException, IOException  {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
 		System.out.println("Utlysning vald");
 	}
@@ -81,18 +83,33 @@ public class anliEpmFormTitleCategory extends BeforeAfterTestBrowsers{
 	@Test (dependsOnMethods={"Projekttitel"})
 	public void SkapaEtikprövning() {
 
+		System.out.println("metod SkapaEtikprövning");
 		driver.findElement(By.id("Submitter")).click();
 	}
 
 	@Test (dependsOnMethods={"SkapaEtikprövning"})
-	public void BytFokusTillFormulär() {
+	public void BytFokusTillFormulär() throws AWTException, InterruptedException, IOException {
 
+		System.out.println("metod BytFokusTillFormulär");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 
 		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 		driver.switchTo().window(tabs2.get(1));
 
+		if (driver.getPageSource().contains("Spara")) {
+			System.out.println("jag ser spara");
+		}
+		else {
+			Assert.fail("Hittar inte spara-knappen");
+			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		}
+		Thread.sleep(2000);
+		
+//		// spara 
+//		driver.findElement(By.name("Submitter")).click();
+//		Thread.sleep(3000);
+//		System.out.println("Utkast sparat med 'by.name('Submitter').");
 //		System.out.println("Nu pausar vi på första sidan av ansökan.");
 	}
 

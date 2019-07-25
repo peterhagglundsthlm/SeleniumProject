@@ -60,7 +60,7 @@ public class baraBilagor extends anliEpmFormTitleCategory {
 
 			// 15.5.1 EudraCT-nr in med javascript
 			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-			generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+			generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 		}
 
 		// annars = om det inte är läkemedelsprövning
@@ -97,7 +97,7 @@ public class baraBilagor extends anliEpmFormTitleCategory {
 
 		// tillägg av alla obligatoriska bilagor
 		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-		generateApplicationEPM.anliEpmLäkemedel.bilagorLäkemedel(driver);
+		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 
 		System.out.println("Alla filer är uppladdade.");
 		System.out.println("Sektion 15 är klar.");

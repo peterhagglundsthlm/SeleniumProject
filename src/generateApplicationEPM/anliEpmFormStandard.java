@@ -355,29 +355,39 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 	@Test (dependsOnMethods={"s13_RedovisningResultat"})
 	public void s14_EkonomiskaFörhållanden() throws InterruptedException {
+		
+		String keyToSend = "Text i sektion 14";
 
 		driver.findElement(By.linkText("14. EKONOMISKA FÖRHÅLLANDEN")).click();
 
-		if (driver.getPageSource().contains("14. Ekonomiska förhållanden"))
-
-		{
+		if (driver.getPageSource().contains("14. Ekonomiska förhållanden")){
+			
 			int size = driver.findElements(By.tagName("iframe")).size();
 			//			System.out.println(size);
 
 			Thread.sleep(2000);
 			driver.switchTo().frame(0);
-			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("1");
+			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(keyToSend);
 			driver.switchTo().parentFrame();
 
 			driver.switchTo().frame(1);
-			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("2");
+			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(keyToSend);
 			driver.switchTo().parentFrame();
 		}
+		
+//		if (driver.getPageSource().contains(keyToSend)) {
+//			System.out.println("Sektion 14 är klar.");
+//		}
+//		else {
+//			Assert.fail("Saknas inmatad text.");
+//		}
 
-		System.out.println("Sektion 14 är klar.");
+//		System.out.println("Sektion 14 är klar.");
 	}
 
+
 	@Test (dependsOnMethods={"s14_EkonomiskaFörhållanden"})
+
 	public void s15_Bilagor() throws AWTException, InterruptedException, IOException {
 
 		String eudraCT = "2019-123456-99";
@@ -437,7 +447,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 			// 15.5.1 EudraCT-nr in med javascript
 			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-			generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+			generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 		}
 
 		// annars = om det inte är läkemedelsprövning
@@ -474,18 +484,18 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 		// tillägg av alla obligatoriska bilagor
 		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-		generateApplicationEPM.anliEpmLäkemedel.bilagorLäkemedel(driver);
+		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 
 		System.out.println("Alla filer är uppladdade.");
 
-		if (driver.getPageSource().contains(eudraCT)) {
-			System.out.println("EudraCT är kvar.");
-			System.out.println("Sektion 15 är klar.");
-		}
-		else {
-			Assert.fail("EudraCT har försvunnit");
-			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-		}
+//		if (driver.getPageSource().contains(eudraCT)) {
+//			System.out.println("EudraCT är kvar.");
+//			System.out.println("Sektion 15 är klar.");
+//		}
+//		else {
+//			Assert.fail("EudraCT har försvunnit");
+//			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+//		}
 	}
 
 	@Test (dependsOnMethods={"s15_Bilagor"})
@@ -498,43 +508,51 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 		// Om texten "'15.5.1 EudraCT-nummer' krävs" finns på sidan...
 		if (driver.getPageSource().contains("'15.5.1 EudraCT-nummer' krävs")){
+			
+			Assert.fail("EudraCT-numret har försvunnit.");
 
 			// ...så går vi tillbakak till 15. Bilagor.
-			driver.findElement(By.linkText("15. BILAGOR")).click();
-
-			// kontrollerar EudraCT-nr
-			// Om EudraCT finns, tillbaka till Kontrollera och registrera. 
-			if (driver.getPageSource().contains(eudraCT)) {
-				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT är kvar.");
-
-				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-			}
-			
-			// annars informera och pröva igen.
-			else {
-				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT har försvunnit.");
-
-				generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
-
-				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-			}
-
+//			driver.findElement(By.linkText("15. BILAGOR")).click();
+//
+//			// kontrollerar EudraCT-nr
+//			// Om EudraCT finns, tillbaka till Kontrollera och registrera. 
+//			if (driver.getPageSource().contains(eudraCT)) {
+//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT är kvar.");
+//
+//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+//
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//			}
+//			
+//			// annars informera och pröva igen.
+//			else {
+//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT har försvunnit.");
+//
+//				generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+//
+//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+//
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+//			}
+//
 
 			//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
 			//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
 			//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-		}	
+		}
+		else {
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+		}
 		System.out.println("KontrolleraRegistrera klar.");
 	}
 
+	
 	@Test (dependsOnMethods={"KontrolleraRegistrera"})
 	public void Register() {
 

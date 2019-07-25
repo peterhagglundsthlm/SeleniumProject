@@ -8,8 +8,8 @@
 	<parameter name="Password" value="VRtestare1"></parameter>
 	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
 	<parameter name="Language" value="svenska"></parameter> 
-	<parameter name="applicationType" value="Form02"></parameter> 
-	<parameter name="projectTitle" value="testa kod som kollar Eudra-försvinnandet 14.28"></parameter> 
+	<parameter name="applicationType" value="Form04"></parameter> 
+	<parameter name="projectTitle" value="testa spara utkast med EudraCT 1612 bas i Form04"></parameter> 
 
 	<test name="Ansökan om etikprövning">
 		<classes>

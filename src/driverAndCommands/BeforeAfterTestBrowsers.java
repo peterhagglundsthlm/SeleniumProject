@@ -41,14 +41,14 @@ public class BeforeAfterTestBrowsers {
 
 	@BeforeClass
 
-  public void Setup(
+	public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
 			@Optional String Language, 
 			@Optional String projectTitle,
-      @Optional String applicationType) {
+			@Optional String applicationType) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -148,41 +148,29 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterMethod
 	public void ScreenShotWhenFail(ITestResult result) {
-		
-		
-		
-		
+
 		if (ITestResult.FAILURE == result.getStatus()){
 			try{
 				TakesScreenshot ts=(TakesScreenshot) driver;
 				File src= ts.getScreenshotAs(OutputType.FILE);
 				FileHandler.copy(src, new File("C:\\SeleniumScreenshots", result.getInstanceName() + "." + result.getName() + (".png")));
-				
-				
 			}
 
 			catch(Exception e)
 			{
-
 				System.out.println("");
 			}
 		}
-
-
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-  	//EndDriver.DriverQuit(driver);	
+		//EndDriver.DriverQuit(driver);	
 		EndTime.EndTimeTest(durationTest, startTimeTest);
-
 	}
-
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
 		EndTime.EndTimeSuite(duration, startTimeSuite);
-
 	}
-
 }

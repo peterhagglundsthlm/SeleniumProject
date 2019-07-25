@@ -27,7 +27,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
 
 
-public class anliEpmFormCreateApplication extends GeneralSetup {
+public class anliEpmFormCreateApplication extends BeforeAfterTestBrowsers {
 	
 	String titelEPM;
 
@@ -52,8 +52,8 @@ public class anliEpmFormCreateApplication extends GeneralSetup {
 
 	@Test (dependsOnMethods={"AnsökanOmEtikPrövning"})
 	public void NyAnsökan() {
-		driver.findElement(By.xpath("//*[@id=\"UniqueKeyRowGrid\"]/div[1]/table/tbody/tr[1]/td[1]/div/a")).click();
-
+		driver.findElement(By.xpath("öakjfd aölkjfd ösa")).click();
+//		*[@id=\"UniqueKeyRowGrid\"]/div[1]/table/tbody/tr[1]/td[1]/div/a
 	}
 	
 	@Test (dependsOnMethods={"NyAnsökan"})
