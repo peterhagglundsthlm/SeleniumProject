@@ -37,17 +37,18 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle", "applicationType"})
 
 	@BeforeClass
-	public void Setup(
+
+  public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
 			@Optional String Language, 
-			@Optional String projectTitle) {
-
+			@Optional String projectTitle,
+      @Optional String applicationType) {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -172,7 +173,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		//EndDriver.DriverQuit(driver);	
+  	//EndDriver.DriverQuit(driver);	
 		EndTime.EndTimeTest(durationTest, startTimeTest);
 
 	}

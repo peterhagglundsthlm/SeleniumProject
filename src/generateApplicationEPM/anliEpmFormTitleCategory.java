@@ -25,20 +25,31 @@ import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
 
-public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
+public class anliEpmFormTitleCategory extends BeforeAfterTestBrowsers{
 	
 	String titelEPM;
-
+	String ansökansKategori;
+	
 	@Parameters({"projectTitle"})	
 	@BeforeClass 
 	public void skapaTitel(@Optional String projectTitle) {
 		
 		titelEPM = projectTitle;
+		System.out.println("Ansökans titel: " + titelEPM);
+	}
+	
+	@Parameters({"applicationType"})
+	@BeforeClass 
+	public void definieraKategori(@Optional String applicationType) {
+		
+		ansökansKategori = applicationType;
+		System.out.println("Ansökanstyp: " + ansökansKategori);
 	}
 	
 	@Test
 	public void Utlysning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
+		System.out.println("Utlysning vald");
 	}
 
 	@Test (dependsOnMethods={"Utlysning"})
@@ -49,16 +60,13 @@ public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
 	@Test (dependsOnMethods={"AnsökanOmEtikPrövning"})
 	public void NyAnsökan() {
 		driver.findElement(By.xpath("//*[@id=\"UniqueKeyRowGrid\"]/div[1]/table/tbody/tr[1]/td[1]/div/a")).click();
+		System.out.println("Skapar ny ansökan");
 		
 	}
 	
 	@Test (dependsOnMethods={"NyAnsökan"})
 	public void Projekttitel() {
-//		
-//ändra titel på ansökan här!
-//
-//		String Projekttitel = "Testa skapa ansökan med formStandard (bas: form01) 190723 11.03";
-		
+	
 		driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
 
 		if (driver.findElement(By.id("ProjectTitleSV")).getAttribute("value") != titelEPM);
@@ -67,6 +75,7 @@ public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
 			driver.findElement(By.id("ProjectTitleSV")).clear();
 			driver.findElement(By.id("ProjectTitleSV")).sendKeys(titelEPM);
 		}
+		System.out.println("Nu är titeln satt (" + titelEPM + ") och ansökanskategorin är " + ansökansKategori);
 	}
 	
 	@Test (dependsOnMethods={"Projekttitel"})
@@ -84,6 +93,7 @@ public class anliEpmFormTitle01 extends BeforeAfterTestBrowsers{
 		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 		driver.switchTo().window(tabs2.get(1));
 
+//		System.out.println("Nu pausar vi på första sidan av ansökan.");
 	}
 
 }

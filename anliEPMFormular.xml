@@ -9,7 +9,7 @@
 	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
 	<parameter name="Language" value="svenska"></parameter> 
 	<parameter name="applicationType" value="Form02"></parameter> 
-	<parameter name="projectTitle" value="skapa ansökan Form02 190723 16.00"></parameter> 
+	<parameter name="projectTitle" value="testa kod som kollar Eudra-försvinnandet 14.28"></parameter> 
 
 	<test name="Ansökan om etikprövning">
 		<classes>

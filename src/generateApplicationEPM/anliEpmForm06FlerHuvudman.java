@@ -24,7 +24,7 @@ import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
 
-public class anliEpmForm06FlerHuvudman extends anliEpmFormTitle01{
+public class anliEpmForm06FlerHuvudman extends anliEpmFormTitleCategory{
 
 	@Test (dependsOnMethods={"BytFokusTillFormulär"})
 	// Ansökan endast personuppgifter, en forskningshuvudman
