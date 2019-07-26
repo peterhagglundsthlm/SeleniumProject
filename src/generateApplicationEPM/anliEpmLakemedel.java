@@ -195,7 +195,9 @@ public class anliEpmLakemedel extends anliEpmFormTitleCategory {
 //			}
 			test--;
 			//			System.out.println(test);
-		} 
+		}
+
+		System.out.println("Alla filer är uppladdade.");
 
 		// spara 
 		Thread.sleep(3000);

@@ -22,13 +22,14 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 	@Test (dependsOnMethods={"BytFokusTillFormulär"})
 
-	// ansökanskategori
+	// specifik info som skapar ansökans avgifts
 	//	public void s1a_AnsökansKategori(@Optional String applicationType) throws InterruptedException {
 	public void s1a_AnsökansKategori() throws InterruptedException {
 
 		System.out.println("Ansökanstypen är " + ansökansKategori + "." );
 
 		// här hämtar jag in koden för den specifika info som behövs för respektive ansökanskategori.
+
 
 		// om det är en huvudman, endast personuppgifter: 
 		if (ansökansKategori.equalsIgnoreCase("Form01")) {
@@ -42,7 +43,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			System.out.print("s1a2 vald");
 		}
 
-		// om det är endast personuppgifter, en forskningshuvudman
+		// om det är en huvudman, endast personuppgifter
 		if (ansökansKategori.equalsIgnoreCase("Form03")) {
 			generateApplicationEPM.anliEpmAllPage1aMethods.s1a3_AnsökanEnFohuv(driver);
 			System.out.print("s1a3 vald");
@@ -52,6 +53,36 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		if (ansökansKategori.equalsIgnoreCase("Form04")) {
 			generateApplicationEPM.anliEpmAllPage1aMethods.s1a4_AnsökanFleraFohuvLäk(driver);
 			System.out.print("s1a4 vald");
+		}
+
+		// om det är flera huvudmän, personuppgifter, samband
+		if (ansökansKategori.equalsIgnoreCase("Form05")) {
+			generateApplicationEPM.anliEpmAllPage1aMethods.s1a5_AnsökanFleraPersuppg(driver);
+			System.out.print("s1a5 vald");
+		}
+
+		// om det är flera huvudmän, ej personuppgifter, samband
+		if (ansökansKategori.equalsIgnoreCase("Form06")) {
+			generateApplicationEPM.anliEpmAllPage1aMethods.s1a6_AnsökanFleraFohuv(driver);
+			System.out.print("s1a6 vald");
+		}
+
+		// om det är flera huvudmän, läkemedel, ej samband
+		if (ansökansKategori.equalsIgnoreCase("Form07")) {
+			generateApplicationEPM.anliEpmAllPage1aMethods.s1a7_AnsökanFleraFohuvLäkEjSamband(driver);
+			System.out.print("s1a7 vald");
+		}
+
+		// om det är flera huvudmän, personuppgifter, ej samband
+		if (ansökansKategori.equalsIgnoreCase("Form08")) {
+			generateApplicationEPM.anliEpmAllPage1aMethods.s1a8_AnsökanFleraFohuvEjSambandPersuppg(driver);
+			System.out.print("s1a8 vald");
+		}
+
+		// om det är flera huvudmän, ej personuppgifter, ej samband
+		if (ansökansKategori.equalsIgnoreCase("Form09")) {
+			generateApplicationEPM.anliEpmAllPage1aMethods.s1a9_AnsökanFleraFohuvEjSambandEjPersuppg(driver);
+			System.out.print("s1a9 vald");
 		}
 
 		System.out.println(". Sektion 1a är klar.");
@@ -125,7 +156,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("3");
 			driver.switchTo().parentFrame();
 		}
-		System.out.println("Sektion 3 är ifylld.");
+		System.out.print("sektion 3 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s3_SyfteFrågeställningar"})
@@ -152,7 +183,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("3");
 			driver.switchTo().parentFrame();
 		}
-		System.out.println("Sektion 4 är ifylld.");
+		System.out.print("sektion 4 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s4_Metod"})
@@ -168,7 +199,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("ae03f2c5-e9e9-4fba-b546-2d23707ae13f")));
 		driver.findElement(By.id(("ae03f2c5-e9e9-4fba-b546-2d23707ae13f"))).sendKeys("2019-12-31");
 
-		System.out.println("Sektion 5 är ifylld.");
+		System.out.println("sektion 5 är ifylld.");
 	}
 
 	@Test (dependsOnMethods={"s5_Tidsplan"})
@@ -199,7 +230,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("4");
 			driver.switchTo().parentFrame();
 
-			System.out.println("Sektion 6 är ifylld.");
+			System.out.print("Sektion 6 är ifylld, ");
 		}
 	}
 
@@ -236,7 +267,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.switchTo().parentFrame();
 		}
 
-		System.out.println("Sektion 7 är ifylld.");
+		System.out.print("sektion 7 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s7_EtiskaÖverväganden"})
@@ -244,11 +275,9 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 		driver.findElement(By.linkText("8. FORSKNINGSPERSONER")).click();
 
-		if (driver.getPageSource().contains("8. Forskningspersoner"))
+		if (driver.getPageSource().contains("8. Forskningspersoner")){
 
-		{
 			int size = driver.findElements(By.tagName("iframe")).size();
-			//			System.out.println(size);
 
 			Thread.sleep(2000);
 			driver.switchTo().frame(0);
@@ -268,7 +297,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.switchTo().parentFrame();
 		}
 
-		System.out.println("Sektion 8 är ifylld.");
+		System.out.print("sektion 8 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s8_Forskningspersoner"})
@@ -287,7 +316,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		Select Disp2 = new Select (driver.findElement(By.id("526a103d-8908-422e-a0ef-e9d21c29d5c8")));
 		Disp2.selectByVisibleText("Nej");
 
-		System.out.println("Sektion 9 är ifylld.");
+		System.out.println("sektion 9 är ifylld, sektion 10 hoppas över.");
 	}
 
 	@Test (dependsOnMethods={"s9_InfoSamtycke"})
@@ -305,7 +334,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		Select Disp2 = new Select (driver.findElement(By.id("daaf1f39-d802-4f61-b9a1-49cfc4c05f3a")));
 		Disp2.selectByVisibleText("Nej");
 
-		System.out.println("Sektion 11 är ifylld.");
+		System.out.print("Sektion 11 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s11_BiologisktMaterial"})
@@ -318,7 +347,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		Select Disp2 = new Select (driver.findElement(By.id("44ce99dc-8830-4c6a-9980-0ffc1d18d95f")));
 		Disp2.selectByVisibleText("Nej");
 
-		System.out.println("Sektion 12 är ifylld.");
+		System.out.print("sektion 12 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s12_ResultatDjurförsök"})
@@ -326,11 +355,9 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 		driver.findElement(By.linkText("13. REDOVISNING AV RESULTAT")).click();
 
-		if (driver.getPageSource().contains("13. Redovisning av resultat"))
+		if (driver.getPageSource().contains("13. Redovisning av resultat")){
 
-		{
 			int size = driver.findElements(By.tagName("iframe")).size();
-			//			System.out.println(size);
 
 			Thread.sleep(2000);
 			driver.switchTo().frame(0);
@@ -350,20 +377,19 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.switchTo().parentFrame();
 		}
 
-		System.out.println("Sektion 13 är ifylld.");
+		System.out.print("sektion 13 är ifylld, ");
 	}
 
 	@Test (dependsOnMethods={"s13_RedovisningResultat"})
 	public void s14_EkonomiskaFörhållanden() throws InterruptedException {
-		
+
 		String keyToSend = "Text i sektion 14";
 
 		driver.findElement(By.linkText("14. EKONOMISKA FÖRHÅLLANDEN")).click();
 
 		if (driver.getPageSource().contains("14. Ekonomiska förhållanden")){
-			
+
 			int size = driver.findElements(By.tagName("iframe")).size();
-			//			System.out.println(size);
 
 			Thread.sleep(2000);
 			driver.switchTo().frame(0);
@@ -374,20 +400,18 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(keyToSend);
 			driver.switchTo().parentFrame();
 		}
-		
-//		if (driver.getPageSource().contains(keyToSend)) {
-//			System.out.println("Sektion 14 är klar.");
-//		}
-//		else {
-//			Assert.fail("Saknas inmatad text.");
-//		}
 
-//		System.out.println("Sektion 14 är klar.");
+		//		if (driver.getPageSource().contains(keyToSend)) {
+		//			System.out.println("Sektion 14 är klar.");
+		//		}
+		//		else {
+		//			Assert.fail("Saknas inmatad text.");
+		//		}
+
+		System.out.println("sektion 14 är klar.");
 	}
 
-
 	@Test (dependsOnMethods={"s14_EkonomiskaFörhållanden"})
-
 	public void s15_Bilagor() throws AWTException, InterruptedException, IOException {
 
 		String eudraCT = "2019-123456-99";
@@ -412,21 +436,21 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		wait1.until(ExpectedConditions.elementToBeClickable(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Select Disp = new Select (driver.findElement(By.id("9e0fb60e-cd29-4208-9561-b9c1d53e946c")));
 		Disp.selectByVisibleText("Nej");
-		System.out.println("wait1");
+		System.out.print("wait1, ");
 
 		// Frågor om bilagor: 15.3
 		WebDriverWait wait2 = new WebDriverWait(driver, 10);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Select Disp2 = new Select (driver.findElement(By.id("7c0cded1-b0b0-4245-8ef6-b5e2591a07bb")));
 		Disp2.selectByVisibleText("Nej");
-		System.out.println("wait2");
+		System.out.print("wait2, ");
 
 		// Frågor om bilagor: 15.4
 		WebDriverWait wait3 = new WebDriverWait(driver, 10);
 		wait3.until(ExpectedConditions.elementToBeClickable(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Select Disp3 = new Select (driver.findElement(By.id("ff16dfd4-37a5-4f2a-9b22-d151440f0152")));
 		Disp3.selectByVisibleText("Nej");
-		System.out.println("wait3");
+		System.out.println("wait3.");
 
 		//		Fråga om läkemedel: 15.5
 		//		WebDriverWait wait4 = new WebDriverWait(driver, 10);
@@ -434,16 +458,19 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		//		System.out.println("wait4");
 
 		//		om det är en läkemedelsprövning: 
-		if (ansökansKategori.equalsIgnoreCase("Form02")	|| ansökansKategori.equalsIgnoreCase("Form04")|| ansökansKategori.equalsIgnoreCase("Form07")){
+		if 
+		(ansökansKategori.equalsIgnoreCase("Form02")
+				|| ansökansKategori.equalsIgnoreCase("Form04")
+				|| ansökansKategori.equalsIgnoreCase("Form07")){
 
 			//	om parameter ansökanstyp==Form02, Form04 eller Form07 tar jag in kod eudraCT från anliEpmLäkemedel
 			WebDriverWait wait4a = new WebDriverWait(driver, 10);
 			wait4a.until(ExpectedConditions.elementToBeClickable(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
-			System.out.println("wait4a");
+			System.out.println("wait4a = läkemedelsprövning");
 			Select Disp4a = new Select (driver.findElement(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 			Disp4a.selectByVisibleText("Ja");
-			System.out.println("Ansökanstyp är " + ansökansKategori);
-			System.out.println("Jag har valt Ja på läkemedelsprövning");
+			System.out.print("Ansökanstyp är " + ansökansKategori);
+			System.out.println(". Jag har valt Ja på läkemedelsprövning");
 
 			// 15.5.1 EudraCT-nr in med javascript
 			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
@@ -454,11 +481,11 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		else {
 			WebDriverWait wait4 = new WebDriverWait(driver, 10);
 			wait4.until(ExpectedConditions.elementToBeClickable(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
-			System.out.println("wait4");
+			System.out.println("wait4 = inte läkemedelsprövning");
 			Select Disp4 = new Select (driver.findElement(By.id("d8a5629c-7ff5-43af-a6c3-30d0af5d12d4")));
 			Disp4.selectByVisibleText("Nej");
-			System.out.println("Ansökanstyp är " + ansökansKategori);
-			System.out.println("Jag har valt Nej på läkemedelsprövning");
+			System.out.print("Ansökanstyp är " + ansökansKategori);
+			System.out.println(". Jag har valt Nej på läkemedelsprövning");
 		}
 
 		// resten av bilagorna etc. 15.6
@@ -466,36 +493,36 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		wait5.until(ExpectedConditions.elementToBeClickable(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Select Disp5 = new Select (driver.findElement(By.id("47bcd41a-346e-44b7-9d7a-869de0e096b3")));
 		Disp5.selectByVisibleText("Nej");
-		System.out.println("wait5");
+		System.out.print("wait5, ");
 
 		// resten av bilagorna etc. 15.7
 		WebDriverWait wait6 = new WebDriverWait(driver, 10);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Select Disp6 = new Select (driver.findElement(By.id("78e0e3ef-49b7-4719-b492-53df1b1d65ed")));
 		Disp6.selectByVisibleText("Nej");
-		System.out.println("wait6");
+		System.out.print("wait6, ");
 
 		// resten av bilagorna etc. 15.8
 		WebDriverWait wait7 = new WebDriverWait(driver, 10);
 		wait7.until(ExpectedConditions.elementToBeClickable(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Select Disp7 = new Select (driver.findElement(By.id("5674d283-9e88-4ad0-9b30-0e2c8f16d7be")));
 		Disp7.selectByVisibleText("Nej");
-		System.out.println("wait7");
+		System.out.println("wait7.");
 
 		// tillägg av alla obligatoriska bilagor
 		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 
-		System.out.println("Alla filer är uppladdade.");
+		System.out.println("Sektion 15 är klar.");
 
-//		if (driver.getPageSource().contains(eudraCT)) {
-//			System.out.println("EudraCT är kvar.");
-//			System.out.println("Sektion 15 är klar.");
-//		}
-//		else {
-//			Assert.fail("EudraCT har försvunnit");
-//			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-//		}
+		//		if (driver.getPageSource().contains(eudraCT)) {
+		//			System.out.println("EudraCT är kvar.");
+		//			System.out.println("Sektion 15 är klar.");
+		//		}
+		//		else {
+		//			Assert.fail("EudraCT har försvunnit");
+		//			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		//		}
 	}
 
 	@Test (dependsOnMethods={"s15_Bilagor"})
@@ -508,37 +535,37 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 		// Om texten "'15.5.1 EudraCT-nummer' krävs" finns på sidan...
 		if (driver.getPageSource().contains("'15.5.1 EudraCT-nummer' krävs")){
-			
+
 			Assert.fail("EudraCT-numret har försvunnit.");
 
 			// ...så går vi tillbakak till 15. Bilagor.
-//			driver.findElement(By.linkText("15. BILAGOR")).click();
-//
-//			// kontrollerar EudraCT-nr
-//			// Om EudraCT finns, tillbaka till Kontrollera och registrera. 
-//			if (driver.getPageSource().contains(eudraCT)) {
-//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT är kvar.");
-//
-//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-//
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//			}
-//			
-//			// annars informera och pröva igen.
-//			else {
-//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT har försvunnit.");
-//
-//				generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
-//
-//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-//
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
-//			}
-//
+			//			driver.findElement(By.linkText("15. BILAGOR")).click();
+			//
+			//			// kontrollerar EudraCT-nr
+			//			// Om EudraCT finns, tillbaka till Kontrollera och registrera. 
+			//			if (driver.getPageSource().contains(eudraCT)) {
+			//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT är kvar.");
+			//
+			//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+			//
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//			}
+			//			
+			//			// annars informera och pröva igen.
+			//			else {
+			//				System.out.println("Kontroll igen från KontrolleraRegistrera. EudraCT har försvunnit.");
+			//
+			//				generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+			//
+			//				driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
+			//
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//				driver.findElement(By.id("AcceptedTermsAndConditions")).click();
+			//			}
+			//
 
 			//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
 			//			driver.findElement(By.id("AcceptedTermsAndConditions")).click();
@@ -552,17 +579,16 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		System.out.println("KontrolleraRegistrera klar.");
 	}
 
-	
 	@Test (dependsOnMethods={"KontrolleraRegistrera"})
 	public void Register() {
 
-		//		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
-		//		WebDriverWait wait = new WebDriverWait(driver, 2);
-		//		wait.until(ExpectedConditions.alertIsPresent());
-		//		Alert alert = driver.switchTo().alert();
-		//		alert.accept();
-		//		System.out.println("Sektion Register är klar.");
-		System.out.println("Sista steget är bortkommenterat.");
+		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
+		WebDriverWait wait = new WebDriverWait(driver, 2);
+		wait.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		System.out.println("Sektion Register är klar.");
+		//		System.out.println("Sista steget är bortkommenterat.");
 	} 
 }
 
