@@ -56,20 +56,16 @@ public class anliEpmLakemedel extends anliEpmFormTitleCategory {
 		//					System.out.println("Finns inget EudraCT-nr. Som förväntat.");
 		//		}
 
-		//
-		//		WebDriverWait wait4b = new WebDriverWait(driver, 10);
-		//		wait4b.until(ExpectedConditions.elementToBeClickable(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")));
-		//		((JavascriptExecutor) driver).executeScript("scroll(0, 200)"); 
-		//		Thread.sleep(5000);
-		//		driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")), eudraCT);
-		//				
-		//		
+		
+		// 15.5.1 EudraCT-nr in med javascript - - - FUNKAR INTE!
+//		WebDriverWait wait4b = new WebDriverWait(driver, 10);
+//		wait4b.until(ExpectedConditions.elementToBeClickable(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")));
+//		((JavascriptExecutor) driver).executeScript("scroll(0, 200)"); 
+//		Thread.sleep(10000);
+//		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])",
+//				driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")), eudraCT);
 
-		//			Thread.sleep(2000);
-		//			driver.switchTo().frame(0);
-		//			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(keyToSend);
-		//			driver.switchTo().parentFrame();
-
+		
 		//15.5.1 EudraCT-nr in med sendKeys
 		WebDriverWait wait4b = new WebDriverWait(driver, 10);
 		wait4b.until(ExpectedConditions.elementToBeClickable(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")));
@@ -80,48 +76,6 @@ public class anliEpmLakemedel extends anliEpmFormTitleCategory {
 		Thread.sleep(2000);
 		driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")).sendKeys(eudraCT);
 		Thread.sleep(2000);
-
-		// kontroll om numret fyllts i
-		//		if (driver.getPageSource().equalsIgnoreCase(eudraCT)) {
-		//			System.out.println("EudraCT är ifyllt.");
-		//		}
-		//
-		//		// OM INTE - nytt försök
-		//		else {
-		////			System.out.println("EudraCT-fältet, försök 2.");
-		////			driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")).click();
-		////			Thread.sleep(2000);
-		////			driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")).sendKeys(eudraCT);
-		//
-		//			// kontroll om försök 2 lyckats
-		////			if (driver.getPageSource().equalsIgnoreCase(eudraCT)) {
-		////				System.out.println("EudraCT är ifyllt.");
-		////				Thread.sleep(3000);
-		////			}
-		////
-		////			// OM INTE
-		////			else {
-		//				Assert.fail("Saknas komplett EudraCT.");
-		//			}
-
-
-		//		Thread.sleep(2000);
-		//		driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")).click();
-		//		System.out.println("EudraCT-fältet, försök 2.");
-		//		driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")).sendKeys(eudraCT);
-		//		System.out.println("Fyllt i EudraCT-fältet.");
-		//		Thread.sleep(3000);
-		//		driver.switchTo().parentFrame();
-		//		System.out.println("Gått ur EudraCT-fältet.");
-		//		Thread.sleep(3000);
-
-		// 15.5.1 EudraCT-nr in med javascript
-		//		WebDriverWait wait4b = new WebDriverWait(driver, 10);
-		//		wait4b.until(ExpectedConditions.elementToBeClickable(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")));
-		//		((JavascriptExecutor) driver).executeScript("scroll(0, 200)"); 
-		//		Thread.sleep(10000);
-		//		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])",
-		//				driver.findElement(By.id("45972d02-03bd-4879-b6f6-0d75314d66e7")), eudraCT);
 
 		// spara 
 		driver.findElement(By.name("Submitter")).click();

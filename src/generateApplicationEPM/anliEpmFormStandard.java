@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +18,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
+import pageElementsSAT_EPM.EPM_applicationFormElements;
+import pageElementsSAT_EPM.EPM_applicationTestData;
 
 public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
@@ -144,12 +147,16 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			int size = driver.findElements(By.tagName("iframe")).size();
 			//			System.out.println(size);
 
-			driver.switchTo().frame(0);
-			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("1");
+			// inmatning
+			driver.switchTo().frame(0);		
+			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(EPM_applicationTestData.TextMedRadbrytningar);
+			//			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("1");
 			driver.switchTo().parentFrame();
 
 			driver.switchTo().frame(1);
 			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys("2");
+			System.out.println("Text inlagd i andra textfältet.");
+			//			driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))).sendKeys(EPM_applicationTestData.TextMedRadbrytningar);
 			driver.switchTo().parentFrame();
 
 			driver.switchTo().frame(2);
@@ -168,7 +175,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 
 			// alla fält i sektion 4
 			int size = driver.findElements(By.tagName("iframe")).size();
-			//			System.out.println(size);
+			//	System.out.println(size);
 
 			Thread.sleep(2000);
 			driver.switchTo().frame(0);
@@ -422,14 +429,14 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		//15.1 bifoga forskningsplan - obligatorisk -- ALLA BILAGOR LADDAS UPP SIST
 
 		// kontroll att EudraCT-nr inte finns
-		if (driver.getPageSource().contains(eudraCT)) {
-			System.out.println("Finns EudraCT-nr = AVVIKANDE.");
-			Thread.sleep(10000);
-		}
-		else {
-			//			Assert.fail("EudraCT har försvunnit");
-			System.out.println("Finns inget EudraCT-nr. Som förväntat.");
-		}
+//		if (driver.getPageSource().contains(eudraCT)) {
+//			System.out.println("Finns EudraCT-nr = AVVIKANDE.");
+//			Thread.sleep(10000);
+//		}
+//		else {
+//			//			Assert.fail("EudraCT har försvunnit");
+//			System.out.println("Finns inget EudraCT-nr. Som förväntat.");
+//		}
 
 		// Frågor om bilagor: 15.2
 		WebDriverWait wait1 = new WebDriverWait(driver, 10);
@@ -472,7 +479,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			System.out.print("Ansökanstyp är " + ansökansKategori);
 			System.out.println(". Jag har valt Ja på läkemedelsprövning");
 
-			// 15.5.1 EudraCT-nr in med javascript
+			// 15.5.1 EudraCT-nr - javascript eller text väljs i metoden i Lakemedel
 			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 			generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 		}
@@ -583,12 +590,12 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 	public void Register() {
 
 		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
-		WebDriverWait wait = new WebDriverWait(driver, 2);
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
-		System.out.println("Sektion Register är klar.");
-		//		System.out.println("Sista steget är bortkommenterat.");
+//		WebDriverWait wait = new WebDriverWait(driver, 2);
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		alert.accept();
+//		System.out.println("Sektion Register är klar.");
+				System.out.println("Sista steget är bortkommenterat.");
 	} 
 }
 

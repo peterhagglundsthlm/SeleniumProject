@@ -23,10 +23,10 @@
 	<!--Ansökan flera huvudmän, personuppgifter, ej samband : Form08 --> 
 	<!--Ansökan flera huvudmän, ej personuppgifter, ej samband : Form09 -->
 
-	<parameter name="applicationType" value="Form01"></parameter>
+	<parameter name="applicationType" value="Form02"></parameter>
 	
 	<!-- Texten i parametern projectTitle sätter titeln på ansökan. -->
-	<parameter name="projectTitle" value="Testa fler bilagor. Form01. 190726 15.19"></parameter>
+	<parameter name="projectTitle" value="Testa EudraCT-javascript. Form02. 190729 14.44"></parameter>
 
 	<test name="Ansökan om etikprövning">
 		

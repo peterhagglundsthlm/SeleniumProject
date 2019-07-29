@@ -1,6 +1,7 @@
 package pageElementsSAT_EPM;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -23,7 +24,7 @@ public class EPM_applicationFormElements {
 		element = driver.findElement(By.id("4ec91423-1d5a-4d03-86ed-14792a006821_select_1"));
 		return element;
 	}
-	
+
 	//Dropdown läkemedelsprövning eller ej, en fo-huvudman
 	public static final String KliniskLäkemedelsprövning = "4ec91423-1d5a-4d03-86ed-14792a006821_select_1"; 
 
@@ -85,5 +86,42 @@ public class EPM_applicationFormElements {
 		element = driver.findElement(By.id("90e1b632-c222-4285-8b77-694f538357f2"));
 		return element;
 	}
+
+//	//Text med radbrytningar
+//	public static final String TextMedRadbrytningar = "Git är ett verktyg för versionshantering. "
+//			+ "Det gör det möjligt för flera personer att arbeta på samma projekt. Git går att köra genom gränssnittet, genom Eclipse eller genom command promt. "
+//			+ "Vi har valt att använda command promt eftersom att det var mest stabilt och mycket enklare än Eclipse egen hantering för Git. "
+//			+ "Mer information om att arbeta med Git kommer senare i dokumentet."
+//			+ "Eclipse är den utvecklingsmiljö som vi har valt att använda för detta projekt. "
+//			+ "Det finns ett flertal andra alternativ men vi valde att arbeta med Eclipse eftersom att det är den vanligaste utvecklingsmiljön som används tillsammans med Selenium. "
+//			+ "Det finns mycket information och tips angående Eclipse och Selenium på Google." 
+//			+ "En detaljerad guide för att installera Eclipse och Selenium finns på: "
+//			+ "https://www.guru99.com/installing-selenium-webdriver.html" 
+//			+ Keys.ENTER + "Git är ett verktyg för versionshantering. Det gör det möjligt för flera personer att arbeta på samma projekt. "
+//			+ "Git går att köra genom gränssnittet, genom Eclipse eller genom command promt. "
+//			+ "Vi har valt att använda command promt eftersom att det var mest stabilt och mycket enklare än Eclipse egen hantering för Git. "
+//			+ "Mer information om att arbeta med Git kommer senare i dokumentet." 
+//			+ Keys.ENTER + "En detaljerad guide för att installera Eclipse och Selenium finns på: www.guru99.com/installing-selenium-webdriver.html"
+//			+ Keys.ENTER + Keys.ENTER + "Nu är texten slut."; 
+//
+//	public static WebElement TextMedRadbrytningar (WebDriver driver){
+//		element = driver.findElement(By.id("Git är ett verktyg för versionshantering." 
+//				+ "Det gör det möjligt för flera personer att arbeta på samma projekt. Git går att köra genom gränssnittet, genom Eclipse eller genom command promt. " 
+//				+ "Vi har valt att använda command promt eftersom att det var mest stabilt och mycket enklare än Eclipse egen hantering för Git."  
+//				+ "Mer information om att arbeta med Git kommer senare i dokumentet. " 
+//				+ "Eclipse är den utvecklingsmiljö som vi har valt att använda för detta projekt.  " 
+//				+ "Det finns ett flertal andra alternativ men vi valde att arbeta med Eclipse eftersom att det är den vanligaste utvecklingsmiljön som används tillsammans med Selenium.  " 
+//				+"Det finns mycket information och tips angående Eclipse och Selenium på Google."   
+//				+"En detaljerad guide för att installera Eclipse och Selenium finns på:  " 
+//				+ "https://www.guru99.com/installing-selenium-webdriver.html"   
+//				+ Keys.ENTER + "Git är ett verktyg för versionshantering. Det gör det möjligt för flera personer att arbeta på samma projekt. "  
+//				+"Git går att köra genom gränssnittet, genom Eclipse eller genom command promt. "  
+//				+"Vi har valt att använda command promt eftersom att det var mest stabilt och mycket enklare än Eclipse egen hantering för Git. "  
+//				+"Mer information om att arbeta med Git kommer senare i dokumentet."   
+//				+ Keys.ENTER + "En detaljerad guide för att installera Eclipse och Selenium finns på: www.guru99.com/installing-selenium-webdriver.html"  
+//				+ Keys.ENTER + Keys.ENTER + "Nu är texten slut."));
+//		return element;
+//
+//	}
 
 }
