@@ -40,16 +40,20 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
+
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle", "applicationType"})
 
 	@BeforeClass
+
 	public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
-			@Optional String Language) {
-		
+			@Optional String Language, 
+			@Optional String projectTitle,
+			@Optional String applicationType) {
+
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -166,13 +170,10 @@ public class BeforeAfterTestBrowsers {
 	public void tearDown() throws Exception { 
 		//EndDriver.DriverQuit(driver);	
 		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest);
-
 	}
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
 		EndTimeSuiteAndTest.EndTimeSuite(duration, startTimeSuite);
-
 	}
-
 }

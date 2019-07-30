@@ -21,10 +21,10 @@ public class GeneralSetup {
 	
 	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
 
 	@BeforeClass
-	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language) {
+	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language, @Optional String projectTitle) {
 
 		
 

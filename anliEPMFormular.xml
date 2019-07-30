@@ -4,17 +4,35 @@
 
 <suite name="EPM FORMULÄR anli" verbose="1" parallel="none">
 	<parameter name="browser" value="Chrome" />
-	<parameter name="Username" value="maria.vrsignering@gmail.com"></parameter>
+	<parameter name="Username"
+		value="maria.vrsignering@gmail.com"></parameter>
 	<parameter name="Password" value="VRtestare1"></parameter>
-	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
-	<parameter name="Language" value="svenska"></parameter> 
-	<parameter name="applicationType" value="Form02"></parameter> 
-	<parameter name="projectTitle" value="skapa ansökan Form02 190723 16.00"></parameter> 
+	<parameter name="Environment"
+		value="https://testaprismaepm.vr.se/"></parameter>
+	<parameter name="Language" value="svenska"></parameter>
+
+	<!--Parametern applicationType avgör vilken avgiftskategori ansökan får. 
+		Det motsvarar den info som fylls i först i ansökan. Texten i value styr hur ansökan fylls i. -->
+	<!-- Ansökan en huvudman, personuppgifter : Form01 -->
+	<!--Ansökan en huvudman, läkemedelsprövning : Form02 -->
+	<!--Ansökan en huvudman, endast personuppgifter : Form03 --> 
+	<!--Ansökan flera huvudmän, läkemedel, samband : Form04 -->
+	<!--Ansökan flera huvudmän, personuppgifter, samband : Form05 --> 
+	<!--Ansökan flera huvudmän, ej 	personuppgifter, samband : Form06 --> 
+	<!--Ansökan flera huvudmän, läkemedel, ej samband : Form07 -->
+	<!--Ansökan flera huvudmän, personuppgifter, ej samband : Form08 --> 
+	<!--Ansökan flera huvudmän, ej personuppgifter, ej samband : Form09 -->
+
+	<parameter name="applicationType" value="Form01"></parameter>
+	
+	<!-- Texten i parametern projectTitle sätter titeln på ansökan. -->
+	<parameter name="projectTitle" value="en titel"></parameter>
 
 	<test name="Ansökan om etikprövning">
+		
+		<!-- för att skicka in en hel ansökan är det anliEpmFormStandard som ska användas. -->
 		<classes>
-			<class
-				name= "generateApplicationEPM.anliEpmFormStandard"/> 
+			<class name="generateApplicationEPM.anliEpmFormCreateApplication" />
 		</classes>
 	</test>
 </suite> 

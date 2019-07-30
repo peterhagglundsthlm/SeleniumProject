@@ -26,7 +26,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
 
-public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
+public class anliEpmForm02LäkEn extends anliEpmFormTitleCategory{
 
 	// föregås av att ansökan har skapats och titel har satts 
 
@@ -397,7 +397,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 
 		// 15.5.1 EudraCT-nr in med javascript
 		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-		generateApplicationEPM.anliEpmLäkemedel.eudraCTnr(driver);
+		generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 				
 		System.out.println("Tillbaka i form02-klassen.");
 		
@@ -423,7 +423,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 		System.out.println("Nu ska jag anropa kod från anliEpmLäkemedel.bilagorLäkemedel");
 		
 		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-		generateApplicationEPM.anliEpmLäkemedel.bilagorLäkemedel(driver);
+		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 		
 		System.out.println("Alla filer är uppladdade.");
 	}
@@ -445,12 +445,12 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitle01{
 
 	@Test (dependsOnMethods={"KontrolleraRegistrera"})
 	public void Register() {
-
-		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
-		WebDriverWait wait = new WebDriverWait(driver, 2);
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
+		System.out.println("Registrera är utkommenterat.");
+//		driver.findElement(By.id("confirmAcceptTermsAndConditions")).click();
+//		WebDriverWait wait = new WebDriverWait(driver, 2);
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		alert.accept();
 	} 
 }
 
