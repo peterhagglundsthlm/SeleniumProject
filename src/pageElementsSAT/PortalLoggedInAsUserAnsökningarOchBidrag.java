@@ -2,59 +2,47 @@ package pageElementsSAT;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 
 public class PortalLoggedInAsUserAnsökningarOchBidrag {
-	private static WebElement element = null;
+	private static By element = null;
 
 
 	//ANSÖKNINGAR OCH BIDRAG - KNAPPEN
-	public static final String AnsökningarOchBidragButton = "body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuApplicationsAndGrants"; {
-	}
-	public static WebElement AnsökningarOchBidragButton(WebDriver driver){
+	public static By AnsökningarOchBidragButton(){
 
-		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuApplicationsAndGrants"));
+		By element = By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuApplicationsAndGrants");
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - UTLYSNINGAR
-	public static final String AnsökningarOchBidragUtlysningarButton = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"; {
-	}
-	public static WebElement AnsökningarOchBidragUtlysningarButton(WebDriver driver){
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"));
+	public static By AnsökningarOchBidragUtlysningarButton(){
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a");
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - ANSÖKNINGAR
-	public static final String AnsökningarOchBidragAnsokningar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"; {
-	}
-	public static WebElement AnsökningarOchBidragAnsokningar(WebDriver driver){
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"));
+	public static By AnsökningarOchBidragAnsokningar(){
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a");
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - BIDRAG
-	public static final String AnsökningarOchBidragBidrag = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"; {
-	}
-	public static WebElement AnsökningarOchBidragBidrag(WebDriver driver){
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"));
+	public static By AnsökningarOchBidragBidrag(){
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a");
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - ANSÖKAN OM ETIKPRÖVNING
-	public static final String AnsökningarOchBidragAnsökOmEtikprövning = "//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[1]/div/a"; {
-	}
-	public static WebElement AnsökningarOchBidragAnsökOmEtikprövning(WebDriver driver){
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[1]/div/a"));
+	public static By AnsökningarOchBidragAnsökOmEtikprövning(){
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[1]/div/a");
 		return element;
 	}
 
 	//ANSÖKNINGAR OCH BIDRAG - ETIKPRÖVNINGSANSÖKNINGAR
-	public static final String AnsökningarOchBidragEtikprövningsansökningar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[2]/div/a"; {
-	}
-	public static WebElement AnsökningarOchBidragEtikprövningsansökningar(WebDriver driver){
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[2]/div/a"));
+	public static By AnsökningarOchBidragEtikprövningsansökningar(){
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[2]/div/a");
 		return element;
 	}
 

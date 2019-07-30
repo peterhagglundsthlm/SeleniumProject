@@ -2,198 +2,156 @@ package pageElementsSAT;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 
 public class PortalLoggedInAsUserGranskning {
-	private static WebElement element = null;
+	private static By element = null;
 
 	//GRANSKNING - KNAPPEN
-	public static final String GranskningButton = "body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview"; {
-	}
-	public static WebElement GranskningButton(WebDriver driver){
+	public static By GranskningButton(){
 
-		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview"));
+		By element = By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuReview");
 		return element;
 	}
 
 	//GRANSKNING - GRANSKNING
-	public static final String Granskning_Granskning = "//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[1]/a"; {
-	}
-	public static WebElement Granskning_Granskning(WebDriver driver){
+	public static By Granskning_Granskning(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[1]/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[1]/a");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION
-	public static final String GranskningBetalningsinformation = "//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[2]/a"; {
-	}
-	public static WebElement GranskningBetalningsinformation(WebDriver driver){
+	public static By GranskningBetalningsinformation(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[2]/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[2]/a");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKENS LAND (DROPDOWN)
-	public static final String GranskningBetalningsinformationBankensLand = "BankCountry"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankensLand(WebDriver driver){
+	public static By GranskningBetalningsinformationBankensLand(){
 
-		element = driver.findElement(By.id("BankCountry"));
+		By element = By.id("BankCountry");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BETALNINGSTYP (DROPDOWN)
-	public static final String GranskningBetalningsinformationBetalningstyp = "PaymentAccountType"; {
-	}
-	public static WebElement GranskningBetalningsinformationBetalningstyp(WebDriver driver){
+	public static By GranskningBetalningsinformationBetalningstyp(){
 
-		element = driver.findElement(By.id("PaymentAccountType"));
+		By element = By.id("PaymentAccountType");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKGIRO
-	public static final String GranskningBetalningsinformationBankgiro_Id = "BankGiro"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankgiro_Id(WebDriver driver){
+	public static By GranskningBetalningsinformationBankgiro_Id(){
 
-		element = driver.findElement(By.id("BankGiro"));
+		By element = By.id("BankGiro");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - PLUSGIRO
-	public static final String GranskningBetalningsinformationPlusgiro = "PostalGiro"; {
-	}
-	public static WebElement GranskningBetalningsinformationPlusgiro(WebDriver driver){
+	public static By GranskningBetalningsinformationPlusgiro(){
 
-		element = driver.findElement(By.id("PostalGiro"));
+		By element = By.id("PostalGiro");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKENS NAMN
-	public static final String GranskningBetalningsinformationBankensNamn = "BankName"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankensNamn(WebDriver driver){
+	public static By GranskningBetalningsinformationBankensNamn(){
 
-		element = driver.findElement(By.id("BankName"));
+		By element = By.id("BankName");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKADRESS
-	public static final String GranskningBetalningsinformationBankAdress = "BankAddress"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankAdress(WebDriver driver){
+	public static By GranskningBetalningsinformationBankAdress(){
 
-		element = driver.findElement(By.id("BankAddress"));
+		By element = By.id("BankAddress");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKENS POSTNUMMER
-	public static final String GranskningBetalningsinformationBankensPostnummer = "BankPostalNumber"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankensPostnummer(WebDriver driver){
+	public static By GranskningBetalningsinformationBankensPostnummer(){
 
-		element = driver.findElement(By.id("BankPostalNumber"));
+		By element = By.id("BankPostalNumber");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKENS POSTADRESS
-	public static final String GranskningBetalningsinformationBankensPostAdress = "BankPostalAddress"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankensPostAdress(WebDriver driver){
+	public static By GranskningBetalningsinformationBankensPostAdress(){
 
-		element = driver.findElement(By.id("BankPostalAddress"));
+		By element = By.id("BankPostalAddress");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKKONTONUMMER
-	public static final String GranskningBetalningsinformationBankkontonummer = "BankNumber"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankkontonummer(WebDriver driver){
+	public static By GranskningBetalningsinformationBankkontonummer(){
 
-		element = driver.findElement(By.id("BankNumber"));
+		By element = By.id("BankNumber");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - SKATTEPROCENT
-	public static final String GranskningBetalningsinformationSkatteprocent = "TaxPercentage"; {
-	}
-	public static WebElement GranskningBetalningsinformationSkatteprocent(WebDriver driver){
+	public static By GranskningBetalningsinformationSkatteprocent(){
 
-		element = driver.findElement(By.id("TaxPercentage"));
+		By element = By.id("TaxPercentage");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - BANKKOD
-	public static final String GranskningBetalningsinformationBankkod = "BankCode"; {
-	}
-	public static WebElement GranskningBetalningsinformationBankkod(WebDriver driver){
+	public static By GranskningBetalningsinformationBankkod(){
 
-		element = driver.findElement(By.id("BankCode"));
+		By element = By.id("BankCode");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - KONTOINNEHAVARE
-	public static final String GranskningBetalningsinformationKontoinnehavare = "Accountholder"; {
-	}
-	public static WebElement GranskningBetalningsinformationKontoinnehavare(WebDriver driver){
+	public static By GranskningBetalningsinformationKontoinnehavare(){
 
-		element = driver.findElement(By.id("Accountholder"));
+		By element = By.id("Accountholder");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - CLEARINGNUMMER
-	public static final String GranskningBetalningsinformationClearingnummer = "ClearingNumber"; {
-	}
-	public static WebElement GranskningBetalningsinformationClearingnummer(WebDriver driver){
+	public static By GranskningBetalningsinformationClearingnummer(){
 
-		element = driver.findElement(By.id("ClearingNumber"));
+		By element = By.id("ClearingNumber");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - IBAN
-	public static final String GranskningBetalningsinformationIBAN = "IBAN"; {
-	}
-	public static WebElement GranskningBetalningsinformationIBAN(WebDriver driver){
+	public static By GranskningBetalningsinformationIBAN(){
 
-		element = driver.findElement(By.id("IBAN"));
+		By element = By.id("IBAN");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - SWIFT/BIC
-	public static final String GranskningBetalningsinformationSWIFTBIC = "SWIFTBIC"; {
-	}
-	public static WebElement GranskningBetalningsinformationSWIFTBIC(WebDriver driver){
+	public static By GranskningBetalningsinformationSWIFTBIC(){
 
-		element = driver.findElement(By.id("SWIFTBIC"));
+		By element = By.id("SWIFTBIC");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - TIN
-	public static final String GranskningBetalningsinformationTIN = "TIN"; {
-	}
-	public static WebElement GranskningBetalningsinformationTIN(WebDriver driver){
+	public static By GranskningBetalningsinformationTIN(){
 
-		element = driver.findElement(By.id("TIN"));
+		By element = By.id("TIN");
 		return element;
 	}
 
 	//GRANSKNING - BETALNINGSINFORMATION - SPARA
-	public static final String GranskningBetalningsinformationSpara = "Submitter"; {
-	}
-	public static WebElement GranskningBetalningsinformationSpara(WebDriver driver){
+	public static By GranskningBetalningsinformationSpara(){
 
-		element = driver.findElement(By.id("Submitter"));
+		By element = By.id("Submitter");
 		return element;
 	}
 
 	//GRANSKNING - ARVODEN
-	public static final String GranskningArvoden = "//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[3]/a"; {
-	}
-	public static WebElement GranskningArvoden(WebDriver driver){
+	public static By GranskningArvoden(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[3]/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/aside/section[1]/div/div/ul/li[3]/a");
 		return element;
 	}
 

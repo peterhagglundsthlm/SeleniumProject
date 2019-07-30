@@ -2,71 +2,57 @@ package pageElementsSAT;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 public class PortalLoggedInAsAdminIntressentregister {
-	private static WebElement element = null;
+	private static By element = null;
 
 	//INTRESSENTREGISTER - KNAPPEN
-	public static final String IntressentregisterButton = "body > div.page-container > div.container > div.row.header-row > header > ul > li.menuStakeholder"; {
-	}
-	public static WebElement IntressentregisterButton(WebDriver driver){
+	public static By IntressentregisterButton(){
 
-		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.menuStakeholder"));
+		By element = By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.menuStakeholder");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - PERSONKONTO
-	public static final String IntressentregisterButton_Personkonto = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_Personkonto(WebDriver driver){
+	public static By IntressentregisterButton_Personkonto(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"));
+		 By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - ORGANISATIONSKONTO
-	public static final String IntressentregisterButton_Organisationskonto = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_Organisationskonto(WebDriver driver){
+	public static By IntressentregisterButton_Organisationskonto(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - ORGANISATIONSANSÖKNINGAR
-	public static final String IntressentregisterButton_OrganisationsAnsökningar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_OrganisationsAnsökningar(WebDriver driver){
+	public static By IntressentregisterButton_OrganisationsAnsökningar(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[3]/div/a");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - BEREDNINGSGRUPPSMEDLEMMAR
-	public static final String IntressentregisterButton_Beredningsgruppsmedlemmar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_Beredningsgruppsmedlemmar(WebDriver driver){
+	public static By IntressentregisterButton_Beredningsgruppsmedlemmar(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/a");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - GRANSKARPOOL
-	public static final String IntressentregisterButton_Granskarpool = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[5]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_Granskarpool(WebDriver driver){
+	public static By IntressentregisterButton_Granskarpool(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[5]/div/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[5]/div/a");
 		return element;
 	}
 
 	//INTRESSENTREGISTER - ARBETSGIVARE
-	public static final String IntressentregisterButton_Arbetsgivare = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a"; {
-	}
-	public static WebElement IntressentregisterButton_Arbetsgivare(WebDriver driver){
+	public static By IntressentregisterButton_Arbetsgivare(){
 
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a"));
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[6]/div/a");
 		return element;
 
 	}

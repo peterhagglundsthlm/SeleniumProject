@@ -7,7 +7,7 @@ import java.math.RoundingMode;
 import org.openqa.selenium.WebElement;
 
 
-public class EndTime {
+public class EndTimeSuiteAndTest {
 
 
 	public static WebElement EndTimeSuite(double durationSuite, double startTimeSuite) {

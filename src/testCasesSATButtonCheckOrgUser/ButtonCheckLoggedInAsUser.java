@@ -1,5 +1,6 @@
 package testCasesSATButtonCheckOrgUser;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -159,7 +160,8 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void Logout() {
 
 		//LOGGAR UT
-		PortalLoggedInAsUserLoggaUt.LoggaUt(driver).click();
+		
+		driver.findElement(PortalLoggedInAsUserLoggaUt.LoggaUt()).click();
 
 	}
 
