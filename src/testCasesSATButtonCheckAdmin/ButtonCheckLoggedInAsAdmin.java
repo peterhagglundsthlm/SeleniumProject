@@ -4,6 +4,7 @@ package testCasesSATButtonCheckAdmin;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
@@ -17,6 +18,8 @@ import pageElementsSAT.PortalLoggedInAsAdminFormulär;
 import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
 import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
 import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
+import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
@@ -38,82 +41,84 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void ClickMyProfileButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MIN PROFIL
-		PortalLoggedInAsAdminMinProfil.MinProfilButton(driver).click();
-		PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar(driver).click();
-		PortalLoggedInAsAdminMinProfil.MinProfilButton_SWAMID_KONTO(driver).click();
+		driver.findElement(PortalLoggedInAsAdminMinProfil.MinProfilButton()).click();
+		driver.findElement(PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminMinProfil.MinProfilButton_SWAMID_KONTO()).click();
+
 	}
 
 	@Test (dependsOnMethods={"ClickMyProfileButton"})
 	public void ClickIntressentregisterButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER INTRESSENTREGISTER
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Organisationskonto(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_OrganisationsAnsökningar(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Beredningsgruppsmedlemmar(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Granskarpool(driver).click();
-		PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Arbetsgivare(driver).click();	
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Organisationskonto()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_OrganisationsAnsökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Beredningsgruppsmedlemmar()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Granskarpool()).click();
+		driver.findElement(PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Arbetsgivare()).click();
+
+
 	}
 
 	@Test (dependsOnMethods={"ClickIntressentregisterButton"})
 	public void ClickBeredningsgrupperButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER BEREDNINGSGRUPPER
-		PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton(driver).click();
-		PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper(driver).click();
-		PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Arvodeshantering(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton()).click();
+		driver.findElement(PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper()).click();
+		driver.findElement(PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Arvodeshantering()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickBeredningsgrupperButton"})
 	public void ClickFormulärButton() {
 
-		PortalLoggedInAsAdminFormulär.FormulärButton(driver).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormulärButton()).click();
+
 	}
 
 	@Test (dependsOnMethods={"ClickFormulärButton"})
 	public void FormulärKarolinskaInstitutet() {
 
 		//KAROLINSKA
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminFormulär.KarolinskaInstitutet));
-		PortalLoggedInAsAdminFormulär.KarolinskaInstitutet(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaInstitutetSidmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaAvsnittsmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaDataInställningar(driver).click();
-		PortalLoggedInAsAdminFormulär.KarolinskaKontroller(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsAdminFormulär.KarolinskaInstitutet());
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaInstitutet()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaInstitutetSidmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaUnderhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaDataInställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.KarolinskaKontroller()).click();
+
 
 	}
 
 	@Test (dependsOnMethods={"FormulärKarolinskaInstitutet"})
 	public void FormulärFormas() {
 
-
 		//FORMAS
-		PortalLoggedInAsAdminFormulär.Formas(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasFormulär(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasSidmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasAvsnittsmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasDatainställningar(driver).click();
-		PortalLoggedInAsAdminFormulär.FormasKontroller(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFormulär.Formas()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasFormulär()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasSidmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasAvsnittsmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasUnderhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasDatainställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.FormasKontroller()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"FormulärFormas"})
 	public void FormulärVetenskapsrådet() {
 
 		//VETENSKAPSRÅDET
-		PortalLoggedInAsAdminFormulär.Vetenskapsrådet(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetSidmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetAvsnittsmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetDataInställningar(driver).click();
-		PortalLoggedInAsAdminFormulär.VetenskapsrådetKontroller(driver).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.Vetenskapsrådet()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetSidmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetAvsnittsmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetUnderhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetDataInställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.VetenskapsrådetKontroller()).click();
 
 	}
 
@@ -121,27 +126,27 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void FormulärForte() {
 
 		//FORTE
-		PortalLoggedInAsAdminFormulär.Forte(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteFormulär(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteSidmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteAvsnittsmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteDatainställningar(driver).click();
-		PortalLoggedInAsAdminFormulär.ForteKontroller(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFormulär.Forte()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteFormulär()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteSidmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteAvsnittsmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteUnderhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteDatainställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.ForteKontroller()).click();
+	
 	}
 
 	@Test (dependsOnMethods={"FormulärForte"})
 	public void FormulärSkolfi() {
 
 		//SKOLFI
-		PortalLoggedInAsAdminFormulär.Skolfi(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiFormulär(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiSidmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiAvsnittsmallar(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiDatainställningar(driver).click();
-		PortalLoggedInAsAdminFormulär.SkolfiKontroller(driver).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.Skolfi()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiFormulär()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiSidmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiAvsnittsmallar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiUnderhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiDatainställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFormulär.SkolfiKontroller()).click();
 
 	}
 
@@ -164,43 +169,44 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void ClickFinansiärButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER FINANSIÄR
-		PortalLoggedInAsAdminFinansiär.FinansiärButton(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FinansiärButton()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"ClickFinansiärButton"})
 	public void FinansiärKarolinskaInstitutet() {
 
 		//KAROLINSKA INSTITUTET
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet));
-
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetGranskarpoolinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetInternaAnvändare(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetArvodesinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetSINKAdministration(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetSöknycklar(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetOrganisationskontoansökningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetOrganisationskonton(driver).click();
-		PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetInternaFörfråningar(driver).click();
-
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet());
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetGranskarpoolinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetInternaAnvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetArvodesinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetSINKAdministration()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetSöknycklar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetOrganisationskontoansökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetOrganisationskonton()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetInternaFörfråningar()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"FinansiärKarolinskaInstitutet"})
 	public void FinansiärFormas() {
 
 		//FORMAS
-		PortalLoggedInAsAdminFinansiär.Formas(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasGranskarpoolinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasInternaAnvändare(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasArvodesinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasSINKAdministration(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasSöknycklar(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasOrganisationskontoansökningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasOrganisationskonton(driver).click();
-		PortalLoggedInAsAdminFinansiär.FormasInternaFörfråningar(driver).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.Formas()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasGranskarpoolinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasInternaAnvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasArvodesinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasSINKAdministration()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasSöknycklar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasOrganisationskontoansökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasOrganisationskonton()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.FormasInternaFörfråningar()).click();
+		
+		
 
 	}
 
@@ -209,51 +215,51 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 
 		//VETENSKAPSRÅDET
-		PortalLoggedInAsAdminFinansiär.Vetenskapsrådet(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetGranskarpoolinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetInternaAnvändare(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetArvodesinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetSINKAdministration(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetSöknycklar(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetOrganisationskontoansökningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetOrganisationskonton(driver).click();
-		PortalLoggedInAsAdminFinansiär.VetenskapsrådetInternaFörfråningar(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFinansiär.Vetenskapsrådet()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetGranskarpoolinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetInternaAnvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetArvodesinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetSINKAdministration()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetSöknycklar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetOrganisationskontoansökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetOrganisationskonton()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.VetenskapsrådetInternaFörfråningar()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"FinansiärVetenskapsrådet"})
 	public void FinansiärForte() {
 
 		//FORTE
-		PortalLoggedInAsAdminFinansiär.Forte(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteGranskarpoolinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteInternaAnvändare(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteArvodesinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteSINKAdministration(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteSöknycklar(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteOrganisationskontoansökningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteOrganisationskonton(driver).click();
-		PortalLoggedInAsAdminFinansiär.ForteInternaFörfråningar(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFinansiär.Forte()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteGranskarpoolinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteInternaAnvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteArvodesinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteSINKAdministration()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteSöknycklar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteOrganisationskontoansökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteOrganisationskonton()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.ForteInternaFörfråningar()).click();
+	
 	}
 
 	@Test (dependsOnMethods={"FinansiärForte"})
 	public void FinansiärSkolfi() {
 
 		//SKOLFI
-		PortalLoggedInAsAdminFinansiär.Skolfi(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiGranskarpoolinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiInternaAnvändare(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiArvodesinställningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiSINKAdministration(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiSöknycklar(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiOrganisationskontoansökningar(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiOrganisationskonton(driver).click();
-		PortalLoggedInAsAdminFinansiär.SkolfiInternaFörfråningar(driver).click();
-
+		driver.findElement(PortalLoggedInAsAdminFinansiär.Skolfi()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiGranskarpoolinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiInternaAnvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiArvodesinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiSINKAdministration()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiSöknycklar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiOrganisationskontoansökningar()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiOrganisationskonton()).click();
+		driver.findElement(PortalLoggedInAsAdminFinansiär.SkolfiInternaFörfråningar()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"FinansiärSkolfi"})
@@ -280,24 +286,25 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void ClickPortaladministrationButton() {
 
 		////KLICKAR PÅ ALLA RUBRIKER UNDER PORTALADMINISTRAION
-		PortalLoggedInAsAdminPortalAdministration.PortaladministrationButton(driver).click();
-
-		PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Portalanvändare(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Finansiärer(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Underhållstabeller(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.HierarkiskaUnderhållstabeller(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Språk(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Meddelanden(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Driftstatus(driver).click();
-		PortalLoggedInAsAdminPortalAdministration.Statistik(driver).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.PortaladministrationButton()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Portalanvändare()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Finansiärer()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Underhållstabeller()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.HierarkiskaUnderhållstabeller()).click();
+		driver.findElement(	PortalLoggedInAsAdminPortalAdministration.Språk()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Meddelanden()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Driftstatus()).click();
+		driver.findElement(PortalLoggedInAsAdminPortalAdministration.Statistik()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"ClickPortaladministrationButton"})
 	public void Logout() {
 
 		//LOGGAR UT
-		PortalLoggedInAsAdminLoggaUt.LoggaUt(driver).click();
+		driver.findElement(PortalLoggedInAsAdminLoggaUt.LoggaUt()).click();
+	
 
 
 

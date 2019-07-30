@@ -10,29 +10,23 @@ public class PortalLoggedInAsAdminMinProfil {
 
 
 	//MIN PROFIL - KNAPPEN
-	public static final String MinProfilButton = "body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuMyProfileInternalUser > a"; {
-	}
-	public static WebElement MinProfilButton(WebDriver driver){
+	public static By MinProfilButton(){
 		
-		element = driver.findElement(By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuMyProfileInternalUser > a"));
+		By element = By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuMyProfileInternalUser > a");
 		return element;
 	}
 	
 	//MIN PROFIL - INSTÄLLNINGAR
-	public static final String MinProfilButton_Inställningar = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"; {
-	}
-	public static WebElement MinProfilButton_Inställningar(WebDriver driver){
-
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a"));
+	public static By MinProfilButton_Inställningar(){
+		
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[1]/div/a");
 		return element;
 	}
 
 	//MIN PROFIL - SWAMID-KONTO
-	public static final String MinProfilButton_SWAMID_KONTO = "//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"; {
-	}
-	public static WebElement MinProfilButton_SWAMID_KONTO(WebDriver driver){
-
-		element = driver.findElement(By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a"));
+	public static By MinProfilButton_SWAMID_KONTO(){
+		
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[2]/div/a");
 		return element;
 	}
 
