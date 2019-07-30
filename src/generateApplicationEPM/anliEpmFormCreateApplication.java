@@ -38,8 +38,6 @@ public class anliEpmFormCreateApplication extends BeforeAfterTestBrowsers {
 		titelEPM = projectTitle;
 	}
 	
-	
-	
 	@Test
 	public void Utlysning() {
 		driver.get("https://testaprismaepm.vr.se/EthicalReviewUniqueKeyRow"); 
