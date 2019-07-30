@@ -30,14 +30,15 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickStartButton() {
 
 		//KLICKAR PÅ START
-		PortalLoggedInAsUserMinProfil.MinProfil_Start(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Start()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickStartButton"})
 	public void ClickPersonuppgifterButton() {
 
 		//KLICKAR PÅ PERSONUPPGIFTER
-		PortalLoggedInAsUserMinProfil.MinProfil_Personuppgifter(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Personuppgifter()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Start()).click();
 
 	}
 
@@ -45,9 +46,10 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickUtbildningButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER UTBILDNING
-		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå()).click();
+
 
 	}
 
@@ -55,52 +57,47 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickArbetslivButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER ARBETSLIV
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Postdoktorvistelser(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Forskarutbyten(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningen(driver).click();
-
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Postdoktorvistelser()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Forskarutbyten()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningen()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickArbetslivButton"})
 	public void ClickPublikationerButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER PUBLIKATIONER
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationer(driver).click();
-
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationer()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickPublikationerButton"})
 	public void ClickMeriterOchUtmärkelserButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_Docentur(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersoner(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelser(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriter(driver).click();
-
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_Docentur()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersoner()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_BidragErHållnaiKonkurrens()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_PriserOchUtMärkelser()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriter()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickMeriterOchUtmärkelserButton"})
 	public void ClickImmaterialrättButton() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
-		PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt(driver).click();
-		PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt_Immaterialrätt(driver).click();
-
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt()).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt_Immaterialrätt()).click();
 	}
-
 
 	@Test (dependsOnMethods={"ClickImmaterialrättButton"})
 	public void ClickGranskarkompetensIfVisible() {
 
 		//KLICKAR PÅ ALLA RUBRIKER UNDER GRANSKARKOMPETENS
 		while (driver.getPageSource().contains("Granskarkompetens")) {
-			PortalLoggedInAsUserMinProfil.MinProfil_Granskarkompetens(driver).click();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Granskarkompetens()).click();
 			break;
 		}
 	}
@@ -109,62 +106,60 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	public void ClickAnsökningarOchBidrag() {
 
 		//Klickar på alla knappar som finns på "Ansökningar och bidrag" sidan
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragUtlysningarButton(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsokningar(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragBidrag(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsökOmEtikprövning(driver).click();
-		PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragEtikprövningsansökningar(driver).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton()).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragUtlysningarButton()).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsokningar()).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragBidrag()).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragAnsökOmEtikprövning()).click();
+		driver.findElement(PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragEtikprövningsansökningar()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickAnsökningarOchBidrag"})
 	public void ClickGranskning() {
 
 		//Klickar på alla knappar som finns på "Granskning" sidan
-		PortalLoggedInAsUserGranskning.GranskningButton(driver).click();
-		PortalLoggedInAsUserGranskning.Granskning_Granskning(driver).click();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformation(driver).click();
-		PortalLoggedInAsUserGranskning.GranskningArvoden(driver).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningButton()).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.Granskning_Granskning()).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformation()).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningArvoden()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickGranskning"})
 	public void ClickOrganisationsUppgifter() {
 
 		//Klickar på alla knappar som finns på "ORGANISATIONSUPPGIFTER" SIDAN
-		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter(driver).click();
-		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Signera(driver).click();
-		PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Rapportera(driver).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Signera()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationsuppgifter.Organisationsuppifter_Rapportera()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationsUppgifter"})
 	public void ClickOrganisationsKonto() {
 
 		//Klickar på alla knappar som finns på "ORGANISATIONSKONTO" SIDAN
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_AnsökningarOchBidrag(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Nedladdning(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Byt_Hemvist(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Föreslagen_Hemvist(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsöversikt(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsstruktur(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsöversikt(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsstruktur(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsutlysningar(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsansökningar(driver).click();
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Utbetalningar(driver).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_AnsökningarOchBidrag()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_AnsökningarOchBidrag()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Byt_Hemvist()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Föreslagen_Hemvist()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsöversikt()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Rapporteringsstruktur()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsöversikt()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Signeringsstruktur()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsutlysningar()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Organisationsansökningar()).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Utbetalningar()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationsKonto"})
 	public void Logout() {
 
 		//LOGGAR UT
-		
+
 		driver.findElement(PortalLoggedInAsUserLoggaUt.LoggaUt()).click();
-
 	}
-
 }
 
 

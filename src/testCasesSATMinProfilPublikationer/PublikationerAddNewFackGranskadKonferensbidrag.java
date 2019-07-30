@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -23,28 +24,28 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	@Test
 	public void LoginAsUser() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickPublikationer() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickPublikationer"})
 	public void LäggTillPublikationer() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill()).click();
 	}
 
 	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		
-		if (driver.getPageSource().contains("Publikationer"))
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+
+		if (driver.getPageSource().contains("Publikationer"))	 
 		{
 			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
 		}
@@ -58,9 +59,9 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
 	public void DropDownKonferensbidrag() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
-	
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+
 		if (driver.getPageSource().contains("Publikationer"))
 		{
 			Publikationstyp.selectByVisibleText("Konferensbidrag");
@@ -68,29 +69,27 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 		else if (driver.getPageSource().contains("Publications")) 
 		{
 			Publikationstyp.selectByVisibleText("Conference contribution");
-		}
-	
+		}	
 	}
 
 	@Test (dependsOnMethods={"DropDownKonferensbidrag"})
 	public void KonferensbidragFörfattareKnapp() {
 
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp()).click();
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragFörfattareKnapp"})
 	public void KonferensbidragTitel() {
 
 		String KonferensbidragTitel = "Testtitel123";
-		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(KonferensbidragTitel);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).getAttribute("value") != KonferensbidragTitel)
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(KonferensbidragTitel);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).getAttribute("value") != KonferensbidragTitel)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(KonferensbidragTitel);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(KonferensbidragTitel);
 		}
 	}
 
@@ -98,13 +97,13 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragFörfattareFörnamn() {
 
 		String FörfattareFörnamn = "Förnamn";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys(FörfattareFörnamn);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).getAttribute("value") != FörfattareFörnamn)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn()).sendKeys(FörfattareFörnamn);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn()).getAttribute("value") != FörfattareFörnamn)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys(FörfattareFörnamn);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn()).sendKeys(FörfattareFörnamn);
 		}
 	}
 
@@ -112,27 +111,27 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragFörfattareEfternamn() {
 
 		String FörfattareEfternamn = "Efternamn";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(FörfattareEfternamn);
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).getAttribute("value") != FörfattareEfternamn)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn()).sendKeys(FörfattareEfternamn);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn()).getAttribute("value") != FörfattareEfternamn)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(FörfattareEfternamn);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn()).sendKeys(FörfattareEfternamn);
 		}
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragFörfattareEfternamn"})
 	public void KonferensbidragNamnPåTidskrift() {
 
-		String NamnPåTidsskrift = "Tidsskrift";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift(driver).sendKeys(NamnPåTidsskrift);
+		String NamnPåTidskrift = "Tidskrift";
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift(driver).getAttribute("value") != NamnPåTidsskrift)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift()).sendKeys(NamnPåTidskrift);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift()).getAttribute("value") != NamnPåTidskrift)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift(driver).sendKeys(NamnPåTidsskrift);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift()).sendKeys(NamnPåTidskrift);
 		}
 	}
 
@@ -140,27 +139,28 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragVolym() {
 
 		String Volym = "10";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym(driver).sendKeys(Volym);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym(driver).getAttribute("value") != Volym)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym()).sendKeys(Volym);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym()).getAttribute("value") != Volym)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym(driver).sendKeys(Volym);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym()).sendKeys(Volym);
 		}
+
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragVolym"})
 	public void KonferensbidragUtfärdandenummer() {
 
 		String Utfärdandenummer = "2786";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer(driver).sendKeys(Utfärdandenummer);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer(driver).getAttribute("value") != Utfärdandenummer)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer()).sendKeys(Utfärdandenummer);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer()).getAttribute("value") != Utfärdandenummer)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer(driver).sendKeys(Utfärdandenummer);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer()).sendKeys(Utfärdandenummer);
 		}
 	}
 
@@ -168,13 +168,13 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragFörstaSidnummer() {
 
 		String FörstaSidnummer = "1";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).sendKeys(FörstaSidnummer);
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).getAttribute("value") != FörstaSidnummer)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer()).sendKeys(FörstaSidnummer);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer()).getAttribute("value") != FörstaSidnummer)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).sendKeys(FörstaSidnummer);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer()).sendKeys(FörstaSidnummer);
 		}
 	}
 
@@ -182,13 +182,13 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragSistaSidnummer() {
 
 		String Sistasidnummer = "199";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).sendKeys(Sistasidnummer);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).getAttribute("value") != Sistasidnummer)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer()).sendKeys(Sistasidnummer);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer()).getAttribute("value") != Sistasidnummer)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).sendKeys(Sistasidnummer);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer()).sendKeys(Sistasidnummer);
 		}
 	}
 
@@ -196,20 +196,21 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragDOI() {
 
 		String DOI = "1234";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys(DOI);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).getAttribute("value") != DOI)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).sendKeys(DOI);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).getAttribute("value") != DOI)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys(DOI);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).sendKeys(DOI);
 		}
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragDOI"})
 	public void KonferensbidragKällaFörPublikation() {
 
-		Select KällaFörPublikation = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation)));
+		Select KällaFörPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation());
+
 		Random randomOption = new Random();  
 		int endOption = KällaFörPublikation.getOptions().size(); 
 		int number = randomOption .nextInt(endOption);  
@@ -219,52 +220,52 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	@Test (dependsOnMethods={"KonferensbidragKällaFörPublikation"})
 	public void KonferensbidragStatus() {
 
-		Select Status = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationStatus)));
+		Select Status = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationStatus());
 		Status.selectByIndex(0);
-
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragStatus"})
 	public void KonferensbidragKällaID() {
 
 		String KällaId = "1234";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys(KällaId);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).getAttribute("value")  != KällaId)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID()).sendKeys(KällaId);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID()).getAttribute("value") != KällaId)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys(KällaId);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID()).sendKeys(KällaId);
 		}
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragKällaID"})
 	public void KonferensbidragVarTextenPubliceradIOpenAcessJa() {
 
-		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
+		Select TextenPubliceradIOpenAcess = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown());
 		TextenPubliceradIOpenAcess.selectByIndex(1);
-		
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragVarTextenPubliceradIOpenAcessJa"})
 	public void KonferensbidragOpenAccessLänkExternLänkFörPublicering() {
 
 		String LänkFörPublicering = "Testlänk";
-		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys(LänkFörPublicering);
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).getAttribute("value") != LänkFörPublicering)
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering());
+
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering()).sendKeys(LänkFörPublicering);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering()).getAttribute("value") != LänkFörPublicering)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys(LänkFörPublicering);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering()).sendKeys(LänkFörPublicering);
 		}
+
 	}
 
 	@Test (dependsOnMethods={"KonferensbidragOpenAccessLänkExternLänkFörPublicering"})
 	public void KonferensbidragOpenAccessFormAvOA() {
 
-		Select FormAvOA= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFormAvOA)));
+		Select FormAvOA = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFormAvOA());
 		Random randomOption = new Random();  
 		int startOption = 1;
 		int endOption = FormAvOA.getOptions().size(); 
@@ -275,7 +276,7 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	@Test (dependsOnMethods={"KonferensbidragOpenAccessFormAvOA"})
 	public void KonferensbidragOpenAccessDokumentVersion() {
 
-		Select DokumentVersion= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDokumentversion)));
+		Select DokumentVersion = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDokumentversion());
 		Random randomOption = new Random();  
 		int startOption = 1;
 		int endOption = DokumentVersion.getOptions().size(); 
@@ -288,13 +289,13 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragOpenAcessSammanfattning() {
 
 		String OpenAccessSammanfattning = "Jag skriver en riktigt bra sammanfattning";
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys(OpenAccessSammanfattning);
 
-		if (PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).getAttribute("value") != OpenAccessSammanfattning)
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning()).sendKeys(OpenAccessSammanfattning);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning()).getAttribute("value") != OpenAccessSammanfattning)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys(OpenAccessSammanfattning);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning()).sendKeys(OpenAccessSammanfattning);
 		}
 	}
 
@@ -302,9 +303,8 @@ public class PublikationerAddNewFackGranskadKonferensbidrag extends BeforeAfterT
 	public void KonferensbidragSpara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara()).click();
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
-
 }

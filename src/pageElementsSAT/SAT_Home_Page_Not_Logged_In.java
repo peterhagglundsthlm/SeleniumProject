@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class SAT_Home_Page_Not_Logged_In {
 	private static By element = null;
 
-
 	//LOGGA IN KNAPPEN PÅ STARTSIDAN
 	public static By LoginButtonChrome(){
 

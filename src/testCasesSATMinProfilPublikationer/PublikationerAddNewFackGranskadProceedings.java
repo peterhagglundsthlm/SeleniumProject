@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -21,38 +22,52 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
-	@Test
-	public void LoginAsUser() {
+//	@Test
+//	public void LoginAsUser() {
+//
+//		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
+//	}
+//
+//	@Test (dependsOnMethods={"LoginAsUser"})
+//	public void ClickPublikationer() {
+//
+//		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
+//	}
+//
+//	@Test (dependsOnMethods={"ClickPublikationer"})
+//	public void LäggTillPublikationer() {
+//
+//		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
+//	}
 
-		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-	}
-
-	@Test (dependsOnMethods={"LoginAsUser"})
-	public void ClickPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
-	}
-
-	@Test (dependsOnMethods={"ClickPublikationer"})
-	public void LäggTillPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
-	}
-
+	
 	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-
-		if (driver.getPageSource().contains("Publikationer"))
-		{
-			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
-		}
-		else if (driver.getPageSource().contains("Publications")) 
-		{
-			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
-		}
+		
+		GemensammaMetoder.LoggainPublikation(driver);
+		GemensammaMetoder.PublikationFackgranskad(driver);
+//		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
+//		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
+//
+//		if (driver.getPageSource().contains("Publikationer"))
+//		{
+//			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
+//		}
+//		else if (driver.getPageSource().contains("Publications")) 
+//		{
+//			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
+//		}
+//		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+//		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+//
+//		if (driver.getPageSource().contains("Publikationer"))
+//		{
+//			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
+//		}
+//		else if (driver.getPageSource().contains("Publications")) 
+//		{
+//			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
+//		}
 	}
 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
