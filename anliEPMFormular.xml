@@ -23,16 +23,16 @@
 	<!--Ansökan flera huvudmän, personuppgifter, ej samband : Form08 --> 
 	<!--Ansökan flera huvudmän, ej personuppgifter, ej samband : Form09 -->
 
-	<parameter name="applicationType" value="Form02"></parameter>
+	<parameter name="applicationType" value="Form01"></parameter>
 	
 	<!-- Texten i parametern projectTitle sätter titeln på ansökan. -->
-	<parameter name="projectTitle" value="Testa EudraCT-javascript. Form02. 190729 14.44"></parameter>
+	<parameter name="projectTitle" value="en titel"></parameter>
 
 	<test name="Ansökan om etikprövning">
 		
 		<!-- för att skicka in en hel ansökan är det anliEpmFormStandard som ska användas. -->
 		<classes>
-			<class name="generateApplicationEPM.anliEpmFormStandard" />
+			<class name="generateApplicationEPM.anliEpmFormCreateApplication" />
 		</classes>
 	</test>
 </suite> 
