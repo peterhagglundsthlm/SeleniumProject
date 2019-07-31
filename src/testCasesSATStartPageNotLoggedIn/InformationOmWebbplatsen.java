@@ -15,7 +15,6 @@ public class InformationOmWebbplatsen extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Om Webbplatsen fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 		Url = driver.getCurrentUrl();
 
 	}
@@ -23,27 +22,27 @@ public class InformationOmWebbplatsen extends BeforeAfterTestBrowsers {
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());  
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickInformation() {
-
-		SAT_Home_Page_Not_Logged_In.InformationButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickInformation"})
 	public void ClickOmWebbplatsen() {
-
-		SAT_Home_Page_Not_Logged_In.InformationOmWebbplatsenButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationOmWebbplatsenButton()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickOmWebbplatsen"})
 	public void VerifyURL() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.InformationOmWebbplatsenModal));
+		
+		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, SAT_Home_Page_Not_Logged_In.InformationOmWebbplatsenModal());
 
 		NyURL = driver.getCurrentUrl();
 

@@ -18,22 +18,20 @@ public class Driftinformation extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Drifinformation fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
-		
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickDriftinformation() {
-
-		SAT_Home_Page_Not_Logged_In.DriftinformationButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.DriftinformationButton())
+		.click();
 	}
-
 
 	@Test (dependsOnMethods={"ClickDriftinformation"})
 	public void VerifyURL() {
@@ -47,6 +45,5 @@ public class Driftinformation extends BeforeAfterTestBrowsers {
 		{
 			Assert.fail("Url stämmer inte");
 		} 
-
 	}
 }

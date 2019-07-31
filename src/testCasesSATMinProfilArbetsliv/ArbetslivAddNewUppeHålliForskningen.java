@@ -4,67 +4,58 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
+import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers {
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till ett Uppehåll i forskningen";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test
 	public void LoginAsUser() {
-		
-		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
+
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickArbetsliv() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickArbetsliv"})
 	public void UppehållIForskningenLäggTill() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenLäggTill(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenLäggTill()).click();
 	}
 
 	@Test (dependsOnMethods={"UppehållIForskningenLäggTill"})
 	public void StartDatum() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).sendKeys("2017-05-19");
-		
-//		String StartDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum(driver).getAttribute("value");
-//		System.out.println("Start Datum Uppehåll = " + StartDatumUppehall); 
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenStartDatum()).sendKeys("2017-06-18");
 	}
 
 	@Test (dependsOnMethods={"StartDatum"})
 	public void SlutDatum() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).sendKeys("2018-06-17");
-		
-//		String SlutDatumUppehall = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum(driver).getAttribute("value");
-//		System.out.println("Slut Datum Uppehåll = " + SlutDatumUppehall); 
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSlutDatum()).sendKeys("2018-06-18");
 	}
 
 	@Test (dependsOnMethods={"SlutDatum"})
 	public void Beskrivning() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).sendKeys("test");
-		
-//		String Beskrivning = PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning(driver).getAttribute("value");
-//		System.out.println("Beskrivning fritext = " + Beskrivning); 
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenBeskrivning()).sendKeys("test");
 	}
-	
+
 	@Test (dependsOnMethods={"Beskrivning"})
 	public void SparaVal() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSpara(driver).click();
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSpara()).click();	
 	}
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoggedInAsUserSwitchLanguage {
+	
 
 
 	public static WebElement SwitchLanguageToEnglishLoggedInPage(WebDriver driver) {
@@ -12,11 +13,11 @@ public class LoggedInAsUserSwitchLanguage {
 		
 		if (driver.getPageSource().contains("Min profil"))
 		{
-			//System.out.println("Detta test genomförs på den engelska versionen av portalen");
-			driver.findElement(By.linkText("In English")).click();
+			String hrefEn = "/Localization/SelectLanguage?languageName=EN&returnUrl=%2F";
+			driver.get("https://testaprisma.vr.se" + hrefEn);
 		}
 		else {
-			//System.out.println("Detta test genomförs på den engelska versionen av portalen");
+			
 		}
 		return null;
 	}
@@ -26,11 +27,12 @@ public class LoggedInAsUserSwitchLanguage {
 		
 		if (driver.getPageSource().contains("My profile"))
 		{
-			//System.out.println("Detta test genomförs på den svenska versionen av portalen");
-			driver.findElement(By.linkText("På svenska")).click();
+
+			String hrefSWE = "/Localization/SelectLanguage?languageName=SV&returnUrl=%2F";
+			driver.get("https://testaprisma.vr.se" + hrefSWE);
 		}
 		else {
-			//System.out.println("Detta test genomförs på den svenska versionen av portalen");
+		
 		}
 		return null;
 

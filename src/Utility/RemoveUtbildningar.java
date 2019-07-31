@@ -8,14 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
-public class RemoveUtbildningar {
-	public static WebDriver driver; 
+public class RemoveUtbildningar extends BeforeAfterTestBrowsers {
+	
 
 
 
@@ -23,17 +24,10 @@ public class RemoveUtbildningar {
 	public void f() throws InterruptedException {
 
 
-		System.setProperty("webdriver.chrome.driver","C:\\Selenium 3.12.0\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil());
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning()).click();
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Utbildning(driver).click();
 	}
 
 	

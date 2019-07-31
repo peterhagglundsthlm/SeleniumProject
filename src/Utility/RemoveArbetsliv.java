@@ -8,30 +8,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
-public class RemoveArbetsliv {
-	public static WebDriver driver;
+public class RemoveArbetsliv extends BeforeAfterTestBrowsers {
+
 	
 	
 	@Test 
 	public void f() throws InterruptedException {
 
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
-		DriverGetWebsite.OpenSatPortal(driver);
-		SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-		LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, UserCredentials.jagtestarprismaSATuserName, UserCredentials.jagtestarprismaSATpassword);
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsUserMinProfil.MinProfil));
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 	}
 
 	
@@ -48,12 +44,7 @@ public class RemoveArbetsliv {
 			Alert alert = driver.switchTo().alert();
 			alert.accept();
 
-			Thread.sleep(1000);
-
-	
-
-	
-			
+			Thread.sleep(1000);	
 		}
 		}
 	}
