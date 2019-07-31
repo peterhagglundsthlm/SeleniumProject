@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -15,12 +16,13 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Recension artikel";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
-	
-	@Test
+
+	//	@Test
+	/*LoginAsUser, ClickPublikationer, LäggTillPublikationer
 	public void LoginAsUser() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
@@ -37,13 +39,22 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
 	}
+	 */
 
+	@Test
+	public void LoginVäljKlickaPublikation() {
+
+		GemensammaMetoder.LoggainPublikation(driver);
+	}
+
+	// VäljPublikationstyp = Fackgranskad
+	/*
 	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
 		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		
+
 		if (driver.getPageSource().contains("Publikationer"))
 		{
 			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
@@ -53,12 +64,15 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
 		}
 	}
-
-	@Test (dependsOnMethods={"VäljPublikationsTyp"})
+	 */
+	
+	@Test (dependsOnMethods={"LoginVäljKlickaPublikation"})
 	public void DropDownRecensionArtikel() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
+		
+		GemensammaMetoder.PublikationFackgranskad(driver);
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
@@ -70,7 +84,8 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 		}
 	}
 
-	@Test (dependsOnMethods={"DropDownRecensionArtikel"})
+	//	@Test (dependsOnMethods={"DropDownRecensionArtikel"})
+	/* Titel, FörfattareKnapp, FörfattareFörnamn, FörfattareEfternamn
 	public void RecensionArtikelFörfattareKnapp() {
 
 
@@ -98,39 +113,60 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys("Efternamn");
 	}
+	 */
 
-	@Test (dependsOnMethods={"RecensionArtikelFörfattareEfternamn"})
+	@Test (dependsOnMethods={"DropDownRecensionArtikel"})
+	public void TitleAuthor() {
+
+		GemensammaMetoder.TitelOchFörfattare(driver);
+	}
+
+	//	@Test (dependsOnMethods={"DropDownRecensionArtikel"})
+	/* RecensionArtikelNamnPåTidskrift,RecensionArtikelVolym,RecensionArtikelUtfärdandenummer, första/sista sidnummer
+	 * 
 	public void RecensionArtikelNamnPåTidskrift() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift(driver).sendKeys("Tidsskrift");
+		String TitelTidskrift = "Tidskrift";
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationNamnPåTidskrift()).sendKeys(TitelTidskrift);
 	}
-	
+
 	@Test (dependsOnMethods={"RecensionArtikelNamnPåTidskrift"})
 	public void RecensionArtikelVolym() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVolym(driver).sendKeys("10");
 	}
-	
+
 	@Test (dependsOnMethods={"RecensionArtikelVolym"})
 	public void RecensionArtikelUtfärdandenummer() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationUtfärdandenummer(driver).sendKeys("287");
 	}
-	
+
 	@Test (dependsOnMethods={"RecensionArtikelUtfärdandenummer"})
 	public void RecensionArtikelFörstaSidnummer() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).sendKeys("1");
 	}
-	
+
 	@Test (dependsOnMethods={"RecensionArtikelFörstaSidnummer"})
 	public void RecensionArtikelSistaSidnummer() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).sendKeys("99");
 	}
 
-	@Test (dependsOnMethods={"RecensionArtikelSistaSidnummer"})
-	public void RecensionArtikelDOI() {
+	 */
+
+	@Test (dependsOnMethods={"TitleAuthor"})
+	public void TidskriftNamnVolymUtfärdandenrSidnr() {
+
+		GemensammaMetoder.Tidskrifter(driver);
+		GemensammaMetoder.Sidnummer(driver);
+	}
+
+	// @Test (dependsOnMethods={"RecensionArtikelSistaSidnummer"})
+	/*DOI, Status, Källa för publikation, KällaID
+	 * public void RecensionArtikelDOI() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys("123456");
 	}
@@ -145,7 +181,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		KällaFörPublikation.selectByIndex(number);
 	}
-	
+
 	@Test (dependsOnMethods={"RecensionArtikelKällaFörPublikation"})
 	public void RecensionArtikelStatus() {
 
@@ -159,8 +195,18 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys("1234");
 	}
 
-	@Test (dependsOnMethods={"RecensionArtikelKällaID"})
-	public void RecensionArtikelVarTextenPubliceradIOpenAcessJa() {
+	 */
+
+	@Test (dependsOnMethods={"TidskriftNamnVolymUtfärdandenrSidnr"})
+	public void InfoUtgivare() {
+
+		GemensammaMetoder.Utgivare(driver);
+	}
+
+//	@Test (dependsOnMethods={"RecensionArtikelKällaID"})
+	/* Publicerad open access JA, Extern länk för publicering, Form av OA, Dokumentversion och OASammanfattning
+	 * 
+public void RecensionArtikelVarTextenPubliceradIOpenAcessJa() {
 
 		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
 		TextenPubliceradIOpenAcess.selectByIndex(1);
@@ -201,14 +247,28 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys("Jag skriver en riktigt bra sammanfattning");
 	}
 
-	@Test (dependsOnMethods={"RecensionArtikelOpenAcessSammanfattning"})
-	public void RecensionArtikelSpara() {
+	 */
+
+	@Test (dependsOnMethods={"InfoUtgivare"})
+	public void InfoOpenAccess() {
+
+		GemensammaMetoder.OpenAccess(driver);
+	}
+
+//	@Test (dependsOnMethods={"RecensionArtikelOpenAcessSammanfattning"})
+	/*
+	 * public void RecensionArtikelSpara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
-
+	 */
+	
+	@Test (dependsOnMethods = {"InfoOpenAccess"})
+	public void Spara() {
+		GemensammaMetoder.Spara(driver);
+	}
 }
