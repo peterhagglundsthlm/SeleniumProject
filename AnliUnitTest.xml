@@ -11,7 +11,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-				name="testCasesSATMinProfilPublikationer.GemensammaMetoder" />	
+				name="testCasesSATMinProfilPublikationer.PublikationerAddNewFackGranskadProceedings" />	
 		</classes>
 	</test>
 </suite> 

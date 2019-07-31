@@ -21,42 +21,45 @@ public class PublikationerAddNewFackGranskadBok extends BeforeAfterTestBrowsers 
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
-	@Test
-	public void LoginAsUser() {
+//	@Test
+//	public void LoginAsUser() {
+//
+//		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+//	}
+//
+//	@Test (dependsOnMethods={"LoginAsUser"})
+//	public void ClickPublikationer() {
+//
+//		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer()).click();
+//	}
+//
+//	@Test (dependsOnMethods={"ClickPublikationer"})
+//	public void LäggTillPublikationer() {
+//
+//		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill()).click();
+//	}
+//
+//	@Test (dependsOnMethods={"LäggTillPublikationer"})
+//	public void VäljPublikationsTyp() {
+//
+//		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+//		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
+//
+//		if (driver.getPageSource().contains("Publikationer"))	 
+//		{
+//			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
+//		}
+//		else if (driver.getPageSource().contains("Publications")) 
+//		{
+//			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
+//		}
+//	}
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
-	}
-
-	@Test (dependsOnMethods={"LoginAsUser"})
-	public void ClickPublikationer() {
-
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer()).click();
-	}
-
-	@Test (dependsOnMethods={"ClickPublikationer"})
-	public void LäggTillPublikationer() {
-
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill()).click();
-	}
-
-	@Test (dependsOnMethods={"LäggTillPublikationer"})
-	public void VäljPublikationsTyp() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
-		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
-
-		if (driver.getPageSource().contains("Publikationer"))	 
-		{
-			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
-		}
-		else if (driver.getPageSource().contains("Publications")) 
-		{
-			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
-		}
-	}
-
-	@Test (dependsOnMethods={"VäljPublikationsTyp"})
+	@Test 
 	public void DropDownBok() {
+
+		GemensammaMetoder.LoggainPublikation(driver);
+		GemensammaMetoder.PublikationFackgranskad(driver);
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
 		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
