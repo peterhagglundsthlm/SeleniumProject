@@ -18,7 +18,7 @@ import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class GeneralSetup {
-	
+
 	public WebDriver driver; long startTime; long duration; long startTimeSuite; long durationSuite; 
 
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle"})
@@ -26,7 +26,7 @@ public class GeneralSetup {
 	@BeforeClass
 	public void Setup(@Optional String browser, @Optional String Username , @Optional String Password, @Optional String Environment, @Optional String Language, @Optional String projectTitle) {
 
-		
+
 
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -45,7 +45,7 @@ public class GeneralSetup {
 
 			//Ändrade loginlogiken så allt görs från en annan klass.. Prolemet är hur man ska hantera parametern för olika miljöer. Kolla med Anna-Maja på måndag 2019-07-22
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			
+
 
 			//			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
 			//			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
@@ -73,8 +73,6 @@ public class GeneralSetup {
 			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//			GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL");
-
-
 		}
 
 		if (browser.equalsIgnoreCase("FireFox")) {
@@ -89,12 +87,12 @@ public class GeneralSetup {
 			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
-			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			driver.findElement(SAT_Home_Page_Not_Logged_In.LoginButtonChrome()).click();
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.EnterUserName());
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
-			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
-
+			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, PortalLoggedInAsUserLoggaUt.LoggaUt());
+			
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
@@ -109,9 +107,8 @@ public class GeneralSetup {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			DriverGetWebsite.OpenSatPortal(driver);
-			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
+			driver.findElement(SAT_Home_Page_Not_Logged_In.LoginButtonChrome()).click();
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
-
 		}
 
 		if (browser.equalsIgnoreCase("Headless")) {
@@ -126,11 +123,11 @@ public class GeneralSetup {
 			startTime = System.currentTimeMillis();
 			driver.get(Environment);
 			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
-			SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
+			driver.findElement(SAT_Home_Page_Not_Logged_In.LoginButtonChrome()).click();
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.EnterUserName());
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
 
-			DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserLoggaUt.LoggaUt());
 
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);

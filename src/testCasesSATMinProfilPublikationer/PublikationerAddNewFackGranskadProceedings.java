@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -21,46 +22,39 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
+	//	@Test
+	/*  LoginAsUser, ClickPublikationer, LäggTillPublikationer
+ 		public void LoginAsUser() {
+
+			PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
+		}
+
+		@Test (dependsOnMethods={"LoginAsUser"})
+		public void ClickPublikationer() {
+
+			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
+		}
+
+		@Test (dependsOnMethods={"ClickPublikationer"})
+		public void LäggTillPublikationer() {
+
+			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
+		}
+	 */
+
 	@Test
-	public void LoginAsUser() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-	}
-
-	@Test (dependsOnMethods={"LoginAsUser"})
-	public void ClickPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
-	}
-
-	@Test (dependsOnMethods={"ClickPublikationer"})
-	public void LäggTillPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
-	}
-
-	@Test (dependsOnMethods={"LäggTillPublikationer"})
 	public void VäljPublikationsTyp() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-
-		if (driver.getPageSource().contains("Publikationer"))
-		{
-			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
-		}
-		else if (driver.getPageSource().contains("Publications")) 
-		{
-			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
-		}
+		GemensammaMetoder.LoggainPublikation(driver);
+		GemensammaMetoder.PublikationFackgranskad(driver);
 	}
 
 	@Test (dependsOnMethods={"VäljPublikationsTyp"})
 	public void DropDownProceedings() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
-		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+
 		if (driver.getPageSource().contains("Publikationer"))
 		{
 			Publikationstyp.selectByVisibleText("Proceedings");
@@ -72,28 +66,32 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 	}
 
 	@Test (dependsOnMethods={"DropDownProceedings"})
-	public void ProceedingsFörfattareKnapp() {
+	public void TitleAuthor() {
 
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp(driver).click();
+		GemensammaMetoder.TitelOchFörfattare(driver);
 	}
 
-	@Test (dependsOnMethods={"ProceedingsFörfattareKnapp"})
-	public void ProceedingsTitel() {
+	//	@Test (dependsOnMethods={"DropDownProceedings"})
+	/* Titel, FörfattareKnapp, FörfattareFörnamn, FörfattareEfternamn
+	/*	public void ProceedingsTitel() {
 
 		String titel = "Testtitel";
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(titel);
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).getAttribute("value") != titel)
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).getAttribute("value") != titel)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys(titel);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
 		}
-
 	}
 
-	@Test (dependsOnMethods={"ProceedingsTitel"})
+	 @Test (dependsOnMethods={"ProceedingsFörfattareKnapp"})
+	public void ProceedingsFörfattareKnapp() {
+
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp()).click();
+	}
+
+		@Test (dependsOnMethods={"ProceedingsTitel"})
 	public void ProceedingsFörfattareFörnamn() {
 
 		String Förnamn = "Förnamn";
@@ -106,20 +104,20 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 		}
 	}
 
-	@Test (dependsOnMethods={"ProceedingsFörfattareFörnamn"})
+		@Test (dependsOnMethods={"ProceedingsFörfattareFörnamn"})
 	public void ProceedingsFörfattareEfternamn() {
 
-		String Efternamn = "Efternamn";
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(Efternamn);
-
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).getAttribute("value") != Efternamn)
-		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).clear();
+			String Efternamn = "Efternamn";
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(Efternamn);
-		}
-	}
 
-	@Test (dependsOnMethods={"ProceedingsFörfattareEfternamn"})
+			if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).getAttribute("value") != Efternamn)
+			{
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).clear();
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys(Efternamn);
+			}
+		}
+
+		@Test (dependsOnMethods={"TitleAuthor"})
 	public void ProceedingsFörlag() {
 
 		String Förlag = "Testförlag";
@@ -131,9 +129,16 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).sendKeys(Förlag);
 		}
 	}
+	 */
 
-	@Test (dependsOnMethods={"ProceedingsFörlag"})
-	public void ProceedingsFörlagsplats() {
+	@Test (dependsOnMethods={"TitleAuthor"})
+	public void Publisher() {
+
+		GemensammaMetoder.FörlagOchPlats(driver);
+	}
+
+	//	@Test (dependsOnMethods={"ProceedingsFörlag"})
+	/*public void ProceedingsFörlagsplats() {
 
 		String Förlagsplats = "Förlagsaplats";
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).sendKeys(Förlagsplats);
@@ -144,22 +149,30 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).sendKeys(Förlagsplats);
 		}
 	}
+	 */
 
-	@Test (dependsOnMethods={"ProceedingsFörlagsplats"})
-	public void ProceedingsDOI() {
+	@Test (dependsOnMethods={"Publisher"})
+	public void InfoUtgivare() {
+
+		GemensammaMetoder.Utgivare(driver);
+	}
+
+//	@Test (dependsOnMethods={"ProceedingsFörlagsplats"})
+	/*ProceedingsDOI, ProceedingsKällaFörPublikation, ProceedingsKällaID
+	 * public void ProceedingsDOI() {
 
 		String DOI = "123456";
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys(DOI);
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).sendKeys(DOI);
 
-		if(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).getAttribute("value") !=DOI)
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).getAttribute("value") != DOI)
 		{
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).clear();
-			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys(DOI);
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI()).sendKeys(DOI);
 		}
 	}
 
 	@Test (dependsOnMethods={"ProceedingsDOI"})
-	public void ProceedingsKällaFörPublikation() {
+public void ProceedingsKällaFörPublikation() {
 
 		Select KällaFörPublikation = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation)));
 		Random randomOption = new Random();  
@@ -175,8 +188,8 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 		Status.selectByIndex(0);
 	}
 
-	@Test (dependsOnMethods={"ProceedingsStatus"})
-	public void ProceedingsKällaID() {
+@Test (dependsOnMethods={"ProceedingsStatus"})
+public void ProceedingsKällaID() {
 
 		String KällaId = "1234";
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys(KällaId);
@@ -187,15 +200,23 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys(KällaId);
 		}
 	}
+	 */
 
-	@Test (dependsOnMethods={"ProceedingsKällaID"})
-	public void ProceedingsVarTextenPubliceradIOpenAcessJa() {
+	@Test (dependsOnMethods={"InfoUtgivare"})
+	public void InfoOpenAccess() {
+
+		GemensammaMetoder.OpenAccess(driver);
+	}
+
+//	@Test (dependsOnMethods={"ProceedingsKällaID"})
+	/*ProceedingsVarTextenPubliceradIOpenAcessJa,ProceedingsOpenAccessLänkExternLänkFörPublicering, 
+	 * ProceedingsOpenAccessFormAvOA, ProceedingsOpenAccessDokumentVersion, ProceedingsOpenAcessSammanfattning
+public void ProceedingsVarTextenPubliceradIOpenAcessJa() {
 
 		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
 		TextenPubliceradIOpenAcess.selectByIndex(1);
 	}
-
-	@Test (dependsOnMethods={"ProceedingsVarTextenPubliceradIOpenAcessJa"})
+	 @Test (dependsOnMethods={"ProceedingsVarTextenPubliceradIOpenAcessJa"})
 	public void ProceedingsOpenAccessLänkExternLänkFörPublicering() {
 
 		String LänkFörPublicering = "Testlänk";
@@ -210,7 +231,7 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 	}
 
 	@Test (dependsOnMethods={"ProceedingsOpenAccessLänkExternLänkFörPublicering"})
-	public void ProceedingsOpenAccessFormAvOA() {
+public void ProceedingsOpenAccessFormAvOA() {
 
 		Select FormAvOA= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFormAvOA)));
 		Random randomOption = new Random();  
@@ -220,7 +241,7 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 		FormAvOA.selectByIndex(number);
 	}
 
-	@Test (dependsOnMethods={"ProceedingsOpenAccessFormAvOA"})
+@Test (dependsOnMethods={"ProceedingsOpenAccessFormAvOA"})
 	public void ProceedingsOpenAccessDokumentVersion() {
 
 		Select DokumentVersion= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDokumentversion)));
@@ -243,14 +264,18 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 			PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys(Sammanfattning);
 		}
 	}
+	 */
 
-	@Test (dependsOnMethods={"ProceedingsOpenAcessSammanfattning"})
+	@Test (dependsOnMethods={"InfoOpenAccess"})
 	public void ProceedingsSpara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
+
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara()).click();
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
+
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
+
 	}
 
 }
