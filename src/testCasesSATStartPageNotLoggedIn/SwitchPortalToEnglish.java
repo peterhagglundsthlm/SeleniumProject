@@ -15,21 +15,17 @@ public class SwitchPortalToEnglish extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att det är möjligt att byta språk till engelska";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
-
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void SwitchToEnglish() {
 
-		
-		
 		String href = "/Localization/SelectLanguage?languageName=EN&returnUrl=%2F";
 		driver.get("https://testaprisma.vr.se" + href);
 		

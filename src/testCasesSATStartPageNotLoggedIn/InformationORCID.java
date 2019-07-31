@@ -16,33 +16,31 @@ public class InformationORCID extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen ORCID fungerar som förväntat";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 		Url = driver.getCurrentUrl();
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());  
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickInformation() {
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 
-		SAT_Home_Page_Not_Logged_In.InformationButton(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickInformation"})
 	public void ClickORCID() {
 
-		SAT_Home_Page_Not_Logged_In.InformationORCIDButton(driver).click();
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationORCIDButton()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickORCID"})
 	public void VerifyURL() throws InterruptedException {
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.InformationORCIDModal));
-
+		
 		NyURL = driver.getCurrentUrl();
 
 		if (!NyURL.equals((Url + "#orcid")))

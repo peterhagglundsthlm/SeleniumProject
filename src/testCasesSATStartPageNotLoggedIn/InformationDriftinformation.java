@@ -18,29 +18,27 @@ public class InformationDriftinformation extends BeforeAfterTestBrowsers  {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Drifinformation under information fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 		Url = driver.getCurrentUrl();
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome()); 
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickInformation() {
 
-		SAT_Home_Page_Not_Logged_In.InformationButton(driver).click();
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickInformation"})
 	public void ClickDriftinformation() {
-
-		SAT_Home_Page_Not_Logged_In.InformationDriftinformationButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationDriftinformationButton()).click();
 	}
-
 
 	@Test (dependsOnMethods={"ClickDriftinformation"})
 	public void VerifyURL() {
@@ -49,7 +47,7 @@ public class InformationDriftinformation extends BeforeAfterTestBrowsers  {
 		driver.switchTo().window(tabs2.get(1));
 
 		NyURL = driver.getCurrentUrl();
-		
+
 		if (!NyURL.equals(("https://prismasupport.research.se/driftsinformation")))
 		{
 			Assert.fail("Url stämmer inte");

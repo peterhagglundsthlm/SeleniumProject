@@ -15,33 +15,31 @@ public class InformationSWAMID extends BeforeAfterTestBrowsers {
 	@BeforeClass
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen SWAMID fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
+		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen SWAMID fungerar som tänkt";	
 		Url = driver.getCurrentUrl();
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());   
 	}
 	
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickInformation() {
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 
-		SAT_Home_Page_Not_Logged_In.InformationButton(driver).click();
 	}
 
 	@Test (dependsOnMethods={"ClickInformation"})
 	public void ClickSWAMID() {
-
-		SAT_Home_Page_Not_Logged_In.InformationSWAMIDButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationSWAMIDButton()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickSWAMID"})
 	public void VerifyURL() throws InterruptedException {
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.InformationSWAMIDModal));
 
 		NyURL = driver.getCurrentUrl();
 

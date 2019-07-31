@@ -174,8 +174,14 @@ public class PortalLoggedInAsUserMinProfil {
 		By element = By.id("CreateExamPost");
 		return element;
 	}
+	
+	////MIN PROFIL - UTBILDNING - FORSKARUTBILDNING - SPARA ForskningskompetensMotsvarandeDoktorsexamenKNAPP
+	public static By MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamenButton() {
 
-
+		By element = By.id("CreateCompetencePost");
+		return element;
+	}
+	
 	//MIN PROFIL - UTBILDNING - UTBILDNING PÅ GRUND OCH AVANCERAD NIVÅ	
 	public static By MinProfil_Utbildning_UtbildningPåGrundOchAvanceradNivå(){
 
@@ -256,7 +262,7 @@ public class PortalLoggedInAsUserMinProfil {
 	//MIN PROFIL - ARBETSLIV - KNAPP
 	public static By MinProfil_Arbetsliv(){
 
-		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/a123");
+		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[1]/div/div/ul/li[4]/div/a");
 		return element;
 	}
 

@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 
 public class GranskningAddNewPaymentInformationBankLocatedInEurope extends BeforeAfterTestBrowsers {
@@ -15,7 +16,6 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land i Europa (Frankrike)";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test
@@ -26,20 +26,21 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickGranskningsfliken() {
 
-		PortalLoggedInAsUserGranskning.GranskningButton(driver).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningButton()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
+		
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformation()).click();
 
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformation(driver).click();
 	}
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
-
-		Select BankensLand = new Select (driver.findElement(By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand)));
 		
+		Select BankensLand = driverSelect.DropDown(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
+	
 		if (driver.getPageSource().contains("Betalningsinformation"))
 		{
 			BankensLand.selectByVisibleText("Frankrike");
@@ -48,77 +49,57 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 		{
 			BankensLand.selectByVisibleText("France");
 		}
-
-		//WebElement AnställningsNamnSelect = BankensLand.getFirstSelectedOption();
-		//String SelectValue = AnställningsNamnSelect.getText();
-		//System.out.println("Bankens land är = " + SelectValue ); 
-
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
 	public void BankensNamn() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn));
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).sendKeys("Frankrikes största bank");
-
-		//String BankensnamnString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(driver).getAttribute("value");
-		//System.out.println("Bankens namn är = " + BankensnamnString); 
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).sendKeys("Frankrikes bästa bank");
+		
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
 	public void Kontoinnehavare() {
-
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).sendKeys("BankmanTest");
-
-//		String KontoinnehavareString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(driver).getAttribute("value");
-//		System.out.println("Kontoinnehavare = " + KontoinnehavareString); 
+		
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).clear();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
 	}
-
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void IBAN() {
 
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).sendKeys("9943595");
-
-//		String IBANString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(driver).getAttribute("value");
-//		System.out.println("IBAN = " + IBANString); 
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN()).clear();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN()).sendKeys("9943595");
 	}
 
 	@Test (dependsOnMethods={"IBAN"})
 	public void SWIFTBIC() {
-
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).sendKeys("Abc1234567");
-
-//		String SWIFTBICString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(driver).getAttribute("value");
-//		System.out.println("SWIFT = " + SWIFTBICString); 
+		
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).clear();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).sendKeys("Abc1234567");
 	}
 
 	@Test (dependsOnMethods={"SWIFTBIC"})
 	public void TIN() {
-
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).clear();
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).sendKeys("12134234");
-
-//		String TINString = PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(driver).getAttribute("value");
-//		System.out.println("TIN = " + TINString); 
+		
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).clear();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).sendKeys("12134234");
 	}
 
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara(driver).click();
+		driver.findElement(PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
 
 	@Test (dependsOnMethods={"Spara"})
 	public void AccepteraAlert() {
 
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
-
 
 	}
 }

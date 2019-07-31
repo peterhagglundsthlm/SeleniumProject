@@ -3,6 +3,7 @@ package testCasesSATOrganisationsKontoAnvändare;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 import java.util.Random;
 import org.openqa.selenium.By;
@@ -11,135 +12,74 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 
 public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
-	String valueEmail;
+
 
 	@BeforeClass
 	public void beforeClass() {
 
 		String TestCaseInfo = "Loggar in och försöker skicka en inbjudan till en användare. Utelämnar dock samtliga fält och ska då få felmeddelanden.";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	  
 	}
-
 
 	@Test
 	public void CheckForOrganisationButton() {
 
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto(driver).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
 	}
-
 
 	@Test (dependsOnMethods={"CheckForOrganisationButton"})
 	public void ClickAnvändareButton() {
 
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare(driver).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare()).click();
 	}
-
 
 	@Test (dependsOnMethods={"ClickAnvändareButton"})
 	public void BjudInAnvändareButton() {
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In(driver).click();
-	}
 
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In()).click();
+	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButton"})
 	public void BjudInAnvändareButtonFörnamn() {
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn(driver), ""); 
-	}
 
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
+				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn()), ""); 
+	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonFörnamn"})
 	public void BjudInAnvändareButtonEfternamn() {
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn(driver), ""); 
-	}
 
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
+				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn()), ""); 
+	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEfternamn"})
 	public void BjudInAnvändareButtonEmail() {
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email(driver), ""); 
-	}
 
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
+				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email()), ""); 
+	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEmail"})
-	public void BjudInAnvändareButtonRoll() {
-		Select ResponsibilityType = new Select (driver.findElement(By.id(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Roll)));
-		Random randomOption = new Random();  
-		int endOption = ResponsibilityType.getOptions().size(); 
-		int number = randomOption .nextInt(endOption );  
-		ResponsibilityType.selectByIndex(number);
-	}
-
-
-	@Test (dependsOnMethods={"BjudInAnvändareButtonRoll"})
 	public void ClickAnvändareButtonSkicka() {
-		
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka(driver).click();
 
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka()).click();	
 	}
-
-	//DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span")) != null)
 
 	@Test (dependsOnMethods={"ClickAnvändareButtonSkicka"})
-	public void CheckErrorMessagesFörnamn()  {
-
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
-		if (driver.getPageSource().contains("Bjud in användare"))
-		{
-			//String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			//System.out.println("Felmeddelande på Svenska  "+valueFörnamn + " visas korrekt");
-		}
-
-		else if (driver.getPageSource().contains("Invite user"))
-		{
-			//String valueFörnamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			//System.out.println("Felmeddelande på Engelska  "+valueFörnamn + " visas korrekt");
-
-		}
-	}
-
-
-	@Test (dependsOnMethods={"CheckErrorMessagesFörnamn"})
-	public void CheckErrorMessagesEfternamn()  {
-
+	public void CheckErrorMessages()  {
 
 		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
-		if (driver.getPageSource().contains("Bjud in användare"))
-		{
-			//String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			//System.out.println("Felmeddelande på Svenska  "+valueEfternamn + " visas korrekt");
-		}
 
-		else if (driver.getPageSource().contains("Invite user"))
-		{
-			//String valueEfternamn= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-			//System.out.println("Felmeddelande på Engelska  "+valueEfternamn + " visas korrekt");
-
+		if (driver.getPageSource().contains("'Förnamn' krävs") && 
+				(driver.getPageSource().contains("'Efternamn' krävs")) && 
+				(driver.getPageSource().contains("'E-postadress' krävs"))) {
+		} else if (driver.getPageSource().contains("'First name' is required") && 
+				(driver.getPageSource().contains("'Last name' is required")) && 
+				(driver.getPageSource().contains("'E-mail' is required"))) {
+		} else {
+			org.testng.Assert.fail();
 		}
 	}
-
-
-	@Test (dependsOnMethods={"CheckErrorMessagesEfternamn"})
-	public void CheckErrorMessagesEpost()  {
-
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector("#FormId > div:nth-child(1) > div:nth-child(1) > div > span > span"));
-		if (driver.getPageSource().contains("Bjud in användare"))
-		{
-//			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-//			System.out.println("Felmeddelande på Svenska  "+valueEpost + " visas korrekt");
-		}
-
-		else if (driver.getPageSource().contains("Invite user"))
-		{
-//			String valueEpost= driver.findElement(By.xpath("//*[@id=\"FormId\"]/div[1]/div[1]/div/span/span")).getText();
-//			System.out.println("Felmeddelande på Engelska  "+valueEpost + " visas korrekt");
-
-		}
-	}
-
 }
 
 

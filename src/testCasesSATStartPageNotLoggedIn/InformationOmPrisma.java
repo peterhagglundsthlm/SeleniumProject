@@ -15,35 +15,34 @@ public class InformationOmPrisma extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen information Om Prisma fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 		Url = driver.getCurrentUrl();
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome()); 
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClicInformation() {
-
-		SAT_Home_Page_Not_Logged_In.InformationButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClicInformation"})
 	public void ClickOmPrisma() {
 
-		SAT_Home_Page_Not_Logged_In.InformationOmPrismaButton(driver).click();
+		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationOmPrismaButton()).click();	
 	}
 
 
 	@Test (dependsOnMethods={"ClickOmPrisma"})
 	public void VerifyURL() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.id(SAT_Home_Page_Not_Logged_In.InformationOmPrismaModal));
-
+		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, SAT_Home_Page_Not_Logged_In.InformationOmPrismaModal());
+		
 		NyURL = driver.getCurrentUrl();
 
 		if (!NyURL.equals((Url + "#aboutprisma")))
