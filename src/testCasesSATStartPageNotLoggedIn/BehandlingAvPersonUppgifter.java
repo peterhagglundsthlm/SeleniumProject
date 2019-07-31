@@ -1,6 +1,5 @@
 package testCasesSATStartPageNotLoggedIn;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,27 +14,25 @@ public class BehandlingAvPersonUppgifter extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Behandling av personuppgifter fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 		Url = driver.getCurrentUrl();
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClicBehandlingAvPersonuppgifter() {
-
-		SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterButton())
+		.click();
 	}
 
 	@Test (dependsOnMethods={"ClicBehandlingAvPersonuppgifter"})
 	public void VerifyBehandlingAvPersonuppgifter() throws InterruptedException {
-
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterModal));
-
+		
 		NyURL = driver.getCurrentUrl();
 
 		if (!NyURL.equals((Url + "#processingofpersonaldata")))

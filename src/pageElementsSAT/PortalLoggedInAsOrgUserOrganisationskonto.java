@@ -41,6 +41,13 @@ public class PortalLoggedInAsOrgUserOrganisationskonto {
 		return element;
 	}
 
+	//ORGANISATIONSKONTO - NAMN PÅ HÖGSTA NIVÅN (ORGANISATIONSNAMN)
+	public static By Organisationskonto_HögstaNivåNamn(){
+
+		By element = By.xpath("//*[@id=\"contentBody\"]/section/div[2]/form/div/div/div/ul/li/div/div[1]/div/h2");
+		return element;
+	}
+
 	//ORGANISATIONSKONTO - STRUKTUR - REDIGERA HÖGSTA NIVÅN
 	public static By Organisationskonto_Struktur_RedigeraHögstaNivån(){
 

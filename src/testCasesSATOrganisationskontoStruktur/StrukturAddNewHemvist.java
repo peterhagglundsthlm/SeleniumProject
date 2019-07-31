@@ -10,13 +10,12 @@ import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
 
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
-	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;
+	String EngelsktNamnPåEnhet; String SvenskNamnPåEnhet;
 
 	@BeforeClass
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Loggar in som en organisationskontoansvarig och lägger till en ny hemvist under fliken organisationskonto, sidan struktur";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
 	@Test
@@ -27,39 +26,39 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickOrganisationskonto() {
 
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto(driver).click();
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationskonto"})
 	public void ClickStruktur() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur));
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur());
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickStruktur"})
 	public void RedigeraHögstaNivån() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån));
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån(driver).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån());
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån()).click();
 	}
 
 	@Test (dependsOnMethods={"RedigeraHögstaNivån"})
 	public void SvensktNamnPåNyEnhet() {
 
 		int RandomNumber = 1 + (int)(Math.random() * 9999); 
-
-		String SvenskNamnPåEnhet = "Autoskapad hemvist svenska: " + RandomNumber;
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
-
-		if (PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value") != SvenskNamnPåEnhet);
-		{
-			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).clear();
-			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).sendKeys(SvenskNamnPåEnhet);
-
-			SvenskNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet(driver).getAttribute("value");
-//			System.out.println("Svensk namn på enhet är = " + SvenskNamnPåEnhetValue); 
-		}
+		SvenskNamnPåEnhet = "Autoskapad hemvist svenska: " + RandomNumber;
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
+		.sendKeys(SvenskNamnPåEnhet);
+		if (driver.findElement
+				(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).
+				getAttribute("value") != SvenskNamnPåEnhet); {
+			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
+			.clear();
+			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
+			.sendKeys(SvenskNamnPåEnhet); }
 	}
 
 	@Test (dependsOnMethods={"SvensktNamnPåNyEnhet"})
@@ -67,16 +66,16 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 
 		int RandomNumber = 1 + (int)(Math.random() * 9999); 
 
-		String EngelsktNamnPåEnhet = "Autoskapad hemvist engelska: " + RandomNumber;
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
-
-		if (PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value") != EngelsktNamnPåEnhet);
+		EngelsktNamnPåEnhet = "Autoskapad hemvist engelska: " + RandomNumber;
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
+		.sendKeys(EngelsktNamnPåEnhet);
+		if (driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
+				.getAttribute("value") != EngelsktNamnPåEnhet);
 		{
-			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).clear();
-			PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).sendKeys(EngelsktNamnPåEnhet);
-
-			EngelsktNamnPåEnhetValue = PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet(driver).getAttribute("value");
-//			System.out.println("Engelskt namn på enhet är = " + EngelsktNamnPåEnhetValue); 
+			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
+			.clear();
+			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
+			.sendKeys(EngelsktNamnPåEnhet);
 		}
 	}
 
@@ -84,40 +83,26 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	public void SparaNyHemvist() throws InterruptedException {
 
 		Thread.sleep(1000);
-
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp(driver).click();
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng));
-
-		PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng(driver).click();
-
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp())
+		.click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng());
+		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng())
+		.click();
 	}
 
 	@Test (dependsOnMethods={"SparaNyHemvist"})
 	public void KontrollerAttHemvistenHarLagtsTill() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån));
-
-		if (driver.getPageSource().contains((SvenskNamnPåEnhetValue)))
-		{
-			System.out.println(" ");
-//			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
-		}
-		else if ((driver.getPageSource().contains((EngelsktNamnPåEnhetValue)))) 
-		{
-			System.out.println(" ");
-//			System.out.println("Den nya hemvisten finns nu i strukturen. Testet har lyckats");
-		}
-		else 
-		{
-			System.out.println(" ");
-//			String FailedTest = "Hemvisten har inte lagts till i strukturen. Testet har misslyckats";
-//			System.out.println(FailedTest);
-			Assert.fail();
-		}
-
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån());
+		if (driver.getPageSource().contains(SvenskNamnPåEnhet)) {
+			
+		}else if (driver.getPageSource().contains(EngelsktNamnPåEnhet)) {
+			
+		}else {
+			Assert.fail(); }
 	}
-
 }
 
 

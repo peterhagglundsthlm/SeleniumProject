@@ -16,20 +16,18 @@ public class Hjalp extends BeforeAfterTestBrowsers {
 	public void TestCaseInfo() {
 
 		String TestCaseInfo = "Öppnar SAT startsidan och verfierar att knappen Hjälp fungerar som tänkt";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
-
 	}
 
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.cssSelector(SAT_Home_Page_Not_Logged_In.LoginButtonChrome)); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome()); 
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClickHjälp() {
-
-		SAT_Home_Page_Not_Logged_In.HjälpButton(driver).click();
+		
+		driver.findElement(SAT_Home_Page_Not_Logged_In.HjälpButton()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickHjälp"})
