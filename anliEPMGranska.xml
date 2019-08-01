@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="EPM granska anli" verbose="1" parallel="none">
+	<parameter name="browser" value="Chrome" />
+	<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+	<parameter name="Password" value="Vr1234"></parameter>
+	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
+	<parameter name="Language" value="svenska"></parameter>
+
+
+<!-- klistra in komplett URL för den aktuella beredningsgruppen och för sidan med granskningsuppgifter-->
+	<parameter name="bgURL" value="https://testaprismaepm.vr.se/EvaluationPanel/EthicalReviewSummary/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4"></parameter>
+	<parameter name="granskningURL" value="https://testaprismaepm.vr.se/EvaluationPanel/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4/ApplicationFormReview/EthicalReviewIndex/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4"></parameter>
+	
+	
+	<test name="Granskning och utlåtande">
+		
+		<!-- för att skicka in en hel ansökan är det anliEpmFormStandard som ska användas. -->
+		<classes>
+			<class name="generateApplicationEPM.EPMGranskaUtlåtande" />
+		</classes>
+	</test>
+</suite> 
