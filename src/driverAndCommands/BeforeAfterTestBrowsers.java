@@ -31,17 +31,15 @@ public class BeforeAfterTestBrowsers {
 		startTimeSuite = System.currentTimeMillis();
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle", "applicationType"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
 	@BeforeClass
 	public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
-			@Optional String Language, 
-			@Optional String projectTitle,
-			@Optional String applicationType) {
-
+			@Optional String Language) 
+	{
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			System.setProperty("webdriver.chrome.silentOutput", "true");

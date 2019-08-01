@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverGetWebsite;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
