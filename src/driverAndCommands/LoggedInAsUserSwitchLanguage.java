@@ -15,7 +15,7 @@ public class LoggedInAsUserSwitchLanguage {
 			driver.get(
 					"https://testaprisma.vr.se" + hrefEn);
 		}
-		else {Assert.fail();}
+		else {}
 		return null; 
 	}
 
@@ -29,7 +29,7 @@ public class LoggedInAsUserSwitchLanguage {
 			driver.get(
 					"https://testaprisma.vr.se" + hrefSWE);
 		} 
-		else {Assert.fail();}
+		else {}
 		return null;
 	}
 }

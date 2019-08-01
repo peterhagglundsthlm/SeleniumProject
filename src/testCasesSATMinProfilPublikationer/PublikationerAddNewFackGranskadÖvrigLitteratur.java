@@ -22,55 +22,32 @@ public class PublikationerAddNewFackGranskadÖvrigLitteratur extends BeforeAfterT
 	}
 
 	@Test
-	public void LoginVäljKlickaPublikation() {
-
-		GemensammaMetoder.LoggainPublikation(driver);
-	}
-
-	@Test (dependsOnMethods={"LoginVäljKlickaPublikation"})
 	public void DropDownÖvrigLitteratur() {
 
+		GemensammaMetoder.LoggainPublikation(driver);
 		GemensammaMetoder.PublikationFackgranskad(driver);
+		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
-		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
-
+		Select VetenskapligPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+ 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
-			Publikationstyp.selectByVisibleText("Övrig litteratur");
+			VetenskapligPublikation.selectByVisibleText("Övrig litteratur");
 		}
 		else if (driver.getPageSource().contains("Publications")) 
 		{
-			Publikationstyp.selectByVisibleText("Other literature");
+			VetenskapligPublikation.selectByVisibleText("Other literature");
 		}
 	}
 
 	@Test (dependsOnMethods={"DropDownÖvrigLitteratur"})
-	public void TitleAuthor() throws InterruptedException {
+	public void FackgranskÖvrLitteraturRestern() throws InterruptedException {
 
 		GemensammaMetoder.TitelOchFörfattare(driver);
-	}
-
-	@Test (dependsOnMethods={"TitleAuthor"})
-	public void Publisher() {
-
 		GemensammaMetoder.FörlagOchPlats(driver);
-	}
-
-	@Test (dependsOnMethods={"Publisher"})
-	public void InfoUtgivare() {
-		// ISBN och övrigt
 		GemensammaMetoder.ISBN_publikation(driver);
 		GemensammaMetoder.Utgivare(driver);
-	}
-
-	@Test (dependsOnMethods={"InfoUtgivare"})
-	public void InfoOpenAccess() {
-
 		GemensammaMetoder.OpenAccess(driver);
-	}
-
-	@Test (dependsOnMethods = {"InfoOpenAccess"})
-	public void Spara() {
 		GemensammaMetoder.Spara(driver);
 	}
 }

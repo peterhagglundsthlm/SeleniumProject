@@ -49,8 +49,5 @@ public class PublikationerAddNewINTEFackGranskadBok extends BeforeAfterTestBrows
 		GemensammaMetoder.Utgivare(driver);
 		GemensammaMetoder.OpenAccess(driver);
 		GemensammaMetoder.Spara(driver);
-		
-//		BidragTillBok.RestenAvEnBokBidrag(driver);
 	}
-
 }

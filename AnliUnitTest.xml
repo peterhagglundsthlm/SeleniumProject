@@ -11,7 +11,7 @@
 	<test name="Ett test">
 		<classes>
 			<class
-				name="testCasesSATMinProfilPublikationer.PublikationerAddNewINTEFackGranskadÖvrigLitteratur" />	
+				name="testCasesSATMinProfilPublikationer.PublikationerAddNewINTEFackGranskadÖvrigLitteratur"/>	
 		</classes>
 	</test>
 </suite> 
