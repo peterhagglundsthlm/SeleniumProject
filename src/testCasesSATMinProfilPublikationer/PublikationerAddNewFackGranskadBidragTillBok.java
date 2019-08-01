@@ -42,7 +42,7 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 
 	@Test (dependsOnMethods = {"DropDownBidragTillEnBok"})
 	public void BidragTillBokResten() throws InterruptedException {
-		BidragTillBok.RestenAvEnBok(driver);
+		BidragTillBok.RestenAvEnBokBidrag(driver);
 
 	}
 

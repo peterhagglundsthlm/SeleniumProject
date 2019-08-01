@@ -14,7 +14,7 @@ import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 public class BidragTillBok {
 	
-	public static void RestenAvEnBok(WebDriver driver) throws InterruptedException{ 
+	public static void RestenAvEnBokBidrag(WebDriver driver) throws InterruptedException{ 
 		
 		GemensammaMetoder.TitelOchFörfattare(driver);
 		GemensammaMetoder.Redaktör(driver);

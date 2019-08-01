@@ -99,6 +99,22 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		}
 	}
 
+
+	public static void Titel(WebDriver driver) {
+
+		String titel = "Testtitel Allmän";
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).getAttribute("value") != titel)
+		{
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
+		}
+	}
+	
+	
 	public static void Redaktör(WebDriver driver){
 
 		String EditorName = "Förnamn Efternamn";
@@ -136,6 +152,12 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		}
 	}
 
+	public static void Status (WebDriver driver) {
+
+		Select Status = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationStatus());
+		Status.selectByIndex(0);
+	}
+	
 	public static void Tidskrifter (WebDriver driver) {
 		// ersätter metoderna för namn, volym och utfärdandenummer
 		String Volym = "145";

@@ -42,8 +42,15 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 
 	@Test (dependsOnMethods = {"DropDownBidragTillEnBokIckeFackgranskad"})
 	public void BidragTillBokResten() throws InterruptedException {
-		BidragTillBok.RestenAvEnBok(driver);
-
+				
+		GemensammaMetoder.TitelOchFörfattare(driver);
+		GemensammaMetoder.Redaktör(driver);
+		GemensammaMetoder.FörlagOchPlats(driver);
+		GemensammaMetoder.Sidnummer(driver);
+		GemensammaMetoder.ISBN_publikation(driver);
+		GemensammaMetoder.Utgivare(driver);
+		GemensammaMetoder.OpenAccess(driver);
+		GemensammaMetoder.Spara(driver);
 	}
 
 //	

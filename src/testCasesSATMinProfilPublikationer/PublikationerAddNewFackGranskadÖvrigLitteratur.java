@@ -45,7 +45,7 @@ public class PublikationerAddNewFackGranskadÖvrigLitteratur extends BeforeAfterT
 	}
 
 	@Test (dependsOnMethods={"DropDownÖvrigLitteratur"})
-	public void TitleAuthor() {
+	public void TitleAuthor() throws InterruptedException {
 
 		GemensammaMetoder.TitelOchFörfattare(driver);
 	}

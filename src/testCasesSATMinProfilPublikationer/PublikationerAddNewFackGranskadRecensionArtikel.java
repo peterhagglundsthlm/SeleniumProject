@@ -116,7 +116,7 @@ public class PublikationerAddNewFackGranskadRecensionArtikel extends BeforeAfter
 	 */
 
 	@Test (dependsOnMethods={"DropDownRecensionArtikel"})
-	public void TitleAuthor() {
+	public void TitleAuthor() throws InterruptedException {
 
 		GemensammaMetoder.TitelOchFörfattare(driver);
 	}
