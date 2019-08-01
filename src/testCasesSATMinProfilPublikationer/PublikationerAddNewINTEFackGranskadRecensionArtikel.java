@@ -41,7 +41,7 @@ public class PublikationerAddNewINTEFackGranskadRecensionArtikel extends BeforeA
 	}
 
 	@Test (dependsOnMethods = {"DropDownRecensionArtikel"})
-	public void TidskriftResten() throws InterruptedException {
+	public void INTEfackgranskRecensionResten() throws InterruptedException {
 		
 		GemensammaMetoder.TitelOchFörfattare(driver);
 		GemensammaMetoder.Tidskrifter(driver);

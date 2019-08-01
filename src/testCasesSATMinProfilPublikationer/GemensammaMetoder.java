@@ -63,7 +63,6 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
 	}
 
-	// ersätter metoderna för klicka författare-knapp samt för- och efternamn
 	public static void TitelOchFörfattare(WebDriver driver) throws InterruptedException{
 		// ersätter metoderna för klicka författare-knapp samt för- och efternamn
 
@@ -99,7 +98,6 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		}
 	}
 
-
 	public static void Titel(WebDriver driver) {
 
 		String titel = "Testtitel Allmän";
@@ -113,8 +111,7 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
 		}
 	}
-	
-	
+		
 	public static void Redaktör(WebDriver driver){
 
 		String EditorName = "Förnamn Efternamn";

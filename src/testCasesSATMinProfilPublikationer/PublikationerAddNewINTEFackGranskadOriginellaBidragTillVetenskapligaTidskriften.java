@@ -41,7 +41,7 @@ public class PublikationerAddNewINTEFackGranskadOriginellaBidragTillVetenskaplig
 	}
 
 	@Test (dependsOnMethods = {"DropDownOriginellaBidragTillVetenskapligaTidskriften"})
-	public void TidskriftResten() throws InterruptedException {
+	public void INTEfackgrTidskriftResten() throws InterruptedException {
 		
 		GemensammaMetoder.TitelOchFörfattare(driver);
 		GemensammaMetoder.Tidskrifter(driver);

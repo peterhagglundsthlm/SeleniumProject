@@ -33,7 +33,6 @@ public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAf
 		}
 	}
 
-	
 	@Test (dependsOnMethods = {"DropDown÷vrigLitteratur"})
 	public void INTEfackgransk÷vrLittResten() throws InterruptedException {
 		
