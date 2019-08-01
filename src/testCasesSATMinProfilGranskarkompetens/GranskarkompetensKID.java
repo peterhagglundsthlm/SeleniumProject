@@ -22,19 +22,22 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test
 	public void LoginAsUser() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickGranskarkompetens() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Granskarkompetens()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Granskarkompetens()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickGranskarkompetens"})
 	public void Forskningsområde1() {
 		
-		Select Forskningsområde1 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde1());
+		Select Forskningsområde1 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde1());
 		Random randomOptionForskningsområde1 = new Random();  
 		int startOptionForskningsområde1 = 1;
 		int endOptionForskningsområde1 = Forskningsområde1.getOptions().size(); 
@@ -46,7 +49,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Forskningsområde1"})
 	public void Forskningsområde2() {
 		
-		Select Forskningsområde2 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde2());
+		Select Forskningsområde2 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde2());
 		Random randomOptionForskningsområde2 = new Random();  
 		int startOptionForskningsområde2 = 1;
 		int endOptionForskningsområde2 = Forskningsområde2.getOptions().size(); 
@@ -57,7 +61,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Forskningsområde2"})
 	public void Forskningsområde3() {
 
-		Select Forskningsområde3 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde3());
+		Select Forskningsområde3 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde3());
 		Random randomOptionForskningsområde3 = new Random();  
 		int startOptionForskningsområde3 = 1;
 		int endOptionForskningsområde3 = Forskningsområde3.getOptions().size(); 
@@ -68,7 +73,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Forskningsområde3"})
 	public void Forskningsområde4() {
 
-		Select Forskningsområde4 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde4());
+		Select Forskningsområde4 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde4());
 		Random randomOptionForskningsområde4 = new Random();  
 		int startOptionForskningsområde4 = 1;
 		int endOptionForskningsområde4 = Forskningsområde4.getOptions().size(); 
@@ -79,7 +85,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Forskningsområde4"})
 	public void Forskningsområde5() {
 
-		Select Forskningsområde5 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde5());
+		Select Forskningsområde5 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde5());
 		Random randomOptionForskningsområde5 = new Random();  
 		int startOptionForskningsområde5 = 1;
 		int endOptionForskningsområde5 = Forskningsområde5.getOptions().size(); 
@@ -90,7 +97,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Forskningsområde5"})
 	public void Metod1() {
 
-		Select Metod1 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod1());
+		Select Metod1 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod1());
 		Random randomOptionMetod1 = new Random();  
 		int startOptionMetod1 = 1;
 		int endOptionMetod1 = Metod1.getOptions().size(); 
@@ -101,7 +109,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Metod1"})
 	public void Metod2() {
 
-		Select Metod2 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod2());
+		Select Metod2 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod2());
 		Random randomOptionMetod2 = new Random();  
 		int startOptionMetod2 = 1;
 		int endOptionMetod2 = Metod2.getOptions().size(); 
@@ -112,7 +121,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Metod2"})
 	public void Metod3() {
 
-		Select Metod3 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod3());
+		Select Metod3 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod3());
 		Random randomOptionMetod3 = new Random();  
 		int startOptionMetod3 = 1;
 		int endOptionMetod3 = Metod3.getOptions().size(); 
@@ -123,7 +133,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Metod3"})
 	public void Metod4() {
 
-		Select Metod4 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod4());
+		Select Metod4 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod4());
 		Random randomOptionMetod4 = new Random();  
 		int startOptionMetod4 = 1;
 		int endOptionMetod4 = Metod4.getOptions().size(); 
@@ -134,7 +145,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Metod4"})
 	public void Metod5() {
 
-		Select Metod5 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod5());
+		Select Metod5 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod5());
 		Random randomOptionMetod5 = new Random();  
 		int startOptionMetod5 = 1;
 		int endOptionMetod5 = Metod5.getOptions().size(); 
@@ -145,7 +157,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Metod5"})
 	public void Nyckelord1() {
 
-		Select Nyckelord1 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord1());
+		Select Nyckelord1 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord1());
 		Random randomOptionNyckelord1 = new Random();  
 		int startOptionNyckelord1 = 1;
 		int endOptionNyckelord1 = Nyckelord1.getOptions().size(); 
@@ -156,7 +169,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Nyckelord1"})
 	public void Nyckelord2() {
 
-		Select Nyckelord2 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord2());
+		Select Nyckelord2 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord2());
 		Random randomOptionNyckelord2 = new Random();  
 		int startOptionNyckelord2 = 1;
 		int endOptionNyckelord2 = Nyckelord2.getOptions().size(); 
@@ -167,7 +181,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Nyckelord2"})
 	public void Nyckelord3() {
 
-		Select Nyckelord3 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord3());
+		Select Nyckelord3 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord3());
 		Random randomOptionNyckelord3 = new Random();  
 		int startOptionNyckelord3 = 1;
 		int endOptionNyckelord3 = Nyckelord3.getOptions().size(); 
@@ -178,7 +193,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Nyckelord3"})
 	public void Nyckelord4() {
 
-		Select Nyckelord4 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord4());
+		Select Nyckelord4 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord4());
 		Random randomOptionNyckelord4 = new Random();  
 		int startOptionNyckelord4 = 1;
 		int endOptionNyckelord4 = Nyckelord4.getOptions().size(); 
@@ -189,7 +205,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Nyckelord4"})
 	public void Nyckelord5() {
 
-		Select Nyckelord5 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord5());
+		Select Nyckelord5 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord5());
 		Random randomOptionNyckelord5 = new Random();  
 		int startOptionNyckelord5 = 1;
 		int endOptionNyckelord5 = Nyckelord5.getOptions().size(); 
@@ -200,13 +217,15 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"Nyckelord5"})
 	public void Spara() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDSpara()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDSpara()).click();
 	}
 
 	@Test (dependsOnMethods={"Spara"})
 	public void ConfirmSave() {
 
-		driver.switchTo().alert().accept();
+		driver.switchTo(
+				).alert().accept();
 	}
 
 

@@ -30,6 +30,7 @@ public class LoginLogic {
 
 		} 
 		driver.findElement(SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword()).click();
+		
 		return null;
 	}
 
@@ -37,15 +38,23 @@ public class LoginLogic {
 	//DENNA ANVÄNDER JAVASCRIPT FÖR ATT DIREKT FYLLA I ANVÄNDARNAMN OCH LÖSENORD. DET GÅR SNABBARE ÄN ATT KÖRA SENDKEYS.
 	public static WebElement InputUserNameAndPassWordUsingJavaScript (WebDriver driver, String AnyUsername, String AnyPassword){
 
-		driver.findElement(SAT_Home_Page_Not_Logged_In.LoginButtonChrome()).click();
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.EnterUserName());
-		driver.findElement(SAT_Home_Page_Not_Logged_In.EnterUserName()).click();
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.LoginButtonChrome()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(
+				driver, SAT_Home_Page_Not_Logged_In.EnterUserName());
+		
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.EnterUserName()).click();
+		
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
+				driver.findElement(SAT_Home_Page_Not_Logged_In.EnterUserName()), AnyUsername);
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
+				driver.findElement(SAT_Home_Page_Not_Logged_In.EnterPassword()), AnyPassword);
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(SAT_Home_Page_Not_Logged_In.EnterUserName()), AnyUsername);
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(SAT_Home_Page_Not_Logged_In.EnterPassword()), AnyPassword);
-
-		driver.findElement(SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword()).click();
-
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.SubmitUserNameAndPassword()).click();
+		
 		return null;
 	}
 }
