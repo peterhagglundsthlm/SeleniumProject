@@ -155,8 +155,8 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-		EndDriver.DriverQuit(driver);	
-		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest);
+//		EndDriver.DriverQuit(driver);	
+//		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest);
 	}
 
 	@AfterSuite

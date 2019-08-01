@@ -66,7 +66,7 @@ public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestB
 	}
 
 	@Test (dependsOnMethods={"DropDownProceedings"})
-	public void TitleAuthor() {
+	public void TitleAuthor() throws InterruptedException {
 
 		GemensammaMetoder.TitelOchFörfattare(driver);
 	}

@@ -8,19 +8,22 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
 public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAfterTestBrowsers {
-	
+
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad RedaktörerAntologi";
 		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
 	}
 
-
+	//	@Test
+	/*LoginAsUser, ClickPublikationer, LäggTillPublikationer
+	 * 
 	@Test
 	public void LoginAsUser() {
 
@@ -38,28 +41,27 @@ public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAft
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
 	}
+	 */
+	
+	@Test
+	public void LoginVäljKlickaPublikation() {
 
-	@Test (dependsOnMethods={"LäggTillPublikationer"})
-	public void VäljPublikationsTyp() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
-		
-		if (driver.getPageSource().contains("Publikationer"))
-		{
-			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
-		}
-		else if (driver.getPageSource().contains("Publications")) 
-		{
-			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
-		}
+		GemensammaMetoder.LoggainPublikation(driver);
 	}
 
-	@Test (dependsOnMethods={"VäljPublikationsTyp"})
+	//	@Test (dependsOnMethods={"LoginVäljKlickaPublikation"})
+	//	public void VäljPublikationsTyp() {
+	//
+	//		GemensammaMetoder.PublikationFackgranskad(driver);
+	//	}
+
+	@Test (dependsOnMethods={"LoginVäljKlickaPublikation"})
 	public void DropDownRedaktörerAntologi() {
+
+		GemensammaMetoder.PublikationFackgranskad(driver);
 		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown)));
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+		Select Publikationstyp = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
@@ -74,33 +76,30 @@ public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAft
 	@Test (dependsOnMethods={"DropDownRedaktörerAntologi"})
 	public void RedaktörerAntologiTitel() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys("TestTitel123");
+		String titel = "Testtitel Antologi";
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel());
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
+
+		if (driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).getAttribute("value") != titel)
+		{
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).clear();
+			driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel()).sendKeys(titel);
+		}
 	}
-
-
 
 	@Test (dependsOnMethods={"RedaktörerAntologiTitel"})
-	public void RedaktörerAntologiRedaktörKnapp() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp(driver).click();
-	}
-
-
-
-	@Test (dependsOnMethods={"RedaktörerAntologiRedaktörKnapp"})
 	public void RedaktörerAntologiRedaktörNamn() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn(driver).sendKeys("NamnTest");
+		GemensammaMetoder.Redaktör(driver);
 	}
 
-	@Test (dependsOnMethods={"RedaktörerAntologiRedaktörNamn"})
-	public void RedaktörerAntologiFörlag() {
+	//	@Test (dependsOnMethods={"RedaktörerAntologiRedaktörNamn"})
+	/*Förlag och förlagsplats
+	 * public void RedaktörerAntologiFörlag() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).sendKeys("TestFörlag");
 	}
-
 
 	@Test (dependsOnMethods={"RedaktörerAntologiFörlag"})
 	public void RedaktörerAntologiFörlagsplats() {
@@ -108,14 +107,16 @@ public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAft
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).sendKeys("Förlagsplats");
 	}
+	 */
 
-	@Test (dependsOnMethods={"RedaktörerAntologiFörlagsplats"})
-	public void RedaktörerAntologiISBN() {
+	@Test (dependsOnMethods={"RedaktörerAntologiRedaktörNamn"})
+	public void Publisher() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationISBN(driver).sendKeys("1234567");
+		GemensammaMetoder.FörlagOchPlats(driver);
 	}
 
-	@Test (dependsOnMethods={"RedaktörerAntologiISBN"})
+	//	@Test (dependsOnMethods={"RedaktörerAntologiISBN"})
+	/* DOI, Status, KällaPub, KällaID
 	public void RedaktörerAntologiDOI() {
 
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys("123456");
@@ -145,8 +146,19 @@ public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAft
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys("1234");
 	}
 
-	@Test (dependsOnMethods={"RedaktörerAntologiKällaID"})
-	public void RedaktörerAntologiVarTextenPubliceradIOpenAcessJa() {
+	 * 
+	 */
+
+	@Test (dependsOnMethods={"Publisher"})
+	public void InfoUtgivare() {
+		// ISBN och övrigt
+		GemensammaMetoder.ISBN_publikation(driver);
+		GemensammaMetoder.Utgivare(driver);
+	}
+
+	//	@Test (dependsOnMethods={"RedaktörerAntologiKällaID"})
+	/* Publicerad open access JA, Extern länk för publicering, Form av OA, Dokumentversion och OASammanfattning
+	 * public void RedaktörerAntologiVarTextenPubliceradIOpenAcessJa() {
 
 		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
 		TextenPubliceradIOpenAcess.selectByIndex(1);
@@ -187,17 +199,28 @@ public class PublikationerAddNewFackGranskadRedaktörerAntologi extends BeforeAft
 		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys("Jag skriver en riktigt bra sammanfattning");
 	}
 
-	@Test (dependsOnMethods={"RedaktörerAntologiOpenAcessSammanfattning"})
-	public void RedaktörerAntologiSpara() {
+	 */
 
-		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
-		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
+	@Test (dependsOnMethods={"InfoUtgivare"})
+	public void InfoOpenAccess() {
 
-
+		GemensammaMetoder.OpenAccess(driver);
 	}
+
+	@Test (dependsOnMethods = {"InfoOpenAccess"})
+	public void Spara() {
+		GemensammaMetoder.Spara(driver);
+	}
+	//	@Test (dependsOnMethods={"RedaktörerAntologiOpenAcessSammanfattning"})
+	//	public void RedaktörerAntologiSpara() {
+	//
+	//		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
+	//
+	//		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
+	//		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
+	//		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
+
+
 }
 
 
