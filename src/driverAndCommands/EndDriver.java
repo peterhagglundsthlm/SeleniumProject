@@ -10,10 +10,10 @@ public class EndDriver {
 		driver.quit();
 		return null;
 	}
+
 	public static WebElement DriverClose(WebDriver driver){
 
 		driver.close();
 		return null;
-	}
-
+	} 
 }

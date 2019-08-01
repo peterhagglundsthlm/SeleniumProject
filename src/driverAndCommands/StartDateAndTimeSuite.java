@@ -10,7 +10,7 @@ public class StartDateAndTimeSuite {
 
 	public static WebElement StartDateAndTimeSuitePrint() {
 
-		DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
 		System.out.println("Testsuiten startade " + dateFormat.format(date));
 		return null;
