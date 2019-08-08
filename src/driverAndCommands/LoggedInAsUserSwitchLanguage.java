@@ -13,7 +13,7 @@ public class LoggedInAsUserSwitchLanguage {
 			driver.get(
 					"https://testaprisma.vr.se/Localization/SelectLanguage?languageName=EN&returnUrl=%2F");
 		}
-		
+
 		return null; 
 	}
 
@@ -24,7 +24,7 @@ public class LoggedInAsUserSwitchLanguage {
 			driver.get(
 					"https://testaprisma.vr.se/Localization/SelectLanguage?languageName=SV&returnUrl=%2F");
 		} 
-		
+
 		return null;
 	}
 }

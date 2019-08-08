@@ -38,17 +38,15 @@ public class BeforeAfterTestBrowsers {
 		WebDriverManager.firefoxdriver();
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language", "projectTitle", "applicationType"})
+	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
 	@BeforeClass
 	public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
-			@Optional String Language, 
-			@Optional String projectTitle,
-			@Optional String applicationType) {
-
+			@Optional String Language) 
+	{
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -166,10 +164,12 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
+
 		
 		String testCaseName = this.getClass().getSimpleName();
 		EndDriver.DriverQuit(driver);	
 		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
+
 	}
 
 	@AfterSuite

@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
 
@@ -21,213 +22,37 @@ public class PublikationerAddNewINTEFackGranskadBidragTillBok extends BeforeAfte
 	}
 	
 	@Test
-	public void LoginAsUser() {
+	public void DropDownBidragTillEnBokIckeFackgranskad() {
 
-		PortalLoggedInAsUserMinProfil.MinProfil(driver).click();
-	}
+		GemensammaMetoder.LoggainPublikation(driver);
+		GemensammaMetoder.PublikationIckeFackgranskad(driver);
 
-	@Test (dependsOnMethods={"LoginAsUser"})
-	public void ClickPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer(driver).click();
-	}
-
-	@Test (dependsOnMethods={"ClickPublikationer"})
-	public void LäggTillPublikationer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_LäggTill(driver).click();
-	}
-
-	@Test (dependsOnMethods={"LäggTillPublikationer"})
-	public void VäljPublikationsTyp() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp)));
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
+		Select VetenskapligPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
-			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - inte fackgranskade");
+			VetenskapligPublikation.selectByVisibleText("Bidrag till en bok");
 		}
 		else if (driver.getPageSource().contains("Publications")) 
 		{
-			Publikationstyp.selectByVisibleText("Scientific publication - not peer-reviewed");
+			VetenskapligPublikation.selectByVisibleText("Contribution to a book");
 		}
-		
 	}
 
-	@Test (dependsOnMethods={"VäljPublikationsTyp"})
-	public void DropDownBidragTillEnBok() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown));
-		Select Publikationstyp = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown)));
-
-		if (driver.getPageSource().contains("Publikationer"))
-		{
-			Publikationstyp.selectByVisibleText("Bidrag till en bok");
-		}
-		else if (driver.getPageSource().contains("Publications")) 
-		{
-			Publikationstyp.selectByVisibleText("Contribution to a book");
-		}
-		
+	@Test (dependsOnMethods = {"DropDownBidragTillEnBokIckeFackgranskad"})
+	public void BidragTillBokResten() throws InterruptedException {
+				
+		GemensammaMetoder.TitelOchFörfattare(driver);
+		GemensammaMetoder.Redaktör(driver);
+		GemensammaMetoder.FörlagOchPlats(driver);
+		GemensammaMetoder.Sidnummer(driver);
+		GemensammaMetoder.ISBN_publikation(driver);
+		GemensammaMetoder.Utgivare(driver);
+		GemensammaMetoder.OpenAccess(driver);
+		GemensammaMetoder.Spara(driver);
 	}
 
-	@Test (dependsOnMethods={"DropDownBidragTillEnBok"})
-	public void BidragTillEnBokTitel() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationTitel(driver).sendKeys("TestTitel123");
-		
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokTitel"})
-	public void BidragTillEnBokFörfattareKnapp() {
-
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareKnapp(driver).click();
-
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokFörfattareKnapp"})
-	public void BidragTillEnBokFörfattareFörnamn() {
-
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareFörNamn(driver).sendKeys("Förnamn");	
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokFörfattareFörnamn"})
-	public void BidragTillEnBokFörfattareEfternamn() {
-
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörfattareEfterNamn(driver).sendKeys("Efternamn");
-		
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokFörfattareEfternamn"})
-	public void BidragTillEnBokRedaktörKnapp() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörKnapp(driver).click();
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokRedaktörKnapp"})
-	public void BidragTillEnBokRedaktörNamn() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationRedaktörNamn(driver).sendKeys("NamnTest");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokRedaktörNamn"})
-	public void BidragTillEnBokUtgivareFörlag() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlag(driver).sendKeys("TestFörlag");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareFörlag"})
-	public void BidragTillEnBokUtgivareFörlagsplats() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörlagsplats(driver).sendKeys("FörlagsaplatsTest");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareFörlagsplats"})
-	public void BidragTillEnBokUtgivareFörstaSidnummer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFörstaSidnummer(driver).sendKeys("1");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareFörstaSidnummer"})
-	public void BidragTillEnBokUtgivareSistaSidnummer() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSistaSidnummer(driver).sendKeys("99");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareSistaSidnummer"})
-	public void BidragTillEnBokUtgivareISBN() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationISBN(driver).sendKeys("1234567");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareISBN"})
-	public void BidragTillEnBokUtgivareDOI() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDOI(driver).sendKeys("1234567");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareDOI"})
-	public void BidragTillEnBokUtgivareStatus() {
-
-		Select Status = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationStatus)));
-		Status.selectByIndex(0);
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareStatus"})
-	public void BidragTillEnBokUtgivareKällaFörPublikation() {
-
-		Select KällaFörPublikation = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation)));
-		Random randomOption = new Random();  
-		int startOption = 0;
-		int endOption = KällaFörPublikation.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		KällaFörPublikation.selectByIndex(number);
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareKällaFörPublikation"})
-	public void BidragTillEnBokUtgivareKällaID() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID(driver).sendKeys("1234");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareKällaID"})
-	public void BidragTillEnBokVarTextenPubliceradIOpenAcessJa() {
-
-		Select TextenPubliceradIOpenAcess = new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationVarTextenPubliceradIOpenAccessDropdown)));
-		TextenPubliceradIOpenAcess.selectByIndex(1);
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokVarTextenPubliceradIOpenAcessJa"})
-	public void BidragTillEnBokOpenAccessLänkExternLänkFörPublicering() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering));
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationLänkExternLänkFörPublicering(driver).sendKeys("Testlänk");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokOpenAccessLänkExternLänkFörPublicering"})
-	public void BidragTillEnBokOpenAccessFormAvOA() {
-
-		Select FormAvOA= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFormAvOA)));
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = FormAvOA.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		FormAvOA.selectByIndex(number);
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokOpenAccessFormAvOA"})
-	public void BidragTillEnBokOpenAccessDokumentVersion() {
-
-		Select DokumentVersion= new Select (driver.findElement(By.id(PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDokumentversion)));
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = DokumentVersion.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		DokumentVersion.selectByIndex(number);
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokOpenAccessDokumentVersion"})
-	public void BidragTillEnBokOpenAcessSammanfattning() {
-
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning(driver).sendKeys("Jag skriver en riktigt bra sammanfattning");
-	}
-
-	@Test (dependsOnMethods={"BidragTillEnBokOpenAcessSammanfattning"})
-	public void BidragTillEnBokSpara() {
-
-		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
-		PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSpara(driver).click();
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
-		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
-	}
 }
 
 

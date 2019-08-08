@@ -31,20 +31,6 @@ public class EPM_applicationTestData {
 			+ Keys.ENTER + "En detaljerad guide för att installera Eclipse och Selenium finns på: www.guru99.com/installing-selenium-webdriver.html"
 			+ Keys.ENTER + Keys.ENTER + "Nu är texten slut."; 
 	
-	/*public static WebElement InmatningTextJavascript (WebDriver driver){
-
-		WebDriverWait wait3a = new WebDriverWait(driver, 10);
-		wait3a.until(ExpectedConditions.elementToBeClickable(By.xpath(("//*[@id=\"tinymce\"]"))));
-
-		driver.switchTo().frame(0);
-		((JavascriptExecutor) driver).executeScript	
-		("arguments[0].setAttribute('value', arguments[1])",driver.findElement(By.xpath(("//*[@id=\"tinymce\"]"))), "Test.");
-
-		System.out.println("Text med javascript - check.");
-		return null;
-	}
-	*/	
-
 	// Byta teckensnitt och storlek
 	public static void BytaTeckensnittOchStorlek (WebDriver driver){
 
