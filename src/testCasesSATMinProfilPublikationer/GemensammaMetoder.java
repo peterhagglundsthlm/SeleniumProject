@@ -217,7 +217,6 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		}
 	}
 
-	@Test (dependsOnMethods={"BidragTillEnBokUtgivareISBN"})
 	public static void Utgivare(WebDriver driver) {
 		// ersätter DOI, Status, Källa för publikation, KällaID
 
