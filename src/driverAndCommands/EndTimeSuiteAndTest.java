@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
 
 public class EndTimeSuiteAndTest {
 
@@ -27,8 +28,8 @@ public class EndTimeSuiteAndTest {
 		return null;
 	}
 
-	public static WebElement EndTimeTest(double durationTest, double startTimeTest) {
-
+	public static void EndTimeTest(double durationTest, double startTimeTest, String testCaseName) {
+		
 		durationTest = System.currentTimeMillis() - startTimeTest;
 		double inputSekunder = durationTest/1000;
 		double inputminuter = inputSekunder/60;
@@ -43,8 +44,8 @@ public class EndTimeSuiteAndTest {
 		double sekunder = sekund.doubleValue();
 		
 		System.out.println
-		("Detta testfall tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
+		("Testfallet " + testCaseName + " tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
 
-		return null;
+		
 	}
 }

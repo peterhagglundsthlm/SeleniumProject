@@ -1,18 +1,11 @@
 package Utility;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.LoginLogic;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
 public class RemoveUtbildningar extends BeforeAfterTestBrowsers {
 	

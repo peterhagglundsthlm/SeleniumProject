@@ -6,12 +6,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -21,6 +24,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BeforeAfterTestBrowsers {
 
 	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
@@ -29,6 +34,8 @@ public class BeforeAfterTestBrowsers {
 	public void CheckTimeBeforeSuite() {
 		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
 		startTimeSuite = System.currentTimeMillis();
+		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver();
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
@@ -51,6 +58,8 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+					By.cssSelector("body > div.page-container > div.container > div.row.header-row > header > ul > li.mainMenuMyProfile.active > a"));
 
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
@@ -132,7 +141,9 @@ public class BeforeAfterTestBrowsers {
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
 		}
-		 */
+		
+		*/
+		 
 	}
 
 	@AfterMethod
@@ -153,8 +164,12 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterClass
 	public void tearDown() throws Exception { 
-//		EndDriver.DriverQuit(driver);	
-//		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest);
+
+		
+		String testCaseName = this.getClass().getSimpleName();
+		EndDriver.DriverQuit(driver);	
+		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
+
 	}
 
 	@AfterSuite
