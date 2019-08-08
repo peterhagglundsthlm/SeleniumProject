@@ -8,28 +8,23 @@ public class LoggedInAsUserSwitchLanguage {
 
 	public static WebElement SwitchLanguageToEnglishLoggedInPage(WebDriver driver) {
 
-		if (driver.getPageSource().contains("Min profil"))
+		if (driver.getPageSource().contains("Min Profil"))
 		{
-			String hrefEn = 
-					"/Localization/SelectLanguage?languageName=EN&returnUrl=%2F";
 			driver.get(
-					"https://testaprisma.vr.se" + hrefEn);
+					"https://testaprisma.vr.se/Localization/SelectLanguage?languageName=EN&returnUrl=%2F");
 		}
-		else {Assert.fail();}
+		
 		return null; 
 	}
 
 	public static WebElement SwitchLanguageToSwedishLoggedInPage(WebDriver driver) {
 
-
-		if (driver.getPageSource().contains("My profile"))
+		if (driver.getPageSource().contains("My Profile"))
 		{
-			String hrefSWE = 
-					"/Localization/SelectLanguage?languageName=SV&returnUrl=%2F";
 			driver.get(
-					"https://testaprisma.vr.se" + hrefSWE);
+					"https://testaprisma.vr.se/Localization/SelectLanguage?languageName=SV&returnUrl=%2F");
 		} 
-		else {Assert.fail();}
+		
 		return null;
 	}
 }

@@ -8,12 +8,13 @@ import org.testng.collections.Lists;
 
 public class TestNGXMLTest {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
 		List<String> suites = Lists.newArrayList();
-		suites.add("C:\\Users\\krkl\\Desktop\\RunnableJarTest.xml");
+		suites.add("C:\\RunnableJarTest.xml");
 		testng.setTestSuites(suites);
 		testng.run();
 	}
