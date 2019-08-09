@@ -22,8 +22,8 @@ public class EndTimeSuiteAndTest {
 		double sekunder = sekund.doubleValue();
 		double minuter = minut.doubleValue();
 
-		System.out.println 
-		("Denna testsuite tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
+		System.out.println();
+		System.out.println ("Denna testsuite tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
 
 		return null;
 	}
@@ -43,8 +43,7 @@ public class EndTimeSuiteAndTest {
 		double minuter = minut.doubleValue();
 		double sekunder = sekund.doubleValue();
 		
-		System.out.println
-		("Testfallet " + testCaseName + " tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
+		System.out.println("Testfallet " + testCaseName + " tog " + sekunder + " sekunder att genomföra vilket motsvarar ca " + minuter + " minuter");
 
 		
 	}
