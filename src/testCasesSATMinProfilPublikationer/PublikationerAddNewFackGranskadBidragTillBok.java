@@ -1,25 +1,15 @@
 package testCasesSATMinProfilPublikationer;
 
-import java.util.Random;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-
 public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTestBrowsers {
 
-	@BeforeClass
-	public void TestCaseInfo() {
-
-		String TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad Bidrag till Bok";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
-	}
+	//TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad Bidrag till Bok";
 
 	@Test
 	public void DropDownBidragTillEnBok() {
@@ -27,8 +17,11 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 		GemensammaMetoder.LoggainPublikation(driver);
 		GemensammaMetoder.PublikationFackgranskad(driver);
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
-		Select VetenskapligPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
+
+		Select VetenskapligPublikation = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFackgranskadeDropDown());
 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
@@ -42,7 +35,7 @@ public class PublikationerAddNewFackGranskadBidragTillBok extends BeforeAfterTes
 
 	@Test (dependsOnMethods = {"DropDownBidragTillEnBok"})
 	public void FackgranskadBidragTillBokResten() throws InterruptedException {
-		
+
 		GemensammaMetoder.TitelOchFörfattare(driver);
 		GemensammaMetoder.Redaktör(driver);
 		GemensammaMetoder.FörlagOchPlats(driver);

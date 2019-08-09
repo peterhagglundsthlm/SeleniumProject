@@ -33,6 +33,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
+		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 	}
@@ -51,14 +52,17 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(universitet);
+		
 		Thread.sleep(500);
 		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.DOWN);
+		
 		Thread.sleep(500);
 		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.ENTER);
+		
 		Thread.sleep(500);
 
 		if (driver.getPageSource().contains("Anställningar"))
