@@ -20,7 +20,7 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 				"Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land utanför Europa (Chile)";
 	}
 
-	@Test (dependsOnMethods={"LoginAsUser"})
+	@Test
 	public void ClickGranskningsfliken() {
 
 		driver.findElement(

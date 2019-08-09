@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,7 +13,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -33,6 +31,7 @@ public class BeforeAfterTestBrowsers {
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
 		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
+		System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "WARN");
 		startTimeSuite = System.currentTimeMillis();
 		WebDriverManager.chromedriver().setup();
 		WebDriverManager.firefoxdriver();
@@ -165,7 +164,6 @@ public class BeforeAfterTestBrowsers {
 	@AfterClass
 	public void tearDown() throws Exception { 
 
-		
 		String testCaseName = this.getClass().getSimpleName();
 		EndDriver.DriverQuit(driver);	
 		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
@@ -174,6 +172,7 @@ public class BeforeAfterTestBrowsers {
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
+		
 		EndTimeSuiteAndTest.EndTimeSuite(duration, startTimeSuite);
 	}
 }
