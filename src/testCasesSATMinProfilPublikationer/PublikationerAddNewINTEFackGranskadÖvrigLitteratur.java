@@ -1,28 +1,28 @@
 package testCasesSATMinProfilPublikationer;
 
-import java.util.Random;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-
 public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAfterTestBrowsers {
-	
+
+	//TestCaseInfo = "Loggar in som en projektledare och l‰gger till en INTE fackgranskad ÷vrig Litteratur";
+
 	@Test 
 	public void DropDown÷vrigLitteratur() {
 
 		GemensammaMetoder.LoggainPublikation(driver);
 		GemensammaMetoder.PublikationIckeFackgranskad(driver);
-		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
-		Select VetenskapligPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
- 
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
+
+		Select VetenskapligPublikation = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
+
 		if (driver.getPageSource().contains("Publikationer"))
 		{
 			VetenskapligPublikation.selectByVisibleText("÷vrig litteratur");
@@ -35,7 +35,7 @@ public class PublikationerAddNewINTEFackGranskad÷vrigLitteratur extends BeforeAf
 
 	@Test (dependsOnMethods = {"DropDown÷vrigLitteratur"})
 	public void INTEfackgransk÷vrLittResten() throws InterruptedException {
-		
+
 		GemensammaMetoder.TitelOchFˆrfattare(driver);
 		GemensammaMetoder.FˆrlagOchPlats(driver);
 		GemensammaMetoder.ISBN_publikation(driver);
