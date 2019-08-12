@@ -35,8 +35,6 @@ public class EPM_granskningElements {
 		return element;
 	}
 
-
-
 	// BYTA FLIK TILL GRANSKNINGSFORMULÄR
 	public static WebElement ChangeTabGranskning (WebDriver driver) throws AWTException, InterruptedException, IOException {
 
