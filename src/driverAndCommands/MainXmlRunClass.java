@@ -8,7 +8,7 @@ import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.collections.Lists;
 
-public class TestNGXMLTest {
+public class MainXmlRunClass {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {

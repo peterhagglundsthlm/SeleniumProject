@@ -4,7 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsAdminLoggaUt;
+import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 import pageElementsSAT.PortalLoggedInAsAdminFinansiär;
 import pageElementsSAT.PortalLoggedInAsAdminFormulär;
@@ -376,7 +376,7 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		//LOGGAR UT
 		driver.findElement(
-				PortalLoggedInAsAdminLoggaUt.LoggaUt()).click();
+				PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton()).click();
 	}
 }
 
