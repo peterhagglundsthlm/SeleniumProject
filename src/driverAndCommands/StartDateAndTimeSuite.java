@@ -12,7 +12,9 @@ public class StartDateAndTimeSuite {
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
+		System.out.println();
 		System.out.println("Testsuiten startade " + dateFormat.format(date));
+		System.out.println();
 		return null;
 	}
 }

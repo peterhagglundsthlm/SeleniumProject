@@ -1,34 +1,27 @@
 package testCasesSATMinProfilPublikationer;
 
-import java.util.Random;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-
 public class PublikationerAddNewINTEFackGranskadOriginellaBidragTillVetenskapligaTidskriften extends BeforeAfterTestBrowsers {
-	
-	@BeforeClass
-	public void TestCaseInfo() {
-		
-		String TestCaseInfo = "Loggar in som en projektledare och lägger till en INTE fackgranskad Originella bidrag till vetenskapliga tidskriften";
-		System.out.println("Beskrivning av testfall: " + TestCaseInfo);	
-	}
-	
+
+	//TestCaseInfo =  "Loggar in som en projektledare och lägger till en INTE fackgranskad Originella bidrag till vetenskapliga tidskriften";
+
 	@Test
 	public void DropDownOriginellaBidragTillVetenskapligaTidskriften() {
-		
+
 		GemensammaMetoder.LoggainPublikation(driver);
 		GemensammaMetoder.PublikationIckeFackgranskad(driver);
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
-		Select VetenskapligPublikation = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
+
+		Select VetenskapligPublikation = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationINTEFackgranskadeDropDown());
 
 		if (driver.getPageSource().contains("Publikationer"))
 		{
@@ -42,7 +35,7 @@ public class PublikationerAddNewINTEFackGranskadOriginellaBidragTillVetenskaplig
 
 	@Test (dependsOnMethods = {"DropDownOriginellaBidragTillVetenskapligaTidskriften"})
 	public void INTEfackgrTidskriftResten() throws InterruptedException {
-		
+
 		GemensammaMetoder.TitelOchFörfattare(driver);
 		GemensammaMetoder.Tidskrifter(driver);
 		GemensammaMetoder.Sidnummer(driver);

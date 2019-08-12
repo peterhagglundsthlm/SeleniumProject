@@ -19,7 +19,7 @@
 		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSATMinProfilUtbildning" />
+			<package name="testCasesSATMinProfilPublikationer" />
 		</packages>
 	</test>
 </suite> 

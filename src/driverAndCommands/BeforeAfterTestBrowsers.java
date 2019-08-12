@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
+import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
+import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
+
 public class BeforeAfterTestBrowsers {
 
 	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
@@ -28,7 +34,10 @@ public class BeforeAfterTestBrowsers {
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
 		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
+		System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "WARN");
 		startTimeSuite = System.currentTimeMillis();
+		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver();
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
@@ -51,7 +60,9 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(
+					driver, PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
+			
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
@@ -108,31 +119,31 @@ public class BeforeAfterTestBrowsers {
 			LoginLogic.InputUntilUsernameAndPasswordIsFilled(driver, Username, Password);
 
 		}
+		
+		*/
 
 		if (browser.equalsIgnoreCase("Headless")) {
-
-			//System.out.println("\u001b[1;31mTestfallet inleds nu\u001b[0m");
+			
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized", "--headless");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
-			//GetCurrentUrl.GetUrlAndPrintInConsole(driver, "This test case is performed on the following URL ");
-			//SAT_Home_Page_Not_Logged_In.LoginButtonChrome(driver).click();
-			//DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.id(SAT_Home_Page_Not_Logged_In.EnterUserName));
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-
-		//	DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, By.cssSelector(PortalLoggedInAsUserLoggaUt.LoggaUt));
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(
+					driver, PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
 
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
+			
 		}
-		 */
+		 
 	}
 
 	@AfterMethod
@@ -152,13 +163,17 @@ public class BeforeAfterTestBrowsers {
 			catch(Exception e) { } } }
 
 	@AfterClass
-	public void tearDown() throws Exception { 
-//		EndDriver.DriverQuit(driver);	
-//		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest);
+	public void tearDown() { 
+
+		String testCaseName = this.getClass().getSimpleName();
+		driver.quit();
+		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
+
 	}
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
+		
 		EndTimeSuiteAndTest.EndTimeSuite(duration, startTimeSuite);
 	}
 }
