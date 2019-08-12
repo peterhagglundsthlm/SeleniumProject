@@ -32,7 +32,7 @@
 		
 		<!-- för att skicka in en hel ansökan är det anliEpmFormStandard som ska användas. -->
 		<classes>
-			<class name="generateApplicationEPM.anliEpmFormCreateApplication" />
+			<class name="generateApplicationEPM.EPMGranskaUtlåtande" />
 		</classes>
 	</test>
 </suite> 

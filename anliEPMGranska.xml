@@ -13,6 +13,7 @@
 <!-- klistra in komplett URL för den aktuella beredningsgruppen och för sidan med granskningsuppgifter-->
 	<parameter name="bgURL" value="https://testaprismaepm.vr.se/EvaluationPanel/EthicalReviewSummary/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4"></parameter>
 	<parameter name="granskningURL" value="https://testaprismaepm.vr.se/EvaluationPanel/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4/ApplicationFormReview/EthicalReviewIndex/86e88a6a-3f9b-4bf7-9431-aa8b00e01fe4"></parameter>
+	<parameter name="date" value="190812"></parameter>
 	
 	
 	<test name="Granskning och utlåtande">
