@@ -24,7 +24,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test
 	public void ClickMyProfileButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER MIN PROFIL
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton()).click();
 
@@ -40,7 +39,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickMyProfileButton"})
 	public void ClickIntressentregisterButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER INTRESSENTREGISTER
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton()).click();
 		
@@ -64,7 +62,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickIntressentregisterButton"})
 	public void ClickBeredningsgrupperButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER BEREDNINGSGRUPPER
 		driver.findElement(
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton()).click();
 		
@@ -87,7 +84,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickFormulärButton"})
 	public void FormulärKarolinskaInstitutet() {
 
-		//KAROLINSKA
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutet());
 		
@@ -114,7 +110,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärKarolinskaInstitutet"})
 	public void FormulärFormas() {
 
-		//FORMAS
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Formas()).click();
 		
@@ -138,7 +133,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärFormas"})
 	public void FormulärVetenskapsrådet() {
 
-		//VETENSKAPSRÅDET
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Vetenskapsrådet()).click();
 		
@@ -162,7 +156,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärVetenskapsrådet"})
 	public void FormulärForte() {
 
-		//FORTE
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Forte()).click();
 		
@@ -186,7 +179,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärForte"})
 	public void FormulärSkolfi() {
 
-		//SKOLFI
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Skolfi()).click();
 		
@@ -224,7 +216,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FormulärEPN"})
 	public void ClickFinansiärButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER FINANSIÄR
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.FinansiärButton()).click();
 	}
@@ -232,7 +223,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickFinansiärButton"})
 	public void FinansiärKarolinskaInstitutet() {
 
-		//KAROLINSKA INSTITUTET
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet());
 		
@@ -265,7 +255,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärKarolinskaInstitutet"})
 	public void FinansiärFormas() {
 
-		//FORMAS
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Formas()).click();
 		
@@ -295,7 +284,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärFormas"})
 	public void FinansiärVetenskapsrådet() {
 
-		//VETENSKAPSRÅDET
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Vetenskapsrådet()).click();
 		
@@ -325,7 +313,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärVetenskapsrådet"})
 	public void FinansiärForte() {
 
-		//FORTE
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Forte()).click();
 		
@@ -355,7 +342,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärForte"})
 	public void FinansiärSkolfi() {
 
-		//SKOLFI
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Skolfi()).click();
 		
@@ -404,7 +390,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"FinansiärEPN"})
 	public void ClickPortaladministrationButton() {
 
-		////KLICKAR PÅ ALLA RUBRIKER UNDER PORTALADMINISTRAION
 		driver.findElement(
 				PortalLoggedInAsAdminPortalAdministration.PortaladministrationButton()).click();
 		
@@ -434,7 +419,6 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickPortaladministrationButton"})
 	public void Logout() {
 
-		//LOGGAR UT
 		driver.findElement(
 				PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton()).click();
 	}

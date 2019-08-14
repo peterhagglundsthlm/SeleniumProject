@@ -4,11 +4,9 @@
 
 <suite name="EPM FORMULÄR anli" verbose="1" parallel="none">
 	<parameter name="browser" value="Chrome" />
-	<parameter name="Username"
-		value="maria.vrsignering@gmail.com"></parameter>
+	<parameter name="Username" value="maria.vrsignering@gmail.com"></parameter>
 	<parameter name="Password" value="VRtestare1"></parameter>
-	<parameter name="Environment"
-		value="https://testaprismaepm.vr.se/"></parameter>
+	<parameter name="Environment" value="https://testaprismaepm.vr.se/"></parameter>
 	<parameter name="Language" value="svenska"></parameter>
 
 	<!--Parametern applicationType avgör vilken avgiftskategori ansökan får. 
@@ -32,7 +30,7 @@
 		
 		<!-- för att skicka in en hel ansökan är det anliEpmFormStandard som ska användas. -->
 		<classes>
-			<class name="generateApplicationEPM.EPMGranskaUtlåtande" />
+			<class name="generateApplicationEPM.anliEpmForm01PersuppgEnHuvudman" />
 		</classes>
 	</test>
 </suite> 

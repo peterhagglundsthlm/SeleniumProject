@@ -1,6 +1,5 @@
 package testCasesSATMinProfilArbetsliv;
 
-import java.util.Random;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
@@ -8,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -48,7 +48,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"AddAnställning"})
 	public void SelectOrganization() throws InterruptedException {
-		
+
 		String universitet = "Uppsala Universitet";
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
@@ -69,34 +69,27 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Thread.sleep(500);
 
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare()).click();
-		}
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare()).click();
+	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
 	public void AnställningDropDown() {
-		
+
 		Select Anställning = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningDropDown()); 
-		
-		Random randomOption = new Random();  
-		int startOption = 2;
-		int endOption = Anställning.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);   
-		Anställning.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Anställning, 2, 0);
 	}
 
 	@Test (dependsOnMethods={"AnställningDropDown"})
 	public void AnställningsFormDropDown() {
-		
+
 		Select AnställningsForm = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningsFormDropDown());
-	
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = AnställningsForm.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		AnställningsForm.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(AnställningsForm, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"AnställningDropDown"})
@@ -120,18 +113,16 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"DelAvForskningIAnställningenBaseradPåHeltid"})
 	public void AnställningensStartAndEndYear() {
-		
+
 		Select	AnställningensBörjanYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear());
-		
-		Random randomOption = new Random();  
-		int endOption = AnställningensBörjanYear.getOptions().size(); 
-		int number = randomOption.nextInt(endOption);  
-		AnställningensBörjanYear.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(AnställningensBörjanYear, 0, 1);
 
 		Select	AnställningensEndYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensSlutYear());
-		AnställningensEndYear.selectByIndex(number + 1);
+
+		RandomDropDownOptionSelect.RandomOptionInDropdownPreviousDropDownPlusOne(AnställningensEndYear);
 	}
 
 	@Test (dependsOnMethods={"AnställningensStartAndEndYear"})
@@ -139,11 +130,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Select AnställningensBörjanMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanMonth());
-		
-		Random randomOption = new Random();  
-		int endOption = AnställningensBörjanMonth.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
-		AnställningensBörjanMonth.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(AnställningensBörjanMonth, 0, 0);
 	}
 
 	@Test (dependsOnMethods={"AnställningensBörjanMonth"})
@@ -151,11 +139,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Select AnställningensSlutMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensSlutMonth());
-		
-		Random randomOption = new Random();  
-		int endOption = AnställningensSlutMonth.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
-		AnställningensSlutMonth.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(AnställningensSlutMonth, 0, 0);
 	}
 
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})

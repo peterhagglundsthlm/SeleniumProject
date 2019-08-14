@@ -3,11 +3,9 @@ package testCasesSATOrganisationsKontoAnvändare;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
-import pageElementsSAT.PortalLoggedInAsUserGranskning;
-
-import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -84,11 +82,9 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 
 		Select ResponsibilityType = driverSelect.DropDown(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Roll());
-
-		Random randomOption = new Random();  
-		int endOption = ResponsibilityType.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
-		ResponsibilityType.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ResponsibilityType, 0, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonRoll"})
@@ -105,7 +101,8 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				By.xpath("//button[contains(text(), 'Ok')]"));
 
-		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
+		driver.findElement(
+				By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 
 	@Test (dependsOnMethods={"AccepteraAlert"})

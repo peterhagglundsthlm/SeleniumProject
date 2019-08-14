@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
@@ -309,10 +310,8 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 
 		Select KällaFörPublikation = driverSelect.DropDown(driver,
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaFörPublikation());
-		Random randomOption = new Random();  
-		int endOption = KällaFörPublikation.getOptions().size(); 
-		int number = randomOption .nextInt(endOption);  
-		KällaFörPublikation.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(KällaFörPublikation, 0, 0);
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationKällaID()).sendKeys(KällaId);
@@ -353,20 +352,14 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 
 		Select FormAvOA = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationFormAvOA());
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = FormAvOA.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		FormAvOA.selectByIndex(number);
-
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(FormAvOA, 1, 0);
+		
 		Select DokumentVersion = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationDokumentversion());
-		Random randomOption2 = new Random();  
-		int startOption2 = 1;
-		int endOption2 = DokumentVersion.getOptions().size(); 
-		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
-		DokumentVersion.selectByIndex(number2);
-
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(DokumentVersion, 1, 0);
+		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_VetenskapligPublikationSammanfattning()).sendKeys(Sammanfattning);
 		if (driver.findElement(

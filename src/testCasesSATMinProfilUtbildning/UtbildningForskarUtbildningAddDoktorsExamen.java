@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-
 
 public class UtbildningForskarUtbildningAddDoktorsExamen extends BeforeAfterTestBrowsers {
 
@@ -116,11 +116,7 @@ public class UtbildningForskarUtbildningAddDoktorsExamen extends BeforeAfterTest
 		Select ämne1 = driverSelect.DropDown(driver,
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne1DropDownForskarUtbildning());
 		
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = ämne1.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		ämne1.selectByIndex(number);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne1, 1, 0);
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
@@ -128,23 +124,16 @@ public class UtbildningForskarUtbildningAddDoktorsExamen extends BeforeAfterTest
 		Select ämne2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
 		
-		Random randomOption2 = new Random();  
-		int startOption2 = 1;
-		int endOption2 = ämne2.getOptions().size(); 
-		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
-		ämne2.selectByIndex(number2);
-
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne2, 1, 0);
+		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
 		
 		Select ämne3 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
 		
-		Random randomOption3 = new Random();  
-		int startOption3 = 1;
-		int endOption3 = ämne3.getOptions().size(); 
-		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
-		ämne3.selectByIndex(number3);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne3, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"TypAvForskarUtbildningSelectSubjects"})

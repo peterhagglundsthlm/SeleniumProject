@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -29,7 +30,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickImmaterialrätt() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt());
 
@@ -39,7 +40,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 	@Test (dependsOnMethods={"ClickImmaterialrätt"})
 	public void LäggTill() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättLäggTill());
 
@@ -49,18 +50,15 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 	@Test (dependsOnMethods={"LäggTill"})
 	public void Typ() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättTyp());
 
 		Select Typ = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättTyp());
-		
-		Random randomOptionTyp = new Random();  
-		int startOptionTyp = 1;
-		int endOptionTyp = Typ.getOptions().size(); 
-		int numberTyp = startOptionTyp + randomOptionTyp .nextInt(endOptionTyp - startOptionTyp);  
-		Typ.selectByIndex(numberTyp);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Typ, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Typ"})
@@ -69,7 +67,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 		String id = "123456";
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).sendKeys(id);
-		
+
 		if (driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).getAttribute("value") != id)
 		{
@@ -85,25 +83,19 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljande()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown());
 
 		Select År = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderÅrDropDown());
-		
-		Random randomÅr = new Random();  
-		int endOption = År.getOptions().size(); 
-		int numberÅr = randomÅr .nextInt(endOption);  
-		År.selectByIndex(numberÅr);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(År, 0, 0);
 
 		Select Månad = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättDatumFörBeviljandeKalenderMånadDropDown());
-		
-		Random randomMånad = new Random();  
-		int endOptionMånad = Månad.getOptions().size(); 
-		int numberMånad = randomMånad .nextInt(endOptionMånad);  
-		Månad.selectByIndex(numberMånad);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Månad, 0, 0);
 
 		int RandomDatum = 1 + (int)(Math.random() * 28); 
 		String Datum = Integer.toString(RandomDatum);
@@ -115,21 +107,14 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 		Select ProduktKlassificering1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättProduktKlassificering1());
-		
-		Random randomOptionProduktKlassificering1 = new Random();  
-		int startOptionProduktKlassificering1 = 1;
-		int endOptionProduktKlassificering1 = ProduktKlassificering1.getOptions().size(); 
-		int numberProduktKlassificering1 = startOptionProduktKlassificering1 + randomOptionProduktKlassificering1 .nextInt(endOptionProduktKlassificering1 - startOptionProduktKlassificering1);  
-		ProduktKlassificering1.selectByIndex(numberProduktKlassificering1);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ProduktKlassificering1, 1, 0);
 
 		Select ProduktKlassificering2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättProduktKlassificering2());
-		
-		Random randomOptionProduktKlassificering2 = new Random();  
-		int startOptionProduktKlassificering2 = 1;
-		int endOptionProduktKlassificering2 = ProduktKlassificering2.getOptions().size(); 
-		int numberProduktKlassificering2 = startOptionProduktKlassificering2 + randomOptionProduktKlassificering2 .nextInt(endOptionProduktKlassificering2 - startOptionProduktKlassificering2);  
-		ProduktKlassificering2.selectByIndex(numberProduktKlassificering2);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ProduktKlassificering2, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"ProduktKlassificering"})
@@ -137,7 +122,7 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 		Select LicensieradTillAnnan = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättLicensieradTillAnnan());
-	
+
 		if (driver.getPageSource().contains("Immaterialrätt"))  
 		{
 			LicensieradTillAnnan.selectByVisibleText("Ja");
@@ -153,19 +138,16 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 		Select LicensieradTillAnnanDropDown = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättLicensieradTillAnnanDropwDown());
-		
-		Random randomOptionLicensieradTillAnnanDropDown = new Random();  
-		int startOptionLicensieradTillAnnanDropDown = 1;
-		int endOptionLicensieradTillAnnanDropDown = LicensieradTillAnnanDropDown.getOptions().size(); 
-		int numberLicensieradTillAnnanDropDown = startOptionLicensieradTillAnnanDropDown + randomOptionLicensieradTillAnnanDropDown .nextInt(endOptionLicensieradTillAnnanDropDown - startOptionLicensieradTillAnnanDropDown);  
-		LicensieradTillAnnanDropDown.selectByIndex(numberLicensieradTillAnnanDropDown);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(LicensieradTillAnnanDropDown, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"LicensieradTillAnnan"})
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättSpara()).click();
 	}

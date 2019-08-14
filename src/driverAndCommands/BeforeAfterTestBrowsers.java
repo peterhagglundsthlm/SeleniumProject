@@ -166,7 +166,7 @@ public class BeforeAfterTestBrowsers {
 	public void tearDown() { 
 
 		String testCaseName = this.getClass().getSimpleName();
-		driver.quit();
+		//driver.quit();
 		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
 
 	}

@@ -1,12 +1,13 @@
 package testCasesSATMinProfilMeriterOchUtm‰rkelser;
 
-import java.util.Random;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -14,10 +15,10 @@ public class MeriterOchUtm‰rkelserAddNewPriserOchUtm‰rkelser extends BeforeAfter
 
 	@BeforeClass
 	public void TestCaseInfo() {
-		
+
 		String TestCaseInfo = "Loggar in som en projektledare och l‰gger till en Priser och Utm‰rkelser";
 	}
-	
+
 	@Test
 	public void LoginAsUser() {
 
@@ -26,7 +27,7 @@ public class MeriterOchUtm‰rkelserAddNewPriserOchUtm‰rkelser extends BeforeAfter
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickMeriterOchUtm‰rkelser() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser());
 
@@ -36,27 +37,25 @@ public class MeriterOchUtm‰rkelserAddNewPriserOchUtm‰rkelser extends BeforeAfter
 
 	@Test (dependsOnMethods={"ClickMeriterOchUtm‰rkelser"})
 	public void L‰ggTill() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserL‰ggTill());
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserL‰ggTill()).click();
 	}
 
 	@Test (dependsOnMethods={"L‰ggTill"})
 	public void ≈r() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
-				 PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelser≈r());
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelser≈r());
 
 		Select ≈r = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelser≈r());
-		
-		Random randomOption≈r = new Random();  
-		int endOption≈r = ≈r.getOptions().size(); 
-		int number≈r = randomOption≈r .nextInt(endOption≈r);  
-		≈r.selectByIndex(number≈r);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(≈r, 0, 0);
+
 	}
 
 	@Test (dependsOnMethods={"≈r"})
@@ -64,12 +63,9 @@ public class MeriterOchUtm‰rkelserAddNewPriserOchUtm‰rkelser extends BeforeAfter
 
 		Select Land = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserLand());
-		
-		Random randomOptionLand = new Random();  
-		int startOptionLand = 3;
-		int endOptionLand = Land.getOptions().size(); 
-		int numberLand = startOptionLand + randomOptionLand .nextInt(endOptionLand - startOptionLand);  
-		Land.selectByIndex(numberLand);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Land, 3, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Land"})
@@ -81,23 +77,23 @@ public class MeriterOchUtm‰rkelserAddNewPriserOchUtm‰rkelser extends BeforeAfter
 
 	@Test (dependsOnMethods={"NamnPÂPriset"})
 	public void Utf‰rdare() {
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserUtf‰rdare()).sendKeys("En bra utf‰rdare");
 	}
 
 	@Test (dependsOnMethods={"Utf‰rdare"})
 	public void Beskrivning() {
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserBeskrivning()).sendKeys("En bra beskrivning");
 	}
-	
+
 	@Test (dependsOnMethods={"Beskrivning"})
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtm‰rkelser_PriserOchUtM‰rkelserSpara()).click();
 	}
