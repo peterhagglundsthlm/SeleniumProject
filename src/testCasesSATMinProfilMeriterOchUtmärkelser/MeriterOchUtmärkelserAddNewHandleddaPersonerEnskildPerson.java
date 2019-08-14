@@ -1,12 +1,12 @@
 package testCasesSATMinProfilMeriterOchUtmärkelser;
 
 import java.util.Random;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
+import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -27,6 +27,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickMeriterOchUtmärkelser() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser());
 
 		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser()).click();
 	}
@@ -34,25 +37,36 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 	@Test (dependsOnMethods={"ClickMeriterOchUtmärkelser"})
 	public void LäggTillHandleddaPersonerEnskildPerson() {
 		
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerLäggTillEnskildPersonKnapp()).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerLäggTillEnskildPersonKnapp());
+		
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerLäggTillEnskildPersonKnapp()).click();
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPerson"})
 	public void LäggTillHandleddaPersonerEnskildPersonFörnamn() {
 		
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn()).sendKeys("Förnamn3");
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn());
+		
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerFörnamn()).sendKeys("Förnamn3");
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonFörnamn"})
 	public void LäggTillHandleddaPersonerEnskildPersonEfternamn() {
 		
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn()).sendKeys("Efternamn3");
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerEfternamn()).sendKeys("Efternamn3");
 	}
 
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonEfternamn"})
 	public void LäggTillHandleddaPersonerEnskildPersonSlutår() {
 
-		Select Slutår = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSlutår());
+		Select Slutår = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSlutår());
+		
 		Random randomOption = new Random();  
 		int endOption = Slutår.getOptions().size(); 
 		int number =  randomOption .nextInt(endOption);  
@@ -62,7 +76,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonSlutår"})
 	public void LäggTillHandleddaPersonerEnskildPersonTypAvHandleddaPersoner() {
 
-		Select TypAvHandleddaPersoner = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerTypAvHandleddaPerson());
+		Select TypAvHandleddaPersoner = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerTypAvHandleddaPerson());
+		
 		Random randomOption2 = new Random();  
 		int startOption2 = 1;
 		int endOption2 = TypAvHandleddaPersoner.getOptions().size(); 
@@ -73,7 +89,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 	@Test (dependsOnMethods={"LäggTillHandleddaPersonerEnskildPersonTypAvHandleddaPersoner"})
 	public void LäggTillHandleddaPersonerEnskildPersonRoll() {
 
-		Select Roll = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerRoll());
+		Select Roll = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerRoll());
+		
 		Random randomOption3 = new Random();  
 		int startOption3 = 1;
 		int endOption3 = Roll.getOptions().size(); 
@@ -85,7 +103,9 @@ public class MeriterOchUtmärkelserAddNewHandleddaPersonerEnskildPerson extends B
 	public void LäggTillHandleddaPersonerEnskildPersonRollSpara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaEnskildPerson()).click();
+		
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_HandleddaPersonerSparaEnskildPerson()).click();
 	}
 
 

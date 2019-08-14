@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
+import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 
@@ -26,6 +27,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation());
 
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation()).click();
@@ -33,41 +37,46 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
 		Select BankensLand = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
-		if (driver.getPageSource().contains
-				("Betalningsinformation"))
-		{BankensLand.selectByVisibleText
-			("Sverige");}
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Sverige");}
 
-		else if (driver.getPageSource().contains
-				("Payment information")) 
-		{BankensLand.selectByVisibleText
-			("Sweden");}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("Sweden");}
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
 	public void Betalningstyp() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp());
 
 		Select Betalningstyp = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp());
 
-		if (driver.getPageSource().contains
-				("Betalningstyp"))
-		{Betalningstyp.selectByVisibleText
-			("Plusgiro");}
+		if (driver.getPageSource().contains("Betalningstyp"))
+		{
+			Betalningstyp.selectByVisibleText("Plusgiro");}
 
-		else if (driver.getPageSource().contains
-				("PaymentAccountType")) 
-		{Betalningstyp.selectByVisibleText
-			("Postal giro");}
+		else if (driver.getPageSource().contains("PaymentAccountType")) 
+		{
+			Betalningstyp.selectByVisibleText("Postal giro");}
 	}
 
 	@Test (dependsOnMethods={"Betalningstyp"})
 	public void Plusgiro() {
 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro());
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationPlusgiro()).clear();
 		driver.findElement(
@@ -95,17 +104,19 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenPlusgiro exten
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
-		((JavascriptExecutor) 
-				driver).executeScript("scroll(0,-200)");
+		((JavascriptExecutor)driver).executeScript("scroll(0,-200)");
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
 
 	@Test (dependsOnMethods={"Spara"})
 	public void AcceptAlert() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				By.xpath("//button[contains(text(), 'Ok')]"));
 
-		driver.findElement(
-				By.xpath("//button[contains(text(), 'Ok')]")).click();
+		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }
 

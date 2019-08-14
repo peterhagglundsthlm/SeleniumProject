@@ -45,6 +45,12 @@ public class PortalLoggedInAsUserAnsökningarOchBidrag {
 		By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[2]/div/a");
 		return element;
 	}
+	
+	//ANSÖKNINGAR OCH BIDRAG - ÄNDRINGSANSÖKNINGAR
+		public static By AnsökningarOchBidragÄndringsansökningar(){
+			By element = By.xpath("//*[@id=\"mainContentBody\"]/div/div/aside/section[2]/div/div/ul/li[3]/div/a");
+			return element;
+		}
 
 
 }

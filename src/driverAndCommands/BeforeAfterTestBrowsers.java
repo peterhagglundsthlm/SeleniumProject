@@ -60,8 +60,8 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			DriverWaitExpectedConditions.WaitForElementToBeClickable(
-					driver, PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+					PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
 			
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);
@@ -71,14 +71,14 @@ public class BeforeAfterTestBrowsers {
 		}
 
 		if (browser.equalsIgnoreCase("ChromeNotLoggedIn")) {
-
-			//System.out.println("\u001b[1;31mTestfallet inleds nu\u001b[0m");
+			
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions ChromeOption = new ChromeOptions();
 			ChromeOption.addArguments("start-maximized");
 			LogManager.getLogManager().reset();
 			driver = new ChromeDriver(ChromeOption);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 
 		}
@@ -133,8 +133,8 @@ public class BeforeAfterTestBrowsers {
 			startTimeTest = System.currentTimeMillis();
 			driver.get(Environment);
 			LoginLogic.InputUserNameAndPassWordUsingJavaScript(driver, Username, Password);
-			DriverWaitExpectedConditions.WaitForElementToBeClickable(
-					driver, PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
+			DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+					PortalLoggedInAsAdminAndUserLoggaUt.LoggaUtButton());
 
 			if (Language.equalsIgnoreCase("Engelska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToEnglishLoggedInPage(driver);

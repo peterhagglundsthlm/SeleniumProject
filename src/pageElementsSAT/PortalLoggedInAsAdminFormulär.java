@@ -1,12 +1,8 @@
 package pageElementsSAT;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
-
 
 public class PortalLoggedInAsAdminFormulär {
-	private static By element = null;
 
 	//FORMULÄRKNAPPEN
 	public static By FormulärButton(){
