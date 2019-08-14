@@ -40,14 +40,11 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		//System.out.println("Dropdown Publikationstyp");
 
 		if (driver.getPageSource().contains("Publikationer")){
-			Publikationstyp.selectByVisibleText(
-					"Vetenskaplig publikation - fackgranskade");
+			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - fackgranskade");
 		}
 		else if (driver.getPageSource().contains("Publications")) {
-			Publikationstyp.selectByVisibleText(
-					"Scientific publication - peer-reviewed");
+			Publikationstyp.selectByVisibleText("Scientific publication - peer-reviewed");
 		}
-		//System.out.println("Valt Vetenskaplig publikation - fackgranskad.");
 	}
 
 	public static void PublikationIckeFackgranskad(WebDriver driver) {
@@ -55,19 +52,14 @@ public class GemensammaMetoder extends BeforeAfterTestBrowsers {
 		Select Publikationstyp = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer_Publikationstyp());
 
-		//System.out.println("Dropdown Publikationstyp");
-
 		if (driver.getPageSource().contains("Publikationer"))
 		{
-			Publikationstyp.selectByVisibleText(
-					"Vetenskaplig publikation - inte fackgranskade");
+			Publikationstyp.selectByVisibleText("Vetenskaplig publikation - inte fackgranskade");
 		}
 		else if (driver.getPageSource().contains("Publications")) 
 		{
-			Publikationstyp.selectByVisibleText(
-					"Scientific publication - not peer-reviewed");
+			Publikationstyp.selectByVisibleText("Scientific publication - not peer-reviewed");
 		}
-
 	}
 
 	public static void DropdownPublikationstyp (WebDriver driver) {

@@ -30,7 +30,8 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickOrganisationskonto() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationskonto"})
@@ -38,7 +39,9 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
+		
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickStruktur"})
@@ -47,11 +50,13 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån());
 
-		WebElement StrukturHögstaNamnElement =  driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_HögstaNivåNamn()); 
+		WebElement StrukturHögstaNamnElement =  driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_HögstaNivåNamn());
+		
 		StrukturHögstaNamn = StrukturHögstaNamnElement.getText();
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån())
-		.click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån()).click();
 	}
 
 	@Test (dependsOnMethods={"RedigeraHögstaNivån"})
@@ -59,20 +64,24 @@ public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterT
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-		.sendKeys(StrukturHögstaNamn);
-		if (driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-				.getAttribute("value") != StrukturHögstaNamn);{
-					driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-					.clear();
-					driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-					.sendKeys(StrukturHögstaNamn);}
+		
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).sendKeys(StrukturHögstaNamn);
+		
+		if (driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).getAttribute("value") != StrukturHögstaNamn);
+		{
+					driver.findElement(
+							PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).clear();
+					driver.findElement(
+							PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).sendKeys(StrukturHögstaNamn);}
 	}
 
 	@Test (dependsOnMethods={"NamnPåNyEnhet"})
 	public void SparaNyHemvist() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp()).click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp()).click();
 	}
 
 	@Test (dependsOnMethods={"SparaNyHemvist"})

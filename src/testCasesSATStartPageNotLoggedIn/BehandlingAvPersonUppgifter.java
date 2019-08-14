@@ -20,14 +20,15 @@ public class BehandlingAvPersonUppgifter extends BeforeAfterTestBrowsers {
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(
+				driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClicBehandlingAvPersonuppgifter() {
 		
-		driver.findElement(SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterButton())
-		.click();
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.BehandlingAvPersonuppgifterButton()).click();
 	}
 
 	@Test (dependsOnMethods={"ClicBehandlingAvPersonuppgifter"})

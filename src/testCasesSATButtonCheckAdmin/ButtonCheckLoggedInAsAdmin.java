@@ -27,6 +27,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//KLICKAR PÅ ALLA RUBRIKER UNDER MIN PROFIL
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton()).click();
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar()).click();
 		driver.findElement(
@@ -39,6 +43,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//KLICKAR PÅ ALLA RUBRIKER UNDER INTRESSENTREGISTER
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto()).click();
 		driver.findElement(
@@ -59,6 +67,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//KLICKAR PÅ ALLA RUBRIKER UNDER BEREDNINGSGRUPPER
 		driver.findElement(
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper()).click();
 		driver.findElement(
@@ -76,14 +88,21 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void FormulärKarolinskaInstitutet() {
 
 		//KAROLINSKA
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(
-				driver, PortalLoggedInAsAdminFormulär.KarolinskaInstitutet());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.KarolinskaInstitutet());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutet()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär()).click();
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutetSidmallar()).click();
+		driver.findElement(
+				PortalLoggedInAsAdminFormulär.KarolinskaAvsnittsmallar()).click();
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaUnderhållstabeller()).click();
 		driver.findElement(
@@ -98,6 +117,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//FORMAS
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Formas()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.FormasFormulär());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.FormasFormulär()).click();
 		driver.findElement(
@@ -118,6 +141,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//VETENSKAPSRÅDET
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Vetenskapsrådet()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär()).click();
 		driver.findElement(
@@ -138,6 +165,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//FORTE
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Forte()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.ForteFormulär());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.ForteFormulär()).click();
 		driver.findElement(
@@ -158,6 +189,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//SKOLFI
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Skolfi()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFormulär.SkolfiFormulär());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.SkolfiFormulär()).click();
 		driver.findElement(
@@ -198,10 +233,15 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 	public void FinansiärKarolinskaInstitutet() {
 
 		//KAROLINSKA INSTITUTET
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(
-				driver, PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar()).click();
 		driver.findElement(
@@ -228,6 +268,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//FORMAS
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Formas()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar()).click();
 		driver.findElement(
@@ -254,6 +298,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//VETENSKAPSRÅDET
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Vetenskapsrådet()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar()).click();
 		driver.findElement(
@@ -280,6 +328,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//FORTE
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Forte()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar()).click();
 		driver.findElement(
@@ -306,6 +358,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		//SKOLFI
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Skolfi()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar()).click();
 		driver.findElement(
@@ -351,6 +407,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		////KLICKAR PÅ ALLA RUBRIKER UNDER PORTALADMINISTRAION
 		driver.findElement(
 				PortalLoggedInAsAdminPortalAdministration.PortaladministrationButton()).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar());
+		
 		driver.findElement(
 				PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar()).click();
 		driver.findElement(

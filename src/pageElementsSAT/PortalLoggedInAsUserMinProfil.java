@@ -59,7 +59,7 @@ public class PortalLoggedInAsUserMinProfil {
 	//MIN PROFIL - UTBILDNING - LÄGG TILL FORSKARUTBILDNING - KNAPP FÖR ATT SPARA SÖKT ORGANISATION
 	public static By MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp() {
 
-		By element = By.tagName("button");
+		By element = By.tagName("Button");
 		return element;
 	}
 
@@ -290,7 +290,7 @@ public class PortalLoggedInAsUserMinProfil {
 	//MIN PROFIL - ARBETSLIV - ANSTÄLLNINGAR - SPARA SÖKT ARBETSGIVARE
 	public static By MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare (){
 
-		By element = By.xpath("//button[contains(text(), 'Spara val')]");
+		By element = By.tagName("Button");
 		return element;
 	}
 

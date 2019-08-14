@@ -1,7 +1,6 @@
 package testCasesSATMinProfilArbetsliv;
 
 import java.util.Random;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
@@ -17,8 +16,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@BeforeClass
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = 
-				"Loggar in som en projektledare och lägger till en Anställning UTAN att kopiera redan tillagd post.";
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till en Anställning UTAN att kopiera redan tillagd post.";
 	}
 
 	@Test
@@ -33,7 +31,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 	}
@@ -41,59 +39,59 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickArbetsliv"})
 	public void AddAnställning() {
 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_LäggTill());
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_LäggTill()).click();
 	}
 
 	@Test (dependsOnMethods={"AddAnställning"})
 	public void SelectOrganization() throws InterruptedException {
-
-		String universitet = "Uppsala Universitet";
 		
+		String universitet = "Uppsala Universitet";
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare());
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(universitet);
-		
-		Thread.sleep(500);
-		
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.DOWN);
-		
-		Thread.sleep(500);
-		
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.ENTER);
-		
+
 		Thread.sleep(500);
 
-		if (driver.getPageSource().contains("Anställningar"))
-		{
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.DOWN);
+
+		Thread.sleep(500);
+
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.ENTER);
+
+		Thread.sleep(500);
+
 			driver.findElement(
 					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare()).click();
 		}
-		else if (driver.getPageSource().contains("Employments")) 
-		{
-			driver.findElement(By.xpath(
-					"//button[contains(text(), 'Save choice')]")).click();
-		}
-	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
 	public void AnställningDropDown() {
-
+		
 		Select Anställning = driverSelect.DropDown(driver, 
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningDropDown());
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningDropDown()); 
+		
 		Random randomOption = new Random();  
 		int startOption = 2;
 		int endOption = Anställning.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
+		int number = startOption + randomOption .nextInt(endOption - startOption);   
 		Anställning.selectByIndex(number);
 	}
 
 	@Test (dependsOnMethods={"AnställningDropDown"})
 	public void AnställningsFormDropDown() {
-
+		
 		Select AnställningsForm = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningsFormDropDown());
+	
 		Random randomOption = new Random();  
 		int startOption = 1;
 		int endOption = AnställningsForm.getOptions().size(); 
@@ -107,35 +105,31 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		String DelAvForskningIAnställningenBaseradPåHeltid = "100";
 
 		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(
-						DelAvForskningIAnställningenBaseradPåHeltid);
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(DelAvForskningIAnställningenBaseradPåHeltid);
 
 		if (driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).getAttribute(
-						"value")!= DelAvForskningIAnställningenBaseradPåHeltid) 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).getAttribute("value")!= DelAvForskningIAnställningenBaseradPåHeltid) 
 		{
 			driver.findElement(
 					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).clear();
 
 			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(
-							DelAvForskningIAnställningenBaseradPåHeltid);
+					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(DelAvForskningIAnställningenBaseradPåHeltid);
 		}
 	}
 
 	@Test (dependsOnMethods={"DelAvForskningIAnställningenBaseradPåHeltid"})
 	public void AnställningensStartAndEndYear() {
-
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+		
+		Select	AnställningensBörjanYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear());
-		Select AnställningensBörjanYear = driverSelect.DropDown(driver, 
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanYear());
+		
 		Random randomOption = new Random();  
 		int endOption = AnställningensBörjanYear.getOptions().size(); 
 		int number = randomOption.nextInt(endOption);  
 		AnställningensBörjanYear.selectByIndex(number);
 
-		Select AnställningensEndYear = driverSelect.DropDown(driver, 
+		Select	AnställningensEndYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensSlutYear());
 		AnställningensEndYear.selectByIndex(number + 1);
 	}
@@ -145,6 +139,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Select AnställningensBörjanMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensBörjanMonth());
+		
 		Random randomOption = new Random();  
 		int endOption = AnställningensBörjanMonth.getOptions().size(); 
 		int number = randomOption .nextInt(endOption);  
@@ -156,6 +151,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		Select AnställningensSlutMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_AnställningensSlutMonth());
+		
 		Random randomOption = new Random();  
 		int endOption = AnställningensSlutMonth.getOptions().size(); 
 		int number = randomOption .nextInt(endOption);  
@@ -166,7 +162,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	public void ÖvrigInformation() {
 
 		String ÖvrigInformation = "Mycket bra övrig information";
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).sendKeys(ÖvrigInformation);
 
@@ -175,7 +171,7 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		{
 			driver.findElement(
 					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).clear();
-			
+
 			driver.findElement(
 					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).sendKeys(ÖvrigInformation);
 		}
@@ -184,9 +180,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ÖvrigInformation"})
 	public void SparaAnställning() {
 
-		((JavascriptExecutor) 
-				driver).executeScript("scroll(0,-200)");
-		
+		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaAnställning()).click();
 	}

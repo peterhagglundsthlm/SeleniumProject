@@ -1,13 +1,11 @@
 package testCasesSATOrganisationskontoStruktur;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
-
 
 public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 	String EngelsktNamnPåEnhet; String SvenskNamnPåEnhet;
@@ -18,15 +16,11 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 		String TestCaseInfo = "Loggar in som en organisationskontoansvarig och lägger till en ny hemvist under fliken organisationskonto, sidan struktur";
 	}
 
-	@Test
-	public void LoginAsUser() {
-
-	}
-
-	@Test (dependsOnMethods={"LoginAsUser"})
+	@Test 
 	public void ClickOrganisationskonto() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickOrganisationskonto"})
@@ -34,7 +28,9 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
+		
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickStruktur"})
@@ -42,7 +38,9 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån()).click();
+		
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån()).click();
 	}
 
 	@Test (dependsOnMethods={"RedigeraHögstaNivån"})
@@ -50,45 +48,44 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 
 		int RandomNumber = 1 + (int)(Math.random() * 9999); 
 		SvenskNamnPåEnhet = "Autoskapad hemvist svenska: " + RandomNumber;
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-		.sendKeys(SvenskNamnPåEnhet);
-		if (driver.findElement
-				(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).
-				getAttribute("value") != SvenskNamnPåEnhet); {
-			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-			.clear();
-			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet())
-			.sendKeys(SvenskNamnPåEnhet); }
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).sendKeys(SvenskNamnPåEnhet);
+		if (driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).getAttribute("value") != SvenskNamnPåEnhet); {
+			driver.findElement(
+					PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).clear();
+			driver.findElement(
+					PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånSvensktNamnPåNyEnhet()).sendKeys(SvenskNamnPåEnhet); }
 	}
 
 	@Test (dependsOnMethods={"SvensktNamnPåNyEnhet"})
 	public void EngelsktNamnPåNyEnhet() {
 
 		int RandomNumber = 1 + (int)(Math.random() * 9999); 
-
 		EngelsktNamnPåEnhet = "Autoskapad hemvist engelska: " + RandomNumber;
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
 		.sendKeys(EngelsktNamnPåEnhet);
-		if (driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
-				.getAttribute("value") != EngelsktNamnPåEnhet);
+		if (driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet()).getAttribute("value") != EngelsktNamnPåEnhet);
 		{
-			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
-			.clear();
-			driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet())
-			.sendKeys(EngelsktNamnPåEnhet);
+			driver.findElement(
+					PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet()).clear();
+			driver.findElement(
+					PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånEngelsktNamnPåNyEnhet()).sendKeys(EngelsktNamnPåEnhet);
 		}
 	}
 
 	@Test (dependsOnMethods={"EngelsktNamnPåNyEnhet"})
-	public void SparaNyHemvist() throws InterruptedException {
+	public void SparaNyHemvist() throws InterruptedException  {
 
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp()).click();
+		
 		Thread.sleep(1000);
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetKnapp())
-		.click();
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
-				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng())
-		.click();
+		
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivånLäggTillNyEnhetStäng()).click();
 	}
 
 	@Test (dependsOnMethods={"SparaNyHemvist"})
@@ -98,9 +95,11 @@ public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Struktur_RedigeraHögstaNivån());
 		if (driver.getPageSource().contains(SvenskNamnPåEnhet)) {
 			
-		}else if (driver.getPageSource().contains(EngelsktNamnPåEnhet)) {
+		}
+		else if (driver.getPageSource().contains(EngelsktNamnPåEnhet)) {
 			
-		}else {
+		}
+		else {
 			Assert.fail(); }
 	}
 }

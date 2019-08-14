@@ -15,8 +15,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	@BeforeClass
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = 
-				"Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land i Europa (Frankrike)";
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för land i Europa (Frankrike)";
 	}
 
 	@Test 
@@ -28,6 +27,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation());
 
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation()).click();
@@ -35,27 +37,28 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
-
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
+		
 		Select BankensLand = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
-		if (driver.getPageSource().contains
-				("Betalningsinformation"))
-		{BankensLand.selectByVisibleText
-			("Frankrike");}
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Frankrike");}
 
-		else if (driver.getPageSource().
-				contains
-				("Payment information")) 
-		{BankensLand.selectByVisibleText
-			("France");}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("France");}
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
 	public void BankensNamn() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(
-				driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
 		driver.findElement(
@@ -74,8 +77,6 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void IBAN() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN()).clear();
 		driver.findElement(
@@ -103,16 +104,18 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
-		((JavascriptExecutor) 
-				driver).executeScript("scroll(0,-200)");
+		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
 
 	@Test (dependsOnMethods={"Spara"})
 	public void AccepteraAlert() {
-
-		driver.findElement(
-				By.xpath("//button[contains(text(), 'Ok')]")).click();
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				By.xpath("//button[contains(text(), 'Ok')]"));
+		
+		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

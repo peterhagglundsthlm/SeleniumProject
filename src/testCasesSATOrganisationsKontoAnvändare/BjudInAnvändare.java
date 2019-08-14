@@ -5,6 +5,8 @@ import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import pageElementsSAT.PortalLoggedInAsUserGranskning;
+
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,70 +23,87 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 		String TestCaseInfo = "Loggar in och skickar en inbjudan till en användare. Efter genomfört test så raderas även posten i PP.";
 	}
 
-
 	@Test
 	public void CheckForOrganisationButton() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
 	}
 
 
 	@Test (dependsOnMethods={"CheckForOrganisationButton"})
 	public void ClickAnvändareButton() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare()).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare());
+
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickAnvändareButton"})
 	public void BjudInAnvändareButton() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In()).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In());
+
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In()).click();
 	}
 
 
 	@Test (dependsOnMethods={"BjudInAnvändareButton"})
 	public void BjudInAnvändareButtonFörnamn() {
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn()), "Förnamn"); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn());
+
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Förnamn()), "Förnamn"); 
 	}
 
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonFörnamn"})
 	public void BjudInAnvändareButtonEfternamn() {
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn()), "Efternamn"); 
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Efternamn()), "Efternamn"); 
 	}
 
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEfternamn"})
 	public void BjudInAnvändareButtonEmail() {
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", 
-				driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email()), "email1@vr.se"); 
+		((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Email()), "email1@vr.se"); 
 	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonEmail"})
 	public void BjudInAnvändareButtonRoll() {
 
-		Select ResponsibilityType = driverSelect.DropDown(driver, PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Roll());
+		Select ResponsibilityType = driverSelect.DropDown(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Roll());
+
 		Random randomOption = new Random();  
 		int endOption = ResponsibilityType.getOptions().size(); 
-		int number = randomOption .nextInt(endOption );  
+		int number = randomOption .nextInt(endOption);  
 		ResponsibilityType.selectByIndex(number);
 	}
 
 	@Test (dependsOnMethods={"BjudInAnvändareButtonRoll"})
 	public void ClickAnvändareButtonSkicka() {
 
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka()).click();	
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Skicka()).click();	
 	}
 
 
 	@Test (dependsOnMethods={"ClickAnvändareButtonSkicka"})
 	public void AccepteraAlert() {
+
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				By.xpath("//button[contains(text(), 'Ok')]"));
 
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
@@ -105,17 +124,23 @@ public class BjudInAnvändare extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"CheckThatInvitationIsSent"})
 	public void ClickCheckBox() {
 
-		WebElement test = driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Checkbox_Radera());
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", test);
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Checkbox_Radera());
+
+		WebElement test = driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Bjud_In_Checkbox_Radera()); ((JavascriptExecutor) driver).executeScript("arguments[0].click();", test);
 	}
 
 	@Test (dependsOnMethods={"ClickCheckBox"})
 	public void ClickTaBortButton() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort());
-		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort()).click();
+		driver.findElement(
+				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_Användare_Ta_Bort()).click();
+
 		driver.switchTo().alert().accept();
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, By.xpath("//button[contains(text(), 'Ok')]"));
+
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

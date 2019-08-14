@@ -30,45 +30,63 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickUtbildning() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickUtbildning"})
 	public void ClickForskarUtbildning() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Forskarutbildning()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClickForskarUtbildning"})
 	public void AddForskarUtbildning() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning()).click();
 	}
 
 
 	@Test (dependsOnMethods={"AddForskarUtbildning"})
 	public void SelectOrganization() throws InterruptedException {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation());
 
 		String universitet = "Uppsala Universitet";
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(universitet);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(universitet);
 		Thread.sleep(500);
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.DOWN);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.DOWN);
 		Thread.sleep(500);
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.ENTER);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.ENTER);
 		Thread.sleep(500);
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp()).click();
 
 	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
 	public void TypAvForskarUtbildningAddForskningskompetensMotsvarandeDoktorsexamen() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning());
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning()).click();
-		Select typ = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning());
+		Select typ = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_TypDropDownForskarUtbildning());
 
 		if (driver.getPageSource().contains("Forskarutbildning"))  
 		{
@@ -82,31 +100,47 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 
 	@Test (dependsOnMethods={"TypAvForskarUtbildningAddForskningskompetensMotsvarandeDoktorsexamen"})
 	public void Examensdatum() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts());
+		
+		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts()).click();
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts()).sendKeys("2018-05-15");
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_DatumNärForskningskompetensUppnåtts()).sendKeys("2018-05-15");
 
 	}
 
 	@Test (dependsOnMethods={"Examensdatum"})
 	public void TypAvForskarUtbildningSelectSubjects() throws InterruptedException {
 
-		Select ämne1 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne1DropDownForskarUtbildning());
+		Select ämne1 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne1DropDownForskarUtbildning());
+		
 		Random randomOption = new Random();  
 		int startOption = 1;
 		int endOption = ämne1.getOptions().size(); 
 		int number = startOption + randomOption .nextInt(endOption - startOption);  
 		ämne1.selectByIndex(number);
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
-		Select ämne2 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
+		
+		Select ämne2 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne2DropDownForskarUtbildning());
+		
 		Random randomOption2 = new Random();  
 		int startOption2 = 1;
 		int endOption2 = ämne2.getOptions().size(); 
 		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
 		ämne2.selectByIndex(number2);
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
-		Select ämne3 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
+		
+		Select ämne3 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_Ämne3DropDownForskarUtbildning());
+		
 		Random randomOption3 = new Random();  
 		int startOption3 = 1;
 		int endOption3 = ämne3.getOptions().size(); 
@@ -117,19 +151,22 @@ public class UtbildningForskarUtbildningAddForskningskompetensMotsvarandeDoktors
 	@Test (dependsOnMethods={"TypAvForskarUtbildningSelectSubjects"})
 	public void BeskrivningAvKompetensSvenska() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV()).sendKeys("TestSvenska");
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensSV()).sendKeys("TestSvenska");
 	}
 
 	@Test (dependsOnMethods={"BeskrivningAvKompetensSvenska"})
 	public void BeskrivningAvKompetensEngelska() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN()).sendKeys("TestEngelska");
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamen_BeskrivningAvKompetensEN()).sendKeys("TestEngelska");
 	}
 	
 	@Test (dependsOnMethods={"BeskrivningAvKompetensEngelska"})
 	public void SparaForskarutbildningKnapp() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamenButton()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_ForskningskompetensMotsvarandeDoktorsexamenButton()).click();
 	}
 }

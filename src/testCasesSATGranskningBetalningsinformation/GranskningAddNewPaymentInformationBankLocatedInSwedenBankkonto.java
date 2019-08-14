@@ -15,8 +15,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 	@BeforeClass
 	public void TestCaseInfo() {
 
-		String TestCaseInfo = 
-				"Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för Sverige (BANKKONTO)";
+		String TestCaseInfo = "Loggar in som en projektledare och lägger till ny betalningsinformation på sidan Granskning för Sverige (BANKKONTO)";
 	}
 
 	@Test 
@@ -28,6 +27,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation());
 
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation()).click();
@@ -35,36 +37,38 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
 		Select BankensLand = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
-		if (driver.getPageSource().contains
-				("Betalningsinformation"))
-		{BankensLand.selectByVisibleText
-			("Sverige");}
+		if (driver.getPageSource().contains("Betalningsinformation"))
+		{
+			BankensLand.selectByVisibleText("Sverige");}
 
-		else if (driver.getPageSource().contains
-				("Payment information")) 
-		{BankensLand.selectByVisibleText
-			("Sweden");}
+		else if (driver.getPageSource().contains("Payment information")) 
+		{
+			BankensLand.selectByVisibleText("Sweden");}
 	}
 
 	@Test (dependsOnMethods={"BankensLand"})
 	public void Betalningstyp() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp());
 
 		Select Betalningstyp = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp());
 
-		if (driver.getPageSource().contains
-				("Betalningstyp"))
-		{Betalningstyp.selectByVisibleText
-			("Bankkonto");}
+		if (driver.getPageSource().contains("Betalningstyp"))
+		{
+			Betalningstyp.selectByVisibleText("Bankkonto");}
 
-		else if (driver.getPageSource().contains
-				("Payment account type")) 
-		{Betalningstyp.selectByVisibleText
-			("Bank account");}
+		else if (driver.getPageSource().contains("Payment account type")) 
+		{
+			Betalningstyp.selectByVisibleText("Bank account");}
 	}
 
 	@Test (dependsOnMethods={"Betalningstyp"})
@@ -72,6 +76,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
 		driver.findElement(
@@ -126,8 +131,8 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
-		((JavascriptExecutor) 
-				driver).executeScript("scroll(0,-200)");
+		((JavascriptExecutor)driver).executeScript("scroll(0,-200)");
+		
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
@@ -135,7 +140,9 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 	@Test (dependsOnMethods={"Spara"})
 	public void AcceptAlert() {
 
-		driver.findElement(
-				By.xpath("//button[contains(text(), 'Ok')]")).click();
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				By.xpath("//button[contains(text(), 'Ok')]"));
+		
+		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

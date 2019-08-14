@@ -1,6 +1,5 @@
 package testCasesSATStartPageNotLoggedIn;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,27 +20,31 @@ public class InformationOmPrisma extends BeforeAfterTestBrowsers {
 	@Test
 	public void WaitForHomePageToLoad() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome()); 
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				SAT_Home_Page_Not_Logged_In.LoginButtonChrome()); 
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
 	public void ClicInformation() {
 		
-		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationButton()).click();
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.InformationButton()).click();
 	}
 
 
 	@Test (dependsOnMethods={"ClicInformation"})
 	public void ClickOmPrisma() {
 
-		driver.findElement(SAT_Home_Page_Not_Logged_In.InformationOmPrismaButton()).click();	
+		driver.findElement(
+				SAT_Home_Page_Not_Logged_In.InformationOmPrismaButton()).click();	
 	}
 
 
 	@Test (dependsOnMethods={"ClickOmPrisma"})
 	public void VerifyURL() {
 
-		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, SAT_Home_Page_Not_Logged_In.InformationOmPrismaModal());
+		DriverWaitExpectedConditions.WaitForElementToBeVisible(driver, 
+				SAT_Home_Page_Not_Logged_In.InformationOmPrismaModal());
 		
 		NyURL = driver.getCurrentUrl();
 

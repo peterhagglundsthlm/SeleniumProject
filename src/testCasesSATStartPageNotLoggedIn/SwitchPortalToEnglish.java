@@ -1,6 +1,5 @@
 package testCasesSATStartPageNotLoggedIn;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,7 +19,8 @@ public class SwitchPortalToEnglish extends BeforeAfterTestBrowsers {
 	@Test
 	public void WaitForHomePageToLoad() {
 		
-		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				SAT_Home_Page_Not_Logged_In.LoginButtonChrome());
 	}
 
 	@Test (dependsOnMethods={"WaitForHomePageToLoad"})
