@@ -13,13 +13,13 @@
 
 	<!--Denna parameter avgör vilken Browser som testsuiten kommer köras i. 
 		Alternativ är "Chrome", "ChromeNotLoggedIn" "FireFox", "IExplorer" och "Headless" -->
-	<parameter name="browser" value="Chromenotloggedin" />
+	<parameter name="browser" value="Chrome" />
   
 	<test name="testCasesSATMinProfilUtbildning">
 		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
 		<parameter name="Password" value="Vr1234"></parameter>
 		<packages>
-			<package name="testCasesSATStartPageNotLoggedIn" />
+			<package name="testCasesSATMinProfilUtbildning" />
 		</packages>
 	</test>
 </suite> 

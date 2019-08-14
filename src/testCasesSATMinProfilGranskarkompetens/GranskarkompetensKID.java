@@ -1,11 +1,11 @@
 package testCasesSATMinProfilGranskarkompetens;
 
-import java.util.Random;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -42,12 +42,7 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Forskningsområde1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde1());
 		
-		Random randomOptionForskningsområde1 = new Random();  
-		int startOptionForskningsområde1 = 1;
-		int endOptionForskningsområde1 = Forskningsområde1.getOptions().size(); 
-		int numberForskningsområde1 = startOptionForskningsområde1 + randomOptionForskningsområde1 .nextInt(endOptionForskningsområde1 - startOptionForskningsområde1);  
-		Forskningsområde1.selectByIndex(numberForskningsområde1);
-
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Forskningsområde1, 1, 0);
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde1"})
@@ -56,11 +51,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Forskningsområde2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde2());
 		
-		Random randomOptionForskningsområde2 = new Random();  
-		int startOptionForskningsområde2 = 1;
-		int endOptionForskningsområde2 = Forskningsområde2.getOptions().size(); 
-		int numberForskningsområde2 = startOptionForskningsområde2 + randomOptionForskningsområde2 .nextInt(endOptionForskningsområde2 - startOptionForskningsområde2);  
-		Forskningsområde2.selectByIndex(numberForskningsområde2);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Forskningsområde2, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde2"})
@@ -69,11 +61,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Forskningsområde3 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde3());
 		
-		Random randomOptionForskningsområde3 = new Random();  
-		int startOptionForskningsområde3 = 1;
-		int endOptionForskningsområde3 = Forskningsområde3.getOptions().size(); 
-		int numberForskningsområde3 = startOptionForskningsområde3 + randomOptionForskningsområde3 .nextInt(endOptionForskningsområde3 - startOptionForskningsområde3);  
-		Forskningsområde3.selectByIndex(numberForskningsområde3);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Forskningsområde3, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde3"})
@@ -82,11 +71,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Forskningsområde4 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde4());
 		
-		Random randomOptionForskningsområde4 = new Random();  
-		int startOptionForskningsområde4 = 1;
-		int endOptionForskningsområde4 = Forskningsområde4.getOptions().size(); 
-		int numberForskningsområde4 = startOptionForskningsområde4 + randomOptionForskningsområde4 .nextInt(endOptionForskningsområde4 - startOptionForskningsområde4);  
-		Forskningsområde4.selectByIndex(numberForskningsområde4);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Forskningsområde4, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde4"})
@@ -95,11 +81,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Forskningsområde5 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDForskningsområde5());
 		
-		Random randomOptionForskningsområde5 = new Random();  
-		int startOptionForskningsområde5 = 1;
-		int endOptionForskningsområde5 = Forskningsområde5.getOptions().size(); 
-		int numberForskningsområde5 = startOptionForskningsområde5 + randomOptionForskningsområde5 .nextInt(endOptionForskningsområde5 - startOptionForskningsområde5);  
-		Forskningsområde5.selectByIndex(numberForskningsområde5); 
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Forskningsområde5, 1, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"Forskningsområde5"})
@@ -108,11 +91,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Metod1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod1());
 		
-		Random randomOptionMetod1 = new Random();  
-		int startOptionMetod1 = 1;
-		int endOptionMetod1 = Metod1.getOptions().size(); 
-		int numberMetod1 = startOptionMetod1 + randomOptionMetod1 .nextInt(endOptionMetod1 - startOptionMetod1);  
-		Metod1.selectByIndex(numberMetod1);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Metod1, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Metod1"})
@@ -121,11 +101,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Metod2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod2());
 		
-		Random randomOptionMetod2 = new Random();  
-		int startOptionMetod2 = 1;
-		int endOptionMetod2 = Metod2.getOptions().size(); 
-		int numberMetod2 = startOptionMetod2 + randomOptionMetod2 .nextInt(endOptionMetod2 - startOptionMetod2);  
-		Metod2.selectByIndex(numberMetod2);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Metod2, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Metod2"})
@@ -134,11 +111,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Metod3 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod3());
 		
-		Random randomOptionMetod3 = new Random();  
-		int startOptionMetod3 = 1;
-		int endOptionMetod3 = Metod3.getOptions().size(); 
-		int numberMetod3 = startOptionMetod3 + randomOptionMetod3 .nextInt(endOptionMetod3 - startOptionMetod3);  
-		Metod3.selectByIndex(numberMetod3); 
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Metod3, 1, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"Metod3"})
@@ -147,11 +121,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Metod4 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod4());
 		
-		Random randomOptionMetod4 = new Random();  
-		int startOptionMetod4 = 1;
-		int endOptionMetod4 = Metod4.getOptions().size(); 
-		int numberMetod4 = startOptionMetod4 + randomOptionMetod4 .nextInt(endOptionMetod4 - startOptionMetod4);  
-		Metod4.selectByIndex(numberMetod4);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Metod4, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Metod4"})
@@ -160,11 +131,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Metod5 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDMetod5());
 		
-		Random randomOptionMetod5 = new Random();  
-		int startOptionMetod5 = 1;
-		int endOptionMetod5 = Metod5.getOptions().size(); 
-		int numberMetod5 = startOptionMetod5 + randomOptionMetod5 .nextInt(endOptionMetod5 - startOptionMetod5);  
-		Metod5.selectByIndex(numberMetod5);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Metod5, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Metod5"})
@@ -173,11 +141,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Nyckelord1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord1());
 		
-		Random randomOptionNyckelord1 = new Random();  
-		int startOptionNyckelord1 = 1;
-		int endOptionNyckelord1 = Nyckelord1.getOptions().size(); 
-		int numberNyckelord1 = startOptionNyckelord1 + randomOptionNyckelord1 .nextInt(endOptionNyckelord1 - startOptionNyckelord1);  
-		Nyckelord1.selectByIndex(numberNyckelord1);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Nyckelord1, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Nyckelord1"})
@@ -186,11 +151,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Nyckelord2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord2());
 		
-		Random randomOptionNyckelord2 = new Random();  
-		int startOptionNyckelord2 = 1;
-		int endOptionNyckelord2 = Nyckelord2.getOptions().size(); 
-		int numberNyckelord2 = startOptionNyckelord2 + randomOptionNyckelord2 .nextInt(endOptionNyckelord2 - startOptionNyckelord2);  
-		Nyckelord2.selectByIndex(numberNyckelord2);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Nyckelord2, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Nyckelord2"})
@@ -199,11 +161,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Nyckelord3 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord3());
 		
-		Random randomOptionNyckelord3 = new Random();  
-		int startOptionNyckelord3 = 1;
-		int endOptionNyckelord3 = Nyckelord3.getOptions().size(); 
-		int numberNyckelord3 = startOptionNyckelord3 + randomOptionNyckelord3 .nextInt(endOptionNyckelord3 - startOptionNyckelord3);  
-		Nyckelord3.selectByIndex(numberNyckelord3); 
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Nyckelord3, 1, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"Nyckelord3"})
@@ -212,11 +171,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Nyckelord4 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord4());
 		
-		Random randomOptionNyckelord4 = new Random();  
-		int startOptionNyckelord4 = 1;
-		int endOptionNyckelord4 = Nyckelord4.getOptions().size(); 
-		int numberNyckelord4 = startOptionNyckelord4 + randomOptionNyckelord4 .nextInt(endOptionNyckelord4 - startOptionNyckelord4);  
-		Nyckelord4.selectByIndex(numberNyckelord4);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Nyckelord4, 1, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"Nyckelord4"})
@@ -225,11 +181,8 @@ public class GranskarkompetensKID extends BeforeAfterTestBrowsers {
 		Select Nyckelord5 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_GranskarkompetensKIDNyckelord5());
 		
-		Random randomOptionNyckelord5 = new Random();  
-		int startOptionNyckelord5 = 1;
-		int endOptionNyckelord5 = Nyckelord5.getOptions().size(); 
-		int numberNyckelord5 = startOptionNyckelord5 + randomOptionNyckelord5 .nextInt(endOptionNyckelord5 - startOptionNyckelord5);  
-		Nyckelord5.selectByIndex(numberNyckelord5);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Nyckelord5, 1, 0);
+	
 	}
 
 	@Test (dependsOnMethods={"Nyckelord5"})

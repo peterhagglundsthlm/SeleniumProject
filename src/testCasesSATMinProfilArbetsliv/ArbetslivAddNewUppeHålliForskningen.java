@@ -18,7 +18,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 	@Test
 	public void LoginAsUser() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})

@@ -4,14 +4,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationsuppgifter;
 import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
-
 
 public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
@@ -25,14 +23,13 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test 
 	public void ClickStartButton() {
 
-		//KLICKAR PÅ START
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Start()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Start()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickStartButton"})
 	public void ClickPersonuppgifterButton() {
 
-		//KLICKAR PÅ PERSONUPPGIFTER
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Personuppgifter()).click();
 
@@ -41,7 +38,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickPersonuppgifterButton"})
 	public void ClickUtbildningButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER UTBILDNING
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning()).click();
 		
@@ -59,7 +55,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickUtbildningButton"})
 	public void ClickArbetslivButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER ARBETSLIV
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 		
@@ -79,7 +74,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickArbetslivButton"})
 	public void ClickPublikationerButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER PUBLIKATIONER
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Publikationer()).click();
 		
@@ -93,7 +87,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickPublikationerButton"})
 	public void ClickMeriterOchUtmärkelserButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser()).click();
 		
@@ -115,7 +108,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickMeriterOchUtmärkelserButton"})
 	public void ClickImmaterialrättButton() {
 
-		//KLICKAR PÅ ALLA RUBRIKER UNDER MERITER OCH UTMÄRKELSER
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Immaterialrätt()).click();
 		
@@ -139,7 +131,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickGranskarkompetensIfVisible"})
 	public void ClickAnsökningarOchBidrag() {
 
-		//Klickar på alla knappar som finns på "Ansökningar och bidrag" sidan
 		driver.findElement(
 				PortalLoggedInAsUserAnsökningarOchBidrag.AnsökningarOchBidragButton()).click();
 		
@@ -163,7 +154,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickAnsökningarOchBidrag"})
 	public void ClickGranskning() {
 
-		//Klickar på alla knappar som finns på "Granskning" sidan
 		driver.findElement(PortalLoggedInAsUserGranskning.GranskningButton()).click();
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
@@ -195,9 +185,7 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"ClickOrganisationsUppgifter"})
 	public void ClickOrganisationsKonto() {
 
-		//Klickar på alla knappar som finns på "ORGANISATIONSKONTO" SIDAN
 		driver.findElement(PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto()).click();
-		
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsOrgUserOrganisationskonto.Organisationskonto_AnsökningarOchBidrag());
@@ -232,8 +220,6 @@ public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"ClickOrganisationsKonto"})
 	public void Logout() {
-
-		//LOGGAR UT
 
 		driver.findElement(
 				PortalLoggedInAsUserLoggaUt.LoggaUt()).click();

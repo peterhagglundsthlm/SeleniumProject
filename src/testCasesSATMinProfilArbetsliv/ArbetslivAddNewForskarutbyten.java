@@ -1,6 +1,5 @@
 package testCasesSATMinProfilArbetsliv;
 
-import java.util.Random;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
@@ -8,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -22,7 +22,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 	@Test
 	public void LoginAsUser4() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser4"})
@@ -31,7 +32,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
 	}
 
 	@Test (dependsOnMethods={"ClickArbetsliv"})
@@ -40,7 +42,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenLäggTill());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenLäggTill()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenLäggTill()).click();
 	}
 
 	@Test (dependsOnMethods={"AddForskarUbyten"})
@@ -51,19 +54,23 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation());
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(universitet);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(universitet);
 
 		Thread.sleep(500);
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.DOWN);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.DOWN);
 
 		Thread.sleep(500);
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.ENTER);
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.ENTER);
 
 		Thread.sleep(500);
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSparaSöktOrganisation()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSparaSöktOrganisation()).click();
 	}
 
 
@@ -72,30 +79,19 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		Select ämne1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbyteÄmne1());
-
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = ämne1.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		ämne1.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne1, 1, 0);
 
 		Select ämne2 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbyteÄmne2());
-
-		Random randomOption2 = new Random();  
-		int startOption2 = 1;
-		int endOption2 = ämne2.getOptions().size(); 
-		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
-		ämne2.selectByIndex(number2);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne2, 1, 0);
 
 		Select ämne3 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbyteÄmne3());
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne3, 1, 0);
 
-		Random randomOption3 = new Random();  
-		int startOption3 = 1;
-		int endOption3 = ämne3.getOptions().size(); 
-		int number3 = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
-		ämne3.selectByIndex(number3);
 	}
 
 	@Test (dependsOnMethods={"Ämne"})
@@ -103,12 +99,9 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		Select Typ = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbyteTyp());
-
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = Typ.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		Typ.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Typ, 1, 0);
+		
 	}
 
 	@Test (dependsOnMethods={"Typ"})
@@ -116,16 +109,14 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		Select PeriodStartYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenPeriodStartYear());
-
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = PeriodStartYear.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		PeriodStartYear.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(PeriodStartYear, 1, 1);
 
 		Select PeriodEndYear = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenPeriodSlutYear());
-		PeriodEndYear.selectByIndex(number + 1);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropdownPreviousDropDownPlusOne(PeriodEndYear);
+	
 	}
 
 	@Test (dependsOnMethods={"PeriodStartOchSlutYear"})
@@ -133,12 +124,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		Select PeriodStartMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenPeriodStartMonth());
-
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = PeriodStartMonth.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		PeriodStartMonth.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(PeriodStartMonth, 1, 0);
 	}
 
 	@Test (dependsOnMethods={"PeriodStartMonth"})
@@ -146,12 +133,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		Select PeriodEndMonth = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenPeriodSlutMonth());
-
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = PeriodEndMonth.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		PeriodEndMonth.selectByIndex(number);
+		
+		RandomDropDownOptionSelect.RandomOptionInDropDown(PeriodEndMonth, 1, 0);
 	}
 
 	@Test (dependsOnMethods={"PeriodEndMonth"})

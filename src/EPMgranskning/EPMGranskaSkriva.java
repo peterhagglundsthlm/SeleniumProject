@@ -22,6 +22,8 @@ import pageElementsSAT_EPM.EPM_applicationTestData;
 import pageElementsSAT_EPM.EPM_granskningElements;
 
 public class EPMGranskaSkriva extends EpmGranskaPrerequisites {
+	
+	/*
 
 	@Test
 	public void granskaApplication () throws AWTException, InterruptedException, IOException  {
@@ -51,7 +53,7 @@ public class EPMGranskaSkriva extends EpmGranskaPrerequisites {
 		/*
 		int antalTextarea = driver.findElements(By.tagName("textarea")).size();
 		System.out.println(antalTextarea + " stora fält att fylla i");
-		 */
+		 
 		// inmatning
 		driver.findElement(By.id(("4367fbf2-3e42-4220-a1f1-c00c509e6b0f"))).sendKeys(datum + "Test Testenstein skriver utlåtande, fält 1.");
 		driver.findElement(By.id(("ff438f9b-b6cb-4dfe-a4e1-bbbfabe50f90"))).sendKeys("Test Testenstein skriver utlåtande, fält 2.");
@@ -80,5 +82,9 @@ public class EPMGranskaSkriva extends EpmGranskaPrerequisites {
 		wait.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
+	
+		 
+	
 	} 
+*/
 }

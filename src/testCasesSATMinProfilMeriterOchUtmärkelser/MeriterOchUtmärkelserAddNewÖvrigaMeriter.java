@@ -1,12 +1,12 @@
 package testCasesSATMinProfilMeriterOchUtmärkelser;
 
-import java.util.Random;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -22,12 +22,13 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 	@Test
 	public void LoginAsUser() {
 
-		driver.findElement(PortalLoggedInAsUserMinProfil.MinProfil()).click();
+		driver.findElement(
+				PortalLoggedInAsUserMinProfil.MinProfil()).click();
 	}
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickMeriterOchUtmärkelser() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser());
 
@@ -37,7 +38,7 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 	@Test (dependsOnMethods={"ClickMeriterOchUtmärkelser"})
 	public void LäggTill() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterLäggTill());
 
@@ -47,20 +48,20 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 
 	@Test (dependsOnMethods={"LäggTill"})
 	public void StartårAndSlutÅr() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterStartår());
 
 		Select Startår = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterStartår());
-		
-		Random randomOptionStartår = new Random();  
-		int endOptionStartår = Startår.getOptions().size(); 
-		int numberStartår = randomOptionStartår .nextInt(endOptionStartår);  
-		Startår.selectByIndex(numberStartår);
 
-		Select Slutår = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår());
-		Slutår.selectByIndex(numberStartår + 1);
+		RandomDropDownOptionSelect.RandomOptionInDropDown(Startår, 0, 1);
+
+		Select Slutår = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSlutår());
+
+		RandomDropDownOptionSelect.RandomOptionInDropdownPreviousDropDownPlusOne(Slutår);
+
 	}
 
 	@Test (dependsOnMethods={"StartårAndSlutÅr"})
@@ -81,7 +82,7 @@ public class MeriterOchUtmärkelserAddNewÖvrigaMeriter extends BeforeAfterTestBro
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_ÖvrigaMeriterSpara()).click();
 	}

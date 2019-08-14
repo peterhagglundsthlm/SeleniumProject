@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import driverAndCommands.BeforeAfterTestBrowsers;
 import driverAndCommands.DriverWaitExpectedConditions;
+import driverAndCommands.RandomDropDownOptionSelect;
 import driverAndCommands.driverSelect;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
@@ -28,7 +29,7 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 	@Test (dependsOnMethods={"LoginAsUser"})
 	public void ClickMeriterOchUtmärkelser() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser());
 
@@ -38,7 +39,7 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 	@Test (dependsOnMethods={"ClickMeriterOchUtmärkelser"})
 	public void LäggTillDocentur() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturLäggTill());
 
@@ -47,7 +48,7 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 	@Test (dependsOnMethods={"LäggTillDocentur"})
 	public void SelectOrganization() throws InterruptedException {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSökOrganisation());
 
@@ -70,22 +71,18 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 		Select ämne1 = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne1());
-		
-		Random randomOption = new Random();  
-		int startOption = 1;
-		int endOption = ämne1.getOptions().size(); 
-		int number = startOption + randomOption .nextInt(endOption - startOption);  
-		ämne1.selectByIndex(number);
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne1, 1, 0);
+
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2());
 
-		Select ämne2 = driverSelect.DropDown(driver, PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2());
-		Random randomOption2 = new Random();  
-		int startOption2 = 1;
-		int endOption2 = ämne2.getOptions().size(); 
-		int number2 = startOption2 + randomOption2 .nextInt(endOption2 - startOption2);  
-		ämne2.selectByIndex(number2);
+		Select ämne2 = driverSelect.DropDown(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÄmne2());
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(ämne2, 1, 0);
+
 	}
 
 	@Test (dependsOnMethods={"Ämne"})
@@ -93,19 +90,16 @@ public class MeriterOchUtmärkelserAddNewDocentur extends BeforeAfterTestBrowsers
 
 		Select år = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturÅr());
-		
-		Random randomOption3 = new Random();  
-		int startOption3 = 0;
-		int endOption3 = år.getOptions().size(); 
-		int number = startOption3 + randomOption3 .nextInt(endOption3 - startOption3);  
-		år.selectByIndex(number); 
+
+		RandomDropDownOptionSelect.RandomOptionInDropDown(år, 0, 0);
+
 	}
 
 	@Test (dependsOnMethods={"År"})
 	public void SparaDocentur() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_MeriterOchUtmärkelser_DocenturSpara()).click();
 	}
