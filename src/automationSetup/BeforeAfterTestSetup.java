@@ -38,15 +38,13 @@ public class BeforeAfterTestSetup {
 
 	}
 
-	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
-	
-	@BeforeClass
+	@BeforeClass @Parameters({"browser",  "Username", "Password", "Environment", "Language"})
 	public void Setup(
 			@Optional String browser,
 			@Optional String Username , 
 			@Optional String Password, 
 			@Optional String Environment, 
-			@Optional String Language) 
+			@Optional String Language)
 	{
 		if (browser.equalsIgnoreCase("Chrome")) {
 
@@ -158,14 +156,23 @@ public class BeforeAfterTestSetup {
 						result.getInstanceName() + "." + result.getName() + " " + straDate + (".png")));
 			}
 			catch(Exception e) { } } }
+	
+	
 
-	@AfterClass
-	public void tearDown() { 
-
+	@AfterClass @Parameters ({"CloseDriver"})
+	public void tearDown(@Optional String CloseDriver) { 
+		
+		if (CloseDriver.equalsIgnoreCase("Yes")) 
+		{
+			driver.quit();
+		}		
+		else {
+			
+		}
+		
 		String testCaseName = this.getClass().getSimpleName();
-		//driver.quit();
 		CalculateTimeForTestcaseAndTestSuite.EndTimeTest(durationTest, startTimeTest, testCaseName);
-
+		
 	}
 
 	@AfterSuite
