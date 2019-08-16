@@ -1,13 +1,8 @@
 /bin/
 
 test-output/
-
-RunAllTestsSATChrome.xml
-
-RunSingleTestSAT.xml
-
-RunOnePackageSAT.xml
-
-anliEPMFormular.xml
+RunOnePackage.xml
+RunWholeProject.xml
+SingleTest.xml
 
 /target/
