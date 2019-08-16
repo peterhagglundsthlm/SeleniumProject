@@ -16,10 +16,10 @@
 	<parameter name="browser" value="Chrome" />
   
 	<test name="testCasesSATMinProfilUtbildning">
-		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
-		<parameter name="Password" value="Vr1234"></parameter>
+		<parameter name="Username" value="kristofer.klarin@vr.se"></parameter>
+		<parameter name="Password" value="Testare123"></parameter>
 		<packages>
-			<package name="testCasesSATMinProfilUtbildning" />
+			<package name="testCasesSATButtonCheckAdmin" />
 		</packages>
 	</test>
 </suite> 

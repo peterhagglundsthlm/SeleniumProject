@@ -3,11 +3,12 @@ package testCasesSATStartPageNotLoggedIn;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
-public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class LoginAsInvalidUser extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -34,8 +35,7 @@ public class LoginAsInvalidUser extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"InputUserWithInvalidInfo"})
 	public void CheckThatLogginInWithFalseInfoNotPossible() {
 		
-		if (driver.getPageSource().contains("Den angivna e-postadressen är inte korrekt")
-				|| driver.getPageSource().contains("The stated e-mail address is not valid"))
+		if (driver.getPageSource().contains("Den angivna e-postadressen är inte korrekt") || driver.getPageSource().contains("The stated e-mail address is not valid"))
 		{ 
 
 		} else {

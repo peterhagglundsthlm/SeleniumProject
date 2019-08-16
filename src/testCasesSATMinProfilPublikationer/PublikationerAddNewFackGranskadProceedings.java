@@ -2,12 +2,13 @@ package testCasesSATMinProfilPublikationer;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
+
+public class PublikationerAddNewFackGranskadProceedings extends BeforeAfterTestSetup {
 
 		//TestCaseInfo = "Loggar in som en projektledare och lägger till en fackgranskad Proceedings";
 	

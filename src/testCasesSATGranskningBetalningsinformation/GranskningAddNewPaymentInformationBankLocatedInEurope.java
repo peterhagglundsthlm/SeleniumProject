@@ -5,12 +5,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserGranskning;
 
-public class GranskningAddNewPaymentInformationBankLocatedInEurope extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserGranskning;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.CountRowsInTable;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.GetCurrentUrl;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.SearchForOrganizationWhenButtonIdIsUnique;
+import reusableMethods.driverSelect;
+
+public class GranskningAddNewPaymentInformationBankLocatedInEurope extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -23,11 +29,12 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningButton()).click();
+		
 	}
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation());
 
@@ -37,10 +44,10 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
-		
+
 		Select BankensLand = driverSelect.DropDown(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
@@ -58,64 +65,54 @@ public class GranskningAddNewPaymentInformationBankLocatedInEurope extends Befor
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
-		
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).sendKeys("Frankrikes bästa bank");
+
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(), "SvinBraBank");
+
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
 	public void Kontoinnehavare() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(), "BankmanTest");
+
 	}
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void IBAN() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN()).sendKeys("9943595");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationIBAN(), "9943595");
+
 	}
 
 	@Test (dependsOnMethods={"IBAN"})
 	public void SWIFTBIC() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).sendKeys("Abc1234567");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(), "Abc1234567");
+
 	}
 
 	@Test (dependsOnMethods={"SWIFTBIC"})
 	public void TIN() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).sendKeys("12134234");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(), "12134234");
+
 	}
 
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
 
 	@Test (dependsOnMethods={"Spara"})
 	public void AccepteraAlert() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				By.xpath("//button[contains(text(), 'Ok')]"));
-		
+
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

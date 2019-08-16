@@ -24,14 +24,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-//import com.sun.tools.javac.util.List;
-
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
 import java.io.IOException;
 

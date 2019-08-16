@@ -1,13 +1,16 @@
 package testCasesSATMinProfilArbetsliv;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.CountRowsInTable;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -36,6 +39,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenLäggTill());
+		
+		CountRowsInTable.CountTable(driver, By.xpath("//*[@id=\"InterruptionInResearchViewSectionIdFormId\"]/table/tbody/tr"));
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenLäggTill()).click();
@@ -72,5 +77,8 @@ public class ArbetslivAddNewUppeHålliForskningen extends BeforeAfterTestBrowsers
 		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenSpara()).click();	
+		
+		CountRowsInTable.AddedRow(driver, By.xpath("//*[@id=\"InterruptionInResearchViewSectionIdFormId\"]/table/tbody/tr"), PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_UppehållIForskningenLäggTill());
+		
 	}
 }

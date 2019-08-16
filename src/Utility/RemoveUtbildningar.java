@@ -3,11 +3,12 @@ package Utility;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class RemoveUtbildningar extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class RemoveUtbildningar extends BeforeAfterTestSetup {
 	
 
 

@@ -5,12 +5,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserGranskning;
 
-public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserGranskning;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
+
+public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -23,6 +25,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningButton()).click();
+
 	}
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
@@ -76,29 +79,23 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankgiro exten
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id());
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id(), "1234-1234");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankgiro_Id()).sendKeys("1234-1234");
 	}
 
 	@Test (dependsOnMethods={"Bankgiro"})
 	public void Skatteprocent() {
 		
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent()).sendKeys("35");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(), "35");
+		
 	}
 
 	@Test (dependsOnMethods={"Skatteprocent"})
 	public void TIN() {
 		
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).sendKeys("1234567");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(), "1234567");
+	
 	}
 
 	@Test (dependsOnMethods={"TIN"})

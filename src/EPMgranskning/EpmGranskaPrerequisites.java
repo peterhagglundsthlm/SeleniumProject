@@ -4,9 +4,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
+import automationSetup.BeforeAfterTestSetup;
 
-public class EpmGranskaPrerequisites extends BeforeAfterTestBrowsers {
+public class EpmGranskaPrerequisites extends BeforeAfterTestSetup {
 
 	static String beredningsgrupp;
 	static String granskningsuppgifter;

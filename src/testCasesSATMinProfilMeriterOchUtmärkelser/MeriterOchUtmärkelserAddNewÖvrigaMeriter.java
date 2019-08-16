@@ -4,14 +4,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.driverSelect;
 
 
-public class MeriterOchUtm‰rkelserAddNew÷vrigaMeriter extends BeforeAfterTestBrowsers {
+public class MeriterOchUtm‰rkelserAddNew÷vrigaMeriter extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {

@@ -19,11 +19,11 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
 public class anliEpmForm04LäkFlera extends anliEpmFormTitleCategory{
 

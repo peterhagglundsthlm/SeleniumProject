@@ -3,11 +3,12 @@ package testCasesSATStartPageNotLoggedIn;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 
-public class InformationOmWebbplatsen extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class InformationOmWebbplatsen extends BeforeAfterTestSetup {
 	String Url; String NyURL;
 
 	@BeforeClass

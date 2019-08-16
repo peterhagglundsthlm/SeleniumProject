@@ -1,4 +1,4 @@
-package driverAndCommands;
+package automationSetup;
 
 import java.io.File;
 import java.util.List;

@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import reusableMethods.GetCurrentUrl;
+
 public class EPM_granskningElements {
 
 	static By element = null;
@@ -51,7 +53,9 @@ public class EPM_granskningElements {
 		}
 		else {
 			Assert.fail("Hittar inte spara-knappen");
-			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+			GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+			
+			
 		}
 		Thread.sleep(2000);
 

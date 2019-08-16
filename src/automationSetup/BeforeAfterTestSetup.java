@@ -1,4 +1,4 @@
-package driverAndCommands;
+package automationSetup;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,26 +20,26 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
-import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
-import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
+import reusableMethods.DriverWaitExpectedConditions;
 
-public class BeforeAfterTestBrowsers {
+public class BeforeAfterTestSetup {
 
 	public WebDriver driver;  long duration; double startTimeSuite; double durationSuite; double startTimeTest; double durationTest; 
-
+	
 	@BeforeSuite
 	public void CheckTimeBeforeSuite() {
-		StartDateAndTimeSuite.StartDateAndTimeSuitePrint();
+		
+		CalculateTimeForTestcaseAndTestSuite.StartDateAndTimeSuitePrint();
 		System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "WARN");
 		startTimeSuite = System.currentTimeMillis();
 		WebDriverManager.chromedriver().setup();
-		WebDriverManager.firefoxdriver();
+
 	}
 
 	@Parameters({"browser",  "Username", "Password", "Environment", "Language"})
+	
 	@BeforeClass
 	public void Setup(
 			@Optional String browser,
@@ -141,9 +140,7 @@ public class BeforeAfterTestBrowsers {
 
 			if (Language.equalsIgnoreCase("Svenska"))
 				LoggedInAsUserSwitchLanguage.SwitchLanguageToSwedishLoggedInPage(driver);
-			
-		}
-		 
+		} 
 	}
 
 	@AfterMethod
@@ -167,13 +164,13 @@ public class BeforeAfterTestBrowsers {
 
 		String testCaseName = this.getClass().getSimpleName();
 		//driver.quit();
-		EndTimeSuiteAndTest.EndTimeTest(durationTest, startTimeTest, testCaseName);
+		CalculateTimeForTestcaseAndTestSuite.EndTimeTest(durationTest, startTimeTest, testCaseName);
 
 	}
 
 	@AfterSuite
 	public void CheckTimeAfterSuite() {
 		
-		EndTimeSuiteAndTest.EndTimeSuite(duration, startTimeSuite);
+		CalculateTimeForTestcaseAndTestSuite.EndTimeSuite(duration, startTimeSuite);
 	}
 }

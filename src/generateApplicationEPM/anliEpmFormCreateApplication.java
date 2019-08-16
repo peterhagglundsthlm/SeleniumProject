@@ -17,14 +17,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
 
-public class anliEpmFormCreateApplication extends BeforeAfterTestBrowsers {
+public class anliEpmFormCreateApplication extends BeforeAfterTestSetup {
 	
 	String titelEPM;
 

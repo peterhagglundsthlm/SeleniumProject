@@ -1,17 +1,19 @@
 package testCasesSATOrganisationsKontoAnvändare;
 
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
+
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 
-public class BjudInAnvändareNegativtTest extends BeforeAfterTestBrowsers{
+public class BjudInAnvändareNegativtTest extends BeforeAfterTestSetup{
 
 
 	@BeforeClass

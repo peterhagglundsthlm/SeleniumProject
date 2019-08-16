@@ -5,14 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
 
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.driverSelect;
 
-public class GemensammaMetoder extends BeforeAfterTestBrowsers {
+public class GemensammaMetoder extends BeforeAfterTestSetup {
 
 	public static void LoggainPublikation (WebDriver driver) {
 		//	ersätter public void LoginAsUser(), public void ClickPublikationer(), public void LäggTillPublikationer()
