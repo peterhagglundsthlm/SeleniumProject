@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SuiteSAT" verbose="1" parallel="false" group-by-instances="true" >
+
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="Environment" value="https://testaprisma.vr.se/"></parameter>
+	<parameter name="Language" value="svenska"></parameter>
+	<parameter name="projectTitle" value=""></parameter>
+	<parameter name="applicationType" value=""></parameter>
+	<parameter name="CloseDriver" value="yes"></parameter>
+  
+	<test name="testCasesSATButtonCheckAdmin">
+		<parameter name="Username" value="kristofer.klarin@vr.se"></parameter>
+		<parameter name="Password" value="Testare123"></parameter>
+		<packages>
+			<package name="testCasesSATButtonCheckAdmin" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATButtonCheckOrgUser">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATButtonCheckOrgUser" />
+		</packages>
+	</test>	
+
+	<test name="testCasesSATGranskningBetalningsinformation">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATGranskningBetalningsinformation" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilArbetsliv">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilArbetsliv" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilGranskarkompetens">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilGranskarkompetens" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilImmaterialrätt">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilImmaterialrätt" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilMeriterOchUtmärkelser">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilMeriterOchUtmärkelser" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilPublikationer">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilPublikationer" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATMinProfilUtbildning">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilUtbildning" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATOrganisationsKontoAnvändare">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATOrganisationsKontoAnvändare" />
+		</packages>
+	</test>
+
+	<test name="testCasesSATOrganisationskontoStruktur">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATOrganisationskontoStruktur" />
+		</packages>
+	</test>
+	
+	<test name="testCasesSATStartPageNotLoggedIn">
+		<parameter name="browser" value="ChromeNotLoggedIn"></parameter>
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATStartPageNotLoggedIn" />
+		</packages>
+	</test>
+	
+</suite> 

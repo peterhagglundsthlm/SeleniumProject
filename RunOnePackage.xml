@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SuiteSAT" verbose="1" parallel="false"
+	group-by-instances="true">
+
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="Username" value="jagtestarprisma@gmail.com"></parameter>
+	<parameter name="Password" value="Vr1234"></parameter>
+	<parameter name="Environment"
+		value="https://testaprisma.vr.se/"></parameter>
+	<parameter name="Language" value="svenska"></parameter>
+	<parameter name="projectTitle" value=""></parameter>
+	<parameter name="applicationType" value=""></parameter>
+	<parameter name="CloseDriver" value="">yes</parameter>
+
+
+	<test name="Test123">
+		<parameter name="Username" value="kkprisma1@yahoo.com"></parameter>
+		<parameter name="Password" value="Vr1234"></parameter>
+		<packages>
+			<package name="testCasesSATMinProfilUtbildning" />
+		</packages>
+	</test>
+</suite> 
