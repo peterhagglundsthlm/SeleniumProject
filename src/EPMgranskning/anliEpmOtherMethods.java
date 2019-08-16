@@ -11,9 +11,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT_EPM.EPM_granskningElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
 public class anliEpmOtherMethods extends EpmGranskaPrerequisites {
 

@@ -1,11 +1,13 @@
 package testCasesSATOrganisationsKontoAnvändare;
 
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.driverSelect;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -13,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
-public class BjudInAnvändare extends BeforeAfterTestBrowsers {
+public class BjudInAnvändare extends BeforeAfterTestSetup {
 
 	@BeforeClass 	
 	public void TestCaseInfo() {

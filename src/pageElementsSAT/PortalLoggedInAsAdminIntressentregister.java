@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 
 public class PortalLoggedInAsAdminIntressentregister {
-	private static By element = null;
-
+	
 	//INTRESSENTREGISTER - KNAPPEN
 	public static By IntressentregisterButton(){
 

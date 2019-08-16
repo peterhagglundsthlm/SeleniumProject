@@ -1,17 +1,20 @@
 package testCasesSATMinProfilArbetsliv;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.CountRowsInTable;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.SearchForOrganizationWhenButtonIdIsUnique;
+import reusableMethods.driverSelect;
 
-public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
+public class ArbetslivAddNewAnställningar extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -42,6 +45,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_LäggTill());
 
+		CountRowsInTable.CountTable(driver, By.xpath("//*[@id=\"employmentViewSectionIdFormId\"]/table/tbody/tr"));
+
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_LäggTill()).click();
 	}
@@ -49,28 +54,11 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AddAnställning"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet";
-
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare());
 
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(universitet);
+		SearchForOrganizationWhenButtonIdIsUnique.EnterKeyInputs(driver, PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare(), "Uppsala Universitet");
 
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.DOWN);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SökArbetsgivare()).sendKeys(Keys.ENTER);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaSökArbetsgivare()).click();
 	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})
@@ -95,20 +83,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AnställningDropDown"})
 	public void DelAvForskningIAnställningenBaseradPåHeltid() {
 
-		String DelAvForskningIAnställningenBaseradPåHeltid = "100";
+		CombineClearAndSendkeys.ClearSend(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid(), "100");
 
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(DelAvForskningIAnställningenBaseradPåHeltid);
-
-		if (driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).getAttribute("value")!= DelAvForskningIAnställningenBaseradPåHeltid) 
-		{
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).clear();
-
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_DelAvForskningenIAnställningenBaseradPåHeltid()).sendKeys(DelAvForskningIAnställningenBaseradPåHeltid);
-		}
 	}
 
 	@Test (dependsOnMethods={"DelAvForskningIAnställningenBaseradPåHeltid"})
@@ -146,20 +123,8 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 	@Test (dependsOnMethods={"AnställningensSlutMonth"})
 	public void ÖvrigInformation() {
 
-		String ÖvrigInformation = "Mycket bra övrig information";
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).sendKeys(ÖvrigInformation);
-
-		if (driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).getAttribute("value") != ÖvrigInformation);
-		{
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).clear();
-
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation()).sendKeys(ÖvrigInformation);
-		}
+		CombineClearAndSendkeys.ClearSend(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_ÖvrigInformation(), "Mycket bra övrig information");
 	}
 
 	@Test (dependsOnMethods={"ÖvrigInformation"})
@@ -169,6 +134,9 @@ public class ArbetslivAddNewAnställningar extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_SparaAnställning()).click();
+		
+		CountRowsInTable.AddedRow(driver, By.xpath("//*[@id=\"employmentViewSectionIdFormId\"]/table/tbody/tr"), PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_Anställningar_LäggTill());
+
 	}
 }
 

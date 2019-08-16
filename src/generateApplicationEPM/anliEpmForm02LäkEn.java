@@ -19,12 +19,12 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
 public class anliEpmForm02LäkEn extends anliEpmFormTitleCategory{
 
@@ -396,7 +396,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitleCategory{
 		System.out.println("wait4a");
 
 		// 15.5.1 EudraCT-nr in med javascript
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 				
 		System.out.println("Tillbaka i form02-klassen.");
@@ -422,7 +422,7 @@ public class anliEpmForm02LäkEn extends anliEpmFormTitleCategory{
 		
 		System.out.println("Nu ska jag anropa kod från anliEpmLäkemedel.bilagorLäkemedel");
 		
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 		
 		System.out.println("Alla filer är uppladdade.");

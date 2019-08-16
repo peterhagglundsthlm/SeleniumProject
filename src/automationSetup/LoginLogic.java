@@ -1,4 +1,4 @@
-package driverAndCommands;
+package automationSetup;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT.SAT_Home_Page_Not_Logged_In;
+import reusableMethods.DriverWaitExpectedConditions;
 
 public class LoginLogic {
 

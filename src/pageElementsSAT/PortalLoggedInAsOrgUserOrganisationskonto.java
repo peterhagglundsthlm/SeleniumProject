@@ -3,11 +3,8 @@ package pageElementsSAT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
-
 public class PortalLoggedInAsOrgUserOrganisationskonto {
-	private static By element = null;
-
+	
 	//ORGANISATIONSKONTO - KNAPPEN
 	public static By Organisationskonto(){
 

@@ -6,13 +6,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.driverSelect;
+
+public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -63,19 +65,9 @@ public class ImmaterialrättAddNewImmaterialRätt extends BeforeAfterTestBrowsers 
 
 	@Test (dependsOnMethods={"Typ"})
 	public void Id() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId(), "123456");
 
-		String id = "123456";
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).sendKeys(id);
-
-		if (driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).getAttribute("value") != id)
-		{
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).clear();
-			driver.findElement(
-					PortalLoggedInAsUserMinProfil.MinProfil_ImmaterialrättId()).sendKeys(id);
-		}	
 	}
 
 	@Test (dependsOnMethods={"Id"})

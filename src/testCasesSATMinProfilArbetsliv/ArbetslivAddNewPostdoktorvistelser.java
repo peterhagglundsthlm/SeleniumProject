@@ -1,17 +1,21 @@
 package testCasesSATMinProfilArbetsliv;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.CountRowsInTable;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.SearchForOrganizationWhenButtonIdIsUnique;
+import reusableMethods.driverSelect;
+
+public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -38,6 +42,11 @@ public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestBrowsers 
 
 	@Test (dependsOnMethods={"ClickArbetsliv"})
 	public void AddPostdoktorvistelser() {
+		
+		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserLäggTill());
+		
+		CountRowsInTable.CountTable(driver, By.xpath("//*[@id=\"postDoctorialViewSectionIdFormId\"]/table/tbody/tr"));
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserLäggTill()).click();
@@ -46,30 +55,12 @@ public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestBrowsers 
 	@Test (dependsOnMethods={"AddPostdoktorvistelser"})
 	public void SelectOrganization() throws InterruptedException {
 
-		String universitet = "Uppsala Universitet";
-
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation());
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation()).sendKeys(universitet);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation()).sendKeys(Keys.DOWN);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation()).sendKeys(Keys.ENTER);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSparaSöktOrganisation()).click();	
+		
+		SearchForOrganizationWhenButtonIdIsUnique.EnterKeyInputs(driver, PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSökOrganisation(), "Uppsala Universitet");
+		
 	}
-
 
 	@Test (dependsOnMethods={"SelectOrganization"})
 	public void ÄmneDropDown() {
@@ -131,8 +122,10 @@ public class ArbetslivAddNewPostdoktorvistelser extends BeforeAfterTestBrowsers 
 	public void SparaPostdoktorvistelser() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-
+		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserSpara()).click();
+		
+		CountRowsInTable.AddedRow(driver, By.xpath("//*[@id=\"postDoctorialViewSectionIdFormId\"]/table/tbody/tr"), PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_PostdoktorvistelserLäggTill());
 	}
 }

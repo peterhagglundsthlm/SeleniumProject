@@ -3,11 +3,12 @@ package testCasesSATOrganisationskontoStruktur;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
-public class StrukturAddNewHemvist extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class StrukturAddNewHemvist extends BeforeAfterTestSetup {
 	String EngelsktNamnPÂEnhet; String SvenskNamnPÂEnhet;
 
 	@BeforeClass

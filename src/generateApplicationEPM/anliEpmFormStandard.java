@@ -17,7 +17,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
 import pageElementsSAT_EPM.EPM_applicationTestData;
 
@@ -480,7 +480,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 			System.out.println(". Jag har valt Ja på läkemedelsprövning");
 
 			// 15.5.1 EudraCT-nr - javascript eller text väljs i metoden i Lakemedel
-			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+			reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 			generateApplicationEPM.anliEpmLakemedel.eudraCTnr(driver);
 		}
 
@@ -517,7 +517,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		System.out.println("wait7.");
 
 		// tillägg av alla obligatoriska bilagor
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		generateApplicationEPM.anliEpmLakemedel.bilagorLäkemedel(driver);
 
 		System.out.println("Sektion 15 är klar.");
@@ -538,7 +538,7 @@ public class anliEpmFormStandard extends anliEpmFormTitleCategory {
 		String eudraCT = "2019-123456-99";
 
 		driver.findElement(By.linkText("KONTROLLERA OCH REGISTRERA")).click();
-		driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+		reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 
 		// Om texten "'15.5.1 EudraCT-nummer' krävs" finns på sidan...
 		if (driver.getPageSource().contains("'15.5.1 EudraCT-nummer' krävs")){

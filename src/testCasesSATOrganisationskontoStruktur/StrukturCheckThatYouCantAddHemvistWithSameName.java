@@ -5,11 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 
-public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
+import reusableMethods.DriverWaitExpectedConditions;
+
+public class StrukturCheckThatYouCantAddHemvistWithSameName extends BeforeAfterTestSetup {
 	String StrukturHögstaNamn;
 
 	String EngelsktNamnPåEnhetValue; String SvenskNamnPåEnhetValue;

@@ -2,16 +2,17 @@ package testCasesSATButtonCheckOrgUser;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationskonto;
 import pageElementsSAT.PortalLoggedInAsOrgUserOrganisationsuppgifter;
 import pageElementsSAT.PortalLoggedInAsUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserAnsökningarOchBidrag;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
 
-public class ButtonCheckLoggedInAsUser extends BeforeAfterTestBrowsers {
+public class ButtonCheckLoggedInAsUser extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {

@@ -5,12 +5,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserGranskning;
 
-public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserGranskning;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
+
+public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -27,7 +29,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test (dependsOnMethods={"ClickGranskningsfliken"})
 	public void Betalningsinformation() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformation());
 
@@ -37,7 +39,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test (dependsOnMethods={"Betalningsinformation"})
 	public void BankensLand() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensLand());
 
@@ -55,7 +57,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 	@Test (dependsOnMethods={"BankensLand"})
 	public void Betalningstyp() {
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBetalningstyp());
 
@@ -76,63 +78,51 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
-		
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).sendKeys("Sveriges bästa bank");
+
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(), "Sveriges bästa bank");
+
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
 	public void Kontoinnehavare() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(), "BankmanTest");
+
 	}
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void Clearingnummer() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer()).sendKeys("123456-78");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationClearingnummer(), "123456-78");
+
 	}
 
 	@Test (dependsOnMethods={"Clearingnummer"})
 	public void Bankkontonummer() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer()).sendKeys("123-4545");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(), "123-4545");
+
 	}
 
 	@Test (dependsOnMethods={"Bankkontonummer"})
 	public void Skatteprocent() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent()).sendKeys("35");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSkatteprocent(), "35");
+
 	}
 
 	@Test (dependsOnMethods={"Skatteprocent"})
 	public void TIN() {
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).sendKeys("1234567");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(), "1234567");
+
 	}
 
 	@Test (dependsOnMethods={"TIN"})
 	public void Spara() {
 
 		((JavascriptExecutor)driver).executeScript("scroll(0,-200)");
-		
+
 		driver.findElement(
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSpara()).click();
 	}
@@ -142,7 +132,7 @@ public class GranskningAddNewPaymentInformationBankLocatedInSwedenBankkonto exte
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				By.xpath("//button[contains(text(), 'Ok')]"));
-		
+
 		driver.findElement(By.xpath("//button[contains(text(), 'Ok')]")).click();
 	}
 }

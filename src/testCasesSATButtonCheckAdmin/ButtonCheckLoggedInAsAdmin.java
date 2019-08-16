@@ -1,9 +1,10 @@
 package testCasesSATButtonCheckAdmin;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsAdminBeredningsgrupper;
 import pageElementsSAT.PortalLoggedInAsAdminFinansiär;
@@ -11,8 +12,11 @@ import pageElementsSAT.PortalLoggedInAsAdminFormulär;
 import pageElementsSAT.PortalLoggedInAsAdminIntressentregister;
 import pageElementsSAT.PortalLoggedInAsAdminMinProfil;
 import pageElementsSAT.PortalLoggedInAsAdminPortalAdministration;
+import reusableMethods.CheckIfElementIsPresentOnPage;
+import reusableMethods.DriverWaitExpectedConditions;
 
-public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
+
+public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -27,34 +31,50 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton()).click();
 
+	}
+	
+	@Test (dependsOnMethods={"ClickMyProfileButton"})
+	public void ClickInställningar() {
+		
+		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton_Inställningar()).click();
+
+		CheckIfElementIsPresentOnPage.test(driver, By.id("OldPassword"));
+
 		driver.findElement(
 				PortalLoggedInAsAdminMinProfil.MinProfilButton_SWAMID_KONTO()).click();
+		
 	}
 
-	@Test (dependsOnMethods={"ClickMyProfileButton"})
+	@Test (dependsOnMethods={"ClickInställningar"})
 	public void ClickIntressentregisterButton() {
+
 
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Personkonto()).click();
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Organisationskonto()).click();
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_OrganisationsAnsökningar()).click();
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Beredningsgruppsmedlemmar()).click();
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Granskarpool()).click();
+
 		driver.findElement(
 				PortalLoggedInAsAdminIntressentregister.IntressentregisterButton_Arbetsgivare()).click();
 	}
@@ -64,10 +84,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminBeredningsgrupper.BeredningsgrupperButton_Beredningsgrupper()).click();
 		driver.findElement(
@@ -86,13 +106,13 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutet());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutet()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.KarolinskaInstitutetFormulär()).click();
 		driver.findElement(
@@ -112,10 +132,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Formas()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.FormasFormulär());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.FormasFormulär()).click();
 		driver.findElement(
@@ -135,10 +155,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Vetenskapsrådet()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.VetenskapsrådetFormulär()).click();
 		driver.findElement(
@@ -158,10 +178,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Forte()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.ForteFormulär());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.ForteFormulär()).click();
 		driver.findElement(
@@ -181,10 +201,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.Skolfi()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFormulär.SkolfiFormulär());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFormulär.SkolfiFormulär()).click();
 		driver.findElement(
@@ -225,13 +245,13 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutet()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.KarolinskaInstitutetFinansiärsinställningar()).click();
 		driver.findElement(
@@ -257,10 +277,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Formas()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.FormasFinansiärsinställningar()).click();
 		driver.findElement(
@@ -286,10 +306,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Vetenskapsrådet()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.VetenskapsrådetFinansiärsinställningar()).click();
 		driver.findElement(
@@ -315,10 +335,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Forte()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.ForteFinansiärsinställningar()).click();
 		driver.findElement(
@@ -344,10 +364,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.Skolfi()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminFinansiär.SkolfiFinansiärsinställningar()).click();
 		driver.findElement(
@@ -392,10 +412,10 @@ public class ButtonCheckLoggedInAsAdmin extends BeforeAfterTestBrowsers {
 
 		driver.findElement(
 				PortalLoggedInAsAdminPortalAdministration.PortaladministrationButton()).click();
-		
+
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar());
-		
+
 		driver.findElement(
 				PortalLoggedInAsAdminPortalAdministration.Webbplatinställningar()).click();
 		driver.findElement(

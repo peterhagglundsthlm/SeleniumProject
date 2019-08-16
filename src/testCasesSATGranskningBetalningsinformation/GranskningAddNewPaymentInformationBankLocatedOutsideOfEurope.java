@@ -5,13 +5,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsUserGranskning;
+import reusableMethods.CombineClearAndSendkeys;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
 
 
-public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extends BeforeAfterTestBrowsers {
+public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -60,82 +62,64 @@ public class GranskningAddNewPaymentInformationBankLocatedOutsideOfEurope extend
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn());
 		
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn()).sendKeys("Chiles bästa bank");
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensNamn(), "Chiles bästa bank");
+		
 	}
 
 	@Test (dependsOnMethods={"BankensNamn"})
 	public void Bankadress() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress(), "Bankgata123");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankAdress()).sendKeys("Bankgata123");
 	}
 
 	@Test (dependsOnMethods={"Bankadress"})
 	public void BankensPostnummer() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer(), "555555");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostnummer()).sendKeys("55555");
 	}
 
 	@Test (dependsOnMethods={"BankensPostnummer"})
 	public void BankensPostadress() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress(), "GatanIStan");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankensPostAdress()).sendKeys("GatanIStan");
 	}
 
 	@Test (dependsOnMethods={"BankensPostadress"})
 	public void Kontoinnehavare() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare(), "BankmanTest");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationKontoinnehavare()).sendKeys("BankmanTest");
 	}
 
 	@Test (dependsOnMethods={"Kontoinnehavare"})
 	public void Bankkontonummer() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer(), "123-4545");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkontonummer()).sendKeys("123-4545");
 	}
 
 	@Test (dependsOnMethods={"Bankkontonummer"})
 	public void Bankkod() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod(), "1234");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationBankkod()).sendKeys("1234");
 	}
 
 	@Test (dependsOnMethods={"Bankkod"})
 	public void SWIFTBIC() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC(), "Abc1234567");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationSWIFTBIC()).sendKeys("Abc1234567");
 	}
 
 	@Test (dependsOnMethods={"SWIFTBIC"})
 	public void TIN() {
+		
+		CombineClearAndSendkeys.ClearSend(driver, PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN(), "12134234");
 
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).clear();
-		driver.findElement(
-				PortalLoggedInAsUserGranskning.GranskningBetalningsinformationTIN()).sendKeys("12134234");
 	}
 
 	@Test (dependsOnMethods={"TIN"})

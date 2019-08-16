@@ -14,12 +14,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.driverSelect;
+
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationTestData;
 import pageElementsSAT_EPM.EPM_granskningElements;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.driverSelect;
 
 public class EPMGranskaSkriva extends EpmGranskaPrerequisites {
 	

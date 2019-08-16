@@ -1,17 +1,21 @@
 package testCasesSATMinProfilArbetsliv;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.CountRowsInTable;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.SearchForOrganizationWhenButtonIdIsUnique;
+import reusableMethods.driverSelect;
+
+public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -31,6 +35,8 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv());
+		
+		CountRowsInTable.CountTable(driver, By.xpath("//*[@id=\"ResearchExchangeViewSectionIdFormId\"]/table/tbody/tr"));
 
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv()).click();
@@ -48,29 +54,12 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 
 	@Test (dependsOnMethods={"AddForskarUbyten"})
 	public void SelectOrganization() throws InterruptedException {
-
-		String universitet = "Uppsala Universitet";
-
+		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation());
 
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(universitet);
+		SearchForOrganizationWhenButtonIdIsUnique.EnterKeyInputs(driver, PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation(), "Uppsala Universitet");
 
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.DOWN);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSökOrganisation()).sendKeys(Keys.ENTER);
-
-		Thread.sleep(500);
-
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSparaSöktOrganisation()).click();
 	}
 
 
@@ -141,9 +130,11 @@ public class ArbetslivAddNewForskarutbyten extends BeforeAfterTestBrowsers {
 	public void SparaForskarUbyte() {
 
 		((JavascriptExecutor) driver).executeScript("scroll(0,-200)");
-
+		
 		driver.findElement(
 				PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenSpara()).click();
+		
+		CountRowsInTable.AddedRow(driver, By.xpath("//*[@id=\"ResearchExchangeViewSectionIdFormId\"]/table/tbody/tr"), PortalLoggedInAsUserMinProfil.MinProfil_Arbetsliv_ForskarutbytenLäggTill());
 	}
 }
 

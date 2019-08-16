@@ -6,13 +6,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
-import driverAndCommands.RandomDropDownOptionSelect;
-import driverAndCommands.driverSelect;
-import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 
-public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterTestBrowsers {
+import automationSetup.BeforeAfterTestSetup;
+import pageElementsSAT.PortalLoggedInAsUserMinProfil;
+import reusableMethods.DriverWaitExpectedConditions;
+import reusableMethods.RandomDropDownOptionSelect;
+import reusableMethods.SearchForOrganizationWhenButtonIdIsUnique;
+import reusableMethods.driverSelect;
+
+public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterTestSetup {
 
 	@BeforeClass
 	public void TestCaseInfo() {
@@ -61,19 +63,10 @@ public class UtbildningAddUtbildningPåGrundOchAvanceradNivå extends BeforeAfterT
 		
 		DriverWaitExpectedConditions.WaitForElementToBeClickable(driver, 
 				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation());
+		
+		SearchForOrganizationWhenButtonIdIsUnique.EnterKeyInputs(driver, 
+				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation(), "Uppsala Universitet");
 
-		String universitet = "Uppsala Universitet";
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(universitet);
-		Thread.sleep(500);
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.DOWN);
-		Thread.sleep(500);
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SökOrganisation()).sendKeys(Keys.ENTER);
-		Thread.sleep(500);
-		driver.findElement(
-				PortalLoggedInAsUserMinProfil.MinProfil_Utbildning_LäggTillForskarutbildning_SparaSöktOrganisationKnapp()).click();
 	}
 
 	@Test (dependsOnMethods={"SelectOrganization"})

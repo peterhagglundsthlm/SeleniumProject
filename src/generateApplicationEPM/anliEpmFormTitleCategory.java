@@ -21,13 +21,13 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import driverAndCommands.BeforeAfterTestBrowsers;
-import driverAndCommands.DriverWaitExpectedConditions;
+import automationSetup.BeforeAfterTestSetup;
 import pageElementsSAT.PortalLoggedInAsAdminAndUserLoggaUt;
 import pageElementsSAT.PortalLoggedInAsUserMinProfil;
 import pageElementsSAT_EPM.EPM_applicationFormElements;
+import reusableMethods.DriverWaitExpectedConditions;
 
-public class anliEpmFormTitleCategory extends BeforeAfterTestBrowsers{
+public class anliEpmFormTitleCategory extends BeforeAfterTestSetup{
 	
 	String titelEPM;
 	String ansökansKategori;
@@ -102,7 +102,7 @@ public class anliEpmFormTitleCategory extends BeforeAfterTestBrowsers{
 		}
 		else {
 			Assert.fail("Hittar inte spara-knappen");
-			driverAndCommands.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
+			reusableMethods.GetCurrentUrl.GetUrlAndPrintInConsole(driver);
 		}
 		Thread.sleep(2000);
 		
